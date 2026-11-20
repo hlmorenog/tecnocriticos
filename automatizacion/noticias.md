@@ -20,7 +20,13 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 
 ## Cómo elegir y verificar
 
-1. Busca noticias de las **últimas 24 a 48 horas**. Usa varias búsquedas por sección. Para Colombia, prioriza medios colombianos (El Tiempo, El Espectador, Semana, La República, Portafolio, Impacto TIC, Colombia Fintech, MinTIC) y comunicados oficiales.
+1. Busca noticias de las **últimas 24 a 48 horas**. Usa varias búsquedas por sección.
+   **Solo puedes leer y citar estos medios**, porque son los que la red de la sesión permite abrir:
+   - Colombia: `eltiempo.com`, `elespectador.com`, `semana.com`, `larepublica.co`, `portafolio.co`, `elheraldo.co`, `elcolombiano.com`, `enter.co`, `impactotic.co`, `mintic.gov.co`
+   - IA y tecnología: `xataka.com`, `xataka.com.co`, `elpais.com`, `bbc.com`, `theverge.com`, `apnews.com`
+   - Videojuegos y series: `3djuegos.com`, `vidaextra.com`, `variety.com`, y también `xataka.com` y `theverge.com`
+   Si una noticia solo aparece en otros medios, búscala en uno de estos. Si no está en ninguno, descártala.
+   Para ampliar la lista, hay que agregar el dominio en la configuración de red del entorno y aquí.
 2. **Lee la fuente** de cada noticia antes de escribirla, no solo el titular del buscador.
 3. Cada noticia lleva **al menos una fuente** con su enlace real. Si puedes, pon dos fuentes independientes.
 4. **No inventes nada**: ni cifras, ni citas, ni fechas, ni nombres. Si un dato no está en la fuente, no va.
@@ -69,9 +75,12 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 
 1. Crea la rama `noticias/AAAA-MM-DD` a partir de `main` actualizado.
 2. Haz commit solo del archivo nuevo, con el mensaje `Noticias del AAAA-MM-DD`.
-3. Sube la rama y abre un **pull request hacia `main`** con:
+3. Sube la rama (`git push -u origin noticias/AAAA-MM-DD`) y abre un **pull request hacia `main`** con la API REST de GitHub (GraphQL y `gh pr create` no están disponibles en estas sesiones):
+   `gh api repos/hlmorenog/tecnocriticos/pulls -f title='…' -f head='noticias/AAAA-MM-DD' -f base='main' -f body='…'`
+   El pull request lleva:
    - Título: `Noticias del <día> de <mes>`
    - Cuerpo: la lista de titulares con su sección y enlace a la fuente, más cualquier duda o dato que el director deba verificar.
-4. Si el archivo del día ya existe en `main` o ya hay un pull request abierto para esa fecha, no crees otro.
+4. Si el archivo del día ya existe en `main` o ya hay un pull request abierto para esa fecha (`gh api "repos/hlmorenog/tecnocriticos/pulls?state=open"`), no crees otro.
+5. Si una página de un medio de la lista no abre, prueba con otra noticia u otro medio de la lista. Si ninguna abre, no publiques nada e informa el bloqueo.
 
 El director revisa el pull request y pulsa **Merge** para publicar. Si quiere cambios, los pide en un comentario del pull request.
