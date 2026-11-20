@@ -101,6 +101,113 @@
     act();
   }
 
+  /* --- Noticias diarias (archivos noticias/AAAA-MM-DD.json) --- */
+  const SECCIONES = {
+    "Colombia": { clase: "img--co", glifo: "CO" },
+    "IA y tecnología": { clase: "img--ia", glifo: "IA" },
+    "Videojuegos y series": { clase: "img--juegos", glifo: "▶" },
+  };
+  const esc = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const urlSegura = (u) => (/^https?:\/\//i.test(u || "") ? esc(u) : "#");
+  const diaBogota = (d) => new Date(d.getTime() - 5 * 3600e3).toISOString().slice(0, 10);
+  const fechaLarga = (iso) => {
+    const t = new Date(iso + "T12:00:00").toLocaleDateString("es-CO", { weekday: "long", day: "numeric", month: "long" });
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  };
+  const haceCuanto = (iso) => {
+    const dias = Math.round((new Date(diaBogota(new Date()) + "T12:00:00") - new Date(iso + "T12:00:00")) / 864e5);
+    return dias <= 0 ? "Hoy" : dias === 1 ? "Ayer" : "Hace " + dias + " días";
+  };
+
+  async function cargarNoticias(dias) {
+    const hoy = Date.now();
+    const fechas = Array.from({ length: dias }, (_, i) => diaBogota(new Date(hoy - i * 864e5)));
+    const ediciones = await Promise.all(fechas.map((f) =>
+      fetch("noticias/" + f + ".json", { cache: "no-cache" })
+        .then((r) => (r.ok ? r.json() : null)).catch(() => null)));
+    return ediciones.filter((e) => e && Array.isArray(e.noticias) && e.noticias.length)
+      .map((e) => ({ fecha: e.fecha, noticias: e.noticias.map((n) => ({ ...n, fecha: e.fecha })) }));
+  }
+
+  const tarjeta = (n) => {
+    const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
+    const enlace = "noticias.html#" + esc(n.id);
+    return `<article class="tarjeta">
+      <a href="${enlace}" class="img ${s.clase}" data-glifo="${esc(s.glifo)}"><span class="chip">${esc(n.seccion)}</span></a>
+      <h3 class="titular"><a href="${enlace}">${esc(n.titular)}</a></h3>
+      <p class="entradilla">${esc(n.entradilla)}</p>
+      <span class="meta">${haceCuanto(n.fecha)}</span>
+    </article>`;
+  };
+
+  // Portada: últimas 4 noticias + cinta de "última hora"
+  const rejillaPortada = document.querySelector("[data-noticias-portada]");
+  const cinta = document.querySelector("[data-cinta]");
+  if (rejillaPortada || cinta) {
+    cargarNoticias(10).then((eds) => {
+      const todas = eds.flatMap((e) => e.noticias);
+      if (rejillaPortada) {
+        rejillaPortada.innerHTML = todas.length
+          ? todas.slice(0, 4).map(tarjeta).join("")
+          : '<p class="noticias-vacio">La primera edición de noticias llega muy pronto.</p>';
+      }
+      if (cinta) {
+        const titulares = todas.slice(0, 6).map((n) =>
+          `<a href="noticias.html#${esc(n.id)}">${esc(n.titular)}</a>`).join("");
+        if (titulares) cinta.innerHTML = titulares + titulares; // duplicado para el desplazamiento continuo
+        else cinta.closest(".ticker").hidden = true;
+      }
+    });
+  }
+
+  // Página de noticias: archivo completo con filtro por sección
+  const archivo = document.querySelector("[data-noticias-archivo]");
+  if (archivo) {
+    const filtros = document.querySelector("[data-filtros]");
+    let ediciones = [];
+    let filtro = "Todas";
+    const pintarArchivo = () => {
+      const html = ediciones.map((e) => {
+        const lista = e.noticias.filter((n) => filtro === "Todas" || n.seccion === filtro);
+        if (!lista.length) return "";
+        return `<section class="edicion">
+          <h2 class="edicion__fecha">${fechaLarga(e.fecha)}</h2>
+          ${lista.map((n) => {
+            const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
+            const cuerpo = (Array.isArray(n.cuerpo) ? n.cuerpo : [n.cuerpo]).map((p) => `<p>${esc(p)}</p>`).join("");
+            const fuentes = (n.fuentes || []).map((f) =>
+              `<li><a href="${urlSegura(f.url)}" target="_blank" rel="noopener">${esc(f.nombre || f.url)}</a></li>`).join("");
+            return `<article class="noticia" id="${esc(n.id)}">
+              <span class="etiqueta noticia__seccion">${esc(n.seccion)}</span>
+              <h3 class="titular noticia__titular">${esc(n.titular)}</h3>
+              <p class="entradilla">${esc(n.entradilla)}</p>
+              <div class="noticia__cuerpo">${cuerpo}</div>
+              ${n.mirada ? `<p class="noticia__mirada"><strong>La mirada crítica.</strong> ${esc(n.mirada)}</p>` : ""}
+              ${fuentes ? `<div class="noticia__fuentes"><span>Fuentes</span><ul>${fuentes}</ul></div>` : ""}
+            </article>`;
+          }).join("")}
+        </section>`;
+      }).join("");
+      archivo.innerHTML = html || '<p class="noticias-vacio">Todavía no hay noticias publicadas en esta sección.</p>';
+    };
+    if (filtros) filtros.addEventListener("click", (ev) => {
+      const b = ev.target.closest("button[data-seccion]");
+      if (!b) return;
+      filtro = b.dataset.seccion;
+      filtros.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+      pintarArchivo();
+    });
+    cargarNoticias(60).then((eds) => {
+      ediciones = eds;
+      pintarArchivo();
+      if (location.hash) {
+        const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (el) { el.classList.add("noticia--destacada"); el.scrollIntoView(); }
+      }
+    });
+  }
+
   /* --- Copiar enlace --- */
   document.querySelectorAll("[data-copiar]").forEach((b) => b.addEventListener("click", () => {
     navigator.clipboard && navigator.clipboard.writeText(location.href);

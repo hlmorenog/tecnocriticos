@@ -62,7 +62,7 @@
     </button>
     <ul class="nav__lista">
       <li><a class="activo" href="#">Portada</a></li>
-      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
       <li><a href="#noticias">IA</a></li>
       <li><a href="#noticias">Hardware</a></li>
       <li><a href="#juegos">Videojuegos</a></li>
@@ -93,18 +93,7 @@
   <div class="contenedor">
     <span class="ticker__rotulo">ÚLTIMA HORA</span>
     <div class="ticker__pista">
-      <div class="ticker__cinta">
-        <span>La UE abre consulta pública sobre transparencia de algoritmos de recomendación</span>
-        <span>Otro estudio cuestiona el consumo energético real de los centros de datos de IA</span>
-        <span>Los precios de las consolas vuelven a subir a mitad de generación</span>
-        <span>Las plataformas de streaming endurecen las cuentas compartidas</span>
-        <span>Nueva filtración masiva de datos: lo que sabemos y lo que no</span>
-        <span>La UE abre consulta pública sobre transparencia de algoritmos de recomendación</span>
-        <span>Otro estudio cuestiona el consumo energético real de los centros de datos de IA</span>
-        <span>Los precios de las consolas vuelven a subir a mitad de generación</span>
-        <span>Las plataformas de streaming endurecen las cuentas compartidas</span>
-        <span>Nueva filtración masiva de datos: lo que sabemos y lo que no</span>
-      </div>
+      <div class="ticker__cinta" data-cinta></div>
     </div>
   </div>
 </div>
@@ -157,36 +146,11 @@
     <div class="seccion__cab">
       <div>
         <h2 class="seccion__titulo">Noticias</h2>
-        <p class="seccion__desc">Lo que pasa, con contexto y sin nota de prensa copiada.</p>
+        <p class="seccion__desc">Colombia, IA y tecnología, videojuegos y series: lo que pasa, con contexto y sin nota de prensa copiada.</p>
       </div>
-      <a class="seccion__mas" href="#">Ver todas</a>
+      <a class="seccion__mas" href="noticias.html">Ver todas</a>
     </div>
-    <div class="rejilla-4">
-      <article class="tarjeta">
-        <a href="#" class="img img--ia" data-glifo="&lt;/&gt;"><span class="chip">IA</span></a>
-        <h3 class="titular"><a href="#">Los modelos de lenguaje ya escriben código. ¿Quién revisa el código que escriben?</a></h3>
-        <p class="entradilla">Productividad real frente a deuda técnica invisible.</p>
-        <span class="meta">Hace 2 h</span>
-      </article>
-      <article class="tarjeta">
-        <a href="#" class="img img--hw" data-glifo="⌁"><span class="chip">Hardware</span></a>
-        <h3 class="titular"><a href="#">Derecho a reparar: los fabricantes ceden, pero con letra pequeña</a></h3>
-        <p class="entradilla">Piezas disponibles… a precio de móvil nuevo.</p>
-        <span class="meta">Hace 4 h</span>
-      </article>
-      <article class="tarjeta">
-        <a href="#" class="img img--ciencia" data-glifo="∞"><span class="chip">Ciencia</span></a>
-        <h3 class="titular"><a href="#">Computación cuántica: cinco titulares exagerados y la única noticia que sí importa</a></h3>
-        <p class="entradilla">Explicado sin cúbits de humo.</p>
-        <span class="meta">Hace 6 h</span>
-      </article>
-      <article class="tarjeta">
-        <a href="#" class="img img--etica" data-glifo="§"><span class="chip">Regulación</span></a>
-        <h3 class="titular"><a href="#">Qué cambia para ti con las nuevas normas europeas sobre IA</a></h3>
-        <p class="entradilla">Derechos, plazos y lo que queda en el aire.</p>
-        <span class="meta">Ayer</span>
-      </article>
-    </div>
+    <div class="rejilla-4" data-noticias-portada aria-live="polite"></div>
   </section>
 
 </main>
@@ -482,7 +446,7 @@
       </div>
       <div>
         <h4>Actualidad</h4>
-        <ul><li><a href="#noticias">Noticias</a></li><li><a href="#noticias">Inteligencia artificial</a></li><li><a href="#noticias">Hardware</a></li><li><a href="#noticias">Ciencia</a></li></ul>
+        <ul><li><a href="noticias.html">Noticias</a></li><li><a href="#noticias">Inteligencia artificial</a></li><li><a href="#noticias">Hardware</a></li><li><a href="#noticias">Ciencia</a></li></ul>
       </div>
       <div>
         <h4>Cultura</h4>

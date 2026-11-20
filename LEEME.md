@@ -42,3 +42,11 @@ Archivos: `logo.svg` (logo completo) e `logo-icono.svg` (favicon y avatar de red
   - comentarios: Giscus o Disqus.
 - **Recomendación para crecer:** cuando publiques varias veces por semana, migra este diseño a un CMS como WordPress o Ghost (Ghost es ideal para columna + newsletter), o a un generador estático como Astro o Eleventy. Así no tendrás que editar el HTML a mano.
 - Para alojarlo gratis como sitio estático: Netlify, Vercel, Cloudflare Pages o GitHub Pages, apuntando el dominio tecnocriticos.com.
+
+## Noticias diarias automáticas
+
+- Cada mañana una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y abre un **pull request** en GitHub con el archivo `noticias/AAAA-MM-DD.json`.
+- **Para publicar:** abre el pull request (GitHub te avisa por correo y en la app), revisa los titulares y pulsa **Merge pull request**. En uno o dos minutos aparecen en la portada, en la cinta de «Última hora» y en `noticias.html`.
+- **Para pedir cambios:** comenta en el pull request o pídeselo a Claude en una sesión con el repositorio `tecnocriticos`.
+- **Para ajustar el tono, los temas o la cantidad:** edita `automatizacion/noticias.md`.
+- Las noticias se cargan desde los archivos JSON, así que al abrir `index.html` directamente desde tu PC la sección se ve vacía. En el sitio publicado se ve completa.
