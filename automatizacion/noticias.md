@@ -36,7 +36,7 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 ## Cómo escribir
 
 - **Tono**: el de Tecnocríticos, *«La tecnología, sin fanatismo»*. Informativo, claro, sin exageración ni entusiasmo publicitario. Ni tecnófobo ni tecnófilo.
-- **Redacción propia**: resume con tus palabras. No copies párrafos de la fuente. Como máximo, una cita textual corta entre comillas y atribuida.
+- **Redacción propia**: todo el texto se escribe con tus palabras. **No uses citas textuales** (nada entre comillas copiado de la fuente o de una declaración). Si alguien dijo algo relevante, cuéntalo en estilo indirecto: «la ministra aseguró que…». No copies frases de la fuente.
 - **Español neutro con sensibilidad colombiana**: cifras en pesos colombianos cuando aplique y fechas como «20 de noviembre».
 - **`titular`**: informativo y concreto, de hasta unos 90 caracteres. Sin clickbait ni signos de exclamación.
 - **`entradilla`**: una frase que diga por qué importa.
