@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tecnocríticos">
+  <!-- Lupa + botón de encendido: examinar la tecnología antes de encenderla -->
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+  <path d="M38.93 16.98 A17 17 0 1 1 17.07 16.98" fill="none" stroke="#F4F1EA" stroke-width="6" stroke-linecap="round"/>
+  <line x1="28" y1="8" x2="28" y2="27" stroke="#F4F1EA" stroke-width="6" stroke-linecap="round"/>
+  <line x1="42" y1="44" x2="55" y2="57" stroke="#E6332A" stroke-width="8" stroke-linecap="round"/>
+</svg>

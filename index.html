@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tecnocríticos — La tecnología, sin fanatismo</title>
+  <meta name="description" content="Noticias, análisis y opinión crítica sobre tecnología, inteligencia artificial, videojuegos, series y cultura digital.">
+  <meta property="og:title" content="Tecnocríticos">
+  <meta property="og:description" content="La tecnología, sin fanatismo. Noticias, análisis y opinión crítica.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tecnocriticos.com/">
+  <link rel="icon" href="img/logo-icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="barra-sup">
+  <div class="contenedor">
+    <div class="barra-sup__izq"><span data-fecha>Hoy</span></div>
+    <div class="barra-sup__der">
+      <a href="#boletin">Boletín</a>
+      <a href="#mesa">Participa</a>
+      <button class="btn-tema" data-tema type="button">◐ Modo oscuro</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CABECERA ============ -->
+<header class="cabecera">
+  <div class="contenedor">
+    <div class="cabecera__edicion">
+      <strong>Edición semanal</strong>
+      Nueva columna cada lunes
+    </div>
+    <a class="logo" href="index.html" aria-label="Tecnocríticos, inicio">
+      <svg class="logo__icono" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="trazo" d="M38.93 16.98 A17 17 0 1 1 17.07 16.98" fill="none" stroke-width="6" stroke-linecap="round"/>
+        <line class="trazo" x1="28" y1="8" x2="28" y2="27" stroke-width="6" stroke-linecap="round"/>
+        <line x1="42" y1="44" x2="55" y2="57" stroke="#E6332A" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <span class="logo__texto">
+        <span class="logo__nombre"><span>tecno</span><b>críticos</b><i>.com</i></span>
+        <span class="logo__lema">LA TECNOLOGÍA, SIN FANATISMO</span>
+      </span>
+    </a>
+    <div class="cabecera__acciones">
+      <a class="btn" href="#boletin">Suscríbete</a>
+      <a class="btn btn--rojo" href="columna.html">La Columna</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NAVEGACIÓN ============ -->
+<nav class="nav" aria-label="Secciones">
+  <div class="contenedor">
+    <button class="nav__hamb" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav__lista">
+      <li><a class="activo" href="#">Portada</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#noticias">IA</a></li>
+      <li><a href="#noticias">Hardware</a></li>
+      <li><a href="#juegos">Videojuegos</a></li>
+      <li><a href="#juegos">Series y Cine</a></li>
+      <li><a href="#lado-b">Lado B</a></li>
+      <li><a href="#hype">Hype-ómetro</a></li>
+      <li><a href="#mesa">La Mesa</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a class="destacado" href="columna.html">La Columna</a></li>
+    </ul>
+    <button class="nav__buscar" type="button" aria-label="Buscar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="buscador">
+  <div class="contenedor">
+    <form role="search" onsubmit="event.preventDefault()">
+      <label class="sr-only" for="q">Buscar</label>
+      <input id="q" type="search" placeholder="Buscar noticias, análisis, columnas…">
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-label="Última hora">
+  <div class="contenedor">
+    <span class="ticker__rotulo">ÚLTIMA HORA</span>
+    <div class="ticker__pista">
+      <div class="ticker__cinta">
+        <span>La UE abre consulta pública sobre transparencia de algoritmos de recomendación</span>
+        <span>Otro estudio cuestiona el consumo energético real de los centros de datos de IA</span>
+        <span>Los precios de las consolas vuelven a subir a mitad de generación</span>
+        <span>Las plataformas de streaming endurecen las cuentas compartidas</span>
+        <span>Nueva filtración masiva de datos: lo que sabemos y lo que no</span>
+        <span>La UE abre consulta pública sobre transparencia de algoritmos de recomendación</span>
+        <span>Otro estudio cuestiona el consumo energético real de los centros de datos de IA</span>
+        <span>Los precios de las consolas vuelven a subir a mitad de generación</span>
+        <span>Las plataformas de streaming endurecen las cuentas compartidas</span>
+        <span>Nueva filtración masiva de datos: lo que sabemos y lo que no</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="contenedor">
+
+  <!-- ============ PORTADA ============ -->
+  <section class="portada" aria-label="Destacados">
+    <article class="principal">
+      <a href="#" class="img img--ia" data-glifo="IA?"><span class="chip">Análisis</span></a>
+      <span class="etiqueta" style="display:block;margin-top:16px">Inteligencia artificial</span>
+      <h1 class="titular"><a href="#">La IA que “lo cambia todo” lleva tres años cambiando lo mismo: tu suscripción mensual</a></h1>
+      <p class="entradilla">Separamos el anuncio del producto: qué hacen de verdad los asistentes de IA, cuánto cuestan y quién paga la factura energética y de datos.</p>
+      <span class="meta">Por Redacción · 12 min de lectura</span>
+    </article>
+
+    <div class="secundarias">
+      <article>
+        <span class="etiqueta">Privacidad</span>
+        <h2 class="titular"><a href="#">Tu televisor inteligente sabe más de ti que tu médico. Así puedes cerrarle la boca</a></h2>
+        <span class="meta">Guía · 7 min</span>
+      </article>
+      <article>
+        <span class="etiqueta">Hardware</span>
+        <h2 class="titular"><a href="#">El móvil de 1.500 euros y la obsolescencia que nadie anuncia en el escenario</a></h2>
+        <span class="meta">Opinión · 5 min</span>
+      </article>
+      <article>
+        <span class="etiqueta">Videojuegos</span>
+        <h2 class="titular"><a href="#">Microtransacciones: el juego completo ya no viene en la caja (si es que hay caja)</a></h2>
+        <span class="meta">Reportaje · 9 min</span>
+      </article>
+    </div>
+
+    <!-- Columna semanal -->
+    <aside class="columna-card" aria-label="Columna de la semana">
+      <span class="etiqueta">✦ La Columna · Semana 47</span>
+      <h2 class="titular"><a href="columna.html">Nadie nos pidió permiso para el futuro</a></h2>
+      <p>Cada keynote promete liberarnos. Cada actualización nos ata un poco más. Esta semana me pregunto en qué momento dejamos de ser usuarios para convertirnos en usados.</p>
+      <a class="btn" href="columna.html">Leer la columna →</a>
+      <div class="columna-card__autor">
+        <span class="avatar">HM</span>
+        <div><strong>Helmuhd Moreno</strong><span>Director · Columna semanal</span></div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ============ NOTICIAS ============ -->
+  <section class="seccion" id="noticias">
+    <div class="seccion__cab">
+      <div>
+        <h2 class="seccion__titulo">Noticias</h2>
+        <p class="seccion__desc">Lo que pasa, con contexto y sin nota de prensa copiada.</p>
+      </div>
+      <a class="seccion__mas" href="#">Ver todas</a>
+    </div>
+    <div class="rejilla-4">
+      <article class="tarjeta">
+        <a href="#" class="img img--ia" data-glifo="&lt;/&gt;"><span class="chip">IA</span></a>
+        <h3 class="titular"><a href="#">Los modelos de lenguaje ya escriben código. ¿Quién revisa el código que escriben?</a></h3>
+        <p class="entradilla">Productividad real frente a deuda técnica invisible.</p>
+        <span class="meta">Hace 2 h</span>
+      </article>
+      <article class="tarjeta">
+        <a href="#" class="img img--hw" data-glifo="⌁"><span class="chip">Hardware</span></a>
+        <h3 class="titular"><a href="#">Derecho a reparar: los fabricantes ceden, pero con letra pequeña</a></h3>
+        <p class="entradilla">Piezas disponibles… a precio de móvil nuevo.</p>
+        <span class="meta">Hace 4 h</span>
+      </article>
+      <article class="tarjeta">
+        <a href="#" class="img img--ciencia" data-glifo="∞"><span class="chip">Ciencia</span></a>
+        <h3 class="titular"><a href="#">Computación cuántica: cinco titulares exagerados y la única noticia que sí importa</a></h3>
+        <p class="entradilla">Explicado sin cúbits de humo.</p>
+        <span class="meta">Hace 6 h</span>
+      </article>
+      <article class="tarjeta">
+        <a href="#" class="img img--etica" data-glifo="§"><span class="chip">Regulación</span></a>
+        <h3 class="titular"><a href="#">Qué cambia para ti con las nuevas normas europeas sobre IA</a></h3>
+        <p class="entradilla">Derechos, plazos y lo que queda en el aire.</p>
+        <span class="meta">Ayer</span>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ HYPE-ÓMETRO ============ -->
+<section class="seccion hype" id="hype">
+  <div class="contenedor">
+    <div class="seccion__cab">
+      <div>
+        <h2 class="seccion__titulo">El <em>Hype-ómetro</em></h2>
+        <p class="seccion__desc">Medimos cuánto prometen frente a cuánto cumplen. Actualizado cada semana.</p>
+      </div>
+      <a class="seccion__mas" href="#">Metodología</a>
+    </div>
+    <div class="hype__items">
+      <article class="hype__item">
+        <span class="etiqueta">IA</span>
+        <h3>Agentes de IA que “trabajan por ti”</h3>
+        <div class="hype__fila"><span>PROMESA</span><span class="hype__barra"><i style="width:96%"></i></span><span>96</span></div>
+        <div class="hype__fila"><span>REALIDAD</span><span class="hype__barra hype__barra--real"><i style="width:48%"></i></span><span>48</span></div>
+        <p class="hype__veredicto"><b>VEREDICTO:</b> Útiles con supervisión. Autónomos, todavía no.</p>
+      </article>
+      <article class="hype__item">
+        <span class="etiqueta">Realidad mixta</span>
+        <h3>Gafas de realidad mixta</h3>
+        <div class="hype__fila"><span>PROMESA</span><span class="hype__barra"><i style="width:88%"></i></span><span>88</span></div>
+        <div class="hype__fila"><span>REALIDAD</span><span class="hype__barra hype__barra--real"><i style="width:35%"></i></span><span>35</span></div>
+        <p class="hype__veredicto"><b>VEREDICTO:</b> Impresionantes en demo, incómodas a la hora.</p>
+      </article>
+      <article class="hype__item">
+        <span class="etiqueta">Movilidad</span>
+        <h3>Coches totalmente autónomos</h3>
+        <div class="hype__fila"><span>PROMESA</span><span class="hype__barra"><i style="width:92%"></i></span><span>92</span></div>
+        <div class="hype__fila"><span>REALIDAD</span><span class="hype__barra hype__barra--real"><i style="width:30%"></i></span><span>30</span></div>
+        <p class="hype__veredicto"><b>VEREDICTO:</b> “El año que viene”, desde hace una década.</p>
+      </article>
+      <article class="hype__item">
+        <span class="etiqueta">Hardware</span>
+        <h3>Móviles plegables</h3>
+        <div class="hype__fila"><span>PROMESA</span><span class="hype__barra"><i style="width:70%"></i></span><span>70</span></div>
+        <div class="hype__fila"><span>REALIDAD</span><span class="hype__barra hype__barra--real"><i style="width:62%"></i></span><span>62</span></div>
+        <p class="hype__veredicto"><b>VEREDICTO:</b> Por fin maduros. El precio, no.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="contenedor">
+
+  <!-- ============ VIDEOJUEGOS + SERIES ============ -->
+  <section class="seccion" id="juegos">
+    <div class="rejilla-2">
+      <div>
+        <div class="seccion__cab">
+          <div>
+            <h2 class="seccion__titulo">Videojuegos</h2>
+            <p class="seccion__desc">Reseñas sin embargo de publicidad.</p>
+          </div>
+          <a class="seccion__mas" href="#">Más reseñas</a>
+        </div>
+        <div class="lista-resenas">
+          <article class="resena">
+            <a href="#" class="img img--juegos" data-glifo="▲"></a>
+            <div>
+              <span class="etiqueta">Reseña · PC / Consolas</span>
+              <h3 class="titular"><a href="#">El indie de dos personas que humilla a la superproducción del año</a></h3>
+              <p>Menos presupuesto, más ideas. Y ni un solo pase de batalla.</p>
+            </div>
+            <span class="nota nota--alta" title="Veredicto crítico">9.1</span>
+          </article>
+          <article class="resena">
+            <a href="#" class="img img--juegos" data-glifo="◆"></a>
+            <div>
+              <span class="etiqueta">Reseña · Multiplataforma</span>
+              <h3 class="titular"><a href="#">La secuela que cobra extra por el final del juego</a></h3>
+              <p>Técnicamente brillante, comercialmente cínica.</p>
+            </div>
+            <span class="nota nota--media" title="Veredicto crítico">6.4</span>
+          </article>
+          <article class="resena">
+            <a href="#" class="img img--juegos" data-glifo="●"></a>
+            <div>
+              <span class="etiqueta">Reseña · Servicio en vivo</span>
+              <h3 class="titular"><a href="#">Un shooter “gratuito” que cuesta 80 euros al mes</a></h3>
+              <p>Divertido durante una tarde. Diseñado para que no lo sueltes.</p>
+            </div>
+            <span class="nota nota--baja" title="Veredicto crítico">4.2</span>
+          </article>
+        </div>
+      </div>
+
+      <div>
+        <div class="seccion__cab">
+          <div>
+            <h2 class="seccion__titulo">Series y Cine</h2>
+            <p class="seccion__desc">Pantallas, algoritmos y lo que nos cuentan del futuro.</p>
+          </div>
+          <a class="seccion__mas" href="#">Más críticas</a>
+        </div>
+        <div class="lista-resenas">
+          <article class="resena">
+            <a href="#" class="img img--series" data-glifo="▶"></a>
+            <div>
+              <span class="etiqueta">Crítica · Ciencia ficción</span>
+              <h3 class="titular"><a href="#">La distopía tecnológica que ya no parece ficción</a></h3>
+              <p>Inquietante porque los guionistas apenas tuvieron que inventar.</p>
+            </div>
+            <span class="nota nota--alta" title="Veredicto crítico">8.7</span>
+          </article>
+          <article class="resena">
+            <a href="#" class="img img--series" data-glifo="◐"></a>
+            <div>
+              <span class="etiqueta">Crítica · Documental</span>
+              <h3 class="titular"><a href="#">El documental sobre redes sociales que repite lo que ya sabíamos</a></h3>
+              <p>Bien producido, poco valiente.</p>
+            </div>
+            <span class="nota nota--media" title="Veredicto crítico">6.0</span>
+          </article>
+          <article class="resena">
+            <a href="#" class="img img--series" data-glifo="✕"></a>
+            <div>
+              <span class="etiqueta">Crítica · Streaming</span>
+              <h3 class="titular"><a href="#">¿Contenido o relleno? El catálogo hecho a medida del algoritmo</a></h3>
+              <p>Cuando la serie se escribe para que la mires de fondo.</p>
+            </div>
+            <span class="nota nota--baja" title="Veredicto crítico">3.8</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LADO B (ética y sociedad digital) ============ -->
+  <section class="seccion" id="lado-b">
+    <div class="seccion__cab">
+      <div>
+        <h2 class="seccion__titulo">Lado <em>B</em></h2>
+        <p class="seccion__desc">Lo que no sale en la presentación: ética, trabajo, privacidad y medio ambiente.</p>
+      </div>
+      <a class="seccion__mas" href="#">Ver sección</a>
+    </div>
+    <div class="rejilla-3">
+      <article class="tarjeta">
+        <a href="#" class="img img--etica" data-glifo="◉"><span class="chip">Privacidad</span></a>
+        <h3 class="titular"><a href="#">Si es gratis, el producto eres tú. Y si pagas, a veces también</a></h3>
+        <span class="meta">Reportaje · 10 min</span>
+      </article>
+      <article class="tarjeta">
+        <a href="#" class="img img--hw" data-glifo="♻"><span class="chip">Medio ambiente</span></a>
+        <h3 class="titular"><a href="#">La huella invisible de la nube: agua, energía y minerales</a></h3>
+        <span class="meta">Investigación · 14 min</span>
+      </article>
+      <article class="tarjeta">
+        <a href="#" class="img img--ia" data-glifo="☰"><span class="chip">Trabajo</span></a>
+        <h3 class="titular"><a href="#">Quién etiqueta los datos que entrenan a la IA (y cuánto cobra)</a></h3>
+        <span class="meta">Reportaje · 11 min</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ LA MESA + MÁS LEÍDO ============ -->
+  <section class="seccion" id="mesa">
+    <div class="mesa-layout">
+      <div>
+        <div class="seccion__cab">
+          <div>
+            <h2 class="seccion__titulo">La <em>Mesa</em></h2>
+            <p class="seccion__desc">El espacio de debate de la comunidad. Una pregunta por semana.</p>
+          </div>
+        </div>
+        <div class="debate" data-id="s47">
+          <span class="etiqueta">Debate de la semana</span>
+          <p class="debate__pregunta">¿Pagarías por una red social sin algoritmo ni publicidad?</p>
+          <p class="meta">Vota y deja tu argumento. Los mejores comentarios se leen en el podcast.</p>
+          <div class="debate__opciones">
+            <button class="opcion" data-votos="412" type="button"><span class="opcion__fondo"></span><span>Sí, sin dudarlo</span><span class="opcion__pct"></span></button>
+            <button class="opcion" data-votos="356" type="button"><span class="opcion__fondo"></span><span>Sí, si fuera barata</span><span class="opcion__pct"></span></button>
+            <button class="opcion" data-votos="198" type="button"><span class="opcion__fondo"></span><span>No, prefiero lo gratuito</span><span class="opcion__pct"></span></button>
+            <button class="opcion" data-votos="87" type="button"><span class="opcion__fondo"></span><span>Ya no uso redes sociales</span><span class="opcion__pct"></span></button>
+          </div>
+          <div class="debate__pie">
+            <span class="meta" data-total>1.053 votos</span>
+            <a class="btn" href="#">Entrar al debate →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mas-leido">
+        <div class="seccion__cab"><h2 class="seccion__titulo">Lo más leído</h2></div>
+        <ol>
+          <li><a href="#">Cómo desactivar el rastreo de tu móvil en diez minutos</a></li>
+          <li><a href="columna.html">Nadie nos pidió permiso para el futuro</a></li>
+          <li><a href="#">La IA que “lo cambia todo” lleva tres años cambiando lo mismo</a></li>
+          <li><a href="#">Cinco videojuegos que respetan tu tiempo (y tu cartera)</a></li>
+          <li><a href="#">¿Vale la pena actualizar el móvil cada año? Hicimos las cuentas</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ PODCAST ============ -->
+<section class="seccion podcast" id="podcast">
+  <div class="contenedor">
+    <div class="seccion__cab">
+      <div>
+        <h2 class="seccion__titulo">Ruido de Fondo</h2>
+        <p class="seccion__desc">El podcast de Tecnocríticos. Charla semanal sobre la actualidad tecnológica.</p>
+      </div>
+      <a class="seccion__mas" href="#">Todos los episodios</a>
+    </div>
+    <div class="podcast__grid">
+      <div class="reproductor">
+        <span class="etiqueta">Episodio 32 · 58 min</span>
+        <h3>¿Estamos en una burbuja de la IA? Hablamos con quienes pagan la cuenta</h3>
+        <div class="onda" aria-hidden="true"></div>
+        <div class="reproductor__ctrl">
+          <button class="btn-play" type="button" aria-label="Reproducir">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>
+          </button>
+          <span>19:42 / 58:10</span>
+        </div>
+      </div>
+      <ul class="episodios">
+        <li><b>EP31</b><a href="#">Videojuegos como servicio: ¿quién juega a quién?</a></li>
+        <li><b>EP30</b><a href="#">Series que predijeron el presente (y las que fallaron)</a></li>
+        <li><b>EP29</b><a href="#">Privacidad: la batalla que estamos perdiendo por cansancio</a></li>
+        <li><b>EP28</b><a href="#">El fin del software que se compra una vez</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFIESTO ============ -->
+<section class="seccion" id="manifiesto">
+  <div class="contenedor">
+    <div class="seccion__cab">
+      <div>
+        <h2 class="seccion__titulo">Nuestro <em>manifiesto</em></h2>
+        <p class="seccion__desc">Por qué existimos y cómo trabajamos.</p>
+      </div>
+    </div>
+    <div class="manifiesto__grid">
+      <div class="manifiesto__item"><h3>No somos fans</h3><p>Nos gusta la tecnología lo suficiente como para exigirle más. Ninguna marca es nuestro equipo.</p></div>
+      <div class="manifiesto__item"><h3>Contexto antes que prisa</h3><p>Preferimos llegar segundos y explicar bien que ser los primeros en copiar una nota de prensa.</p></div>
+      <div class="manifiesto__item"><h3>Criticar no es odiar</h3><p>Celebramos lo que funciona y señalamos lo que no. Con argumentos, no con ruido.</p></div>
+      <div class="manifiesto__item"><h3>Tú también opinas</h3><p>La Mesa es tuya. Un portal crítico necesita lectores críticos, incluso con nosotros.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOLETÍN ============ -->
+<section class="boletin" id="boletin">
+  <div class="contenedor">
+    <div>
+      <span class="etiqueta">El Boletín Crítico · Cada lunes</span>
+      <h2>La columna de la semana y lo esencial, en tu correo.</h2>
+      <p>Sin spam, sin hype. Un correo a la semana que se lee en cinco minutos.</p>
+    </div>
+    <div>
+      <form data-boletin>
+        <label class="sr-only" for="correo">Correo electrónico</label>
+        <input id="correo" type="email" required placeholder="tu@correo.com">
+        <button type="submit">Suscribirme</button>
+      </form>
+      <small>Puedes darte de baja cuando quieras. Respetamos tu privacidad (sería raro que no).</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIE ============ -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Tecnocríticos, inicio">
+          <svg class="logo__icono" viewBox="0 0 64 64" aria-hidden="true">
+            <path class="trazo" d="M38.93 16.98 A17 17 0 1 1 17.07 16.98" fill="none" stroke-width="6" stroke-linecap="round"/>
+            <line class="trazo" x1="28" y1="8" x2="28" y2="27" stroke-width="6" stroke-linecap="round"/>
+            <line x1="42" y1="44" x2="55" y2="57" stroke="#E6332A" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo__texto"><span class="logo__nombre"><span>tecno</span><b>críticos</b><i>.com</i></span></span>
+        </a>
+        <p style="margin-top:16px;max-width:320px">Periodismo y opinión crítica sobre tecnología, videojuegos, series y cultura digital.</p>
+        <div class="redes">
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="RSS">RSS</a>
+        </div>
+      </div>
+      <div>
+        <h4>Actualidad</h4>
+        <ul><li><a href="#noticias">Noticias</a></li><li><a href="#noticias">Inteligencia artificial</a></li><li><a href="#noticias">Hardware</a></li><li><a href="#noticias">Ciencia</a></li></ul>
+      </div>
+      <div>
+        <h4>Cultura</h4>
+        <ul><li><a href="#juegos">Videojuegos</a></li><li><a href="#juegos">Series y Cine</a></li><li><a href="#hype">Hype-ómetro</a></li><li><a href="#lado-b">Lado B</a></li></ul>
+      </div>
+      <div>
+        <h4>Opinión</h4>
+        <ul><li><a href="columna.html">La Columna</a></li><li><a href="#mesa">La Mesa</a></li><li><a href="#podcast">Podcast</a></li><li><a href="#boletin">Boletín</a></li></ul>
+      </div>
+      <div>
+        <h4>Tecnocríticos</h4>
+        <ul><li><a href="#manifiesto">Manifiesto</a></li><li><a href="#">Quiénes somos</a></li><li><a href="#">Contacto</a></li><li><a href="#">Publicidad ética</a></li></ul>
+      </div>
+    </div>
+    <div class="pie__legal">
+      <span>© <script>document.write(new Date().getFullYear())</script> tecnocriticos.com · Todos los derechos reservados</span>
+      <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
