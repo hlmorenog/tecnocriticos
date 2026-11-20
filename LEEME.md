@@ -11,7 +11,7 @@
 | **Colores** | Tinta `#111111` · Papel `#F4F1EA` · Rojo crítico `#E6332A` · Verde ácido `#C8F03C` (solo para el Hype-ómetro). |
 | **Tipografías** (Google Fonts) | *Fraunces* para titulares (editorial y con carácter), *Space Grotesk* para la interfaz, *JetBrains Mono* para etiquetas y datos. |
 
-Archivos: `img/logo.svg` (logo completo) e `img/logo-icono.svg` (favicon y avatar de redes sociales).
+Archivos: `logo.svg` (logo completo) e `logo-icono.svg` (favicon y avatar de redes sociales).
 
 ## Secciones del portal
 
@@ -29,7 +29,7 @@ Archivos: `img/logo.svg` (logo completo) e `img/logo-icono.svg` (favicon y avata
 
 ## Cómo publicar tu columna semanal
 
-1. Copia `columna.html` como `columnas/2026-semana-48.html`. Si la guardas dentro de una carpeta, añade `../` delante de las rutas `css/`, `js/` e `img/`.
+1. Copia `columna.html` como `columnas/2026-semana-48.html`. Si la guardas dentro de una carpeta, añade `../` delante de las rutas `estilos.css`, `main.js` y `logo-icono.svg`.
 2. Cambia `<title>`, la etiqueta `<h1>`, la entradilla, la fecha y el cuerpo, que va dentro de `<article class="cuerpo">`.
 3. En `index.html`, actualiza la tarjeta `columna-card` de la portada y añade la columna anterior al *Archivo de columnas*.
 
