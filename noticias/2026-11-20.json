@@ -1,0 +1,81 @@
+{
+  "fecha": "2026-11-20",
+  "noticias": [
+    {
+      "id": "2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia",
+      "seccion": "IA y tecnología",
+      "titular": "Anthropic debuta en el Nasdaq con la mayor salida a bolsa de la historia",
+      "entradilla": "La creadora de Claude captó más de 107.000 millones de dólares y pone a prueba cuánto está dispuesto a pagar el mercado por la inteligencia artificial.",
+      "cuerpo": [
+        "Anthropic, la empresa detrás del modelo de inteligencia artificial Claude, empezó a cotizar el jueves 19 de noviembre en el Nasdaq con el símbolo ANT. Vendió 956 millones de acciones a 83 dólares cada una, por encima del rango de 70 a 78 dólares que había previsto, según NPR. Sumando la venta de acciones de sus siete fundadores y colocaciones privadas por 26.000 millones de dólares con Google, Microsoft y Nvidia, lo recaudado supera los 107.000 millones de dólares.",
+        "La acción abrió en 111,50 dólares, un 34 % por encima del precio de salida, y cerró la jornada en 97,17 dólares, un 17 % arriba. La operación supera los 75.000 millones que logró SpaceX en junio y valora la compañía en torno a 1,5 billones de dólares.",
+        "Anthropic fue fundada en 2021 por exinvestigadores de OpenAI, encabezados por Dario Amodei, que dijeron estar preocupados por la seguridad en el desarrollo de la IA. Según El Tiempo, que cita a BBC Mundo, la salida a bolsa convierte en multimillonarios, al menos sobre el papel, a sus siete fundadores."
+      ],
+      "mirada": "El récord llega en medio de una preocupación creciente por una posible burbuja de la IA, como recuerda la propia NPR. Que Google, Microsoft y Nvidia, gigantes del mismo sector, participen con colocaciones privadas muestra lo entrelazado que está este negocio y cuánto depende de que todos sigan apostando por él.",
+      "fuentes": [
+        { "nombre": "NPR", "url": "https://www.npr.org/2026/11/19/nx-s1-6042558/anthropic-ipo-breaks-records-100-billion" },
+        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/los-siete-exempleados-de-openai-que-fundaron-anthropic-y-estan-a-punto-de-convertirse-en-multimillonarios-con-la-inteligencia-artificial-3602650" }
+      ]
+    },
+    {
+      "id": "2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores",
+      "seccion": "Colombia",
+      "titular": "Tribunal de Cundinamarca respalda a la SIC frente a Google por datos de menores",
+      "entradilla": "El fallo dice que la ley colombiana de datos personales aplica a empresas extranjeras cuando recogen información en el país.",
+      "cuerpo": [
+        "El Tribunal Administrativo de Cundinamarca negó en primera instancia la demanda que Google presentó en abril de 2022 contra la Superintendencia de Industria y Comercio (SIC), informó El Tiempo. La sentencia, del 5 de noviembre, deja en firme las resoluciones de 2020 y 2021 que obligan a la compañía a informar con claridad el uso de los datos, adoptar una política de tratamiento ajustada a la ley, registrar sus bases de datos ante la SIC y obtener de forma efectiva el permiso de los padres de los menores.",
+        "Google argumentaba que, por estar domiciliada en California y no tener presencia legal en Colombia, no tenía que cumplir la Ley 1581 de 2012. El tribunal concluyó que lo decisivo es dónde se recogen los datos: aunque se almacenen en servidores extranjeros, se recolectan en Colombia mediante cookies e identificadores en los dispositivos. La propia empresa reportó en 2020 cerca de 1,85 millones de cuentas de menores activas desde el país en 28 días.",
+        "El fallo consideró insuficientes herramientas como Family Link y YouTube Kids, y señaló que Family Link solo cubre a menores de 13 años. También aclaró que las órdenes de la SIC son medidas de adecuación y no sanciones."
+      ],
+      "mirada": "La decisión refuerza la idea de que operar desde el exterior no exime de las leyes locales, algo clave para un país que regula a plataformas sin sede en su territorio. Es un fallo de primera instancia, así que falta saber si Google apelará y, sobre todo, cómo se comprobará en la práctica que hay un consentimiento real de los padres.",
+      "fuentes": [
+        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/novedades-tecnologia/tribunal-de-cundinamarca-respalda-a-la-sic-en-caso-contra-google-por-el-tratamiento-de-datos-personales-de-menores-en-colombia-3602107" }
+      ]
+    },
+    {
+      "id": "2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas",
+      "seccion": "Videojuegos y series",
+      "titular": "GTA VI sale a la venta: en Colombia cuesta desde 339.900 pesos y la crítica lo aplaude",
+      "entradilla": "El juego más esperado de la década llega solo a consolas y con una caja física que no trae disco.",
+      "cuerpo": [
+        "Grand Theft Auto VI, de Rockstar Games, se desbloqueó a la medianoche del jueves 19 de noviembre para PlayStation 5 y Xbox Series X|S, tras varios aplazamientos. Según El Tiempo, en Colombia la edición estándar cuesta entre 339.900 y 369.900 pesos, según la tienda, y la Ultimate Edition, 424.900 pesos. Rockstar no ha anunciado una versión para PC.",
+        "La versión física no incluye disco: la caja trae un código de descarga de un solo uso, por lo que conviene verificar que el código y la cuenta correspondan a la región de Latinoamérica. El juego transcurre en Leonida, un estado ficticio inspirado en Florida, y sigue a la pareja de Jason y Lucía.",
+        "La crítica lo recibió con entusiasmo. CNN recoge que más de 150 críticos publicaron sus análisis el miércoles y que su puntuación agregada en Metacritic es de 99, la más alta junto a The Legend of Zelda: Ocarina of Time."
+      ],
+      "mirada": "Una caja sin disco significa que lo que se compra en la tienda es, en la práctica, una licencia digital: el juego no se puede prestar ni revender como antes. Y con la versión de PC sin fecha, quien no tenga una consola de la generación actual tendrá que sumar ese gasto al precio del juego.",
+      "fuentes": [
+        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/videojuegos/ya-salio-gta-6-para-ps5-y-xbox-precios-en-colombia-disponibilidad-y-todo-lo-que-trae-el-juego-3602257" },
+        { "nombre": "CNN en Español", "url": "https://cnnespanol.cnn.com/2026/11/18/entretenimiento/resenas-grand-theft-auto-vi-gta-6-trax" }
+      ]
+    },
+    {
+      "id": "2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores",
+      "seccion": "Colombia",
+      "titular": "MinTIC y Meta firman un memorando contra el reclutamiento de menores por internet",
+      "entradilla": "El acuerdo, anunciado en Nueva York, también promete formación digital y en uso responsable de la inteligencia artificial.",
+      "cuerpo": [
+        "La ministra de las TIC, Alexandra Falla, anunció durante la Milagro Week, la rueda de negocios del Gobierno en Nueva York para atraer inversión extranjera, la firma de un memorando de entendimiento con Meta. Según El Heraldo, el acuerdo busca fortalecer las acciones contra el reclutamiento de menores a través de internet y ampliar la formación digital y el uso responsable de la IA.",
+        "«Vamos a trabajar desde un entorno seguro para los menores de edad en esta importante red», dijo la ministra. El vicepresidente José Manuel Restrepo, que lidera la delegación, señaló como objetivos combatir el reclutamiento forzado de niños, niñas y adolescentes por grupos armados ilegales y formar a los jóvenes en nuevas tecnologías."
+      ],
+      "mirada": "Un memorando de entendimiento expresa intenciones, pero no obliga a nada concreto, y el anuncio no detalla metas, plazos, recursos ni cómo se medirán los resultados. Sin esos datos será difícil saber si la alianza cambia algo en la forma en que Meta detecta y frena el reclutamiento en sus plataformas.",
+      "fuentes": [
+        { "nombre": "El Heraldo", "url": "https://www.elheraldo.co/colombia/2026/11/18/milagro-week-mintic-anuncio-acuerdo-con-meta-para-proteger-a-menores-en-entornos-digitales/" }
+      ]
+    },
+    {
+      "id": "2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas",
+      "seccion": "IA y tecnología",
+      "titular": "Un tercio de la cadena de suministro de la IA no aparece en las políticas públicas",
+      "entradilla": "Un estudio de Cambridge muestra que los gobiernos miran los modelos y los centros de datos, pero no las fábricas y procesos de los que dependen.",
+      "cuerpo": [
+        "Investigadores del proyecto AIxGEO de la Escuela de Políticas Públicas Bennett, de la Universidad de Cambridge, analizaron 14 niveles de la cadena de suministro de la IA, desde minerales y gases hasta chips, servidores y modelos. Identificaron 137 elementos esenciales y cerca de 800 empresas en 56 países y territorios, informó El Tiempo.",
+        "Al revisar 117 documentos de política de 43 países y territorios, además de la Unión Europea y la OCDE, encontraron que poco más del 33 % de esos elementos no se menciona en ninguno. Los vacíos se concentran en etapas intermedias, como el software de diseño de chips o el empaquetado avanzado, este último concentrado en Taiwán, Vietnam y Filipinas. «Se centran en las GPU, pero ignoran las operaciones de empaquetado necesarias para convertir esos chips en hardware de IA utilizable», dijo Siyi Liu, autor principal.",
+        "El informe también señala que países como Japón tienen más peso del que reconocen sus propias políticas: identificó 101 empresas japonesas en 69 sectores, entre ellas Ajinomoto, que controla más del 95 % del suministro mundial de una película aislante usada en chips avanzados."
+      ],
+      "mirada": "El debate público sobre la IA suele girar en torno a los modelos y sus riesgos, pero el estudio recuerda que su base es industrial, concentrada y frágil. Para países que solo consumen esta tecnología, como Colombia, la dependencia empieza mucho antes de descargar una aplicación.",
+      "fuentes": [
+        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/estudio-de-cambridge-revela-que-un-tercio-de-la-cadena-mundial-de-suministro-de-inteligencia-artificial-es-invisible-para-los-gobiernos-3602422" }
+      ]
+    }
+  ]
+}
