@@ -141,16 +141,47 @@
     </article>`;
   };
 
-  // Portada: últimas 4 noticias + cinta de "última hora"
+  // Portada: la noticia más importante como principal y las tres siguientes como secundarias.
+  // Si no hay noticias (por ejemplo, al abrir el HTML desde el PC), se queda el contenido fijo.
+  const principal = document.querySelector(".portada .principal");
+  const secundarias = document.querySelector(".portada .secundarias");
+  const llenarPortada = (todas) => {
+    if (!principal || !secundarias || !todas.length) return 0;
+    const n = todas[0];
+    const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
+    const enlace = "noticias.html#" + esc(n.id);
+    principal.innerHTML = `
+      <a href="${enlace}" class="img ${s.clase}" data-glifo="${esc(s.glifo)}"><span class="chip">Noticia</span></a>
+      <span class="etiqueta" style="display:block;margin-top:16px">${esc(n.seccion)}</span>
+      <h1 class="titular"><a href="${enlace}">${esc(n.titular)}</a></h1>
+      <p class="entradilla">${esc(n.entradilla)}</p>
+      <span class="meta">${haceCuanto(n.fecha)} · ${esc(fechaLarga(n.fecha))}</span>`;
+    const resto = todas.slice(1, 4);
+    if (resto.length) {
+      secundarias.innerHTML = resto.map((m) => `
+        <article>
+          <span class="etiqueta">${esc(m.seccion)}</span>
+          <h2 class="titular"><a href="noticias.html#${esc(m.id)}">${esc(m.titular)}</a></h2>
+          <span class="meta">${haceCuanto(m.fecha)}</span>
+        </article>`).join("");
+    }
+    return 1 + resto.length;
+  };
+
+  // Rejilla de noticias (las que no caben en la portada) + cinta de "última hora"
   const rejillaPortada = document.querySelector("[data-noticias-portada]");
   const cinta = document.querySelector("[data-cinta]");
-  if (rejillaPortada || cinta) {
+  if (rejillaPortada || cinta || principal) {
     cargarNoticias(10).then((eds) => {
       const todas = eds.flatMap((e) => e.noticias);
+      const enPortada = llenarPortada(todas);
       if (rejillaPortada) {
-        rejillaPortada.innerHTML = todas.length
-          ? todas.slice(0, 4).map(tarjeta).join("")
-          : '<p class="noticias-vacio">La primera edición de noticias llega muy pronto.</p>';
+        const siguientes = todas.slice(enPortada, enPortada + 4);
+        rejillaPortada.innerHTML = siguientes.length
+          ? siguientes.map(tarjeta).join("")
+          : todas.length
+            ? '<p class="noticias-vacio">Todas las noticias de hoy están arriba. <a href="noticias.html">Ver el archivo completo</a>.</p>'
+            : '<p class="noticias-vacio">La primera edición de noticias llega muy pronto.</p>';
       }
       if (cinta) {
         const titulares = todas.slice(0, 6).map((n) =>
