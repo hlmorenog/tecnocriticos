@@ -130,9 +130,10 @@
       .map((e) => ({ fecha: e.fecha, noticias: e.noticias.map((n) => ({ ...n, fecha: e.fecha })) }));
   }
 
+  const enlaceNoticia = (n) => "noticia.html?id=" + encodeURIComponent(n.id);
   const tarjeta = (n) => {
     const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
-    const enlace = "noticias.html#" + esc(n.id);
+    const enlace = esc(enlaceNoticia(n));
     return `<article class="tarjeta">
       <a href="${enlace}" class="img ${s.clase}" data-glifo="${esc(s.glifo)}"><span class="chip">${esc(n.seccion)}</span></a>
       <h3 class="titular"><a href="${enlace}">${esc(n.titular)}</a></h3>
@@ -154,16 +155,20 @@
       }
       if (cinta) {
         const titulares = todas.slice(0, 6).map((n) =>
-          `<a href="noticias.html#${esc(n.id)}">${esc(n.titular)}</a>`).join("");
+          `<a href="${esc(enlaceNoticia(n))}">${esc(n.titular)}</a>`).join("");
         if (titulares) cinta.innerHTML = titulares + titulares; // duplicado para el desplazamiento continuo
         else cinta.closest(".ticker").hidden = true;
       }
     });
   }
 
-  // Página de noticias: archivo completo con filtro por sección
+  // Página de noticias: tarjetas por día, con filtro por sección
   const archivo = document.querySelector("[data-noticias-archivo]");
   if (archivo) {
+    // Enlaces antiguos del tipo noticias.html#id llevan a la página de la noticia
+    if (location.hash.length > 1) {
+      location.replace("noticia.html?id=" + encodeURIComponent(decodeURIComponent(location.hash.slice(1))));
+    }
     const filtros = document.querySelector("[data-filtros]");
     let ediciones = [];
     let filtro = "Todas";
@@ -173,20 +178,7 @@
         if (!lista.length) return "";
         return `<section class="edicion">
           <h2 class="edicion__fecha">${fechaLarga(e.fecha)}</h2>
-          ${lista.map((n) => {
-            const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
-            const cuerpo = (Array.isArray(n.cuerpo) ? n.cuerpo : [n.cuerpo]).map((p) => `<p>${esc(p)}</p>`).join("");
-            const fuentes = (n.fuentes || []).map((f) =>
-              `<li><a href="${urlSegura(f.url)}" target="_blank" rel="noopener">${esc(f.nombre || f.url)}</a></li>`).join("");
-            return `<article class="noticia" id="${esc(n.id)}">
-              <span class="etiqueta noticia__seccion">${esc(n.seccion)}</span>
-              <h3 class="titular noticia__titular">${esc(n.titular)}</h3>
-              <p class="entradilla">${esc(n.entradilla)}</p>
-              <div class="noticia__cuerpo">${cuerpo}</div>
-              ${n.mirada ? `<p class="noticia__mirada"><strong>La mirada crítica.</strong> ${esc(n.mirada)}</p>` : ""}
-              ${fuentes ? `<div class="noticia__fuentes"><span>Fuentes</span><ul>${fuentes}</ul></div>` : ""}
-            </article>`;
-          }).join("")}
+          <div class="rejilla-noticias">${lista.map(tarjeta).join("")}</div>
         </section>`;
       }).join("");
       archivo.innerHTML = html || '<p class="noticias-vacio">Todavía no hay noticias publicadas en esta sección.</p>';
@@ -198,12 +190,46 @@
       filtros.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
       pintarArchivo();
     });
+    cargarNoticias(60).then((eds) => { ediciones = eds; pintarArchivo(); });
+  }
+
+  // Página de una noticia: noticia.html?id=...
+  const detalle = document.querySelector("[data-noticia]");
+  if (detalle) {
+    const id = new URLSearchParams(location.search).get("id");
+    const relacionadas = document.querySelector("[data-relacionadas]");
     cargarNoticias(60).then((eds) => {
-      ediciones = eds;
-      pintarArchivo();
-      if (location.hash) {
-        const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-        if (el) { el.classList.add("noticia--destacada"); el.scrollIntoView(); }
+      const todas = eds.flatMap((e) => e.noticias);
+      const n = todas.find((x) => x.id === id);
+      if (!n) {
+        detalle.innerHTML = '<div class="contenedor noticia-cab"><h1>No encontramos esta noticia</h1><p class="entradilla">Puede que el enlace esté incompleto o que la noticia sea muy antigua.</p><a class="btn" href="noticias.html">Ver todas las noticias</a></div>';
+        return;
+      }
+      document.title = n.titular + " — Tecnocríticos";
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute("content", n.entradilla || "");
+      const cuerpo = (Array.isArray(n.cuerpo) ? n.cuerpo : [n.cuerpo]).map((p) => `<p>${esc(p)}</p>`).join("");
+      const fuentes = (n.fuentes || []).map((f) =>
+        `<li><a href="${urlSegura(f.url)}" target="_blank" rel="noopener">${esc(f.nombre || f.url)}</a></li>`).join("");
+      detalle.innerHTML = `
+        <header class="articulo-cab noticia-cab">
+          <div class="contenedor">
+            <a class="noticia-cab__volver" href="noticias.html">← Noticias</a>
+            <span class="etiqueta">${esc(n.seccion)}</span>
+            <h1>${esc(n.titular)}</h1>
+            <p class="entradilla">${esc(n.entradilla)}</p>
+            <span class="meta">${fechaLarga(n.fecha)} · Redacción Tecnocríticos</span>
+          </div>
+        </header>
+        <article class="noticia-cuerpo">
+          <div class="cuerpo">${cuerpo}</div>
+          ${n.mirada ? `<aside class="noticia__mirada"><strong>La mirada crítica</strong><p>${esc(n.mirada)}</p></aside>` : ""}
+          ${fuentes ? `<div class="noticia__fuentes"><span>Fuentes</span><ul>${fuentes}</ul></div>` : ""}
+        </article>`;
+      if (relacionadas) {
+        const otras = todas.filter((x) => x.id !== n.id)
+          .sort((a, b) => (b.seccion === n.seccion) - (a.seccion === n.seccion)).slice(0, 4);
+        if (otras.length) relacionadas.innerHTML = `<div class="contenedor"><div class="seccion__cab"><div><h2 class="seccion__titulo">Más noticias</h2></div><a class="seccion__mas" href="noticias.html">Ver todas</a></div><div class="rejilla-4">${otras.map(tarjeta).join("")}</div></div>`;
       }
     });
   }

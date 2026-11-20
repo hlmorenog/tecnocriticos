@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticia — Tecnocríticos</title>
+  <meta name="description" content="Noticias diarias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="logo-icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="barra-sup">
+  <div class="contenedor">
+    <div class="barra-sup__izq"><span data-fecha>Hoy</span></div>
+    <div class="barra-sup__der">
+      <a href="index.html#boletin">Boletín</a>
+      <a href="index.html#mesa">Participa</a>
+      <button class="btn-tema" data-tema type="button">◐ Modo oscuro</button>
+    </div>
+  </div>
+</div>
+
+<header class="cabecera">
+  <div class="contenedor">
+    <div class="cabecera__edicion"><strong>Noticias</strong>Nueva edición cada mañana</div>
+    <a class="logo" href="index.html" aria-label="Tecnocríticos, inicio">
+      <svg class="logo__icono" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="trazo" d="M38.93 16.98 A17 17 0 1 1 17.07 16.98" fill="none" stroke-width="6" stroke-linecap="round"/>
+        <line class="trazo" x1="28" y1="8" x2="28" y2="27" stroke-width="6" stroke-linecap="round"/>
+        <line x1="42" y1="44" x2="55" y2="57" stroke="#E6332A" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <span class="logo__texto">
+        <span class="logo__nombre"><span>tecno</span><b>críticos</b><i>.com</i></span>
+        <span class="logo__lema">LA TECNOLOGÍA, SIN FANATISMO</span>
+      </span>
+    </a>
+    <div class="cabecera__acciones"><a class="btn" href="index.html#boletin">Suscríbete</a></div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="contenedor">
+    <button class="nav__hamb" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav__lista">
+      <li><a href="index.html">Portada</a></li>
+      <li><a class="activo" href="noticias.html">Noticias</a></li>
+      <li><a href="index.html#noticias">IA</a></li>
+      <li><a href="index.html#noticias">Hardware</a></li>
+      <li><a href="index.html#juegos">Videojuegos</a></li>
+      <li><a href="index.html#juegos">Series y Cine</a></li>
+      <li><a href="index.html#lado-b">Lado B</a></li>
+      <li><a href="index.html#hype">Hype-ómetro</a></li>
+      <li><a href="index.html#mesa">La Mesa</a></li>
+      <li><a href="index.html#podcast">Podcast</a></li>
+      <li><a href="columna.html">La Columna</a></li>
+    </ul>
+    <span></span>
+  </div>
+</nav>
+
+<main>
+  <div data-noticia aria-live="polite">
+    <div class="contenedor"><p class="noticias-vacio">Cargando noticia…</p></div>
+  </div>
+  <section class="relacionadas" data-relacionadas></section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__legal" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <script>document.write(new Date().getFullYear())</script> tecnocriticos.com · La tecnología, sin fanatismo</span>
+      <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
