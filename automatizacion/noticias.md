@@ -21,12 +21,12 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 ## Cómo elegir y verificar
 
 1. Busca noticias de las **últimas 24 a 48 horas**. Usa varias búsquedas por sección.
-   **Solo puedes leer y citar estos medios**, porque son los que la red de la sesión permite abrir:
+   **Prioriza estos medios**, que son confiables y conocidos por los lectores:
    - Colombia: `eltiempo.com`, `elespectador.com`, `semana.com`, `larepublica.co`, `portafolio.co`, `elheraldo.co`, `elcolombiano.com`, `enter.co`, `impactotic.co`, `mintic.gov.co`
    - IA y tecnología: `xataka.com`, `xataka.com.co`, `elpais.com`, `bbc.com`, `theverge.com`, `apnews.com`
    - Videojuegos y series: `3djuegos.com`, `vidaextra.com`, `variety.com`, y también `xataka.com` y `theverge.com`
-   Si una noticia solo aparece en otros medios, búscala en uno de estos. Si no está en ninguno, descártala.
-   Para ampliar la lista, hay que agregar el dominio en la configuración de red del entorno y aquí.
+   Puedes citar otros medios serios (agencias, diarios reconocidos, comunicados oficiales). Evita blogs anónimos, agregadores y sitios de rumores.
+   Para leer una página, usa WebFetch; si falla, descárgala con `curl -sL` y lee el texto.
 2. **Lee la fuente** de cada noticia antes de escribirla, no solo el titular del buscador.
 3. Cada noticia lleva **al menos una fuente** con su enlace real. Si puedes, pon dos fuentes independientes.
 4. **No inventes nada**: ni cifras, ni citas, ni fechas, ni nombres. Si un dato no está en la fuente, no va.
