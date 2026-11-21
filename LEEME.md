@@ -15,7 +15,7 @@ Archivos: `logo.svg` (logo completo) e `logo-icono.svg` (favicon y avatar de red
 
 ## Secciones del portal
 
-1. **Portada**: noticia principal, tres secundarias y la columna de la semana destacada.
+1. **Portada**: se llena sola con la edición de noticias más reciente: la primera noticia del día como principal, las tres siguientes como secundarias y la columna de la semana al lado. Si no hay noticias publicadas, se muestra el contenido fijo de `index.html`.
 2. **Noticias**: subsecciones de IA, Hardware, Ciencia y Regulación. Actualidad con contexto.
 3. **La Columna** ✦: tu columna de opinión semanal (cada lunes), con su archivo.
 4. **Hype-ómetro**: sección propia que puntúa *promesa frente a realidad* de cada tendencia. Es el sello diferencial del sitio.
@@ -46,7 +46,7 @@ Archivos: `logo.svg` (logo completo) e `logo-icono.svg` (favicon y avatar de red
 ## Noticias diarias automáticas
 
 - Cada mañana una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y abre un **pull request** en GitHub con el archivo `noticias/AAAA-MM-DD.json`.
-- **Para publicar:** abre el pull request (GitHub te avisa por correo y en la app), revisa los titulares y pulsa **Merge pull request**. En uno o dos minutos aparecen en la portada, en la cinta de «Última hora» y en `noticias.html`.
+- **Para publicar:** abre el pull request (GitHub te avisa por correo y en la app), revisa los titulares y pulsa **Merge pull request**. En uno o dos minutos aparecen en la portada (la primera noticia del archivo es la principal), en la sección «Noticias» del home, en la cinta de «Última hora» y en `noticias.html`.
 - **Para pedir cambios:** comenta en el pull request o pídeselo a Claude en una sesión con el repositorio `tecnocriticos`.
 - **Para ajustar el tono, los temas o la cantidad:** edita `automatizacion/noticias.md`.
 - Las noticias se cargan desde los archivos JSON, así que al abrir `index.html` directamente desde tu PC la sección se ve vacía. En el sitio publicado se ve completa.
