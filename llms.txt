@@ -1,15 +1,15 @@
 # Tecnocríticos
 
-> Medio digital colombiano de noticias y análisis crítico sobre tecnología en Colombia, inteligencia artificial, videojuegos y series. Lema: «La tecnología, sin fanatismo». Cada noticia cita sus fuentes enlazadas y separa los hechos de la mirada crítica de la casa.
+> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech (Colombia, IA y tecnología, videojuegos y series) y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
 
-Las ediciones son diarias, con las noticias más relevantes en tres secciones: Colombia, IA y tecnología, y Videojuegos y series. Cada noticia tiene titular, entradilla, «por qué importa», cuerpo, «la mirada crítica», «lo que falta saber» y fuentes. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
+Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
 
 ## Páginas principales
 
 - [Portada](https://tecnocriticos.com/): la edición del día.
 - [Todas las noticias](https://tecnocriticos.com/noticias.html): archivo completo, filtrable por sección.
 - [La Columna](https://tecnocriticos.com/columna.html): columna semanal de opinión del director.
-- [Quiénes somos y cómo trabajamos](https://tecnocriticos.com/quienes-somos.html): dirección, principios, política de fuentes, fotos y correcciones.
+- [Quiénes somos](https://tecnocriticos.com/quienes-somos.html): misión, uso de IA, posición editorial, principios, dirección, fotos y correcciones.
 
 ## Últimas noticias
 

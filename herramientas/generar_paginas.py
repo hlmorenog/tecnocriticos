@@ -62,7 +62,7 @@ ORGANIZACION = {
     "url": f"{SITIO}/",
     "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512},
     "slogan": "La tecnología, sin fanatismo",
-    "description": "Medio digital colombiano de noticias y análisis crítico sobre tecnología, inteligencia artificial, videojuegos y series.",
+    "description": "Medio de comunicación de periodismo de tecnología potenciado por IA: noticias y análisis diarios del sector, con opiniones editoriales que fijan posición frente a productos, servicios y organizaciones del mundo tech.",
     "foundingLocation": {"@type": "Place", "name": "Colombia"},
     "publishingPrinciples": f"{SITIO}/quienes-somos.html",
     "ethicsPolicy": f"{SITIO}/quienes-somos.html#principios",

@@ -179,38 +179,50 @@ def pagina_noticia(n, todas):
 def pagina_quienes():
     principios = "".join(f'<li><b>{t}.</b> {d}</li>' for t, d in gp.MANIFIESTO)
     datos = [gp.ORGANIZACION, {"@type": "AboutPage", "url": f"{SITIO}/quienes-somos.html", "inLanguage": "es-CO",
-                                "name": "Quiénes somos y cómo trabajamos", "about": {"@id": f"{SITIO}/#organizacion"}},
+                                "name": "Quiénes somos", "about": {"@id": f"{SITIO}/#organizacion"}},
              {"@type": "Person", "@id": f"{SITIO}/quienes-somos.html#direccion", "name": "Helmuhd Moreno",
               "jobTitle": "Director de Tecnocríticos", "worksFor": {"@id": f"{SITIO}/#organizacion"}}]
-    return (gp.cabeza("Quiénes somos y cómo trabajamos — Tecnocríticos",
-                      "Quién hace Tecnocríticos, cómo elegimos y verificamos las noticias, de dónde salen las fotos y cómo corregimos errores.",
+    return (gp.cabeza("Quiénes somos — Tecnocríticos",
+                      "Tecnocríticos es un medio de periodismo de tecnología potenciado por IA: noticias y análisis diarios del sector, con opiniones que toman posición frente a productos, servicios y organizaciones tech.",
                       "website", "quienes-somos.html", jsonld=datos)
             + gp.cabecera()
             + f"""<main class="w grid">
  <div class="principal"><article class="art">
   <span class="lab">Tecnocríticos</span>
-  <h1>Quiénes somos y cómo trabajamos</h1>
-  <p class="entradilla">Tecnocríticos es un medio digital colombiano de noticias y análisis sobre tecnología, inteligencia artificial, videojuegos y series. Nuestro lema lo resume: la tecnología, sin fanatismo.</p>
+  <h1>Quiénes somos</h1>
+  <p class="entradilla">Somos un medio de comunicación de periodismo de tecnología potenciado por inteligencia artificial. Cada día llevamos las noticias y los análisis más importantes del sector, y tomamos posición.</p>
   <div class="cuerpo">
-   <h2 id="direccion">Dirección</h2>
-   <p>El sitio lo dirige Helmuhd Moreno, comunicador social y periodista con más de 20 años de experiencia en agencias, oficinas de prensa y departamentos de mercadeo. Es MBA, especialista en Alta Gerencia y docente universitario. Escribe cada lunes <a href="columna.html">La Columna</a> y aprueba cada edición antes de publicarla.</p>
+   <h2 id="que-hacemos">Qué hacemos</h2>
+   <p>Nuestro objetivo es que entiendas lo que pasa en el mundo de la tecnología sin tener que leerlo todo. Por eso actualizamos el sitio a diario con una edición que reúne las noticias y los análisis que más importan del sector, en tres secciones: <a href="noticias.html?seccion=Colombia">Colombia</a>, <a href="noticias.html?seccion=IA%20y%20tecnolog%C3%ADa">IA y tecnología</a> y <a href="noticias.html?seccion=Videojuegos%20y%20series">Videojuegos y series</a>.</p>
+   <p>Cada noticia va al grano: qué pasó, por qué importa, lo que todavía falta saber y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="index.html#hype">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
+
+   <h2 id="ia">Periodismo potenciado por IA</h2>
+   <p>Usamos inteligencia artificial para hacer más y mejor periodismo, no para reemplazar el criterio. La IA nos ayuda a rastrear lo que pasa en el sector, leer las fuentes, ordenar los datos y preparar los borradores de cada edición. Las decisiones son humanas: qué se publica, qué se descarta, qué posición tomamos y qué necesita una verificación adicional.</p>
+   <ul>
+    <li><b>Nada se publica sin aprobación.</b> Cada edición la revisa y la aprueba la dirección antes de publicarse.</li>
+    <li><b>Nada inventado.</b> Ninguna cifra, fecha, nombre o declaración se publica si no está en una fuente. Cada noticia enlaza sus fuentes, y preferimos dos independientes.</li>
+    <li><b>Fuentes serias.</b> Priorizamos medios reconocidos, agencias y documentos oficiales. Descartamos rumores, contenido patrocinado y notas de prensa sin sustancia. Si una cifra viene solo de la empresa interesada, lo decimos.</li>
+    <li><b>Redacción propia.</b> Escribimos con nuestras palabras, no copiamos a otros medios y contamos las declaraciones en estilo indirecto.</li>
+   </ul>
+
+   <h2 id="posicion">Tomamos posición</h2>
+   <p>No somos un servicio de cables. Nuestras opiniones editoriales fijan una posición frente a los productos, los servicios y las organizaciones del mundo tech: decimos qué funciona, qué no, a quién beneficia una decisión y qué se queda sin decir en los lanzamientos y anuncios.</p>
+   <p>Esa posición tiene reglas. En cada noticia, la opinión va aparte, en el bloque <b>«La mirada crítica»</b>, para que siempre sepas qué es un hecho y qué es nuestra lectura. Y nuestras posiciones se apoyan en hechos verificables, no en simpatías: ninguna marca es nuestro equipo.</p>
+
    <h2 id="principios">Nuestros principios</h2>
    <ul>{principios}</ul>
-   <h2 id="noticias">Cómo hacemos las noticias</h2>
-   <ul>
-    <li><b>Ediciones diarias.</b> Cada día publicamos una edición con las noticias más relevantes en tres secciones: Colombia, IA y tecnología, y Videojuegos y series.</li>
-    <li><b>Fuentes enlazadas.</b> Cada noticia cita al menos una fuente con su enlace, y preferimos dos fuentes independientes. Priorizamos medios reconocidos, agencias y comunicados oficiales, y descartamos rumores, contenido patrocinado y notas de prensa sin sustancia.</li>
-    <li><b>Nada inventado.</b> Ninguna cifra, fecha, nombre o declaración se publica si no está en una fuente. Cuando una cifra viene solo de la empresa interesada, lo decimos.</li>
-    <li><b>Redacción propia.</b> Escribimos con nuestras palabras y no copiamos textos de otros medios. Las declaraciones se cuentan en estilo indirecto.</li>
-    <li><b>Mirada crítica.</b> Cada noticia cierra con nuestra mirada: a quién beneficia, qué no se dice y qué preguntas quedan abiertas. Está separada del relato de los hechos y se apoya en ellos.</li>
-    <li><b>Uso de inteligencia artificial.</b> Usamos herramientas de inteligencia artificial para buscar, ordenar y redactar las noticias. Ninguna nota se publica sin la revisión y la aprobación de la dirección.</li>
-   </ul>
+
+   <h2 id="direccion">Dirección</h2>
+   <p>Tecnocríticos lo dirige Helmuhd Moreno, comunicador social y periodista con más de 20 años de experiencia en agencias, oficinas de prensa y departamentos de mercadeo. Es MBA, especialista en Alta Gerencia y docente universitario. Escribe La Columna de cada lunes y aprueba cada edición antes de publicarla.</p>
+
    <h2 id="fotos">Fotos</h2>
    <p>Usamos solo fotos con licencia libre (dominio público, CC0, CC BY o CC BY-SA) de Wikimedia Commons, Unsplash o Pexels, siempre con su crédito. No usamos fotos de agencias ni de otros medios, ni imágenes generadas por IA. Cuando una foto es solo ilustrativa, lo indicamos.</p>
+
    <h2 id="correcciones">Correcciones</h2>
    <p>Si una nota publicada tiene un error, la corregimos y lo indicamos al final de la nota, con la fecha de la corrección.</p>
+
    <h2>Síguenos</h2>
-   <p>Puedes recibir las noticias por <a href="feed.xml">RSS</a> o en el <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
+   <p>Recibe las noticias por <a href="feed.xml">RSS</a> o en el <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
   </div>
  </article></div>
  <aside class="rail">{gp.bloque_minuto()}{gp.bloque_mesa()}{gp.bloque_columna()}{gp.bloque_hype()}{gp.bloque_explora()}</aside>
@@ -298,16 +310,16 @@ def llms(todas):
     lineas = [f"- [{n['titular']}]({gp.url_noticia(n, True)}): {n.get('entradilla', '')}" for n in todas[:20]]
     return f"""# Tecnocríticos
 
-> Medio digital colombiano de noticias y análisis crítico sobre tecnología en Colombia, inteligencia artificial, videojuegos y series. Lema: «La tecnología, sin fanatismo». Cada noticia cita sus fuentes enlazadas y separa los hechos de la mirada crítica de la casa.
+> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech (Colombia, IA y tecnología, videojuegos y series) y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
 
-Las ediciones son diarias, con las noticias más relevantes en tres secciones: Colombia, IA y tecnología, y Videojuegos y series. Cada noticia tiene titular, entradilla, «por qué importa», cuerpo, «la mirada crítica», «lo que falta saber» y fuentes. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
+Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
 
 ## Páginas principales
 
 - [Portada]({SITIO}/): la edición del día.
 - [Todas las noticias]({SITIO}/noticias.html): archivo completo, filtrable por sección.
 - [La Columna]({SITIO}/columna.html): columna semanal de opinión del director.
-- [Quiénes somos y cómo trabajamos]({SITIO}/quienes-somos.html): dirección, principios, política de fuentes, fotos y correcciones.
+- [Quiénes somos]({SITIO}/quienes-somos.html): misión, uso de IA, posición editorial, principios, dirección, fotos y correcciones.
 
 ## Últimas noticias
 
