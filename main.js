@@ -52,6 +52,55 @@
     form.outerHTML = '<p class="bol__ok">Gracias. El Boletín Crítico abre muy pronto: estamos terminando de prepararlo.</p>';
   }));
 
+  /* ---------- Compartir en redes ----------
+     Cada noticia se comparte con su página n/<id>.html, que tiene la vista previa
+     (titular, entradilla y foto) para WhatsApp, Facebook, X, LinkedIn y Telegram. */
+  const REDES = [
+    ["WhatsApp", (u, t) => `https://wa.me/?text=${encodeURIComponent(t + " " + u)}`],
+    ["Facebook", (u) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(u)}`],
+    ["X", (u, t) => `https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}&url=${encodeURIComponent(u)}`],
+    ["LinkedIn", (u) => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(u)}`],
+    ["Telegram", (u, t) => `https://t.me/share/url?url=${encodeURIComponent(u)}&text=${encodeURIComponent(t)}`],
+    ["Correo", (u, t, d) => `mailto:?subject=${encodeURIComponent(t)}&body=${encodeURIComponent((d ? d + "\n\n" : "") + u)}`],
+  ];
+  const barraCompartir = (caja, url, titulo, desc) => {
+    if (!caja) return;
+    const enlaces = REDES.map(([red, f]) => {
+      const destino = red === "Correo" ? "" : ' target="_blank" rel="noopener"';
+      return `<a href="${esc(f(url, titulo, desc))}"${destino} data-red="${red}">${red}</a>`;
+    }).join("");
+    caja.innerHTML = `<span class="compartir__lab">Compartir</span>
+      <button type="button" class="compartir__nativo" data-nativo hidden>Compartir…</button>${enlaces}
+      <button type="button" data-copiar-url>Copiar enlace</button>`;
+    const nativo = caja.querySelector("[data-nativo]");
+    if (navigator.share) {
+      nativo.hidden = false;
+      nativo.addEventListener("click", () => navigator.share({ title: titulo, text: desc || titulo, url }).catch(() => {}));
+    }
+    const copiar = caja.querySelector("[data-copiar-url]");
+    copiar.addEventListener("click", () => {
+      const ok = () => { copiar.textContent = "¡Copiado!"; setTimeout(() => (copiar.textContent = "Copiar enlace"), 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, () => prompt("Copia este enlace:", url));
+      else prompt("Copia este enlace:", url);
+    });
+  };
+  // Dirección pública para compartir una noticia: su página n/<id>.html si ya existe;
+  // si todavía no se ha generado, la propia noticia.
+  const urlCompartirNoticia = async (n) => {
+    const propia = new URL(enlace(n), location.href).href;
+    const pagina = "n/" + encodeURIComponent(n.id) + ".html";
+    try {
+      const r = await fetch(pagina, { method: "HEAD", cache: "no-cache" });
+      return r.ok ? new URL(pagina, location.href).href : propia;
+    } catch (e) { return propia; }
+  };
+  // Páginas fijas (la columna): se comparten con su propia dirección.
+  $$("[data-compartir]").forEach((caja) => {
+    const desc = $('meta[property="og:description"]') || $('meta[name="description"]');
+    const titulo = ($('meta[property="og:title"]') || {}).content || document.title;
+    barraCompartir(caja, location.href.split("#")[0], titulo, desc ? desc.content : "");
+  });
+
   /* ---------- Copiar enlace y barra de lectura ---------- */
   $$("[data-copiar]").forEach((b) => b.addEventListener("click", () => {
     if (navigator.clipboard) navigator.clipboard.writeText(location.href);
@@ -237,12 +286,16 @@
         <h1>${esc(n.titular)}</h1>
         <p class="entradilla">${esc(n.entradilla)}</p>
         <div class="firma-linea">${esc(fechaLarga(n.fecha))} · Redacción Tecnocríticos · ${minutos(n)} min de lectura</div>
+        <div class="compartir compartir--arriba" data-compartir-noticia></div>
         ${foto(n)}${credito(n)}
         ${bloqueCifra(n)}
         ${n.por_que_importa ? `<p class="bl"><b>Por qué importa:</b>${esc(n.por_que_importa)}</p>` : ""}
         <div class="cuerpo">${cuerpo}</div>
         ${bloqueTri(n)}
-        ${fuentes ? `<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>${fuentes}</ul></div>` : ""}`;
+        ${fuentes ? `<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>${fuentes}</ul></div>` : ""}
+        <div class="compartir" data-compartir-noticia></div>`;
+      urlCompartirNoticia(n).then((url) =>
+        $$("[data-compartir-noticia]", detalle).forEach((caja) => barraCompartir(caja, url, n.titular, n.entradilla)));
       const rel = $("[data-relacionadas]");
       if (rel) {
         const otras = todas.filter((x) => x.id !== n.id)

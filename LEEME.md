@@ -32,9 +32,16 @@ Las cuatro páginas se generan con `herramientas/generar_paginas.py`, para que l
 - Después de editar, ejecuta `python3 herramientas/generar_paginas.py` desde la raíz del repositorio.
 - **No edites `index.html`, `noticias.html`, `noticia.html` ni `columna.html` a mano**: se sobrescriben al generar.
 
+## Compartir en redes sociales
+
+- **Botones**: cada noticia y la columna tienen botones para WhatsApp, Facebook, X, LinkedIn, Telegram, correo y «Copiar enlace». En el celular aparece además «Compartir…», que abre el menú del teléfono (Instagram, TikTok y demás apps instaladas).
+- **Vista previa**: las redes no ejecutan JavaScript, así que cada noticia tiene su propia página para compartir, `n/<id>.html`, con titular, entradilla y foto. Al abrirla, el lector pasa directo a la noticia. Esas páginas se crean con `python3 herramientas/generar_compartir.py`, que se ejecuta con cada edición diaria.
+- Las páginas fijas (portada, noticias y columna) usan la imagen `img/compartir.png` (1200 × 630). La columna toma su título y resumen de `herramientas/generar_paginas.py`.
+- **Para revisar cómo se verá un enlace**: Facebook ofrece el «Depurador de contenido compartido» (developers.facebook.com/tools/debug) y LinkedIn el «Post Inspector». Si cambias una foto o un titular ya compartido, pásalo por ahí para que actualicen la vista previa.
+
 ## Noticias diarias automáticas
 
-- Cada mañana, a las 5:47 a. m. (hora de Colombia), una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y abre un **pull request** con `noticias/AAAA-MM-DD.json` y sus fotos en `img/noticias/`.
+- Cada mañana, a las 5:47 a. m. (hora de Colombia), una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y la muestra en el chat. Solo con tu aprobación abre un **pull request** con `noticias/AAAA-MM-DD.json`, sus fotos en `img/noticias/` y sus páginas para compartir en `n/`.
 - Cada noticia trae: titular, titular corto, entradilla, «Por qué importa», una línea de dato, cifra clave (si la hay), cuerpo, mirada crítica, «Lo que falta saber», foto libre con crédito y fuentes.
 - **Para publicar:** revisa el pull request y pulsa **Merge pull request** (o pídeselo a Claude). En uno o dos minutos aparece en el sitio.
 - **Para cambiar tono, temas, cantidad o reglas de fotos:** edita `automatizacion/noticias.md`.
