@@ -157,12 +157,12 @@
     : `<p>${esc(n.entradilla)}</p>`;
   const nombresFuentes = (n) => (n.fuentes || []).map((f) => f.nombre).filter(Boolean).join(", ");
 
+  // La mirada crítica (opinión de la casa) y lo que falta saber, separados de los hechos
   const bloqueTri = (n) => {
     if (!n.mirada) return "";
-    return `<div class="tri">
-      <div><h4>La noticia</h4><p>${esc(n.entradilla)}</p></div>
-      <div class="critica"><h4>La mirada crítica</h4><p>${esc(n.mirada)}</p></div>
-      ${n.falta_saber ? `<div><h4>Lo que falta saber</h4><p>${esc(n.falta_saber)}</p></div>` : ""}
+    return `<div class="analisis">
+      <div class="analisis__mirada"><h4>La mirada crítica</h4><p>${esc(n.mirada)}</p></div>
+      ${n.falta_saber ? `<div class="analisis__falta"><h4>Lo que falta saber</h4><p>${esc(n.falta_saber)}</p></div>` : ""}
     </div>`;
   };
   const bloqueCifra = (n) => n.cifra && n.cifra.valor

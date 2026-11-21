@@ -72,12 +72,13 @@ button { font: inherit; }
 .dato span { font: 500 17px/1.35 var(--f-titular); color: var(--tinta-2); max-width: 440px; }
 .bl { margin: 0 0 14px; font: 400 17.5px/1.6 var(--f-texto); color: var(--tinta-2); }
 .bl b { font: 800 16px var(--f-titular); color: var(--tinta); margin-right: 6px; }
-.tri { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--tinta); margin: 22px 0; }
-.tri > div { padding: 16px 18px; }
-.tri > div + div { border-left: 1px solid var(--tinta); }
-.tri h4 { font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; }
-.tri .critica h4 { color: var(--rojo); }
-.tri p { margin: 0; font: 400 14.5px/1.5 var(--f-texto); color: var(--tinta-2); }
+.analisis { margin: 24px 0; }
+.analisis h4 { font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; color: var(--gris); }
+.analisis__mirada { border-left: 4px solid var(--rojo); padding: 2px 0 2px 18px; }
+.analisis__mirada h4 { color: var(--rojo); }
+.analisis__mirada p { margin: 0; font: 500 17px/1.6 var(--f-texto); color: var(--tinta); }
+.analisis__falta { margin-top: 16px; padding: 12px 0 0 22px; border-top: 1px solid var(--linea); }
+.analisis__falta p { margin: 0; font: 400 15px/1.55 var(--f-texto); color: var(--tinta-2); }
 
 /* ---------- Listado de noticias ---------- */
 .feed { margin-top: 34px; }
@@ -222,7 +223,7 @@ button { font: inherit; }
   .feed, .art-cuerpo { order: 4; } .rail > section { order: 5; }
   .hero h1, .art h1 { font-size: 32px; }
   .dato { flex-direction: column; gap: 6px; } .dato strong { font-size: 38px; } .dato span { font-size: 15px; }
-  .tri { grid-template-columns: 1fr; } .tri > div + div { border-left: 0; border-top: 1px solid var(--tinta); }
+  .analisis__mirada p { font-size: 16px; } .analisis__mirada { padding-left: 14px; } .analisis__falta { padding-left: 18px; }
   .item { grid-template-columns: minmax(0, 1fr) 110px; gap: 4px 14px; } .item h3 { font-size: 20px; }
   .mas4, .manifiesto__rej { grid-template-columns: 1fr 1fr; gap: 14px; } .mas4 p { display: none; }
   .bol .w > div { grid-template-columns: 1fr; gap: 18px; } .bol form { flex-direction: column; } .bol h3 { font-size: 28px; }

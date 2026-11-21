@@ -136,9 +136,10 @@ def pagina_noticia(n, todas):
     importa = f'<p class="bl"><b>Por qué importa:</b>{esc(n["por_que_importa"])}</p>' if n.get("por_que_importa") else ""
     tri = ""
     if n.get("mirada"):
-        falta = f'<div><h4>Lo que falta saber</h4><p>{esc(n["falta_saber"])}</p></div>' if n.get("falta_saber") else ""
-        tri = (f'<div class="tri"><div><h4>La noticia</h4><p>{entradilla}</p></div>'
-               f'<div class="critica"><h4>La mirada crítica</h4><p>{esc(n["mirada"])}</p></div>{falta}</div>')
+        falta = (f'<div class="analisis__falta"><h4>Lo que falta saber</h4><p>{esc(n["falta_saber"])}</p></div>'
+                 if n.get("falta_saber") else "")
+        tri = (f'<div class="analisis"><div class="analisis__mirada"><h4>La mirada crítica</h4><p>{esc(n["mirada"])}</p></div>'
+               f'{falta}</div>')
     fuentes = "".join(f'<li><a href="{esc(fu["url"])}" target="_blank" rel="noopener">{esc(fu.get("nombre") or fu["url"])}</a></li>'
                       for fu in n.get("fuentes", []) if fu.get("url"))
     fuentes = f'<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>' if fuentes else ""
