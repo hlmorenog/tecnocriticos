@@ -39,7 +39,7 @@ SEC = [("Colombia", "Colombia"), ("IA y tecnología", "IA%20y%20tecnolog%C3%ADa"
 # ---------------------------------------------------------------- Piezas comunes
 FUENTES = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
            '<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900'
-           '&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500'
+           '&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600'
            '&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">')
 
 
