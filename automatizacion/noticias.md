@@ -89,7 +89,8 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).
-- No modifiques ningún otro archivo del repositorio, salvo las fotos nuevas en `img/noticias/`.
+- Después, genera las páginas para compartir en redes: `python3 herramientas/generar_compartir.py`. Crea `n/<id>.html` para cada noticia, con la vista previa (titular, entradilla y foto) que muestran WhatsApp, Facebook, X, LinkedIn y Telegram. Sin este paso, las noticias del día se comparten sin foto ni titular.
+- No modifiques ningún otro archivo del repositorio, salvo las fotos nuevas en `img/noticias/` y las páginas para compartir en `n/`.
 
 ## Fotos
 
@@ -107,7 +108,7 @@ Cada noticia lleva una foto **con licencia libre** y su crédito. La web muestra
 ## Entrega para revisión
 
 1. Crea la rama `noticias/AAAA-MM-DD` a partir de `main` actualizado.
-2. Haz commit solo del archivo de noticias y de sus fotos (`img/noticias/`), con el mensaje `Noticias del AAAA-MM-DD`.
+2. Haz commit solo del archivo de noticias, de sus fotos (`img/noticias/`) y de las páginas para compartir (`n/`), con el mensaje `Noticias del AAAA-MM-DD`.
 3. Sube la rama (`git push -u origin noticias/AAAA-MM-DD`) y abre un **pull request hacia `main`** con la API REST de GitHub (GraphQL y `gh pr create` no están disponibles en estas sesiones):
    `gh api repos/hlmorenog/tecnocriticos/pulls -f title='…' -f head='noticias/AAAA-MM-DD' -f base='main' -f body='…'`
    El pull request lleva:

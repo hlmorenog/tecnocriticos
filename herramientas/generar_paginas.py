@@ -43,7 +43,13 @@ FUENTES = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel
            '&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">')
 
 
-def cabeza(titulo, descripcion, tipo="website"):
+SITIO = "https://tecnocriticos.com"
+
+
+def cabeza(titulo, descripcion, tipo="website", ruta="", titulo_social=None):
+    """ruta: dirección de la página dentro del sitio ("" es la portada). Se usa para las vistas previas en redes."""
+    url = f"{SITIO}/{ruta}"
+    titulo_social = titulo_social or titulo
     return f"""<!doctype html>
 <html lang="es">
 <head>
@@ -51,8 +57,21 @@ def cabeza(titulo, descripcion, tipo="website"):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{titulo}</title>
   <meta name="description" content="{descripcion}">
+  <link rel="canonical" href="{url}">
   <meta property="og:type" content="{tipo}">
   <meta property="og:site_name" content="Tecnocríticos">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="{titulo_social}">
+  <meta property="og:description" content="{descripcion}">
+  <meta property="og:url" content="{url}">
+  <meta property="og:image" content="{SITIO}/img/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tecnocríticos: la tecnología, sin fanatismo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{titulo_social}">
+  <meta name="twitter:description" content="{descripcion}">
+  <meta name="twitter:image" content="{SITIO}/img/compartir.png">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="logo-icono.svg" type="image/svg+xml">
   {FUENTES}
@@ -143,7 +162,8 @@ def pie():
 # ---------------------------------------------------------------- Páginas
 def portada():
     return (cabeza("Tecnocríticos — La tecnología, sin fanatismo",
-                   "Noticias y análisis crítico sobre tecnología en Colombia, inteligencia artificial, videojuegos y series.")
+                   "Noticias y análisis crítico sobre tecnología en Colombia, inteligencia artificial, videojuegos y series.",
+                   ruta="")
             + cabecera("hoy")
             + f"""<main class="w grid">
  <div class="principal">
@@ -161,7 +181,8 @@ def portada():
 def pagina_noticias():
     botones = '<button type="button" data-seccion="Todas" aria-pressed="true">Todas</button>' + "".join(
         f'<button type="button" data-seccion="{s}" aria-pressed="false">{s}</button>' for s, _ in SEC)
-    return (cabeza("Noticias — Tecnocríticos", "Noticias diarias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.")
+    return (cabeza("Noticias — Tecnocríticos", "Noticias diarias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.",
+                   ruta="noticias.html")
             + cabecera("noticias")
             + f"""<section class="w titulo-pag"><span class="lab">Edición diaria</span><h1>Noticias, sin fanatismo</h1>
   <p>Lo que pasó en tecnología en Colombia, inteligencia artificial, videojuegos y series. Cada nota cita sus fuentes y cierra con nuestra mirada crítica.</p>
@@ -175,7 +196,7 @@ def pagina_noticias():
 
 
 def pagina_noticia():
-    return (cabeza("Noticia — Tecnocríticos", "Noticias de tecnología con contexto y mirada crítica.", "article")
+    return (cabeza("Noticia — Tecnocríticos", "Noticias de tecnología con contexto y mirada crítica.", "article", "noticia.html")
             + cabecera()
             + f"""<main class="w grid">
  <div class="principal"><article class="art" data-noticia><p class="vacio">Cargando noticia…</p></article>
@@ -188,7 +209,8 @@ def pagina_noticia():
 
 def pagina_columna():
     cuerpo = (RAIZ / "herramientas" / "columna_actual.html").read_text(encoding="utf-8")
-    return (cabeza(f"{COLUMNA['titulo']} — La Columna · Tecnocríticos", "La columna semanal de opinión de Tecnocríticos.", "article")
+    return (cabeza(f"{COLUMNA['titulo']} — La Columna · Tecnocríticos", COLUMNA["resumen"], "article", "columna.html",
+                   f"{COLUMNA['titulo']} · La Columna de Tecnocríticos")
             + '<div class="barra-progreso" aria-hidden="true"></div>\n'
             + cabecera("columna")
             + f"""<main class="w grid">
