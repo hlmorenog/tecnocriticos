@@ -222,7 +222,40 @@ def pagina_quienes():
    <p>Si una nota publicada tiene un error, la corregimos y lo indicamos al final de la nota, con la fecha de la corrección.</p>
 
    <h2>Síguenos</h2>
-   <p>Recibe las noticias por <a href="feed.xml">RSS</a> o en el <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
+   <p>Recibe las noticias por <a href="rss.html">RSS</a> o en el <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
+  </div>
+ </article></div>
+ <aside class="rail">{gp.bloque_minuto()}{gp.bloque_mesa()}{gp.bloque_columna()}{gp.bloque_hype()}{gp.bloque_explora()}</aside>
+</main>
+{gp.boletin()}
+""" + gp.pie())
+
+
+def pagina_rss():
+    feed = f"{SITIO}/feed.xml"
+    feedly = "https://feedly.com/i/subscription/feed%2F" + quote(feed, safe="")
+    inoreader = "https://www.inoreader.com/?add_feed=" + quote(feed, safe="")
+    return (gp.cabeza("Suscríbete por RSS — Tecnocríticos",
+                      "Recibe las noticias de Tecnocríticos en tu lector de RSS: Feedly, Inoreader o la app que prefieras.",
+                      "website", "rss.html")
+            + gp.cabecera()
+            + f"""<main class="w grid">
+ <div class="principal"><article class="art">
+  <span class="lab">Suscríbete</span>
+  <h1>Recibe Tecnocríticos por RSS</h1>
+  <p class="entradilla">Con RSS, cada noticia nueva llega sola a tu lector de noticias, sin algoritmos ni correos. Es gratis.</p>
+  <div class="cuerpo">
+   <h2>Suscríbete con un toque</h2>
+   <div class="rss-botones">
+    <a class="rss-btn" href="{feedly}" target="_blank" rel="noopener">Abrir en Feedly</a>
+    <a class="rss-btn" href="{inoreader}" target="_blank" rel="noopener">Abrir en Inoreader</a>
+   </div>
+   <h2>¿Usas otra app?</h2>
+   <p>Copia esta dirección y pégala en tu lector de RSS (por ejemplo, NetNewsWire, Reeder o Feeder) donde dice «Añadir suscripción» o «Agregar feed»:</p>
+   <div class="rss-url"><code>{feed}</code><button type="button" data-copiar-texto="{feed}">Copiar dirección</button></div>
+   <h2>¿Qué es RSS?</h2>
+   <p>Es una forma abierta de seguir sitios web: tu lector revisa el sitio por ti y te muestra lo nuevo en orden, sin publicidad ni filtros. Si nunca has usado uno, Feedly e Inoreader son gratuitos y funcionan en el celular y en el computador.</p>
+   <p>¿Prefieres el correo? Suscríbete al <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
   </div>
  </article></div>
  <aside class="rail">{gp.bloque_minuto()}{gp.bloque_mesa()}{gp.bloque_columna()}{gp.bloque_hype()}{gp.bloque_explora()}</aside>
@@ -235,7 +268,8 @@ def sitemap(todas):
     hoy = date.today().isoformat()
     ultima = todas[0]["fecha"] if todas else hoy
     urls = [("", ultima, "daily", "1.0"), ("noticias.html", ultima, "daily", "0.9"),
-            ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"), ("quienes-somos.html", hoy, "monthly", "0.5")]
+            ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"), ("quienes-somos.html", hoy, "monthly", "0.5"),
+            ("rss.html", hoy, "monthly", "0.3")]
     filas = [f"  <url><loc>{SITIO}/{r}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>"
              for r, m, c, p in urls]
     for n in todas:
@@ -327,7 +361,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Datos
 
-- [RSS]({SITIO}/feed.xml): últimas 50 noticias.
+- [RSS]({SITIO}/feed.xml): últimas 50 noticias. Cómo suscribirse: {SITIO}/rss.html
 - [Sitemap]({SITIO}/sitemap.xml)
 """
 
