@@ -13,9 +13,34 @@
       ],
       "mirada": "El récord llega en medio de una preocupación creciente por una posible burbuja de la IA, como recuerda la propia NPR. Que Google, Microsoft y Nvidia, gigantes del mismo sector, participen con colocaciones privadas muestra lo entrelazado que está este negocio y cuánto depende de que todos sigan apostando por él.",
       "fuentes": [
-        { "nombre": "NPR", "url": "https://www.npr.org/2026/11/19/nx-s1-6042558/anthropic-ipo-breaks-records-100-billion" },
-        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/los-siete-exempleados-de-openai-que-fundaron-anthropic-y-estan-a-punto-de-convertirse-en-multimillonarios-con-la-inteligencia-artificial-3602650" }
-      ]
+        {
+          "nombre": "NPR",
+          "url": "https://www.npr.org/2026/11/19/nx-s1-6042558/anthropic-ipo-breaks-records-100-billion"
+        },
+        {
+          "nombre": "El Tiempo",
+          "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/los-siete-exempleados-de-openai-que-fundaron-anthropic-y-estan-a-punto-de-convertirse-en-multimillonarios-con-la-inteligencia-artificial-3602650"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.jpg",
+        "alt": "Nasdaq MarketSite, Times Square (Nueva York)",
+        "autor": "ajay_suresh",
+        "licencia": "CC BY 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Nasdaq_MarketSite_(51494550508).jpg"
+      },
+      "titular_corto": "Anthropic, récord en bolsa",
+      "cifra": {
+        "valor": "US$107.000 M",
+        "texto": "recaudó entre la venta de acciones y colocaciones privadas con Google, Microsoft y Nvidia."
+      },
+      "por_que_importa": "es la prueba más grande hasta ahora de cuánto está dispuesto a pagar el mercado por la inteligencia artificial.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "956 millones de acciones a 83 dólares. Abrió en 111,50 y cerró en 97,17."
+      },
+      "falta_saber": "Si los ingresos de la compañía alcanzan a justificar una valoración cercana a 1,5 billones de dólares."
     },
     {
       "id": "2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores",
@@ -29,8 +54,26 @@
       ],
       "mirada": "La decisión refuerza la idea de que operar desde el exterior no exime de las leyes locales, algo clave para un país que regula a plataformas sin sede en su territorio. Es un fallo de primera instancia, así que falta saber si Google apelará y, sobre todo, cómo se comprobará en la práctica que hay un consentimiento real de los padres.",
       "fuentes": [
-        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/novedades-tecnologia/tribunal-de-cundinamarca-respalda-a-la-sic-en-caso-contra-google-por-el-tratamiento-de-datos-personales-de-menores-en-colombia-3602107" }
-      ]
+        {
+          "nombre": "El Tiempo",
+          "url": "https://www.eltiempo.com/tecnosfera/novedades-tecnologia/tribunal-de-cundinamarca-respalda-a-la-sic-en-caso-contra-google-por-el-tratamiento-de-datos-personales-de-menores-en-colombia-3602107"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.jpg",
+        "alt": "Palacio de Justicia, Bogotá",
+        "autor": "Bernard Gagnon",
+        "licencia": "CC BY-SA 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Palacio_de_Justicia_de_Colombia,_Bogot%C3%A1.jpg"
+      },
+      "titular_corto": "Tribunal respalda a la SIC frente a Google",
+      "por_que_importa": "la ley colombiana de datos personales aplica a empresas extranjeras que recogen información en el país.",
+      "dato": {
+        "etiqueta": "Por qué importa",
+        "texto": "la ley colombiana de datos personales aplica a empresas extranjeras que recogen información en el país."
+      },
+      "falta_saber": "Qué decidirá la segunda instancia si Google apela el fallo."
     },
     {
       "id": "2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas",
@@ -44,9 +87,31 @@
       ],
       "mirada": "Una caja sin disco significa que lo que se compra en la tienda es, en la práctica, una licencia digital: el juego no se puede prestar ni revender como antes. Y con la versión de PC sin fecha, quien no tenga una consola de la generación actual tendrá que sumar ese gasto al precio del juego.",
       "fuentes": [
-        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/videojuegos/ya-salio-gta-6-para-ps5-y-xbox-precios-en-colombia-disponibilidad-y-todo-lo-que-trae-el-juego-3602257" },
-        { "nombre": "CNN en Español", "url": "https://cnnespanol.cnn.com/2026/11/18/entretenimiento/resenas-grand-theft-auto-vi-gta-6-trax" }
-      ]
+        {
+          "nombre": "El Tiempo",
+          "url": "https://www.eltiempo.com/tecnosfera/videojuegos/ya-salio-gta-6-para-ps5-y-xbox-precios-en-colombia-disponibilidad-y-todo-lo-que-trae-el-juego-3602257"
+        },
+        {
+          "nombre": "CNN en Español",
+          "url": "https://cnnespanol.cnn.com/2026/11/18/entretenimiento/resenas-grand-theft-auto-vi-gta-6-trax"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.jpg",
+        "alt": "Consola y control de videojuegos (imagen ilustrativa)",
+        "autor": "Evan-Amos",
+        "licencia": "Dominio público",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Xbox-360-Pro-wController.jpg",
+        "encuadre": "completa"
+      },
+      "titular_corto": "GTA VI llega sin disco",
+      "por_que_importa": "la caja física no trae disco: lo que se compra es, en la práctica, una licencia digital.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "la caja física no trae disco. Lo que compras es, en la práctica, una licencia digital."
+      },
+      "falta_saber": "Cuándo llegará la versión para PC y a qué precio."
     },
     {
       "id": "2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores",
@@ -59,8 +124,26 @@
       ],
       "mirada": "Un memorando de entendimiento expresa intenciones, pero no obliga a nada concreto, y el anuncio no detalla metas, plazos, recursos ni cómo se medirán los resultados. Sin esos datos será difícil saber si la alianza cambia algo en la forma en que Meta detecta y frena el reclutamiento en sus plataformas.",
       "fuentes": [
-        { "nombre": "El Heraldo", "url": "https://www.elheraldo.co/colombia/2026/11/18/milagro-week-mintic-anuncio-acuerdo-con-meta-para-proteger-a-menores-en-entornos-digitales/" }
-      ]
+        {
+          "nombre": "El Heraldo",
+          "url": "https://www.elheraldo.co/colombia/2026/11/18/milagro-week-mintic-anuncio-acuerdo-con-meta-para-proteger-a-menores-en-entornos-digitales/"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.jpg",
+        "alt": "Niño usando un celular (imagen ilustrativa)",
+        "autor": "Shixart1985",
+        "licencia": "CC BY 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Child_uses_smartphone_to_play_games_at_home_closeup.jpg"
+      },
+      "titular_corto": "MinTIC y Meta, acuerdo sin metas",
+      "por_que_importa": "el Gobierno busca a una gran plataforma como aliada contra el reclutamiento de menores por internet.",
+      "dato": {
+        "etiqueta": "Lo que no se dice",
+        "texto": "el anuncio no trae metas, plazos ni recursos."
+      },
+      "falta_saber": "Qué compromisos concretos asume Meta y cómo se medirán los resultados."
     },
     {
       "id": "2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas",
@@ -74,8 +157,26 @@
       ],
       "mirada": "El debate público sobre la IA suele girar en torno a los modelos y sus riesgos, pero el estudio recuerda que su base es industrial, concentrada y frágil. Para países que solo consumen esta tecnología, como Colombia, la dependencia empieza mucho antes de descargar una aplicación.",
       "fuentes": [
-        { "nombre": "El Tiempo", "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/estudio-de-cambridge-revela-que-un-tercio-de-la-cadena-mundial-de-suministro-de-inteligencia-artificial-es-invisible-para-los-gobiernos-3602422" }
-      ]
+        {
+          "nombre": "El Tiempo",
+          "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/estudio-de-cambridge-revela-que-un-tercio-de-la-cadena-mundial-de-suministro-de-inteligencia-artificial-es-invisible-para-los-gobiernos-3602422"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas.jpg",
+        "alt": "Oblea de semiconductores en un laboratorio",
+        "autor": "Purdue Engineering",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:A_semiconductor_wafer_being_removed_from_processing_equipment.jpg"
+      },
+      "titular_corto": "La cadena invisible de la IA",
+      "por_que_importa": "las políticas públicas sobre IA ignoran buena parte de la industria de la que depende.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "137 elementos esenciales y cerca de 800 empresas en 56 países, según Cambridge."
+      },
+      "falta_saber": "Si los gobiernos incorporarán estas etapas intermedias en sus estrategias de IA."
     }
   ]
 }

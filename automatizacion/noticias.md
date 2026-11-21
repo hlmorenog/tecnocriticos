@@ -42,6 +42,11 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 - **`entradilla`**: una frase que diga por qué importa.
 - **`cuerpo`**: 2 o 3 párrafos cortos. Qué pasó, quién, cuándo y el contexto necesario.
 - **`mirada`**: 1 o 2 frases con el ángulo crítico de la casa. A quién beneficia, qué no se dice, qué preguntas quedan abiertas o qué separa el anuncio de la realidad. Debe apoyarse en hechos, no en opinión gratuita.
+- **`titular_corto`**: versión de 3 a 6 palabras para la lista «En 1 minuto» (por ejemplo, «GTA VI llega sin disco»).
+- **`por_que_importa`**: una frase que completa «Por qué importa: …», en minúscula inicial. Es la idea clave para el lector.
+- **`dato`**: la línea en negrita que acompaña la noticia en el listado. `etiqueta` es una de: «Por qué importa», «El dato», «En cifras», «Ojo», «Lo que no se dice». `texto` es una frase corta respaldada por la fuente.
+- **`cifra`** (opcional, solo si hay un número protagonista y verificable): `valor` corto (por ejemplo «US$107.000 M» o «339.900 pesos») y `texto` que explica la cifra. Si no hay una cifra clara, omite el campo.
+- **`falta_saber`**: una frase con la pregunta abierta más importante: lo que todavía no se sabe o habrá que vigilar.
 
 ## Formato del archivo
 
@@ -58,6 +63,20 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
       "entradilla": "…",
       "cuerpo": ["Primer párrafo…", "Segundo párrafo…"],
       "mirada": "…",
+      "titular_corto": "…",
+      "por_que_importa": "…",
+      "dato": { "etiqueta": "El dato", "texto": "…" },
+      "cifra": { "valor": "…", "texto": "…" },
+      "falta_saber": "…",
+      "imagen": {
+        "archivo": "img/noticias/2026-11-21-slug-corto-del-titular.jpg",
+        "alt": "Descripción breve de lo que se ve en la foto",
+        "autor": "Nombre del autor",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:…",
+        "encuadre": "completa"
+      },
       "fuentes": [
         { "nombre": "Nombre del medio", "url": "https://…" }
       ]
@@ -67,19 +86,33 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 ```
 
 - `id`: la fecha más un slug en minúsculas, sin tildes, con guiones. Debe ser único.
+- `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).
-- No modifiques ningún otro archivo del repositorio.
+- No modifiques ningún otro archivo del repositorio, salvo las fotos nuevas en `img/noticias/`.
+
+## Fotos
+
+Cada noticia lleva una foto **con licencia libre** y su crédito. La web muestra el crédito debajo de la foto.
+
+1. **Dónde buscar**, en este orden: Wikimedia Commons (API: `https://commons.wikimedia.org/w/api.php`, sin clave), Unsplash y Pexels.
+   **Nunca uses fotos de los medios fuente ni de agencias** (tienen derechos de autor), ni imágenes generadas por IA.
+2. **Licencias válidas**: dominio público, CC0, CC BY o CC BY-SA (cualquier versión), y las licencias de Unsplash y Pexels. Descarta CC BY-NC y CC BY-ND.
+3. **Relevancia**: la foto debe mostrar algo relacionado (el lugar, la empresa, el producto, el tipo de objeto). Si es genérica, dilo en el `alt` con «(imagen ilustrativa)». Nunca uses la foto de una persona para ilustrar a otra.
+4. **Crédito completo**: `autor`, `licencia`, `fuente` y `url` de la página de la foto (no del archivo).
+5. **Archivo**: descárgala, redúcela a 1200 px de ancho como máximo, guárdala en JPG de calidad 76–82 como `img/noticias/<id>.jpg` y verifica que pese menos de 300 KB. Por ejemplo, con Python y Pillow: `im.thumbnail((1200,1200)); im.save(ruta, quality=78, optimize=True, progressive=True)`.
+   Wikimedia limita las descargas rápidas: espera unos segundos entre peticiones y envía un `User-Agent` descriptivo.
+6. Si no encuentras una foto adecuada, **omite el campo `imagen`**: la web muestra un bloque de color de la sección.
 
 ## Entrega para revisión
 
 1. Crea la rama `noticias/AAAA-MM-DD` a partir de `main` actualizado.
-2. Haz commit solo del archivo nuevo, con el mensaje `Noticias del AAAA-MM-DD`.
+2. Haz commit solo del archivo de noticias y de sus fotos (`img/noticias/`), con el mensaje `Noticias del AAAA-MM-DD`.
 3. Sube la rama (`git push -u origin noticias/AAAA-MM-DD`) y abre un **pull request hacia `main`** con la API REST de GitHub (GraphQL y `gh pr create` no están disponibles en estas sesiones):
    `gh api repos/hlmorenog/tecnocriticos/pulls -f title='…' -f head='noticias/AAAA-MM-DD' -f base='main' -f body='…'`
    El pull request lleva:
    - Título: `Noticias del <día> de <mes>`
-   - Cuerpo: la lista de titulares con su sección y enlace a la fuente, más cualquier duda o dato que el director deba verificar.
+   - Cuerpo: la lista de titulares con su sección y enlace a la fuente, el crédito de cada foto, y cualquier duda o dato que el director deba verificar.
 4. Si el archivo del día ya existe en `main` o ya hay un pull request abierto para esa fecha (`gh api "repos/hlmorenog/tecnocriticos/pulls?state=open"`), no crees otro.
 5. Si una página de un medio de la lista no abre, prueba con otra noticia u otro medio de la lista. Si ninguna abre, no publiques nada e informa el bloqueo.
 

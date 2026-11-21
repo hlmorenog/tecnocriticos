@@ -1,52 +1,49 @@
-# tecnocríticos.com — Guía del sitio
+# tecnocriticos.com — Guía del sitio
 
 **Lema:** *La tecnología, sin fanatismo.*
+**Sitio:** https://tecnocriticos.com (GitHub Pages, publicado desde la rama `main`).
 
-## Identidad visual
+## Identidad visual (rediseño 2026)
 
 | Elemento | Detalle |
 |---|---|
-| **Isotipo** | Una lupa cuyo aro es un botón de encendido: *examinar la tecnología antes de encenderla*. El mango rojo es la "marca crítica". |
-| **Logotipo** | `tecno` (regular) + `críticos` (negrita) + `.com` en rojo. |
-| **Colores** | Tinta `#111111` · Papel `#F4F1EA` · Rojo crítico `#E6332A` · Verde ácido `#C8F03C` (solo para el Hype-ómetro). |
-| **Tipografías** (Google Fonts) | *Fraunces* para titulares (editorial y con carácter), *Space Grotesk* para la interfaz, *JetBrains Mono* para etiquetas y datos. |
+| **Fondo** | Blanco siempre, sin modo oscuro. |
+| **Colores** | Tinta `#111111` · Rojo `#E4322B` · Gris de texto `#737373` · Líneas `#E4E4E0`. |
+| **Tipografías** (Google Fonts) | *Inter Tight* para titulares e interfaz, *Newsreader* para el texto de lectura, *IBM Plex Mono* para etiquetas y datos. |
+| **Logo** | Provisional (punto rojo + «tecnocríticos»), a la espera del logo definitivo. |
+| **Alineación** | Todo va dentro de un mismo contenedor de 1200 px: los bloques empiezan y terminan en los mismos bordes. |
 
-Archivos: `logo.svg` (logo completo) e `logo-icono.svg` (favicon y avatar de redes sociales).
+## Estructura de la portada
 
-## Secciones del portal
+1. **Noticia principal**: foto, cifra clave, «Por qué importa» y el recuadro *La noticia / La mirada crítica / Lo que falta saber*.
+2. **Lo que pasó**: el resto de noticias del día, con foto y una línea en negrita.
+3. **Columna derecha**: En 1 minuto · **La Mesa** (destacada) · La Columna · Hype-ómetro · Ruido de Fondo · Explora.
+   La columna derecha se ajusta sola para terminar a la misma altura que el contenido: oculta bloques secundarios o enlaces de «Explora» si sobran, y reparte el espacio si faltan.
+4. **Manifiesto**, **Boletín** y pie.
 
-1. **Portada**: se llena sola con la edición de noticias más reciente: la primera noticia del día como principal, las tres siguientes como secundarias y la columna de la semana al lado. Si no hay noticias publicadas, se muestra el contenido fijo de `index.html`.
-2. **Noticias**: subsecciones de IA, Hardware, Ciencia y Regulación. Actualidad con contexto.
-3. **La Columna** ✦: tu columna de opinión semanal (cada lunes), con su archivo.
-4. **Hype-ómetro**: sección propia que puntúa *promesa frente a realidad* de cada tendencia. Es el sello diferencial del sitio.
-5. **Videojuegos**: reseñas con un "veredicto crítico" del 0 al 10.
-6. **Series y Cine**: críticas centradas en tecnología, ciencia ficción y plataformas.
-7. **Lado B**: lo que no sale en las presentaciones (ética, privacidad, trabajo, medio ambiente).
-8. **La Mesa**: el debate de la comunidad, con una pregunta y una encuesta por semana.
-9. **Ruido de Fondo**: podcast o videopodcast semanal.
-10. **El Boletín Crítico**: newsletter de cada lunes, que sale junto con la columna.
-11. **Manifiesto**: los principios editoriales del sitio.
+Páginas: `index.html` (portada), `noticias.html` (archivo con filtro por sección), `noticia.html?id=…` (una noticia), `columna.html` (La Columna).
 
-## Cómo publicar tu columna semanal
+## Cómo se editan las páginas
 
-1. Copia `columna.html` como `columnas/2026-semana-48.html`. Si la guardas dentro de una carpeta, añade `../` delante de las rutas `estilos.css`, `main.js` y `logo-icono.svg`.
-2. Cambia `<title>`, la etiqueta `<h1>`, la entradilla, la fecha y el cuerpo, que va dentro de `<article class="cuerpo">`.
-3. En `index.html`, actualiza la tarjeta `columna-card` de la portada y añade la columna anterior al *Archivo de columnas*.
+Las cuatro páginas se generan con `herramientas/generar_paginas.py`, para que la cabecera, la columna derecha y el pie sean idénticos en todas:
 
-## Antes de publicar
-
-- Todos los titulares son **contenido de ejemplo**. Sustitúyelos por artículos reales.
-- Las imágenes son marcadores de color. Cámbialas por `<img>` reales cuando tengas fotos.
-- El boletín, la encuesta y los comentarios son demostraciones del lado del cliente. Para que funcionen de verdad, conéctalos a un servicio:
-  - boletín: Buttondown, Substack o Mailchimp;
-  - comentarios: Giscus o Disqus.
-- **Recomendación para crecer:** cuando publiques varias veces por semana, migra este diseño a un CMS como WordPress o Ghost (Ghost es ideal para columna + newsletter), o a un generador estático como Astro o Eleventy. Así no tendrás que editar el HTML a mano.
-- Para alojarlo gratis como sitio estático: Netlify, Vercel, Cloudflare Pages o GitHub Pages, apuntando el dominio tecnocriticos.com.
+- **Debate de La Mesa, Hype-ómetro, manifiesto, menú y resumen de la columna**: se editan al principio de `herramientas/generar_paginas.py`.
+- **Texto de la columna semanal**: `herramientas/columna_actual.html`.
+- Después de editar, ejecuta `python3 herramientas/generar_paginas.py` desde la raíz del repositorio.
+- **No edites `index.html`, `noticias.html`, `noticia.html` ni `columna.html` a mano**: se sobrescriben al generar.
 
 ## Noticias diarias automáticas
 
-- Cada mañana una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y abre un **pull request** en GitHub con el archivo `noticias/AAAA-MM-DD.json`.
-- **Para publicar:** abre el pull request (GitHub te avisa por correo y en la app), revisa los titulares y pulsa **Merge pull request**. En uno o dos minutos aparecen en la portada (la primera noticia del archivo es la principal), en la sección «Noticias» del home, en la cinta de «Última hora» y en `noticias.html`.
-- **Para pedir cambios:** comenta en el pull request o pídeselo a Claude en una sesión con el repositorio `tecnocriticos`.
-- **Para ajustar el tono, los temas o la cantidad:** edita `automatizacion/noticias.md`.
-- Las noticias se cargan desde los archivos JSON, así que al abrir `index.html` directamente desde tu PC la sección se ve vacía. En el sitio publicado se ve completa.
+- Cada mañana, a las 5:47 a. m. (hora de Colombia), una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y abre un **pull request** con `noticias/AAAA-MM-DD.json` y sus fotos en `img/noticias/`.
+- Cada noticia trae: titular, titular corto, entradilla, «Por qué importa», una línea de dato, cifra clave (si la hay), cuerpo, mirada crítica, «Lo que falta saber», foto libre con crédito y fuentes.
+- **Para publicar:** revisa el pull request y pulsa **Merge pull request** (o pídeselo a Claude). En uno o dos minutos aparece en el sitio.
+- **Para cambiar tono, temas, cantidad o reglas de fotos:** edita `automatizacion/noticias.md`.
+- Las noticias se cargan desde los archivos JSON, así que al abrir `index.html` directamente desde tu PC se ve vacío. Usa el sitio publicado o un servidor local (`python3 -m http.server`).
+
+## Pendiente
+
+- **La Mesa**: hoy el voto se guarda solo en el navegador de cada visitante. Para sumar votos reales y publicar argumentos hace falta un servicio externo de encuestas y comentarios.
+- **Boletín**: el formulario aún no está conectado (sugerencia: Buttondown).
+- **Comentarios de La Columna**: por conectar.
+- **Podcast Ruido de Fondo** y **Reseñas**: secciones previstas, sin contenido todavía.
+- **Logo definitivo**: reemplazar el logo provisional de la cabecera (`.logo` en `herramientas/generar_paginas.py`) y `logo-icono.svg`.
