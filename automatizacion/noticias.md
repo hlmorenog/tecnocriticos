@@ -41,7 +41,7 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 - **`titular`**: informativo y concreto, de hasta unos 90 caracteres. Sin clickbait ni signos de exclamación.
 - **`entradilla`**: una frase que diga por qué importa.
 - **`cuerpo`**: 2 o 3 párrafos cortos. Qué pasó, quién, cuándo y el contexto necesario.
-- **`mirada`**: 1 o 2 frases con el ángulo crítico de la casa. A quién beneficia, qué no se dice, qué preguntas quedan abiertas o qué separa el anuncio de la realidad. Debe apoyarse en hechos, no en opinión gratuita.
+- **`mirada`**: **una sola frase contundente, de máximo 25 palabras**, con la posición de la casa. Se muestra como destacado, así que debe leerse de un vistazo. A quién beneficia, qué no se dice o qué separa el anuncio de la realidad. Debe apoyarse en hechos de la noticia, no en opinión gratuita. Lo que no quepa, va en `cuerpo` o en `falta_saber`.
 - **`titular_corto`**: versión de 3 a 6 palabras para la lista «En 1 minuto» (por ejemplo, «GTA VI llega sin disco»).
 - **`por_que_importa`**: una frase que completa «Por qué importa: …», en minúscula inicial. Es la idea clave para el lector.
 - **`dato`**: la línea en negrita que acompaña la noticia en el listado. `etiqueta` es una de: «Por qué importa», «El dato», «En cifras», «Ojo», «Lo que no se dice». `texto` es una frase corta respaldada por la fuente.

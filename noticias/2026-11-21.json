@@ -11,7 +11,7 @@
         "Nvidia fue la más golpeada: pasó de 162,85 a 125,53 dólares, un 22,9 % menos en la semana. Solo el viernes cayó un 14 %, tras informes de una posible investigación contable de la SEC, según The Motley Fool. Alphabet bajó un 10,3 %, de 295,77 a 265,29 dólares, en medio de versiones no confirmadas de que Google reduciría sus pedidos de chips. Nu Holdings, la matriz de Nubank, cayó un 14,8 %, hasta 11,27 dólares, y borró el salto que había dado con sus ganancias récord; el viernes, UBS recortó su precio objetivo, según MarketBeat.",
         "Anthropic, que debutó el jueves en el Nasdaq a 83 dólares por acción, abrió en 111,50 y cerró ese día en 97,17, según NPR. El viernes, en su segundo día, cayó un 8,5 % hasta 88,91 dólares, y llegó a cotizar a centavos de su precio de salida. Quien compró en la salida a bolsa aún gana cerca de un 7 %; quien compró en la apertura del jueves pierde alrededor de un 20 %."
       ],
-      "mirada": "Una semana, aunque sea la peor desde 2020, es una corrección y no todavía un estallido: eso solo se sabe con meses de perspectiva. Además, parte del golpe a Nvidia tiene causas propias, y la caída de Nu responde más a su negocio que a la IA. Lo que sí cambió es el ánimo del mercado, que empezó a preguntar cuánto vale de verdad la promesa de la inteligencia artificial.",
+      "mirada": "Una semana mala es corrección, no estallido; lo que cambió es que el mercado empezó a preguntar cuánto vale la promesa de la IA.",
       "titular_corto": "¿Estalló la burbuja de la IA?",
       "por_que_importa": "las empresas de IA sostienen buena parte del valor de la bolsa, y una caída fuerte de ellas arrastra a todo el mercado.",
       "dato": {
@@ -68,7 +68,7 @@
         "Según el medio POLITICO, citado por The Record, el equipo de respuesta de las instituciones europeas (CERT-EU) identificó el uso de ARTEX, una plataforma de código abierto que automatiza la búsqueda y explotación de vulnerabilidades con modelos comerciales de IA. El ataque habría afectado durante más de diez días los sistemas de personal, como nómina, permisos, reembolsos médicos y traducción.",
         "La Comisión aseguró que no ha encontrado pruebas de una filtración generalizada de datos del personal ni ha recibido pedidos de rescate, y que la investigación sigue abierta. Es el tercer incidente de ciberseguridad que reconoce este año."
       ],
-      "mirada": "La Comisión solo confirmó el ataque casi un mes después de detectarlo y tras la publicación en la prensa, con el argumento de que divulgar las defensas las debilita. El caso pone en duda cuánta transparencia exigen las instituciones a las empresas cuando ellas mismas son las atacadas.",
+      "mirada": "Casi un mes de silencio y una confirmación solo después de que lo publicara la prensa: mala señal de transparencia.",
       "titular_corto": "IA contra la Comisión Europea",
       "por_que_importa": "confirma que las herramientas de IA para atacar ya están en uso contra gobiernos, no solo en advertencias de expertos.",
       "dato": {
@@ -101,7 +101,7 @@
         "En Medina (Cundinamarca) ya se firmó el acta de inicio de un proyecto de 11.790 millones de pesos que llevará internet a 303 familias rurales, 21 zonas digitales y más de 900 estudiantes. En Planadas (Tolima) se viabilizó otro de 17.400 millones de pesos para conectar a 800 familias cafeteras, con apoyo de la Federación Nacional de Cafeteros.",
         "Además, las dos entidades explorarán una red de más de 200 kilómetros entre Huila y Putumayo y el uso de los 475 kilómetros de fibra de la línea Colectora, en construcción, para 14 municipios de La Guajira y Cesar."
       ],
-      "mirada": "Usar infraestructura que ya existe es una idea sensata para llegar donde no hay redes, pero con Obras por Impuestos el Estado deja de recibir impuestos a cambio de las obras. Por ahora solo Medina tiene acta de inicio; lo de La Guajira, Cesar, Huila y Putumayo sigue en fase de exploración.",
+      "mirada": "Buena idea usar redes que ya existen, pero se paga con impuestos que el Estado deja de recibir y, por ahora, solo Medina arrancó.",
       "titular_corto": "Internet por las torres de energía",
       "por_que_importa": "puede abaratar la llegada de internet a zonas rurales donde tender redes nuevas no resulta rentable.",
       "dato": {
@@ -138,7 +138,7 @@
         "La acusación sostiene que, entre noviembre de 2021 y julio de 2024, Apple usó herramientas de software para impedir reparaciones independientes en modelos como el iPhone XS, las series 12 a 15 y el iPhone SE de 2022. El mecanismo señalado es la serialización: vincular digitalmente cada pieza con el teléfono para detectar cuándo se cambia. Según HOP, eso provocaba fallas, como la desactivación de Face ID al cambiar la cámara o la pérdida de datos sobre la salud de la batería, incluso con repuestos originales.",
         "Apple rechazó las acusaciones y las calificó de infundadas, según AFP."
       ],
-      "mirada": "Más allá del fallo, el juicio pone sobre la mesa quién controla un aparato una vez comprado. Si una pieza original deja de funcionar por no pasar por el taller del fabricante, el costo de reparar lo decide la marca y no el mercado.",
+      "mirada": "La pregunta de fondo es quién manda en un teléfono después de comprarlo: el dueño o el fabricante.",
       "titular_corto": "Apple, a juicio por reparaciones",
       "por_que_importa": "de la decisión depende que reparar un iPhone fuera de los servicios oficiales siga siendo una opción real.",
       "dato": {
@@ -171,7 +171,7 @@
         "Durante la caída no se podían hacer ni recibir pagos ni consultar la información necesaria para ellos. Por eso, mediante la Resolución 04700 del 15 de noviembre, el ministerio suspendió los plazos para pagar y cobrar obligaciones a favor del MinTIC y del Fondo Único de TIC, como contraprestaciones, multas y otras sanciones económicas.",
         "Con el sistema de nuevo en línea, los términos suspendidos vuelven a correr por el tiempo que les faltaba, y los que debían empezar durante la suspensión comienzan completos."
       ],
-      "mirada": "Que el ministerio encargado de la transformación digital del Estado pase ocho días sin poder recibir pagos es un recordatorio de la fragilidad de sus propios sistemas. En sus comunicados no explica qué causó la falla.",
+      "mirada": "El ministerio de la transformación digital pasó ocho días sin poder cobrar, y todavía no explica por qué.",
       "titular_corto": "MinTIC, ocho días sin sistema",
       "por_que_importa": "los operadores y empresas del sector que pagan contraprestaciones y multas tienen ahora nuevos plazos.",
       "dato": {
@@ -212,7 +212,7 @@
         "Para comparar, CNN recuerda que Avengers: Endgame recaudó 2.900 millones de dólares en taquilla. Hipertextual señala que GTA V cerró su primer día, en 2013, con 815 millones.",
         "El fenómeno también se vio en las plataformas de transmisión en vivo: según Stream Charts, citada por CNN, los espectadores pasaron más de 132 millones de horas viendo el juego en Twitch, YouTube y Kick el día del estreno."
       ],
-      "mirada": "Las cifras vienen de la propia Take-Two y no tienen verificación independiente. Detrás del récord hay 13 años de espera desde GTA V y un presupuesto que Rockstar nunca ha revelado.",
+      "mirada": "Un récord con cifras de la propia Take-Two, sin verificación independiente, y con un costo de producción que nunca se ha revelado.",
       "titular_corto": "GTA VI, récord en un día",
       "por_que_importa": "confirma que el videojuego ya mueve más dinero en un estreno que el cine o la música.",
       "dato": {
