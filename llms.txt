@@ -1,6 +1,6 @@
 # Tecnocríticos
 
-> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech (Colombia, IA y tecnología, videojuegos y series) y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
+> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
 
 Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
 

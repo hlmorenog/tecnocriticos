@@ -193,7 +193,7 @@ def pagina_quienes():
   <p class="entradilla">Somos un medio de comunicación de periodismo de tecnología potenciado por inteligencia artificial. Cada día llevamos las noticias y los análisis más importantes del sector, y tomamos posición.</p>
   <div class="cuerpo">
    <h2 id="que-hacemos">Qué hacemos</h2>
-   <p>Nuestro objetivo es que entiendas lo que pasa en el mundo de la tecnología sin tener que leerlo todo. Por eso actualizamos el sitio a diario con una edición que reúne las noticias y los análisis que más importan del sector, en tres secciones: <a href="noticias.html?seccion=Colombia">Colombia</a>, <a href="noticias.html?seccion=IA%20y%20tecnolog%C3%ADa">IA y tecnología</a> y <a href="noticias.html?seccion=Videojuegos%20y%20series">Videojuegos y series</a>.</p>
+   <p>Nuestro objetivo es que entiendas lo que pasa en el mundo de la tecnología sin tener que leerlo todo. Por eso actualizamos el sitio a diario con una edición que reúne las noticias y los análisis que más importan del sector: desde lo que pasa en Colombia hasta la inteligencia artificial, las grandes tecnológicas, los videojuegos y el entretenimiento digital. Puedes leerlas todas o por sección en <a href="noticias.html">Noticias</a>.</p>
    <p>Cada noticia va al grano: qué pasó, por qué importa, lo que todavía falta saber y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="index.html#hype">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
 
    <h2 id="ia">Periodismo potenciado por IA</h2>
@@ -310,7 +310,7 @@ def llms(todas):
     lineas = [f"- [{n['titular']}]({gp.url_noticia(n, True)}): {n.get('entradilla', '')}" for n in todas[:20]]
     return f"""# Tecnocríticos
 
-> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech (Colombia, IA y tecnología, videojuegos y series) y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
+> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
 
 Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
 
