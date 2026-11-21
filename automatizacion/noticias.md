@@ -89,8 +89,8 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).
-- Después, genera las páginas para compartir en redes: `python3 herramientas/generar_compartir.py`. Crea `n/<id>.html` para cada noticia, con la vista previa (titular, entradilla y foto) que muestran WhatsApp, Facebook, X, LinkedIn y Telegram. Sin este paso, las noticias del día se comparten sin foto ni titular.
-- No modifiques ningún otro archivo del repositorio, salvo las fotos nuevas en `img/noticias/` y las páginas para compartir en `n/`.
+- Después, regenera el sitio: `python3 herramientas/generar_paginas.py`. Crea la página completa de cada noticia (`n/<id>.html`, que es la que leen Google, los buscadores con IA y las redes sociales), actualiza la portada y el listado, y rehace `sitemap.xml`, `sitemap-noticias.xml`, `feed.xml`, `robots.txt` y `llms.txt`. **Sin este paso, las noticias del día no existen para los buscadores** y se comparten sin foto ni titular.
+- No modifiques a mano ningún otro archivo del repositorio. Las fotos nuevas van en `img/noticias/`; lo demás lo actualiza `generar_paginas.py`.
 
 ## Fotos
 
@@ -108,7 +108,7 @@ Cada noticia lleva una foto **con licencia libre** y su crédito. La web muestra
 ## Entrega para revisión
 
 1. Crea la rama `noticias/AAAA-MM-DD` a partir de `main` actualizado.
-2. Haz commit solo del archivo de noticias, de sus fotos (`img/noticias/`) y de las páginas para compartir (`n/`), con el mensaje `Noticias del AAAA-MM-DD`.
+2. Haz commit del archivo de noticias, de sus fotos (`img/noticias/`) y de todo lo que regeneró `generar_paginas.py` (`n/`, `index.html`, `noticias.html`, `sitemap.xml`, `sitemap-noticias.xml`, `feed.xml`, `llms.txt` y demás), con el mensaje `Noticias del AAAA-MM-DD`. Revisa con `git status` que no haya cambios ajenos a la edición.
 3. Sube la rama (`git push -u origin noticias/AAAA-MM-DD`) y abre un **pull request hacia `main`** con la API REST de GitHub (GraphQL y `gh pr create` no están disponibles en estas sesiones):
    `gh api repos/hlmorenog/tecnocriticos/pulls -f title='…' -f head='noticias/AAAA-MM-DD' -f base='main' -f body='…'`
    El pull request lleva:

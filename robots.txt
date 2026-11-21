@@ -1,0 +1,9 @@
+# Tecnocríticos: todo el contenido público puede rastrearse e indexarse,
+# también por buscadores y asistentes con inteligencia artificial.
+User-agent: *
+Allow: /
+Disallow: /herramientas/
+Disallow: /automatizacion/
+
+Sitemap: https://tecnocriticos.com/sitemap.xml
+Sitemap: https://tecnocriticos.com/sitemap-noticias.xml

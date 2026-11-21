@@ -3,9 +3,15 @@
 
 Uso (desde la raíz del repositorio):  python3 herramientas/generar_paginas.py
 
+Genera TODO el sitio estático: portada, noticias, columna, quiénes somos, la página de cada
+noticia (n/<id>.html), sitemap.xml, sitemap-noticias.xml, feed.xml, robots.txt y llms.txt.
+Hay que ejecutarlo cada vez que se publica una edición nueva.
+
 Las noticias NO se escriben aquí: se cargan solas desde noticias/AAAA-MM-DD.json.
 Aquí se editan los bloques fijos: menú, La Mesa, Hype-ómetro, La Columna, manifiesto y pie.
 """
+import html as _html
+import json
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -21,6 +27,7 @@ DEBATE = {
 COLUMNA = {
     "titulo": "Nadie nos pidió permiso para el futuro",
     "resumen": "Cada keynote promete liberarnos. Cada actualización nos ata un poco más.",
+    "fecha": "2026-11-16",
 }
 HYPE = [  # (tema, promesa, realidad, veredicto)
     ("Agentes de IA que «trabajan por ti»", 96, 48, "Útiles con supervisión. Autónomos, todavía no."),
@@ -46,37 +53,88 @@ FUENTES = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel
 SITIO = "https://tecnocriticos.com"
 
 
-def cabeza(titulo, descripcion, tipo="website", ruta="", titulo_social=None):
-    """ruta: dirección de la página dentro del sitio ("" es la portada). Se usa para las vistas previas en redes."""
+NOMBRE = "Tecnocríticos"
+LOGO = f"{SITIO}/img/logo-tecnocriticos.png"
+ORGANIZACION = {
+    "@type": "NewsMediaOrganization",
+    "@id": f"{SITIO}/#organizacion",
+    "name": NOMBRE,
+    "url": f"{SITIO}/",
+    "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512},
+    "slogan": "La tecnología, sin fanatismo",
+    "description": "Medio digital colombiano de noticias y análisis crítico sobre tecnología, inteligencia artificial, videojuegos y series.",
+    "foundingLocation": {"@type": "Place", "name": "Colombia"},
+    "publishingPrinciples": f"{SITIO}/quienes-somos.html",
+    "ethicsPolicy": f"{SITIO}/quienes-somos.html#principios",
+    "correctionsPolicy": f"{SITIO}/quienes-somos.html#correcciones",
+    "actionableFeedbackPolicy": f"{SITIO}/quienes-somos.html#correcciones",
+    "founder": {"@type": "Person", "name": "Helmuhd Moreno", "jobTitle": "Director"},
+}
+esc = lambda s: _html.escape(str(s or ""), quote=True)
+
+
+def bloque_jsonld(datos):
+    """Datos estructurados (schema.org) para Google y los buscadores con IA."""
+    texto = json.dumps({"@context": "https://schema.org", **datos} if isinstance(datos, dict) else
+                       {"@context": "https://schema.org", "@graph": datos}, ensure_ascii=False, indent=1)
+    return '  <script type="application/ld+json">\n' + texto.replace("</", "<\\/") + "\n  </script>\n"
+
+
+def cargar_noticias():
+    """Todas las noticias publicadas, de la más reciente a la más antigua (respeta el orden de cada edición)."""
+    todas = []
+    for archivo in sorted((RAIZ / "noticias").glob("*.json"), reverse=True):
+        edicion = json.loads(archivo.read_text(encoding="utf-8"))
+        for n in edicion.get("noticias", []):
+            todas.append({**n, "fecha": edicion.get("fecha", archivo.stem)})
+    return todas
+
+
+def url_noticia(n, absoluta=False):
+    return (f"{SITIO}/" if absoluta else "") + f"n/{n['id']}.html"
+
+
+def cabeza(titulo, descripcion, tipo="website", ruta="", titulo_social=None, imagen=None,
+           robots=None, jsonld=None, base=False, extra=""):
+    """ruta: dirección de la página dentro del sitio ("" es la portada).
+    imagen: (ruta, ancho, alto, texto alternativo) para la vista previa; por defecto, img/compartir.png.
+    robots: por ejemplo "noindex, follow" para páginas que no deben aparecer en buscadores.
+    jsonld: datos estructurados (dict o lista de dicts). base: True en páginas de subcarpetas (n/)."""
     url = f"{SITIO}/{ruta}"
     titulo_social = titulo_social or titulo
+    img, img_w, img_h, img_alt = imagen or ("img/compartir.png", 1200, 630, "Tecnocríticos: la tecnología, sin fanatismo")
+    medidas = (f'\n  <meta property="og:image:width" content="{img_w}">\n  <meta property="og:image:height" content="{img_h}">'
+               if img_w else "")
+    canonical = "" if robots and "noindex" in robots else f'\n  <link rel="canonical" href="{url}">'
+    meta_robots = (f'\n  <meta name="robots" content="{robots}">' if robots else
+                   '\n  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">')
+    base_tag = '\n  <base href="/">' if base else ""
     return f"""<!doctype html>
-<html lang="es">
+<html lang="es-CO">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8">{base_tag}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{titulo}</title>
-  <meta name="description" content="{descripcion}">
-  <link rel="canonical" href="{url}">
+  <meta name="description" content="{descripcion}">{canonical}{meta_robots}
+  <link rel="alternate" type="application/rss+xml" title="Tecnocríticos: noticias" href="{SITIO}/feed.xml">
   <meta property="og:type" content="{tipo}">
   <meta property="og:site_name" content="Tecnocríticos">
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="{titulo_social}">
   <meta property="og:description" content="{descripcion}">
   <meta property="og:url" content="{url}">
-  <meta property="og:image" content="{SITIO}/img/compartir.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Tecnocríticos: la tecnología, sin fanatismo">
+  <meta property="og:image" content="{SITIO}/{img}">{medidas}
+  <meta property="og:image:alt" content="{img_alt}">{extra}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{titulo_social}">
   <meta name="twitter:description" content="{descripcion}">
-  <meta name="twitter:image" content="{SITIO}/img/compartir.png">
+  <meta name="twitter:image" content="{SITIO}/{img}">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="logo-icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/logo-tecnocriticos.png">
   {FUENTES}
   <link rel="stylesheet" href="estilos.css">
-</head>
+{bloque_jsonld(jsonld) if jsonld else ''}</head>
 <body>
 """
 
@@ -152,7 +210,7 @@ def boletin():
 
 
 def pie():
-    return """<footer class="pie"><div class="w"><div><span>tecnocriticos.com · La tecnología, sin fanatismo</span><span><a href="index.html#manifiesto">Manifiesto</a> · <a href="noticias.html">Noticias</a> · <a href="columna.html">La Columna</a></span></div></div></footer>
+    return """<footer class="pie"><div class="w"><div><span>tecnocriticos.com · La tecnología, sin fanatismo</span><span><a href="quienes-somos.html">Quiénes somos</a> · <a href="noticias.html">Noticias</a> · <a href="columna.html">La Columna</a> · <a href="feed.xml">RSS</a></span></div></div></footer>
 <script src="main.js"></script>
 </body>
 </html>
@@ -160,15 +218,32 @@ def pie():
 
 
 # ---------------------------------------------------------------- Páginas
+def item_estatico(n):
+    """Versión en HTML de una noticia del listado (la ven los buscadores; el navegador la reemplaza)."""
+    return (f'<article class="item"><span class="lab">{esc(n["seccion"])}</span><div><h3><a href="{url_noticia(n)}">'
+            f'{esc(n["titular"])}</a></h3><p>{esc(n.get("entradilla"))}</p><span class="meta">{esc(n["fecha"])}</span></div></article>')
+
+
 def portada():
+    noticias = cargar_noticias()
+    hoy = [n for n in noticias if noticias and n["fecha"] == noticias[0]["fecha"]]
+    if hoy:
+        p = hoy[0]
+        hero = (f'<span class="lab">{esc(p["seccion"])}</span><h1><a href="{url_noticia(p)}">{esc(p["titular"])}</a></h1>'
+                f'<p class="bl">{esc(p.get("entradilla"))}</p>')
+        feed = "".join(item_estatico(n) for n in hoy[1:])
+    else:
+        hero, feed = '<p class="vacio">Cargando la edición de hoy…</p>', ""
+    datos = [ORGANIZACION, {"@type": "WebSite", "@id": f"{SITIO}/#sitio", "name": NOMBRE, "url": f"{SITIO}/",
+                            "inLanguage": "es-CO", "publisher": {"@id": f"{SITIO}/#organizacion"}}]
     return (cabeza("Tecnocríticos — La tecnología, sin fanatismo",
                    "Noticias y análisis crítico sobre tecnología en Colombia, inteligencia artificial, videojuegos y series.",
-                   ruta="")
+                   ruta="", jsonld=datos)
             + cabecera("hoy")
             + f"""<main class="w grid">
  <div class="principal">
-  <article class="hero" data-hero><p class="vacio">Cargando la edición de hoy…</p></article>
-  <section class="feed"><h2>Lo que pasó <span class="meta" data-edicion></span></h2><div data-feed></div></section>
+  <article class="hero" data-hero>{hero}</article>
+  <section class="feed"><h2>Lo que pasó <span class="meta" data-edicion></span></h2><div data-feed>{feed}</div></section>
  </div>
  <aside class="rail">{bloque_minuto()}{bloque_mesa()}{bloque_columna()}{bloque_hype()}{bloque_podcast()}{bloque_explora()}</aside>
 </main>
@@ -181,6 +256,7 @@ def portada():
 def pagina_noticias():
     botones = '<button type="button" data-seccion="Todas" aria-pressed="true">Todas</button>' + "".join(
         f'<button type="button" data-seccion="{s}" aria-pressed="false">{s}</button>' for s, _ in SEC)
+    lista = "".join(item_estatico(n) for n in cargar_noticias()) or '<p class="vacio">Cargando noticias…</p>'
     return (cabeza("Noticias — Tecnocríticos", "Noticias diarias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.",
                    ruta="noticias.html")
             + cabecera("noticias")
@@ -188,7 +264,7 @@ def pagina_noticias():
   <p>Lo que pasó en tecnología en Colombia, inteligencia artificial, videojuegos y series. Cada nota cita sus fuentes y cierra con nuestra mirada crítica.</p>
   <div class="filtros" data-filtros role="group" aria-label="Filtrar por sección">{botones}</div></section>
 <main class="w grid">
- <div class="principal"><div class="feed" data-noticias-archivo style="margin-top:0"><p class="vacio">Cargando noticias…</p></div></div>
+ <div class="principal"><div class="feed" data-noticias-archivo style="margin-top:0">{lista}</div></div>
  <aside class="rail">{bloque_minuto()}{bloque_mesa()}{bloque_columna()}{bloque_hype()}{bloque_podcast()}{bloque_explora()}</aside>
 </main>
 {boletin()}
@@ -196,7 +272,8 @@ def pagina_noticias():
 
 
 def pagina_noticia():
-    return (cabeza("Noticia — Tecnocríticos", "Noticias de tecnología con contexto y mirada crítica.", "article", "noticia.html")
+    return (cabeza("Noticia — Tecnocríticos", "Noticias de tecnología con contexto y mirada crítica.", "article", "noticia.html",
+                   robots="noindex, follow")
             + cabecera()
             + f"""<main class="w grid">
  <div class="principal"><article class="art" data-noticia><p class="vacio">Cargando noticia…</p></article>
@@ -209,8 +286,15 @@ def pagina_noticia():
 
 def pagina_columna():
     cuerpo = (RAIZ / "herramientas" / "columna_actual.html").read_text(encoding="utf-8")
+    datos = {"@type": "OpinionNewsArticle", "headline": COLUMNA["titulo"], "description": COLUMNA["resumen"],
+             "url": f"{SITIO}/columna.html", "mainEntityOfPage": f"{SITIO}/columna.html", "inLanguage": "es-CO",
+             "datePublished": COLUMNA["fecha"], "dateModified": COLUMNA["fecha"], "image": [f"{SITIO}/img/compartir.png"],
+             "author": {"@type": "Person", "name": "Helmuhd Moreno", "jobTitle": "Director de Tecnocríticos",
+                        "url": f"{SITIO}/quienes-somos.html#direccion"},
+             "publisher": {k: v for k, v in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
     return (cabeza(f"{COLUMNA['titulo']} — La Columna · Tecnocríticos", COLUMNA["resumen"], "article", "columna.html",
-                   f"{COLUMNA['titulo']} · La Columna de Tecnocríticos")
+                   f"{COLUMNA['titulo']} · La Columna de Tecnocríticos", jsonld=datos,
+                   extra=f'\n  <meta property="article:published_time" content="{COLUMNA["fecha"]}">\n  <meta property="article:author" content="Helmuhd Moreno">')
             + '<div class="barra-progreso" aria-hidden="true"></div>\n'
             + cabecera("columna")
             + f"""<main class="w grid">
@@ -229,7 +313,12 @@ def pagina_columna():
 
 
 if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import generar_noticias  # páginas de cada noticia, quiénes somos, sitemap, RSS, robots y llms.txt
     for nombre, html in [("index.html", portada()), ("noticias.html", pagina_noticias()),
-                         ("noticia.html", pagina_noticia()), ("columna.html", pagina_columna())]:
+                         ("noticia.html", pagina_noticia()), ("columna.html", pagina_columna()),
+                         ("quienes-somos.html", generar_noticias.pagina_quienes())]:
         (RAIZ / nombre).write_text(html, encoding="utf-8")
         print("generado", nombre)
+    generar_noticias.main()

@@ -84,16 +84,8 @@
       else prompt("Copia este enlace:", url);
     });
   };
-  // Dirección pública para compartir una noticia: su página n/<id>.html si ya existe;
-  // si todavía no se ha generado, la propia noticia.
-  const urlCompartirNoticia = async (n) => {
-    const propia = new URL(enlace(n), location.href).href;
-    const pagina = "n/" + encodeURIComponent(n.id) + ".html";
-    try {
-      const r = await fetch(pagina, { method: "HEAD", cache: "no-cache" });
-      return r.ok ? new URL(pagina, location.href).href : propia;
-    } catch (e) { return propia; }
-  };
+  // Dirección pública para compartir una noticia: su página n/<id>.html
+  const urlCompartirNoticia = async (n) => new URL(enlace(n), location.href).href;
   // Páginas fijas (la columna): se comparten con su propia dirección.
   $$("[data-compartir]").forEach((caja) => {
     const desc = $('meta[property="og:description"]') || $('meta[name="description"]');
@@ -127,7 +119,8 @@
     "Videojuegos y series": { clase: "foto--juegos", glifo: "▶" },
   };
   const seccionDe = (n) => SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
-  const enlace = (n) => "noticia.html?id=" + encodeURIComponent(n.id);
+  // Cada noticia tiene su página estática (n/<id>.html), generada por herramientas/generar_paginas.py
+  const enlace = (n) => "n/" + encodeURIComponent(n.id) + ".html";
 
   async function cargarNoticias(dias) {
     const hoy = Date.now();
@@ -183,7 +176,8 @@
     if (cuenta) cuenta.textContent = Math.min(lista.length, 5);
     // "Explora" se completa con titulares: solo se ven los que caben (ver equilibrar)
     const exp = $("[data-elastico] ol");
-    const actual = new URLSearchParams(location.search).get("id");
+    const fija = $("[data-noticia-id]");
+    const actual = fija ? fija.dataset.noticiaId : new URLSearchParams(location.search).get("id");
     if (exp && !exp.dataset.ampliado) {
       exp.dataset.ampliado = "1";
       exp.insertAdjacentHTML("beforeend", lista.filter((n) => n.id !== actual).slice(0, 10)
@@ -234,7 +228,8 @@
   const archivo = $("[data-noticias-archivo]");
   if (archivo) {
     if (location.hash.length > 1) { // enlaces antiguos noticias.html#id
-      location.replace("noticia.html?id=" + encodeURIComponent(decodeURIComponent(location.hash.slice(1))));
+      const viejo = decodeURIComponent(location.hash.slice(1));
+      if (/^[a-z0-9-]+$/.test(viejo)) location.replace("n/" + viejo + ".html");
     }
     const filtros = $("[data-filtros]");
     let ediciones = [];
@@ -266,6 +261,11 @@
   const detalle = $("[data-noticia]");
   if (detalle) {
     const id = new URLSearchParams(location.search).get("id");
+    // Enlaces antiguos (noticia.html?id=…): llevar a la página estática de la noticia
+    if (id && /^[a-z0-9-]+$/.test(id)) {
+      fetch("n/" + id + ".html", { method: "HEAD", cache: "no-cache" })
+        .then((r) => { if (r.ok) location.replace("n/" + id + ".html"); }).catch(() => {});
+    }
     cargarNoticias(60).then((eds) => {
       const todas = eds.flatMap((e) => e.noticias);
       llenarMinuto(todas);
