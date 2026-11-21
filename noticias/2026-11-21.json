@@ -2,6 +2,63 @@
   "fecha": "2026-11-21",
   "noticias": [
     {
+      "id": "2026-11-21-estallo-la-burbuja-de-la-ia",
+      "seccion": "IA y tecnología",
+      "titular": "¿Estalló la burbuja de la IA?",
+      "entradilla": "Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año.",
+      "cuerpo": [
+        "Entre el 16 y el 20 de noviembre, el Nasdaq cayó un 10 %, su mayor baja semanal desde marzo de 2020, y borró sus ganancias de 2026, según STL.News y The Closing Print. El S&P 500 perdió un 8,6 % y entró en corrección. La venta se concentró en las empresas de inteligencia artificial y de chips.",
+        "Nvidia fue la más golpeada: pasó de 162,85 a 125,53 dólares, un 22,9 % menos en la semana. Solo el viernes cayó un 14 %, tras informes de una posible investigación contable de la SEC, según The Motley Fool. Alphabet bajó un 10,3 %, de 295,77 a 265,29 dólares, en medio de versiones no confirmadas de que Google reduciría sus pedidos de chips. Nu Holdings, la matriz de Nubank, cayó un 14,8 %, hasta 11,27 dólares, y borró el salto que había dado con sus ganancias récord; el viernes, UBS recortó su precio objetivo, según MarketBeat.",
+        "Anthropic, que debutó el jueves en el Nasdaq a 83 dólares por acción, abrió en 111,50 y cerró ese día en 97,17, según NPR. El viernes, en su segundo día, cayó un 8,5 % hasta 88,91 dólares, y llegó a cotizar a centavos de su precio de salida. Quien compró en la salida a bolsa aún gana cerca de un 7 %; quien compró en la apertura del jueves pierde alrededor de un 20 %."
+      ],
+      "mirada": "Una semana, aunque sea la peor desde 2020, es una corrección y no todavía un estallido: eso solo se sabe con meses de perspectiva. Además, parte del golpe a Nvidia tiene causas propias, y la caída de Nu responde más a su negocio que a la IA. Lo que sí cambió es el ánimo del mercado, que empezó a preguntar cuánto vale de verdad la promesa de la inteligencia artificial.",
+      "titular_corto": "¿Estalló la burbuja de la IA?",
+      "por_que_importa": "las empresas de IA sostienen buena parte del valor de la bolsa, y una caída fuerte de ellas arrastra a todo el mercado.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "En la semana: Nvidia −22,9 %, Nu −14,8 %, Alphabet −10,3 % y Nasdaq −10 %. Anthropic, +7 % sobre su precio de salida."
+      },
+      "cifra": {
+        "valor": "−22,9 %",
+        "texto": "perdió la acción de Nvidia entre el 13 y el 20 de noviembre, la mayor caída entre las grandes de la IA."
+      },
+      "falta_saber": "Si la SEC confirma la investigación a Nvidia y si Anthropic se sostiene por encima de sus 83 dólares de salida.",
+      "imagen": {
+        "archivo": "img/noticias/2026-11-21-estallo-la-burbuja-de-la-ia.jpg",
+        "alt": "Letrero de Wall Street en Nueva York",
+        "autor": "Acediscovery",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Wall-Street-Sign-New-York.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "STL.News",
+          "url": "https://www.stl.news/u-s-stock-market-weekly-update-ending-nov-20-2026/"
+        },
+        {
+          "nombre": "The Closing Print",
+          "url": "https://www.theclosingprint.net/2026/11/post-market-and-weekly-summary-2026-11-20/"
+        },
+        {
+          "nombre": "The Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/"
+        },
+        {
+          "nombre": "MarketBeat",
+          "url": "https://marketbeat.com/instant-alerts/price-nu-nyse-nu-stock-falls-46-after-analyst-downgrade-2026-11-20"
+        },
+        {
+          "nombre": "NPR",
+          "url": "https://www.npr.org/2026/11/19/nx-s1-6042558/anthropic-ipo-breaks-records-100-billion"
+        },
+        {
+          "nombre": "StockAnalysis (precios de cierre)",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia",
       "seccion": "IA y tecnología",
       "titular": "La Comisión Europea confirma un ciberataque hecho con una herramienta de IA",
@@ -14,7 +71,10 @@
       "mirada": "La Comisión solo confirmó el ataque casi un mes después de detectarlo y tras la publicación en la prensa, con el argumento de que divulgar las defensas las debilita. El caso pone en duda cuánta transparencia exigen las instituciones a las empresas cuando ellas mismas son las atacadas.",
       "titular_corto": "IA contra la Comisión Europea",
       "por_que_importa": "confirma que las herramientas de IA para atacar ya están en uso contra gobiernos, no solo en advertencias de expertos.",
-      "dato": { "etiqueta": "El dato", "texto": "Las primeras señales del ataque aparecieron el 22 de octubre; la confirmación pública llegó el 19 de noviembre." },
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "Las primeras señales del ataque aparecieron el 22 de octubre; la confirmación pública llegó el 19 de noviembre."
+      },
       "falta_saber": "Quién está detrás del ataque y si se llevaron datos de los funcionarios.",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.jpg",
@@ -25,7 +85,10 @@
         "url": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_(DSCF7542-DSCF7548).jpg"
       },
       "fuentes": [
-        { "nombre": "The Record", "url": "https://therecord.media/european-commission-confirms-cyberattack-using-ai" }
+        {
+          "nombre": "The Record",
+          "url": "https://therecord.media/european-commission-confirms-cyberattack-using-ai"
+        }
       ]
     },
     {
@@ -41,8 +104,14 @@
       "mirada": "Usar infraestructura que ya existe es una idea sensata para llegar donde no hay redes, pero con Obras por Impuestos el Estado deja de recibir impuestos a cambio de las obras. Por ahora solo Medina tiene acta de inicio; lo de La Guajira, Cesar, Huila y Putumayo sigue en fase de exploración.",
       "titular_corto": "Internet por las torres de energía",
       "por_que_importa": "puede abaratar la llegada de internet a zonas rurales donde tender redes nuevas no resulta rentable.",
-      "dato": { "etiqueta": "Ojo", "texto": "De los cuatro frentes anunciados, solo el de Medina tiene acta de inicio firmada." },
-      "cifra": { "valor": "1.103 familias", "texto": "rurales se conectarían en Medina y Planadas, según el ministerio." },
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "De los cuatro frentes anunciados, solo el de Medina tiene acta de inicio firmada."
+      },
+      "cifra": {
+        "valor": "1.103 familias",
+        "texto": "rurales se conectarían en Medina y Planadas, según el ministerio."
+      },
       "falta_saber": "Cuándo empezarán a funcionar las conexiones y cuánto pagarán las familias por el servicio.",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.jpg",
@@ -53,7 +122,10 @@
         "url": "https://commons.wikimedia.org/wiki/File:Bogota_lattice_towers.jpg"
       },
       "fuentes": [
-        { "nombre": "MinTIC", "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442577:MinTIC-y-Enlaza-unen-infraestructura-y-tecnologia-para-llevar-conectividad-a-zonas-apartadas-del-pais" }
+        {
+          "nombre": "MinTIC",
+          "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442577:MinTIC-y-Enlaza-unen-infraestructura-y-tecnologia-para-llevar-conectividad-a-zonas-apartadas-del-pais"
+        }
       ]
     },
     {
@@ -69,7 +141,10 @@
       "mirada": "Más allá del fallo, el juicio pone sobre la mesa quién controla un aparato una vez comprado. Si una pieza original deja de funcionar por no pasar por el taller del fabricante, el costo de reparar lo decide la marca y no el mercado.",
       "titular_corto": "Apple, a juicio por reparaciones",
       "por_que_importa": "de la decisión depende que reparar un iPhone fuera de los servicios oficiales siga siendo una opción real.",
-      "dato": { "etiqueta": "El dato", "texto": "La denuncia abarca de noviembre de 2021 a julio de 2024 y modelos desde el iPhone XS hasta la serie 15." },
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "La denuncia abarca de noviembre de 2021 a julio de 2024 y modelos desde el iPhone XS hasta la serie 15."
+      },
       "falta_saber": "Qué sanción enfrentaría Apple en caso de una condena y si esta afectaría sus prácticas fuera de Francia.",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.jpg",
@@ -80,7 +155,10 @@
         "url": "https://commons.wikimedia.org/wiki/File:Apple_Store_Op%C3%A9ra,_Paris_September_2013.jpg"
       },
       "fuentes": [
-        { "nombre": "La República", "url": "https://www.larepublica.co/internet-economy/apple-enfrentara-juicio-en-francia-por-las-restricciones-a-las-reparaciones-de-sus-celulares-4529691" }
+        {
+          "nombre": "La República",
+          "url": "https://www.larepublica.co/internet-economy/apple-enfrentara-juicio-en-francia-por-las-restricciones-a-las-reparaciones-de-sus-celulares-4529691"
+        }
       ]
     },
     {
@@ -96,8 +174,14 @@
       "mirada": "Que el ministerio encargado de la transformación digital del Estado pase ocho días sin poder recibir pagos es un recordatorio de la fragilidad de sus propios sistemas. En sus comunicados no explica qué causó la falla.",
       "titular_corto": "MinTIC, ocho días sin sistema",
       "por_que_importa": "los operadores y empresas del sector que pagan contraprestaciones y multas tienen ahora nuevos plazos.",
-      "dato": { "etiqueta": "Lo que no se dice", "texto": "Los comunicados del ministerio no explican la causa de la caída." },
-      "cifra": { "valor": "8 días", "texto": "estuvo fuera de servicio el sistema, del 10 al 18 de noviembre." },
+      "dato": {
+        "etiqueta": "Lo que no se dice",
+        "texto": "Los comunicados del ministerio no explican la causa de la caída."
+      },
+      "cifra": {
+        "valor": "8 días",
+        "texto": "estuvo fuera de servicio el sistema, del 10 al 18 de noviembre."
+      },
       "falta_saber": "Qué provocó la falla y qué hará el ministerio para evitar que se repita.",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.jpg",
@@ -108,8 +192,14 @@
         "url": "https://commons.wikimedia.org/wiki/File:Edificio_Manuel_Murillo_Toro_-_Bogot%C3%A1.jpg"
       },
       "fuentes": [
-        { "nombre": "MinTIC (restablecimiento)", "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442578:Ya-esta-restablecido-del-sistema-de-informacion-SEVEN-ERP-y-los-demas-que-dependen-de-el" },
-        { "nombre": "MinTIC (suspensión de plazos)", "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442534:El-Ministerio-TIC-suspende-temporalmente-los-plazos-de-pago-de-obligaciones-afectadas-por-indisponibilidad-del-sistema-SEVEN-ERP" }
+        {
+          "nombre": "MinTIC (restablecimiento)",
+          "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442578:Ya-esta-restablecido-del-sistema-de-informacion-SEVEN-ERP-y-los-demas-que-dependen-de-el"
+        },
+        {
+          "nombre": "MinTIC (suspensión de plazos)",
+          "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442534:El-Ministerio-TIC-suspende-temporalmente-los-plazos-de-pago-de-obligaciones-afectadas-por-indisponibilidad-del-sistema-SEVEN-ERP"
+        }
       ]
     },
     {
@@ -125,8 +215,14 @@
       "mirada": "Las cifras vienen de la propia Take-Two y no tienen verificación independiente. Detrás del récord hay 13 años de espera desde GTA V y un presupuesto que Rockstar nunca ha revelado.",
       "titular_corto": "GTA VI, récord en un día",
       "por_que_importa": "confirma que el videojuego ya mueve más dinero en un estreno que el cine o la música.",
-      "dato": { "etiqueta": "En cifras", "texto": "32,5 millones de copias en preventa y 132 millones de horas vistas en streaming el día del estreno." },
-      "cifra": { "valor": "US$3.790 M", "texto": "en ventas tras el primer día, según Take-Two y Rockstar." },
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "32,5 millones de copias en preventa y 132 millones de horas vistas en streaming el día del estreno."
+      },
+      "cifra": {
+        "valor": "US$3.790 M",
+        "texto": "en ventas tras el primer día, según Take-Two y Rockstar."
+      },
       "falta_saber": "Si las ventas se sostienen sin versión para PC y cuánto costó realmente producir el juego.",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.jpg",
@@ -137,8 +233,14 @@
         "url": "https://commons.wikimedia.org/wiki/File:20231022_Rockstar_North.jpg"
       },
       "fuentes": [
-        { "nombre": "CNN en Español", "url": "https://cnnespanol.cnn.com/2026/11/20/entretenimiento/ventas-gta-vi-3-000-millones-primer-dia-trax" },
-        { "nombre": "Hipertextual", "url": "https://hipertextual.com/videojuegos/cifras-oficiales-ventas-gta-6/" }
+        {
+          "nombre": "CNN en Español",
+          "url": "https://cnnespanol.cnn.com/2026/11/20/entretenimiento/ventas-gta-vi-3-000-millones-primer-dia-trax"
+        },
+        {
+          "nombre": "Hipertextual",
+          "url": "https://hipertextual.com/videojuegos/cifras-oficiales-ventas-gta-6/"
+        }
       ]
     }
   ]
