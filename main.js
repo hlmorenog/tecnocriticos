@@ -150,7 +150,7 @@
     if (!principal || !secundarias || !todas.length) return 0;
     const n = todas[0];
     const s = SECCIONES[n.seccion] || SECCIONES["IA y tecnología"];
-    const enlace = "noticias.html#" + esc(n.id);
+    const enlace = esc(enlaceNoticia(n));
     principal.innerHTML = `
       <a href="${enlace}" class="img ${s.clase}" data-glifo="${esc(s.glifo)}"><span class="chip">Noticia</span></a>
       <span class="etiqueta" style="display:block;margin-top:16px">${esc(n.seccion)}</span>
@@ -162,7 +162,7 @@
       secundarias.innerHTML = resto.map((m) => `
         <article>
           <span class="etiqueta">${esc(m.seccion)}</span>
-          <h2 class="titular"><a href="noticias.html#${esc(m.id)}">${esc(m.titular)}</a></h2>
+          <h2 class="titular"><a href="${esc(enlaceNoticia(m))}">${esc(m.titular)}</a></h2>
           <span class="meta">${haceCuanto(m.fecha)}</span>
         </article>`).join("");
     }
