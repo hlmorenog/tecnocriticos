@@ -210,7 +210,7 @@ def boletin():
 
 
 def pie():
-    return """<footer class="pie"><div class="w"><div><span>tecnocriticos.com · La tecnología, sin fanatismo</span><span><a href="quienes-somos.html">Quiénes somos</a> · <a href="noticias.html">Noticias</a> · <a href="columna.html">La Columna</a> · <a href="feed.xml">RSS</a></span></div></div></footer>
+    return """<footer class="pie"><div class="w"><div><span>tecnocriticos.com · La tecnología, sin fanatismo</span><span><a href="quienes-somos.html">Quiénes somos</a> · <a href="noticias.html">Noticias</a> · <a href="columna.html">La Columna</a> · <a href="rss.html">RSS</a></span></div></div></footer>
 <script src="main.js"></script>
 </body>
 </html>
@@ -318,7 +318,8 @@ if __name__ == "__main__":
     import generar_noticias  # páginas de cada noticia, quiénes somos, sitemap, RSS, robots y llms.txt
     for nombre, html in [("index.html", portada()), ("noticias.html", pagina_noticias()),
                          ("noticia.html", pagina_noticia()), ("columna.html", pagina_columna()),
-                         ("quienes-somos.html", generar_noticias.pagina_quienes())]:
+                         ("quienes-somos.html", generar_noticias.pagina_quienes()),
+                         ("rss.html", generar_noticias.pagina_rss())]:
         (RAIZ / nombre).write_text(html, encoding="utf-8")
         print("generado", nombre)
     generar_noticias.main()

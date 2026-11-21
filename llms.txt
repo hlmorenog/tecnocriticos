@@ -27,5 +27,5 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Datos
 
-- [RSS](https://tecnocriticos.com/feed.xml): últimas 50 noticias.
+- [RSS](https://tecnocriticos.com/feed.xml): últimas 50 noticias. Cómo suscribirse: https://tecnocriticos.com/rss.html
 - [Sitemap](https://tecnocriticos.com/sitemap.xml)

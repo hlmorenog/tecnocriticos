@@ -93,6 +93,14 @@
     barraCompartir(caja, location.href.split("#")[0], titulo, desc ? desc.content : "");
   });
 
+  /* ---------- Copiar un texto fijo (por ejemplo, la dirección del RSS) ---------- */
+  $$("[data-copiar-texto]").forEach((b) => b.addEventListener("click", () => {
+    const texto = b.dataset.copiarTexto;
+    const ok = () => { b.textContent = "¡Copiada!"; setTimeout(() => (b.textContent = "Copiar dirección"), 1800); };
+    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(ok, () => prompt("Copia esta dirección:", texto));
+    else prompt("Copia esta dirección:", texto);
+  }));
+
   /* ---------- Copiar enlace y barra de lectura ---------- */
   $$("[data-copiar]").forEach((b) => b.addEventListener("click", () => {
     if (navigator.clipboard) navigator.clipboard.writeText(location.href);
