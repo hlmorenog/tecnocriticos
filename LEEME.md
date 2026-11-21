@@ -30,12 +30,22 @@ Las cuatro páginas se generan con `herramientas/generar_paginas.py`, para que l
 - **Debate de La Mesa, Hype-ómetro, manifiesto, menú y resumen de la columna**: se editan al principio de `herramientas/generar_paginas.py`.
 - **Texto de la columna semanal**: `herramientas/columna_actual.html`.
 - Después de editar, ejecuta `python3 herramientas/generar_paginas.py` desde la raíz del repositorio.
-- **No edites `index.html`, `noticias.html`, `noticia.html` ni `columna.html` a mano**: se sobrescriben al generar.
+- **No edites `index.html`, `noticias.html`, `noticia.html`, `columna.html`, `quienes-somos.html` ni nada de `n/` a mano**: se sobrescriben al generar.
+
+## Buscadores (SEO) y motores de IA (GEO)
+
+`python3 herramientas/generar_paginas.py` genera todo el sitio estático; las piezas de noticias y buscadores están en `herramientas/generar_noticias.py`.
+
+- **Una página completa por noticia** (`n/<id>.html`): el texto, la foto, la mirada crítica y las fuentes están en el HTML, así que Google y los buscadores con IA (que casi nunca ejecutan JavaScript) las leen completas. `noticia.html?id=…` queda solo para enlaces antiguos: redirige a la página nueva y no se indexa.
+- **Datos estructurados (schema.org)**: `NewsArticle` y migas de pan en cada noticia; `NewsMediaOrganization` y `WebSite` en la portada; `OpinionNewsArticle` en la columna; `AboutPage` en quiénes somos.
+- **Archivos para rastreadores**: `sitemap.xml` (todas las páginas, con sus fotos), `sitemap-noticias.xml` (formato Google News, últimos 2 días), `feed.xml` (RSS), `robots.txt` (permite todo, también a los buscadores con IA) y `llms.txt` (resumen del sitio para modelos de lenguaje).
+- **Confianza**: `quienes-somos.html` explica quién dirige el sitio, los principios, cómo se hacen y verifican las noticias, el uso de IA, la política de fotos y las correcciones. Se edita en `pagina_quienes()` de `herramientas/generar_noticias.py`.
+- **Pendiente (lo hace la dirección)**: dar de alta el dominio en Google Search Console y en Bing Webmaster Tools y enviar `https://tecnocriticos.com/sitemap.xml`. Para aparecer en Google Noticias, registrar el medio en Google Publisher Center.
 
 ## Compartir en redes sociales
 
 - **Botones**: cada noticia y la columna tienen botones para WhatsApp, Facebook, X, LinkedIn, Telegram, correo y «Copiar enlace». En el celular aparece además «Compartir…», que abre el menú del teléfono (Instagram, TikTok y demás apps instaladas).
-- **Vista previa**: las redes no ejecutan JavaScript, así que cada noticia tiene su propia página para compartir, `n/<id>.html`, con titular, entradilla y foto. Al abrirla, el lector pasa directo a la noticia. Esas páginas se crean con `python3 herramientas/generar_compartir.py`, que se ejecuta con cada edición diaria.
+- **Vista previa**: cada noticia tiene su propia página estática, `n/<id>.html`, con titular, entradilla y foto en el HTML. Es la dirección pública de la noticia y la que se comparte.
 - Las páginas fijas (portada, noticias y columna) usan la imagen `img/compartir.png` (1200 × 630). La columna toma su título y resumen de `herramientas/generar_paginas.py`.
 - **Para revisar cómo se verá un enlace**: Facebook ofrece el «Depurador de contenido compartido» (developers.facebook.com/tools/debug) y LinkedIn el «Post Inspector». Si cambias una foto o un titular ya compartido, pásalo por ahí para que actualicen la vista previa.
 

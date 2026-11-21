@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Tecnocríticos</title>
+  <link>https://tecnocriticos.com/</link>
+  <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
+  <language>es-co</language>
+  <lastBuildDate>Sat, 21 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>¿Estalló la burbuja de la IA?</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año. Por qué importa: las empresas de IA sostienen buena parte del valor de la bolsa, y una caída fuerte de ellas arrastra a todo el mercado.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-estallo-la-burbuja-de-la-ia.jpg" length="144376" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>La Comisión Europea confirma un ciberataque hecho con una herramienta de IA</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo. Por qué importa: confirma que las herramientas de IA para atacar ya están en uso contra gobiernos, no solo en advertencias de expertos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.jpg" length="150639" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>MinTIC y Enlaza usarán las redes eléctricas para llevar internet a zonas apartadas</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>La fibra óptica que ya va en las torres de energía servirá para conectar hogares rurales en Cundinamarca y Tolima. Por qué importa: puede abaratar la llegada de internet a zonas rurales donde tender redes nuevas no resulta rentable.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.jpg" length="201384" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Apple irá a juicio en Francia por presuntas trabas a la reparación independiente de iPhone</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>El caso pone a prueba la práctica de vincular las piezas al teléfono, que limita quién puede repararlo. Por qué importa: de la decisión depende que reparar un iPhone fuera de los servicios oficiales siga siendo una opción real.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.jpg" length="221879" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>El sistema financiero de MinTIC estuvo ocho días caído y frenó pagos y cobros</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>La falla obligó al ministerio a suspender los plazos de multas y contraprestaciones del sector TIC. Por qué importa: los operadores y empresas del sector que pagan contraprestaciones y multas tienen ahora nuevos plazos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.jpg" length="186743" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>GTA VI vendió 3.790 millones de dólares en su primer día, según Take-Two</title>
+   <link>https://tecnocriticos.com/n/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.html</guid>
+   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>La cifra lo pone entre los mayores lanzamientos del entretenimiento, por encima de los grandes estrenos de cine. Por qué importa: confirma que el videojuego ya mueve más dinero en un estreno que el cine o la música.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.jpg" length="234290" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Anthropic debuta en el Nasdaq con la mayor salida a bolsa de la historia</title>
+   <link>https://tecnocriticos.com/n/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.html</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>La creadora de Claude captó más de 107.000 millones de dólares y pone a prueba cuánto está dispuesto a pagar el mercado por la inteligencia artificial. Por qué importa: es la prueba más grande hasta ahora de cuánto está dispuesto a pagar el mercado por la inteligencia artificial.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.jpg" length="323066" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Tribunal de Cundinamarca respalda a la SIC frente a Google por datos de menores</title>
+   <link>https://tecnocriticos.com/n/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.html</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>El fallo dice que la ley colombiana de datos personales aplica a empresas extranjeras cuando recogen información en el país. Por qué importa: la ley colombiana de datos personales aplica a empresas extranjeras que recogen información en el país.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.jpg" length="211070" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>GTA VI sale a la venta: en Colombia cuesta desde 339.900 pesos y la crítica lo aplaude</title>
+   <link>https://tecnocriticos.com/n/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.html</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>El juego más esperado de la década llega solo a consolas y con una caja física que no trae disco. Por qué importa: la caja física no trae disco: lo que se compra es, en la práctica, una licencia digital.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.jpg" length="98891" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>MinTIC y Meta firman un memorando contra el reclutamiento de menores por internet</title>
+   <link>https://tecnocriticos.com/n/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.html</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>El acuerdo, anunciado en Nueva York, también promete formación digital y en uso responsable de la inteligencia artificial. Por qué importa: el Gobierno busca a una gran plataforma como aliada contra el reclutamiento de menores por internet.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.jpg" length="84606" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Un tercio de la cadena de suministro de la IA no aparece en las políticas públicas</title>
+   <link>https://tecnocriticos.com/n/2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas.html</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Un estudio de Cambridge muestra que los gobiernos miran los modelos y los centros de datos, pero no las fábricas y procesos de los que dependen. Por qué importa: las políticas públicas sobre IA ignoran buena parte de la industria de la que depende.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas.jpg" length="103392" type="image/jpeg"/>
+  </item>
+ </channel>
+</rss>

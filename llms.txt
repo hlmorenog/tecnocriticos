@@ -1,0 +1,31 @@
+# Tecnocríticos
+
+> Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
+
+Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
+
+## Páginas principales
+
+- [Portada](https://tecnocriticos.com/): la edición del día.
+- [Todas las noticias](https://tecnocriticos.com/noticias.html): archivo completo, filtrable por sección.
+- [La Columna](https://tecnocriticos.com/columna.html): columna semanal de opinión del director.
+- [Quiénes somos](https://tecnocriticos.com/quienes-somos.html): misión, uso de IA, posición editorial, principios, dirección, fotos y correcciones.
+
+## Últimas noticias
+
+- [¿Estalló la burbuja de la IA?](https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html): Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año.
+- [La Comisión Europea confirma un ciberataque hecho con una herramienta de IA](https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html): El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo.
+- [MinTIC y Enlaza usarán las redes eléctricas para llevar internet a zonas apartadas](https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html): La fibra óptica que ya va en las torres de energía servirá para conectar hogares rurales en Cundinamarca y Tolima.
+- [Apple irá a juicio en Francia por presuntas trabas a la reparación independiente de iPhone](https://tecnocriticos.com/n/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.html): El caso pone a prueba la práctica de vincular las piezas al teléfono, que limita quién puede repararlo.
+- [El sistema financiero de MinTIC estuvo ocho días caído y frenó pagos y cobros](https://tecnocriticos.com/n/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.html): La falla obligó al ministerio a suspender los plazos de multas y contraprestaciones del sector TIC.
+- [GTA VI vendió 3.790 millones de dólares en su primer día, según Take-Two](https://tecnocriticos.com/n/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.html): La cifra lo pone entre los mayores lanzamientos del entretenimiento, por encima de los grandes estrenos de cine.
+- [Anthropic debuta en el Nasdaq con la mayor salida a bolsa de la historia](https://tecnocriticos.com/n/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.html): La creadora de Claude captó más de 107.000 millones de dólares y pone a prueba cuánto está dispuesto a pagar el mercado por la inteligencia artificial.
+- [Tribunal de Cundinamarca respalda a la SIC frente a Google por datos de menores](https://tecnocriticos.com/n/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.html): El fallo dice que la ley colombiana de datos personales aplica a empresas extranjeras cuando recogen información en el país.
+- [GTA VI sale a la venta: en Colombia cuesta desde 339.900 pesos y la crítica lo aplaude](https://tecnocriticos.com/n/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.html): El juego más esperado de la década llega solo a consolas y con una caja física que no trae disco.
+- [MinTIC y Meta firman un memorando contra el reclutamiento de menores por internet](https://tecnocriticos.com/n/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.html): El acuerdo, anunciado en Nueva York, también promete formación digital y en uso responsable de la inteligencia artificial.
+- [Un tercio de la cadena de suministro de la IA no aparece en las políticas públicas](https://tecnocriticos.com/n/2026-11-20-cambridge-un-tercio-de-la-cadena-de-la-ia-fuera-de-las-politicas.html): Un estudio de Cambridge muestra que los gobiernos miran los modelos y los centros de datos, pero no las fábricas y procesos de los que dependen.
+
+## Datos
+
+- [RSS](https://tecnocriticos.com/feed.xml): últimas 50 noticias.
+- [Sitemap](https://tecnocriticos.com/sitemap.xml)
