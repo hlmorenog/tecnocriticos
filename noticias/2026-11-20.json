@@ -6,6 +6,7 @@
       "seccion": "IA y tecnología",
       "titular": "Anthropic debuta en el Nasdaq con la mayor salida a bolsa de la historia",
       "entradilla": "La creadora de Claude captó más de 107.000 millones de dólares y pone a prueba cuánto está dispuesto a pagar el mercado por la inteligencia artificial.",
+      "lead": "Anthropic, la creadora de Claude, debutó el jueves 19 de noviembre en el Nasdaq con la mayor salida a bolsa de la historia: recaudó más de 107.000 millones de dólares y su acción cerró el día un 17 % por encima del precio de salida.",
       "cuerpo": [
         "Anthropic, la empresa detrás del modelo de inteligencia artificial Claude, empezó a cotizar el jueves 19 de noviembre en el Nasdaq con el símbolo ANT. Vendió 956 millones de acciones a 83 dólares cada una, por encima del rango de 70 a 78 dólares que había previsto, según NPR. Sumando la venta de acciones de sus siete fundadores y colocaciones privadas por 26.000 millones de dólares con Google, Microsoft y Nvidia, lo recaudado supera los 107.000 millones de dólares.",
         "La acción abrió en 111,50 dólares, un 34 % por encima del precio de salida, y cerró la jornada en 97,17 dólares, un 17 % arriba. La operación supera los 75.000 millones que logró SpaceX en junio y valora la compañía en torno a 1,5 billones de dólares.",
@@ -47,6 +48,7 @@
       "seccion": "Colombia",
       "titular": "Tribunal de Cundinamarca respalda a la SIC frente a Google por datos de menores",
       "entradilla": "El fallo dice que la ley colombiana de datos personales aplica a empresas extranjeras cuando recogen información en el país.",
+      "lead": "El Tribunal Administrativo de Cundinamarca negó la demanda de Google contra la Superintendencia de Industria y Comercio y dejó en firme las órdenes que obligan a la empresa a cumplir la ley colombiana de protección de datos de menores.",
       "cuerpo": [
         "El Tribunal Administrativo de Cundinamarca negó en primera instancia la demanda que Google presentó en abril de 2022 contra la Superintendencia de Industria y Comercio (SIC), informó El Tiempo. La sentencia, del 5 de noviembre, deja en firme las resoluciones de 2020 y 2021 que obligan a la compañía a informar con claridad el uso de los datos, adoptar una política de tratamiento ajustada a la ley, registrar sus bases de datos ante la SIC y obtener de forma efectiva el permiso de los padres de los menores.",
         "Google argumentaba que, por estar domiciliada en California y no tener presencia legal en Colombia, no tenía que cumplir la Ley 1581 de 2012. El tribunal concluyó que lo decisivo es dónde se recogen los datos: aunque se almacenen en servidores extranjeros, se recolectan en Colombia mediante cookies e identificadores en los dispositivos. La propia empresa reportó en 2020 cerca de 1,85 millones de cuentas de menores activas desde el país en 28 días.",
@@ -80,6 +82,7 @@
       "seccion": "Videojuegos y series",
       "titular": "GTA VI sale a la venta: en Colombia cuesta desde 339.900 pesos y la crítica lo aplaude",
       "entradilla": "El juego más esperado de la década llega solo a consolas y con una caja física que no trae disco.",
+      "lead": "Grand Theft Auto VI salió a la venta el jueves 19 de noviembre para PlayStation 5 y Xbox Series X|S. En Colombia cuesta desde 339.900 pesos, y su versión física trae un código de descarga en lugar de un disco.",
       "cuerpo": [
         "Grand Theft Auto VI, de Rockstar Games, se desbloqueó a la medianoche del jueves 19 de noviembre para PlayStation 5 y Xbox Series X|S, tras varios aplazamientos. Según El Tiempo, en Colombia la edición estándar cuesta entre 339.900 y 369.900 pesos, según la tienda, y la Ultimate Edition, 424.900 pesos. Rockstar no ha anunciado una versión para PC.",
         "La versión física no incluye disco: la caja trae un código de descarga de un solo uso, por lo que conviene verificar que el código y la cuenta correspondan a la región de Latinoamérica. El juego transcurre en Leonida, un estado ficticio inspirado en Florida, y sigue a la pareja de Jason y Lucía.",
@@ -115,6 +118,7 @@
       "seccion": "Colombia",
       "titular": "MinTIC y Meta firman un memorando contra el reclutamiento de menores por internet",
       "entradilla": "El acuerdo, anunciado en Nueva York, también promete formación digital y en uso responsable de la inteligencia artificial.",
+      "lead": "El Ministerio TIC firmó con Meta un memorando de entendimiento para combatir el reclutamiento de menores por internet y ampliar la formación digital, anunció la ministra Alexandra Falla en la Milagro Week de Nueva York.",
       "cuerpo": [
         "La ministra de las TIC, Alexandra Falla, anunció durante la Milagro Week, la rueda de negocios del Gobierno en Nueva York para atraer inversión extranjera, la firma de un memorando de entendimiento con Meta. Según El Heraldo, el acuerdo busca fortalecer las acciones contra el reclutamiento de menores a través de internet y ampliar la formación digital y el uso responsable de la IA.",
         "La ministra aseguró que el trabajo con la plataforma se enfocará en hacerla más segura para niños y adolescentes. El vicepresidente José Manuel Restrepo, que lidera la delegación, señaló como objetivos combatir el reclutamiento forzado de niños, niñas y adolescentes por grupos armados ilegales y formar a los jóvenes en nuevas tecnologías."
@@ -147,6 +151,7 @@
       "seccion": "IA y tecnología",
       "titular": "Un tercio de la cadena de suministro de la IA no aparece en las políticas públicas",
       "entradilla": "Un estudio de Cambridge muestra que los gobiernos miran los modelos y los centros de datos, pero no las fábricas y procesos de los que dependen.",
+      "lead": "Un estudio de la Universidad de Cambridge encontró que más de un tercio de los elementos esenciales de la cadena de suministro de la inteligencia artificial no aparece en ninguna de las políticas públicas analizadas de 43 países y territorios.",
       "cuerpo": [
         "Investigadores del proyecto AIxGEO de la Escuela de Políticas Públicas Bennett, de la Universidad de Cambridge, analizaron 14 niveles de la cadena de suministro de la IA, desde minerales y gases hasta chips, servidores y modelos. Identificaron 137 elementos esenciales y cerca de 800 empresas en 56 países y territorios, informó El Tiempo.",
         "Al revisar 117 documentos de política de 43 países y territorios, además de la Unión Europea y la OCDE, encontraron que poco más del 33 % de esos elementos no se menciona en ninguno. Los vacíos se concentran en etapas intermedias, como el software de diseño de chips o el empaquetado avanzado, este último concentrado en Taiwán, Vietnam y Filipinas. Según Siyi Liu, autor principal del estudio, las políticas se fijan en los procesadores gráficos y pasan por alto el empaquetado, el paso que convierte esos chips en equipos de IA que realmente funcionan.",

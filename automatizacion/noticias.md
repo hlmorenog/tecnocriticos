@@ -45,7 +45,7 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 - **`titular_corto`**: versión de 3 a 6 palabras para la lista «En 1 minuto» (por ejemplo, «GTA VI llega sin disco»).
 - **`por_que_importa`**: una frase que completa «Por qué importa: …», en minúscula inicial. Es la idea clave para el lector.
 - **`dato`**: la línea en negrita que acompaña la noticia en el listado. `etiqueta` es una de: «Por qué importa», «El dato», «En cifras», «Ojo», «Lo que no se dice». `texto` es una frase corta respaldada por la fuente.
-- **`cifra`** (opcional, solo si hay un número protagonista y verificable): `valor` corto (por ejemplo «US$107.000 M» o «339.900 pesos») y `texto` que explica la cifra. Si no hay una cifra clara, omite el campo.
+- **`lead`** (obligatorio): el lead periodístico, una o dos frases (entre 25 y 45 palabras) que cuentan lo esencial: qué pasó, quién, cuándo y dónde. Se muestra en negrita al inicio de la noticia. No repite la entradilla palabra por palabra y solo usa datos de las fuentes.
 
 ## Formato del archivo
 
@@ -65,7 +65,7 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
       "titular_corto": "…",
       "por_que_importa": "…",
       "dato": { "etiqueta": "El dato", "texto": "…" },
-      "cifra": { "valor": "…", "texto": "…" },
+      "lead": "…",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-slug-corto-del-titular.jpg",
         "alt": "Descripción breve de lo que se ve en la foto",
