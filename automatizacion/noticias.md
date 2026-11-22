@@ -98,11 +98,12 @@ Cada noticia lleva una foto **con licencia libre** y su crédito. La web muestra
 1. **Dónde buscar**, en este orden: Wikimedia Commons (API: `https://commons.wikimedia.org/w/api.php`, sin clave), Unsplash y Pexels.
    **Nunca uses fotos de los medios fuente ni de agencias** (tienen derechos de autor), ni imágenes generadas por IA.
 2. **Licencias válidas**: dominio público, CC0, CC BY o CC BY-SA (cualquier versión), y las licencias de Unsplash y Pexels. Descarta CC BY-NC y CC BY-ND.
-3. **Relevancia**: la foto debe mostrar algo relacionado (el lugar, la empresa, el producto, el tipo de objeto). Si es genérica, dilo en el `alt` con «(imagen ilustrativa)». Nunca uses la foto de una persona para ilustrar a otra.
-4. **Crédito completo**: `autor`, `licencia`, `fuente` y `url` de la página de la foto (no del archivo).
-5. **Archivo**: descárgala, redúcela a 1200 px de ancho como máximo, guárdala en JPG de calidad 76–82 como `img/noticias/<id>.jpg` y verifica que pese menos de 300 KB. Por ejemplo, con Python y Pillow: `im.thumbnail((1200,1200)); im.save(ruta, quality=78, optimize=True, progressive=True)`.
+3. **Actualidad**: si la foto muestra un producto (consola, teléfono, computador), debe ser un modelo actual y coherente con la noticia. En videojuegos de PlayStation 5 o Xbox Series X|S, usa esas consolas, nunca generaciones anteriores (PS4, Xbox One, Xbox 360…).
+4. **Relevancia**: la foto debe mostrar algo relacionado (el lugar, la empresa, el producto, el tipo de objeto). Si es genérica, dilo en el `alt` con «(imagen ilustrativa)». Nunca uses la foto de una persona para ilustrar a otra.
+5. **Crédito completo**: `autor`, `licencia`, `fuente` y `url` de la página de la foto (no del archivo).
+6. **Archivo**: descárgala, redúcela a 1200 px de ancho como máximo, guárdala en JPG de calidad 76–82 como `img/noticias/<id>.jpg` y verifica que pese menos de 300 KB. Por ejemplo, con Python y Pillow: `im.thumbnail((1200,1200)); im.save(ruta, quality=78, optimize=True, progressive=True)`.
    Wikimedia limita las descargas rápidas: espera unos segundos entre peticiones y envía un `User-Agent` descriptivo.
-6. Si no encuentras una foto adecuada, **omite el campo `imagen`**: la web muestra un bloque de color de la sección.
+7. Si no encuentras una foto adecuada, **omite el campo `imagen`**: la web muestra un bloque de color de la sección.
 
 ## Entrega para revisión
 
