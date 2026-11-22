@@ -13,6 +13,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Últimas noticias
 
+- [El comercial de kung fu de Apple Pay se parece mucho a uno del BCP de 2006](https://tecnocriticos.com/n/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.html): Apple estrenó un anuncio en el que una pelea de artes marciales se detiene para pagar con el iPhone; el Banco de Crédito del Perú contó una historia casi idéntica hace 20 años.
 - [¿Estalló la burbuja de la IA?](https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html): Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año.
 - [La Comisión Europea confirma un ciberataque hecho con una herramienta de IA](https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html): El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo.
 - [MinTIC y Enlaza usarán las redes eléctricas para llevar internet a zonas apartadas](https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html): La fibra óptica que ya va en las torres de energía servirá para conectar hogares rurales en Cundinamarca y Tolima.

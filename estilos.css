@@ -304,3 +304,15 @@ button { font: inherit; }
 .rss-url code { font: 500 14px var(--f-mono); word-break: break-all; flex: 1 1 220px; }
 .rss-url button { font: 600 13px var(--f-titular); background: var(--tinta); color: #fff; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
 .rss-url button:hover { background: var(--acento); }
+
+/* ---------- Videos dentro de una noticia ---------- */
+.videos { margin: 28px 0; }
+.videos__tit { font: 800 13px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 14px; padding-top: 14px; border-top: 3px solid var(--tinta); }
+.videos__rej { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.video { margin: 0; }
+.video__marco { position: relative; aspect-ratio: 16 / 9; background: var(--tinta); }
+.video__marco iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video figcaption { margin-top: 8px; font: 400 14px/1.5 var(--f-texto); color: var(--tinta-2); }
+.video figcaption b { display: block; font: 700 15px var(--f-titular); color: var(--tinta); }
+.video figcaption a { color: var(--acento); font-weight: 600; }
+

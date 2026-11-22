@@ -84,6 +84,7 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 ```
 
 - `id`: la fecha más un slug en minúsculas, sin tildes, con guiones. Debe ser único.
+- `videos` es opcional: solo si el video aporta a la noticia (por ejemplo, comparar dos comerciales). Es una lista de `{ "titulo": "…", "youtube": "ID de 11 caracteres", "descripcion": "…" }`; `videos_titulo` es el encabezado del bloque. Verifica cada video con `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ID&format=json` (debe responder 200) y di en la descripción quién lo subió si no es el canal oficial.
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).

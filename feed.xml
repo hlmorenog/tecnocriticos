@@ -5,9 +5,17 @@
   <link>https://tecnocriticos.com/</link>
   <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
   <language>es-co</language>
-  <lastBuildDate>Sat, 21 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <lastBuildDate>Sun, 22 Nov 2026 06:00:00 -0500</lastBuildDate>
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>El comercial de kung fu de Apple Pay se parece mucho a uno del BCP de 2006</title>
+   <link>https://tecnocriticos.com/n/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.html</guid>
+   <pubDate>Sun, 22 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Apple estrenó un anuncio en el que una pelea de artes marciales se detiene para pagar con el iPhone; el Banco de Crédito del Perú contó una historia casi idéntica hace 20 años. Por qué importa: en publicidad, la línea entre homenaje, inspiración y copia es delgada, y ver las dos piezas lado a lado es la mejor forma de juzgar.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.jpg" length="110358" type="image/jpeg"/>
+  </item>
   <item>
    <title>¿Estalló la burbuja de la IA?</title>
    <link>https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html</link>
