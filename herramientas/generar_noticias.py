@@ -26,6 +26,7 @@ RAIZ = gp.RAIZ
 SITIO = gp.SITIO
 esc = gp.esc
 ID_VALIDO = re.compile(r"^[a-z0-9-]+$")
+ID_YOUTUBE = re.compile(r"^[A-Za-z0-9_-]{11}$")
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
          "noviembre", "diciembre"]
 DIAS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
@@ -138,6 +139,18 @@ def pagina_noticia(n, todas):
     if n.get("mirada"):
         tri = (f'<div class="analisis"><div class="analisis__mirada"><h4>La mirada crítica</h4><p>{esc(n["mirada"])}</p></div>'
                '</div>')
+    videos = ""
+    lista_v = [v for v in (n.get("videos") or []) if ID_YOUTUBE.match(v.get("youtube", ""))]
+    if lista_v:
+        items = "".join(
+            f'<figure class="video"><div class="video__marco"><iframe src="https://www.youtube-nocookie.com/embed/{v["youtube"]}" '
+            f'title="{esc(v.get("titulo") or "Video")}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" '
+            f'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+            f'<figcaption><b>{esc(v.get("titulo"))}</b>{(" " + esc(v["descripcion"])) if v.get("descripcion") else ""} '
+            f'<a href="https://www.youtube.com/watch?v={v["youtube"]}" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure>'
+            for v in lista_v)
+        titulo_v = esc(n.get("videos_titulo") or "Videos")
+        videos = f'<section class="videos" aria-label="{titulo_v}"><h2 class="videos__tit">{titulo_v}</h2><div class="videos__rej">{items}</div></section>'
     fuentes = "".join(f'<li><a href="{esc(fu["url"])}" target="_blank" rel="noopener">{esc(fu.get("nombre") or fu["url"])}</a></li>'
                       for fu in n.get("fuentes", []) if fu.get("url"))
     fuentes = f'<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>' if fuentes else ""
@@ -164,6 +177,7 @@ def pagina_noticia(n, todas):
   {cifra}
   {importa}
   <div class="cuerpo">{cuerpo}</div>
+  {videos}
   {tri}
   {fuentes}
   <div class="compartir" data-compartir></div>

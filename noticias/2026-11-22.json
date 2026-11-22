@@ -1,0 +1,56 @@
+{
+  "fecha": "2026-11-22",
+  "noticias": [
+    {
+      "id": "2026-11-22-apple-pay-kung-fu-comercial-bcp-2006",
+      "seccion": "IA y tecnología",
+      "titular": "El kung fu de Apple Pay recuerda a un comercial del BCP de 2006: compáralos",
+      "titular_corto": "Apple Pay, ¿kung fu peruano?",
+      "entradilla": "Apple estrenó un anuncio de artes marciales para promover los pagos con el iPhone, y en redes ya lo comparan con una pieza del Banco de Crédito del Perú de hace 20 años.",
+      "por_que_importa": "en publicidad, la línea entre homenaje, inspiración y copia es delgada, y ver las dos piezas lado a lado es la mejor forma de juzgar.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "El comercial del BCP se publicó el 20 de septiembre de 2006, según LatinSpots; el de Apple, el 9 de noviembre de 2026."
+      },
+      "cifra": {
+        "valor": "20 años",
+        "texto": "separan el comercial «Kung Fu» del BCP y el nuevo anuncio de Apple Pay."
+      },
+      "cuerpo": [
+        "Apple publicó el 9 de noviembre un comercial de Apple Pay dirigido por el cineasta Edgar Wright, conocido por Baby Driver y Shaun of the Dead. La pieza convierte una tienda de barrio en una pelea al estilo de las películas de kung fu: el protagonista paga cada arma improvisada con su iPhone, mientras sus rivales se enredan buscando la billetera, según MacRumors y 9to5Mac. En un momento, uno de ellos le roba el teléfono, pero no logra pagar porque Face ID lo bloquea.",
+        "Wright aseguró en X que quiso rendir homenaje a Jackie Chan y al cine de acción de Hong Kong, según recogió el sitio francés iPhoneSoft.",
+        "Casi dos décadas antes, el Banco de Crédito del Perú (BCP) publicó un comercial llamado «Kung Fu» para promover su tarjeta Credimás Visa. Lo creó la agencia Leo Burnett Perú, con producción de FatFree Films, y está registrado en el archivo publicitario LatinSpots con fecha del 20 de septiembre de 2006.",
+        "En YouTube ya circulan videos que plantean que Apple tomó la idea del comercial peruano. No encontramos ningún pronunciamiento de Apple, del BCP ni de las agencias. Abajo están los dos comerciales para que saques tus propias conclusiones."
+      ],
+      "videos_titulo": "Compara los dos comerciales",
+      "videos": [
+        {
+          "titulo": "BCP «Kung Fu» (Perú, 2006)",
+          "youtube": "ylvcOLDHNNg",
+          "descripcion": "Comercial de la tarjeta Credimás Visa, de Leo Burnett Perú. Copia subida a YouTube por un usuario; no la encontramos en el canal oficial del BCP."
+        },
+        {
+          "titulo": "Apple Pay (2026)",
+          "youtube": "miUjxZ2ASRs",
+          "descripcion": "Comercial dirigido por Edgar Wright, publicado en el canal oficial de Apple."
+        }
+      ],
+      "mirada": "Un comercial de kung fu para vender pagos con tarjeta ya existía en Perú desde 2006. ¿Copia, homenaje o coincidencia? Juzga tú.",
+      "imagen": {
+        "archivo": "img/noticias/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.jpg",
+        "alt": "Pago con un iPhone en un datáfono (imagen ilustrativa)",
+        "autor": "Mybloodtypeiscoffee",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Apple-payment-square.jpg"
+      },
+      "fuentes": [
+        { "nombre": "MacRumors", "url": "https://www.macrumors.com/2026/11/09/apple-pay-ad-food-fight/" },
+        { "nombre": "9to5Mac", "url": "https://9to5mac.com/2026/11/09/edgar-wright-directs-apples-hilarious-new-apple-pay-action-ad/" },
+        { "nombre": "iPhoneSoft", "url": "https://iphonesoft.fr/2026/11/10/apple-pay-nouvelle-pub-signee-edgar-wright-transforme-superette-combat-kung-fu" },
+        { "nombre": "LatinSpots (ficha del comercial del BCP)", "url": "https://www.latinspots.com/pieza/comercial/kung-fu/6808" },
+        { "nombre": "Apple en YouTube", "url": "https://www.youtube.com/watch?v=miUjxZ2ASRs" }
+      ]
+    }
+  ]
+}
