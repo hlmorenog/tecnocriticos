@@ -93,6 +93,22 @@
     barraCompartir(caja, location.href.split("#")[0], titulo, desc ? desc.content : "");
   });
 
+  /* ---------- Menú del celular ---------- */
+  const botonMenu = $("[data-menu-btn]");
+  const menuMovil = $("#menu-movil");
+  if (botonMenu && menuMovil) {
+    const abrir = (si) => {
+      menuMovil.hidden = !si;
+      botonMenu.setAttribute("aria-expanded", String(si));
+      botonMenu.querySelector(".sr-only").textContent = si ? "Cerrar el menú" : "Abrir el menú";
+      document.documentElement.classList.toggle("menu-abierto", si);
+    };
+    botonMenu.addEventListener("click", () => abrir(menuMovil.hidden));
+    menuMovil.addEventListener("click", (e) => { if (e.target.closest("a")) abrir(false); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && !menuMovil.hidden) { abrir(false); botonMenu.focus(); } });
+    matchMedia("(min-width: 1101px)").addEventListener("change", (e) => { if (e.matches) abrir(false); });
+  }
+
   /* ---------- Copiar un texto fijo (por ejemplo, la dirección del RSS) ---------- */
   $$("[data-copiar-texto]").forEach((b) => b.addEventListener("click", () => {
     const texto = b.dataset.copiarTexto;
@@ -214,7 +230,7 @@
         <p class="bl"><b>Por qué importa:</b>${esc(n.por_que_importa || n.entradilla)}</p>
         ${n.dato && n.dato.texto && n.dato.texto !== n.por_que_importa ? `<p class="bl"><b>${esc(n.dato.etiqueta || "El dato")}:</b>${esc(n.dato.texto)}</p>` : ""}
         ${bloqueTri(n)}
-        <span class="meta">${nombresFuentes(n) ? "Fuentes: " + esc(nombresFuentes(n)) + " · " : ""}${minutos(n)} min de lectura · <a href="${esc(enlace(n))}" style="color:var(--rojo)">Leer completa →</a></span>`;
+        <span class="meta">${nombresFuentes(n) ? "Fuentes: " + esc(nombresFuentes(n)) + " · " : ""}${minutos(n)} min de lectura · <a href="${esc(enlace(n))}" style="color:var(--acento)">Leer completa →</a></span>`;
 
       const feed = $("[data-feed]");
       const resto = todas.slice(1, 6);

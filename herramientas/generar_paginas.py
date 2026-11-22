@@ -145,11 +145,24 @@ def cabecera(activo=""):
     menu = a("index.html", "Hoy", "hoy") + "".join(a(f"noticias.html?seccion={q}", s, s) for s, q in SEC) \
         + a("noticias.html", "Todas las noticias", "noticias") + a("columna.html", "La Columna", "columna")
     chips = "".join(f'<a href="noticias.html?seccion={q}">{s}</a>' for s, q in SEC)
+    # Menú desplegable del celular (y de pantallas angostas, donde el menú horizontal no cabe)
+    def m(href, txt, clave=""):
+        return f'<a href="{href}"{" aria-current=\"page\"" if clave and activo == clave else ""}>{txt}</a>'
+    movil = (m("index.html", "Hoy", "hoy") + "".join(m(f"noticias.html?seccion={q}", s, s) for s, q in SEC)
+             + m("noticias.html", "Todas las noticias", "noticias") + m("columna.html", "La Columna", "columna"))
+    movil2 = (m("index.html#hype", "⚡ Hype-ómetro") + m("index.html#mesa", "🗳 La Mesa")
+              + m("quienes-somos.html", "Quiénes somos") + m("rss.html", "RSS"))
     return f"""<header class="cab"><div class="w">
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-btn><span class="menu-btn__icono" aria-hidden="true"></span><span class="sr-only">Abrir el menú</span></button>
   <a class="logo" href="index.html" aria-label="Tecnocríticos, inicio"><span class="logo__punto"></span>tecnocríticos</a>
   <nav class="menu" aria-label="Secciones">{menu}</nav>
-  <a class="cta" href="index.html#boletin">Boletín gratis</a>
-</div></header>
+  <a class="cta" href="index.html#boletin">Boletín<span class="cta__extra"> gratis</span></a>
+</div>
+<nav class="menu-movil" id="menu-movil" aria-label="Menú" hidden><div class="w">
+  <span class="menu-movil__lab">Secciones</span>{movil}
+  <span class="menu-movil__lab">Más</span>{movil2}
+  <a class="menu-movil__cta" href="index.html#boletin">Suscríbete al Boletín Crítico</a>
+</div></nav></header>
 <nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
 """
 
@@ -182,7 +195,7 @@ def bloque_hype():
     filas = "".join(f"""<div class="hyp"><h4>{t}</h4><div class="barra"><div class="pista"><i class="promesa" style="width:{p}%"></i><i class="realidad" style="width:{r}%"></i></div><span>−{p - r}</span></div><p>{v}</p></div>"""
                     for t, p, r, v in HYPE)
     return f"""<section class="hype" id="hype" data-quitar="2"><h3>⚡ Hype-ómetro <span class="meta">promesa vs. realidad</span></h3>{filas}
-  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--rojo)"></i>Realidad</span><span>Distancia en puntos</span></div></section>"""
+  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--acento)"></i>Realidad</span><span>Distancia en puntos</span></div></section>"""
 
 
 def bloque_podcast():

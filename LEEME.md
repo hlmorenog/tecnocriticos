@@ -8,9 +8,9 @@
 | Elemento | Detalle |
 |---|---|
 | **Fondo** | Blanco siempre, sin modo oscuro. |
-| **Colores** | Tinta `#111111` · Rojo `#E4322B` · Gris de texto `#737373` · Líneas `#E4E4E0`. |
+| **Colores** | Tinta `#111111` · Verde Jade `#00875A` (acento; variable `--acento` en `estilos.css`) · Gris de texto `#737373` · Líneas `#E4E4E0`. |
 | **Tipografías** (Google Fonts) | *Inter Tight* para titulares e interfaz, *Newsreader* para el texto de lectura, *IBM Plex Mono* para etiquetas y datos. |
-| **Logo** | Provisional (punto rojo + «tecnocríticos»), a la espera del logo definitivo. |
+| **Logo** | Provisional (punto verde + «tecnocríticos»), a la espera del logo definitivo. |
 | **Alineación** | Todo va dentro de un mismo contenedor de 1200 px: los bloques empiezan y terminan en los mismos bordes. |
 
 ## Estructura de la portada
