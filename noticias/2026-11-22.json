@@ -7,6 +7,7 @@
       "titular": "El comercial de kung fu de Apple Pay se parece mucho a uno del BCP de 2006",
       "titular_corto": "Apple Pay, ¿kung fu peruano?",
       "entradilla": "Apple estrenó un anuncio en el que una pelea de artes marciales se detiene para pagar con el iPhone; el Banco de Crédito del Perú contó una historia casi idéntica hace 20 años.",
+      "lead": "El nuevo comercial de Apple Pay, una pelea de kung fu en una tienda en la que todos deben pagar antes de seguir combatiendo, repite la estructura de «Kung Fu», un comercial del Banco de Crédito del Perú publicado en 2006.",
       "por_que_importa": "en publicidad, la línea entre homenaje, inspiración y copia es delgada, y ver las dos piezas lado a lado es la mejor forma de juzgar.",
       "dato": {
         "etiqueta": "El dato",
@@ -74,6 +75,7 @@
       "titular": "EE. UU. aprobó la venta de casi 900.000 chips de IA a empresas chinas en seis meses",
       "titular_corto": "900.000 chips de IA para China",
       "entradilla": "Una comisión del Congreso reveló las licencias que aprobó el Gobierno de Trump, en medio de la presión para endurecer los controles a China.",
+      "lead": "El Gobierno de Estados Unidos aprobó entre diciembre de 2025 y mayo de 2026 licencias para vender 879.000 chips avanzados de IA de Nvidia y AMD a empresas chinas, reveló el 19 de noviembre una comisión de la Cámara de Representantes.",
       "por_que_importa": "los chips de IA más avanzados son la pieza clave de la carrera tecnológica entre Estados Unidos y China.",
       "cifra": {
         "valor": "879.000",
@@ -110,6 +112,7 @@
       "titular": "Signal bloquea las capturas de pantalla para que la IA del celular no lea tus chats",
       "titular_corto": "Signal se blinda contra la IA",
       "entradilla": "La aplicación de mensajería cifrada considera que los asistentes de IA integrados en iOS y Android ponen en riesgo la privacidad de las conversaciones.",
+      "lead": "Signal bloqueará por defecto las capturas de pantalla en iOS 27, y en Android cuando detecte a un asistente de IA leyendo la pantalla, para impedir que Siri AI y Gemini Intelligence capturen el contenido de los chats.",
       "por_que_importa": "el cifrado protege los mensajes en el camino, pero no sirve de mucho si el propio sistema operativo lee la pantalla.",
       "dato": {
         "etiqueta": "Ojo",
@@ -138,6 +141,7 @@
       "titular": "Agentes de IA encontraron y explotaron una falla desconocida en 11 minutos, según Amazon",
       "titular_corto": "Hackeo con IA en 11 minutos",
       "entradilla": "Unos atacantes solo le pidieron a una plataforma de agentes de IA que consiguiera acceso a un servidor, y los agentes hicieron el resto.",
+      "lead": "Unos atacantes usaron agentes de inteligencia artificial que encontraron por su cuenta una falla desconocida en un software de imágenes médicas y la explotaron en 11 minutos para tomar el control de un servidor, informó Amazon.",
       "por_que_importa": "encontrar y explotar fallas desconocidas, que antes exigía expertos y tiempo, empieza a quedar al alcance de herramientas automáticas.",
       "cifra": {
         "valor": "11 minutos",

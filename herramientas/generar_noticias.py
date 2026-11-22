@@ -132,8 +132,7 @@ def pagina_noticia(n, todas):
     imagen = (f[0], f[1], f[2], esc(f[3])) if f else None
     seccion_q = quote(n["seccion"])
     cuerpo = "".join(f"<p>{esc(p)}</p>" for p in (n.get("cuerpo") or []))
-    cifra = (f'<div class="dato"><strong>{esc(n["cifra"]["valor"])}</strong><span>{esc(n["cifra"].get("texto"))}</span></div>'
-             if (n.get("cifra") or {}).get("valor") else "")
+    cifra = f'<p class="lead">{esc(n["lead"])}</p>' if n.get("lead") else ""
     importa = f'<p class="bl"><b>Por qué importa:</b>{esc(n["por_que_importa"])}</p>' if n.get("por_que_importa") else ""
     tri = ""
     if n.get("mirada"):

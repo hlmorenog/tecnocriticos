@@ -180,7 +180,6 @@ def bloque_mesa():
   <div class="mesa__cierre"><span>Cierra: <b>{DEBATE['cierre']}</b></span><span>Un voto por persona</span></div>
   {ops}
   <p class="mesa__gracias" hidden>Gracias por votar. Publicaremos los resultados al cierre del debate.</p>
-  <a class="mesa__btn" href="columna.html#conversa">Deja tu argumento</a>
   <p class="mesa__args">Argumentos destacados</p>
   <p class="mesa__nota">Los argumentos de los lectores aparecerán aquí cuando abramos la conversación.</p>
 </section>"""

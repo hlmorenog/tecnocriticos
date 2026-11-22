@@ -6,6 +6,7 @@
       "seccion": "IA y tecnología",
       "titular": "¿Estalló la burbuja de la IA?",
       "entradilla": "Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año.",
+      "lead": "Las grandes empresas de la inteligencia artificial perdieron valor en la peor semana de la bolsa estadounidense en más de un año: entre el 16 y el 20 de noviembre, Nvidia cayó un 22,9 %, Nu un 14,8 % y Alphabet un 10,3 %.",
       "cuerpo": [
         "Entre el 16 y el 20 de noviembre, el Nasdaq cayó un 10 %, su mayor baja semanal desde marzo de 2020, y borró sus ganancias de 2026, según STL.News y The Closing Print. El S&P 500 perdió un 8,6 % y entró en corrección. La venta se concentró en las empresas de inteligencia artificial y de chips.",
         "Nvidia fue la más golpeada: pasó de 162,85 a 125,53 dólares, un 22,9 % menos en la semana. Solo el viernes cayó un 14 %, tras informes de una posible investigación contable de la SEC, según The Motley Fool. Alphabet bajó un 10,3 %, de 295,77 a 265,29 dólares, en medio de versiones no confirmadas de que Google reduciría sus pedidos de chips. Nu Holdings, la matriz de Nubank, cayó un 14,8 %, hasta 11,27 dólares, y borró el salto que había dado con sus ganancias récord; el viernes, UBS recortó su precio objetivo, según MarketBeat.",
@@ -63,6 +64,7 @@
       "seccion": "IA y tecnología",
       "titular": "La Comisión Europea confirma un ciberataque hecho con una herramienta de IA",
       "entradilla": "El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo.",
+      "lead": "La Comisión Europea confirmó el 19 de noviembre que sufrió un ciberataque hecho con una herramienta de inteligencia artificial, que afectó durante más de diez días sus sistemas de personal y cuyas primeras señales detectó el 22 de octubre.",
       "cuerpo": [
         "La Comisión Europea confirmó el jueves 19 de noviembre que sufrió un ciberataque en el que se usó una herramienta de inteligencia artificial disponible públicamente, informó The Record. Su portavoz, Thomas Regnier, dijo que las primeras señales se detectaron el 22 de octubre y lo describió como una campaña generada con IA, sin identificar la herramienta ni a los atacantes.",
         "Según el medio POLITICO, citado por The Record, el equipo de respuesta de las instituciones europeas (CERT-EU) identificó el uso de ARTEX, una plataforma de código abierto que automatiza la búsqueda y explotación de vulnerabilidades con modelos comerciales de IA. El ataque habría afectado durante más de diez días los sistemas de personal, como nómina, permisos, reembolsos médicos y traducción.",
@@ -96,6 +98,7 @@
       "seccion": "Colombia",
       "titular": "MinTIC y Enlaza usarán las redes eléctricas para llevar internet a zonas apartadas",
       "entradilla": "La fibra óptica que ya va en las torres de energía servirá para conectar hogares rurales en Cundinamarca y Tolima.",
+      "lead": "El Ministerio TIC y Enlaza, filial del Grupo Energía Bogotá, acordaron llevar internet a zonas apartadas usando la fibra óptica de las líneas de transmisión eléctrica, empezando por proyectos en Medina (Cundinamarca) y Planadas (Tolima).",
       "cuerpo": [
         "El Ministerio TIC y Enlaza, filial del Grupo Energía Bogotá, acordaron una hoja de ruta para llevar conectividad a zonas apartadas aprovechando la fibra óptica que viaja por las líneas de transmisión eléctrica, informó el ministerio el 20 de noviembre. Los proyectos se financiarán con el mecanismo de Obras por Impuestos y los ejecutará la filial del GEB.",
         "En Medina (Cundinamarca) ya se firmó el acta de inicio de un proyecto de 11.790 millones de pesos que llevará internet a 303 familias rurales, 21 zonas digitales y más de 900 estudiantes. En Planadas (Tolima) se viabilizó otro de 17.400 millones de pesos para conectar a 800 familias cafeteras, con apoyo de la Federación Nacional de Cafeteros.",
@@ -133,6 +136,7 @@
       "seccion": "IA y tecnología",
       "titular": "Apple irá a juicio en Francia por presuntas trabas a la reparación independiente de iPhone",
       "entradilla": "El caso pone a prueba la práctica de vincular las piezas al teléfono, que limita quién puede repararlo.",
+      "lead": "Apple será juzgada en Francia en junio de 2027 por presunta obsolescencia programada, acusada de usar software para impedir que talleres independientes reparen iPhone, aun con repuestos originales.",
       "cuerpo": [
         "Apple será juzgada en Francia en junio de 2027 por presuntas prácticas de obsolescencia programada, según la agencia AFP, citada por La República. El proceso nace de una denuncia que presentó en diciembre de 2022 la asociación HOP (Stop Planned Obsolescence).",
         "La acusación sostiene que, entre noviembre de 2021 y julio de 2024, Apple usó herramientas de software para impedir reparaciones independientes en modelos como el iPhone XS, las series 12 a 15 y el iPhone SE de 2022. El mecanismo señalado es la serialización: vincular digitalmente cada pieza con el teléfono para detectar cuándo se cambia. Según HOP, eso provocaba fallas, como la desactivación de Face ID al cambiar la cámara o la pérdida de datos sobre la salud de la batería, incluso con repuestos originales.",
@@ -166,6 +170,7 @@
       "seccion": "Colombia",
       "titular": "El sistema financiero de MinTIC estuvo ocho días caído y frenó pagos y cobros",
       "entradilla": "La falla obligó al ministerio a suspender los plazos de multas y contraprestaciones del sector TIC.",
+      "lead": "El sistema financiero del Ministerio TIC, SEVEN ERP, estuvo fuera de servicio del 10 al 18 de noviembre, lo que impidió hacer y recibir pagos y obligó a suspender los plazos de multas y contraprestaciones del sector.",
       "cuerpo": [
         "El Ministerio TIC informó el 20 de noviembre que su sistema de información SEVEN ERP y los que dependen de él, incluido el Sistema de Recaudo Electrónico, quedaron restablecidos el 18 de noviembre a las 10:07 a. m. La indisponibilidad empezó el 10 de noviembre.",
         "Durante la caída no se podían hacer ni recibir pagos ni consultar la información necesaria para ellos. Por eso, mediante la Resolución 04700 del 15 de noviembre, el ministerio suspendió los plazos para pagar y cobrar obligaciones a favor del MinTIC y del Fondo Único de TIC, como contraprestaciones, multas y otras sanciones económicas.",
@@ -207,6 +212,7 @@
       "seccion": "Videojuegos y series",
       "titular": "GTA VI vendió 3.790 millones de dólares en su primer día, según Take-Two",
       "entradilla": "La cifra lo pone entre los mayores lanzamientos del entretenimiento, por encima de los grandes estrenos de cine.",
+      "lead": "Grand Theft Auto VI vendió 3.790 millones de dólares en su primer día en el mercado, según anunciaron el 20 de noviembre Take-Two Interactive y Rockstar Games, una cifra que lo ubica entre los mayores lanzamientos del entretenimiento.",
       "cuerpo": [
         "Las ventas de Grand Theft Auto VI llegaron a 3.790 millones de dólares tras su primer día en el mercado, anunciaron el viernes 20 de noviembre la editora Take-Two Interactive y el estudio Rockstar Games, según CNN. La compañía también informó 32,5 millones de copias vendidas en preventa, abierta desde junio.",
         "Para comparar, CNN recuerda que Avengers: Endgame recaudó 2.900 millones de dólares en taquilla. Hipertextual señala que GTA V cerró su primer día, en 2013, con 815 millones.",

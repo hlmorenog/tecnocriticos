@@ -284,15 +284,17 @@ button { font: inherit; }
 .compartir:empty { display: none; }
 .compartir--arriba { margin: -8px 0 22px; padding: 0 0 18px; border-top: 0; }
 .compartir__lab { font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-right: 4px; }
-.compartir a, .compartir button { font: 600 13px var(--f-titular); color: var(--tinta); background: #fff; border: 1px solid var(--linea); border-radius: 999px; padding: 7px 13px; cursor: pointer; line-height: 1.2; }
-.compartir a:hover, .compartir button:hover { border-color: var(--acento); color: var(--acento); }
-.compartir a[data-red="WhatsApp"] { background: #1F9D55; border-color: #1F9D55; color: #fff; }
-.compartir a[data-red="WhatsApp"]:hover { background: #17804A; color: #fff; }
-.compartir .compartir__nativo { background: var(--tinta); border-color: var(--tinta); color: #fff; }
-.compartir .compartir__nativo:hover { background: var(--acento); border-color: var(--acento); color: #fff; }
+.compartir .red { display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0; border-radius: 50%; border: 1px solid var(--linea); background: #fff; color: var(--tinta); cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+.compartir .red svg { width: 19px; height: 19px; display: block; }
+.compartir .red:hover, .compartir .red:focus-visible { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.compartir .red[data-red="WhatsApp"] { background: #25D366; border-color: #25D366; color: #fff; }
+.compartir .red[data-red="WhatsApp"]:hover { background: #1DA851; border-color: #1DA851; }
+.compartir .red--nativo { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.compartir .red--nativo:hover { background: var(--acento); border-color: var(--acento); }
+.compartir__aviso { font: 600 12px var(--f-mono); color: var(--acento); }
 @media (max-width: 600px) {
   .compartir { gap: 6px; }
-  .compartir a, .compartir button { padding: 6px 11px; font-size: 12.5px; }
+  .compartir .red { width: 40px; height: 40px; }
   .compartir__lab { width: 100%; margin-bottom: 2px; }
 }
 
@@ -315,4 +317,9 @@ button { font: inherit; }
 .video figcaption { margin-top: 8px; font: 400 14px/1.5 var(--f-texto); color: var(--tinta-2); }
 .video figcaption b { display: block; font: 700 15px var(--f-titular); color: var(--tinta); }
 .video figcaption a { color: var(--acento); font-weight: 600; }
+
+/* ---------- Lead periodístico (reemplaza a la cifra grande) ---------- */
+.lead { margin: 4px 0 20px; padding: 16px 0 18px; border-top: 3px solid var(--tinta); border-bottom: 1px solid var(--linea);
+  font: 700 19px/1.5 var(--f-texto); color: var(--tinta); letter-spacing: -.005em; }
+@media (max-width: 860px) { .lead { font-size: 18px; } }
 
