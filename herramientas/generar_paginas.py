@@ -222,7 +222,7 @@ def boletin():
 </div></div></section>"""
 
 
-PIE_COLOR = "negro"  # verde, negro o gris
+PIE_COLOR = "gris"  # verde, negro o gris
 
 
 def pie():
