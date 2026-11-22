@@ -222,8 +222,23 @@ def boletin():
 </div></div></section>"""
 
 
+PIE_COLOR = "negro"  # verde, negro o gris
+
+
 def pie():
-    return """<footer class="pie"><div class="w"><div><span>tecnocriticos.com · La tecnología, sin fanatismo</span><span><a href="quienes-somos.html">Quiénes somos</a> · <a href="noticias.html">Noticias</a> · <a href="columna.html">La Columna</a> · <a href="rss.html">RSS</a></span></div></div></footer>
+    secciones = "".join(f'<li><a href="noticias.html?seccion={q}">{s}</a></li>' for s, q in SEC)
+    return f"""<footer class="pie pie--{PIE_COLOR}"><div class="w">
+ <div class="pie__top">
+  <div class="pie__marca"><a class="logo" href="index.html" aria-label="Tecnocríticos, inicio"><span class="logo__punto"></span>tecnocríticos</a>
+   <p>La tecnología, sin fanatismo. Periodismo de tecnología potenciado por IA, con noticias y análisis cada día.</p></div>
+  <nav class="pie__cols" aria-label="Pie de página">
+   <div><h4>Noticias</h4><ul><li><a href="index.html">Hoy</a></li>{secciones}<li><a href="noticias.html">Todas las noticias</a></li></ul></div>
+   <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="index.html#hype">Hype-ómetro</a></li></ul></div>
+   <div><h4>Recíbelo</h4><ul><li><a href="index.html#boletin">Boletín Crítico</a></li><li><a href="rss.html">RSS</a></li></ul></div>
+  </nav>
+ </div>
+ <div class="pie__base"><span>© <span data-anio>2026</span> tecnocriticos.com</span><span>Hecho en Colombia</span></div>
+</div></footer>
 <script src="main.js"></script>
 </body>
 </html>

@@ -93,6 +93,8 @@
     barraCompartir(caja, location.href.split("#")[0], titulo, desc ? desc.content : "");
   });
 
+  $$("[data-anio]").forEach((e) => (e.textContent = new Date().getFullYear()));
+
   /* ---------- Menú del celular ---------- */
   const botonMenu = $("[data-menu-btn]");
   const menuMovil = $("#menu-movil");
