@@ -136,9 +136,8 @@ def pagina_noticia(n, todas):
     importa = f'<p class="bl"><b>Por qué importa:</b>{esc(n["por_que_importa"])}</p>' if n.get("por_que_importa") else ""
     tri = ""
     if n.get("mirada"):
-        falta = f'<div><h4>Lo que falta saber</h4><p>{esc(n["falta_saber"])}</p></div>' if n.get("falta_saber") else ""
-        tri = (f'<div class="tri"><div><h4>La noticia</h4><p>{entradilla}</p></div>'
-               f'<div class="critica"><h4>La mirada crítica</h4><p>{esc(n["mirada"])}</p></div>{falta}</div>')
+        tri = (f'<div class="analisis"><div class="analisis__mirada"><h4>La mirada crítica</h4><p>{esc(n["mirada"])}</p></div>'
+               '</div>')
     fuentes = "".join(f'<li><a href="{esc(fu["url"])}" target="_blank" rel="noopener">{esc(fu.get("nombre") or fu["url"])}</a></li>'
                       for fu in n.get("fuentes", []) if fu.get("url"))
     fuentes = f'<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>' if fuentes else ""
@@ -194,7 +193,7 @@ def pagina_quienes():
   <div class="cuerpo">
    <h2 id="que-hacemos">Qué hacemos</h2>
    <p>Nuestro objetivo es que entiendas lo que pasa en el mundo de la tecnología sin tener que leerlo todo. Por eso actualizamos el sitio a diario con una edición que reúne las noticias y los análisis que más importan del sector: desde lo que pasa en Colombia hasta la inteligencia artificial, las grandes tecnológicas, los videojuegos y el entretenimiento digital. Puedes leerlas todas o por sección en <a href="noticias.html">Noticias</a>.</p>
-   <p>Cada noticia va al grano: qué pasó, por qué importa, lo que todavía falta saber y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="index.html#hype">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
+   <p>Cada noticia va al grano: qué pasó, por qué importa, nuestra posición y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="index.html#hype">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
 
    <h2 id="ia">Periodismo potenciado por IA</h2>
    <p>Usamos inteligencia artificial para hacer más y mejor periodismo, no para reemplazar el criterio. La IA nos ayuda a rastrear lo que pasa en el sector, leer las fuentes, ordenar los datos y preparar los borradores de cada edición. Las decisiones son humanas: qué se publica, qué se descarta, qué posición tomamos y qué necesita una verificación adicional.</p>
@@ -346,7 +345,7 @@ def llms(todas):
 
 > Medio de comunicación colombiano de periodismo de tecnología potenciado por inteligencia artificial. Publica a diario las noticias y los análisis más importantes del sector tech y fija posición editorial frente a productos, servicios y organizaciones del mundo tech. Lema: «La tecnología, sin fanatismo».
 
-Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas, «lo que falta saber» y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
+Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes enlazadas y, separada de los hechos, «la mirada crítica»: la posición editorial de la casa. La IA ayuda a rastrear fuentes y preparar borradores; cada edición la revisa y aprueba la dirección antes de publicarse. Dirige el sitio Helmuhd Moreno, que escribe una columna de opinión cada lunes.
 
 ## Páginas principales
 

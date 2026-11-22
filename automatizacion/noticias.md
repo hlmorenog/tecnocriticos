@@ -41,12 +41,11 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 - **`titular`**: informativo y concreto, de hasta unos 90 caracteres. Sin clickbait ni signos de exclamación.
 - **`entradilla`**: una frase que diga por qué importa.
 - **`cuerpo`**: 2 o 3 párrafos cortos. Qué pasó, quién, cuándo y el contexto necesario.
-- **`mirada`**: 1 o 2 frases con el ángulo crítico de la casa. A quién beneficia, qué no se dice, qué preguntas quedan abiertas o qué separa el anuncio de la realidad. Debe apoyarse en hechos, no en opinión gratuita.
+- **`mirada`**: **una sola frase contundente, de máximo 25 palabras**, con la posición de la casa. Se muestra como destacado, así que debe leerse de un vistazo. A quién beneficia, qué no se dice o qué separa el anuncio de la realidad. Debe apoyarse en hechos de la noticia, no en opinión gratuita. Lo que no quepa, va en `cuerpo`.
 - **`titular_corto`**: versión de 3 a 6 palabras para la lista «En 1 minuto» (por ejemplo, «GTA VI llega sin disco»).
 - **`por_que_importa`**: una frase que completa «Por qué importa: …», en minúscula inicial. Es la idea clave para el lector.
 - **`dato`**: la línea en negrita que acompaña la noticia en el listado. `etiqueta` es una de: «Por qué importa», «El dato», «En cifras», «Ojo», «Lo que no se dice». `texto` es una frase corta respaldada por la fuente.
 - **`cifra`** (opcional, solo si hay un número protagonista y verificable): `valor` corto (por ejemplo «US$107.000 M» o «339.900 pesos») y `texto` que explica la cifra. Si no hay una cifra clara, omite el campo.
-- **`falta_saber`**: una frase con la pregunta abierta más importante: lo que todavía no se sabe o habrá que vigilar.
 
 ## Formato del archivo
 
@@ -67,7 +66,6 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
       "por_que_importa": "…",
       "dato": { "etiqueta": "El dato", "texto": "…" },
       "cifra": { "valor": "…", "texto": "…" },
-      "falta_saber": "…",
       "imagen": {
         "archivo": "img/noticias/2026-11-21-slug-corto-del-titular.jpg",
         "alt": "Descripción breve de lo que se ve en la foto",

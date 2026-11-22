@@ -11,7 +11,7 @@
         "La acción abrió en 111,50 dólares, un 34 % por encima del precio de salida, y cerró la jornada en 97,17 dólares, un 17 % arriba. La operación supera los 75.000 millones que logró SpaceX en junio y valora la compañía en torno a 1,5 billones de dólares.",
         "Anthropic fue fundada en 2021 por exinvestigadores de OpenAI, encabezados por Dario Amodei, que dijeron estar preocupados por la seguridad en el desarrollo de la IA. Según El Tiempo, que cita a BBC Mundo, la salida a bolsa convierte en multimillonarios, al menos sobre el papel, a sus siete fundadores."
       ],
-      "mirada": "El récord llega en medio de una preocupación creciente por una posible burbuja de la IA, como recuerda la propia NPR. Que Google, Microsoft y Nvidia, gigantes del mismo sector, participen con colocaciones privadas muestra lo entrelazado que está este negocio y cuánto depende de que todos sigan apostando por él.",
+      "mirada": "Un récord en plena sospecha de burbuja, con gigantes del mismo sector como compradores: el negocio de la IA se sostiene entre ellos.",
       "fuentes": [
         {
           "nombre": "NPR",
@@ -52,7 +52,7 @@
         "Google argumentaba que, por estar domiciliada en California y no tener presencia legal en Colombia, no tenía que cumplir la Ley 1581 de 2012. El tribunal concluyó que lo decisivo es dónde se recogen los datos: aunque se almacenen en servidores extranjeros, se recolectan en Colombia mediante cookies e identificadores en los dispositivos. La propia empresa reportó en 2020 cerca de 1,85 millones de cuentas de menores activas desde el país en 28 días.",
         "El fallo consideró insuficientes herramientas como Family Link y YouTube Kids, y señaló que Family Link solo cubre a menores de 13 años. También aclaró que las órdenes de la SIC son medidas de adecuación y no sanciones."
       ],
-      "mirada": "La decisión refuerza la idea de que operar desde el exterior no exime de las leyes locales, algo clave para un país que regula a plataformas sin sede en su territorio. Es un fallo de primera instancia, así que falta saber si Google apelará y, sobre todo, cómo se comprobará en la práctica que hay un consentimiento real de los padres.",
+      "mirada": "Operar desde California no exime de la ley colombiana; falta ver si Google apela y cómo se comprueba que los padres dieron permiso.",
       "fuentes": [
         {
           "nombre": "El Tiempo",
@@ -85,7 +85,7 @@
         "La versión física no incluye disco: la caja trae un código de descarga de un solo uso, por lo que conviene verificar que el código y la cuenta correspondan a la región de Latinoamérica. El juego transcurre en Leonida, un estado ficticio inspirado en Florida, y sigue a la pareja de Jason y Lucía.",
         "La crítica lo recibió con entusiasmo. CNN recoge que más de 150 críticos publicaron sus análisis el miércoles y que su puntuación agregada en Metacritic es de 99, la más alta junto a The Legend of Zelda: Ocarina of Time."
       ],
-      "mirada": "Una caja sin disco significa que lo que se compra en la tienda es, en la práctica, una licencia digital: el juego no se puede prestar ni revender como antes. Y con la versión de PC sin fecha, quien no tenga una consola de la generación actual tendrá que sumar ese gasto al precio del juego.",
+      "mirada": "Una caja sin disco es una licencia digital disfrazada: el juego ya no se presta ni se revende.",
       "fuentes": [
         {
           "nombre": "El Tiempo",
@@ -122,7 +122,7 @@
         "La ministra de las TIC, Alexandra Falla, anunció durante la Milagro Week, la rueda de negocios del Gobierno en Nueva York para atraer inversión extranjera, la firma de un memorando de entendimiento con Meta. Según El Heraldo, el acuerdo busca fortalecer las acciones contra el reclutamiento de menores a través de internet y ampliar la formación digital y el uso responsable de la IA.",
         "La ministra aseguró que el trabajo con la plataforma se enfocará en hacerla más segura para niños y adolescentes. El vicepresidente José Manuel Restrepo, que lidera la delegación, señaló como objetivos combatir el reclutamiento forzado de niños, niñas y adolescentes por grupos armados ilegales y formar a los jóvenes en nuevas tecnologías."
       ],
-      "mirada": "Un memorando de entendimiento expresa intenciones, pero no obliga a nada concreto, y el anuncio no detalla metas, plazos, recursos ni cómo se medirán los resultados. Sin esos datos será difícil saber si la alianza cambia algo en la forma en que Meta detecta y frena el reclutamiento en sus plataformas.",
+      "mirada": "Un memorando sin metas, plazos ni recursos es una intención, no un compromiso.",
       "fuentes": [
         {
           "nombre": "El Heraldo",
@@ -155,7 +155,7 @@
         "Al revisar 117 documentos de política de 43 países y territorios, además de la Unión Europea y la OCDE, encontraron que poco más del 33 % de esos elementos no se menciona en ninguno. Los vacíos se concentran en etapas intermedias, como el software de diseño de chips o el empaquetado avanzado, este último concentrado en Taiwán, Vietnam y Filipinas. Según Siyi Liu, autor principal del estudio, las políticas se fijan en los procesadores gráficos y pasan por alto el empaquetado, el paso que convierte esos chips en equipos de IA que realmente funcionan.",
         "El informe también señala que países como Japón tienen más peso del que reconocen sus propias políticas: identificó 101 empresas japonesas en 69 sectores, entre ellas Ajinomoto, que controla más del 95 % del suministro mundial de una película aislante usada en chips avanzados."
       ],
-      "mirada": "El debate público sobre la IA suele girar en torno a los modelos y sus riesgos, pero el estudio recuerda que su base es industrial, concentrada y frágil. Para países que solo consumen esta tecnología, como Colombia, la dependencia empieza mucho antes de descargar una aplicación.",
+      "mirada": "La IA no es solo software: depende de una cadena industrial concentrada y frágil que ningún país controla por sí solo.",
       "fuentes": [
         {
           "nombre": "El Tiempo",

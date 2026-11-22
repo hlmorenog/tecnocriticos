@@ -15,7 +15,7 @@
 
 ## Estructura de la portada
 
-1. **Noticia principal**: foto, cifra clave, «Por qué importa» y el recuadro *La noticia / La mirada crítica / Lo que falta saber*.
+1. **Noticia principal**: foto, cifra clave, «Por qué importa» y el destacado *La mirada crítica* (una frase con la posición de la casa).
 2. **Lo que pasó**: el resto de noticias del día, con foto y una línea en negrita.
 3. **Columna derecha**: En 1 minuto · **La Mesa** (destacada) · La Columna · Hype-ómetro · Ruido de Fondo · Explora.
    La columna derecha se ajusta sola para terminar a la misma altura que el contenido: oculta bloques secundarios o enlaces de «Explora» si sobran, y reparte el espacio si faltan.
@@ -52,7 +52,7 @@ Las cuatro páginas se generan con `herramientas/generar_paginas.py`, para que l
 ## Noticias diarias automáticas
 
 - Cada mañana, a las 5:47 a. m. (hora de Colombia), una tarea programada prepara la edición del día siguiendo `automatizacion/noticias.md` y la muestra en el chat. Solo con tu aprobación abre un **pull request** con `noticias/AAAA-MM-DD.json`, sus fotos en `img/noticias/` y sus páginas para compartir en `n/`.
-- Cada noticia trae: titular, titular corto, entradilla, «Por qué importa», una línea de dato, cifra clave (si la hay), cuerpo, mirada crítica, «Lo que falta saber», foto libre con crédito y fuentes.
+- Cada noticia trae: titular, titular corto, entradilla, «Por qué importa», una línea de dato, cifra clave (si la hay), cuerpo, mirada crítica (una frase), foto libre con crédito y fuentes.
 - **Para publicar:** revisa el pull request y pulsa **Merge pull request** (o pídeselo a Claude). En uno o dos minutos aparece en el sitio.
 - **Para cambiar tono, temas, cantidad o reglas de fotos:** edita `automatizacion/noticias.md`.
 - Las noticias se cargan desde los archivos JSON, así que al abrir `index.html` directamente desde tu PC se ve vacío. Usa el sitio publicado o un servidor local (`python3 -m http.server`).
