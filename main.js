@@ -205,9 +205,11 @@
       }
       const n = todas[0];
       heroEl.innerHTML = `
-        <a href="${esc(enlace(n))}">${foto(n)}</a>${credito(n)}
-        <span class="lab">${esc(n.seccion)} · ${esc(fechaLarga(n.fecha))}</span>
-        <h1><a href="${esc(enlace(n))}">${esc(n.titular)}</a></h1>
+        <div class="hero__top">
+          <div class="hero__cab"><span class="lab">${esc(n.seccion)} · ${esc(fechaLarga(n.fecha))}</span>
+            <h1><a href="${esc(enlace(n))}">${esc(n.titular)}</a></h1></div>
+          <div class="hero__img"><a href="${esc(enlace(n))}" tabindex="-1" aria-hidden="true">${foto(n)}</a>${credito(n)}</div>
+        </div>
         ${bloqueCifra(n)}
         <p class="bl"><b>Por qué importa:</b>${esc(n.por_que_importa || n.entradilla)}</p>
         ${n.dato && n.dato.texto && n.dato.texto !== n.por_que_importa ? `<p class="bl"><b>${esc(n.dato.etiqueta || "El dato")}:</b>${esc(n.dato.texto)}</p>` : ""}
