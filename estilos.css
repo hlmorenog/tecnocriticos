@@ -14,6 +14,7 @@
   --rojo-osc: #C0221C;
   --ancho: 1200px;           /* ancho del contenedor (incluye 24 px de margen a cada lado) */
   --rail: 340px;
+  --foto-col: calc((min(100vw, 1200px) - 48px - 60px - 16px) / 4); /* foto de listados: mismo tamaño en todo el home */
   --f-titular: "Inter Tight", system-ui, sans-serif;
   --f-texto: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -35,7 +36,7 @@ button { font: inherit; }
 .meta { font: 500 12px var(--f-mono); color: var(--gris); }
 .cred { font: 500 11px var(--f-mono); color: var(--gris); margin: 6px 0 16px; }
 .cred a { text-decoration: underline; text-underline-offset: 2px; }
-.foto { width: 100%; object-fit: cover; background: var(--suave); }
+.foto { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--suave); }
 .foto--completa { object-fit: contain; background: #fff; border: 1px solid var(--linea); }
 .foto--vacia { display: grid; place-items: center; color: #fff; font: 900 64px var(--f-titular); letter-spacing: -.04em; }
 .foto--co { background: #B98A00; } .foto--ia { background: #3B2DB8; } .foto--juegos { background: #B3262E; }
@@ -81,13 +82,13 @@ button { font: inherit; }
 /* ---------- Listado de noticias ---------- */
 .feed { margin-top: 34px; }
 .feed > h2 { font: 800 13px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 6px; display: flex; justify-content: space-between; }
-.item { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 6px 24px; padding: 20px 0; border-bottom: 1px solid var(--linea); }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) var(--foto-col); gap: 6px 24px; padding: 20px 0; border-bottom: 1px solid var(--linea); }
 .item .lab { grid-column: 1 / -1; color: var(--gris); }
 .item h3 { font: 800 23px/1.15 var(--f-titular); letter-spacing: -.02em; margin: 2px 0 8px; }
 .item h3 a:hover { color: var(--rojo); }
 .item p { margin: 0; font: 400 15.5px/1.55 var(--f-texto); color: var(--tinta-2); }
 .item p b { font: 800 14px var(--f-titular); color: var(--tinta); }
-.item .foto { grid-column: 2; grid-row: 2; aspect-ratio: 3 / 2; }
+.item > a[aria-hidden] { grid-column: 2; grid-row: 2; }
 .item .meta { display: block; margin-top: 8px; }
 .vacio { font: 500 13px var(--f-mono); color: var(--gris); padding: 24px 0; margin: 0; }
 
@@ -146,8 +147,8 @@ button { font: inherit; }
 
 /* ---------- Bloques a todo el ancho ---------- */
 .sech { font: 800 13px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 14px; padding-top: 14px; border-top: 3px solid var(--tinta); display: flex; justify-content: space-between; gap: 12px; }
-.mas4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding-bottom: 40px; }
-.mas4 .foto { aspect-ratio: 3 / 2; margin-bottom: 10px; }
+.mas4 { display: grid; grid-template-columns: repeat(4, var(--foto-col)); justify-content: space-between; gap: 20px; padding-bottom: 40px; }
+.mas4 .foto { margin-bottom: 10px; }
 .mas4 h4 { font: 800 18px/1.2 var(--f-titular); letter-spacing: -.01em; margin: 8px 0 6px; }
 .mas4 h4 a:hover { color: var(--rojo); }
 .mas4 p { margin: 0; font: 400 14px/1.5 var(--f-texto); color: var(--tinta-2); }
@@ -222,8 +223,10 @@ button { font: inherit; }
   .hero h1, .art h1 { font-size: 32px; }
   .dato { flex-direction: column; gap: 6px; } .dato strong { font-size: 38px; } .dato span { font-size: 15px; }
   .analisis__mirada p { font-size: 20px; } .analisis__mirada { padding-left: 14px; }
-  .item { grid-template-columns: minmax(0, 1fr) 110px; gap: 4px 14px; } .item h3 { font-size: 20px; }
-  .mas4, .manifiesto__rej { grid-template-columns: 1fr 1fr; gap: 14px; } .mas4 p { display: none; }
+  .item { grid-template-columns: minmax(0, 1fr); gap: 4px; } .item h3 { font-size: 20px; }
+  .item > a[aria-hidden] { grid-column: 1; grid-row: auto; order: -1; margin-bottom: 10px; }
+  .mas4 { grid-template-columns: minmax(0, 1fr); gap: 22px; } .mas4 p { display: none; }
+  .manifiesto__rej { grid-template-columns: 1fr 1fr; gap: 14px; }
   .bol .w > div { grid-template-columns: 1fr; gap: 18px; } .bol form { flex-direction: column; } .bol h3 { font-size: 28px; }
   .titulo-pag h1 { font-size: 32px; }
   .cuerpo { font-size: 18.5px; }
