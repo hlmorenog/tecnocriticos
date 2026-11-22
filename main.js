@@ -230,7 +230,7 @@
         <p class="bl"><b>Por qué importa:</b>${esc(n.por_que_importa || n.entradilla)}</p>
         ${n.dato && n.dato.texto && n.dato.texto !== n.por_que_importa ? `<p class="bl"><b>${esc(n.dato.etiqueta || "El dato")}:</b>${esc(n.dato.texto)}</p>` : ""}
         ${bloqueTri(n)}
-        <span class="meta">${nombresFuentes(n) ? "Fuentes: " + esc(nombresFuentes(n)) + " · " : ""}${minutos(n)} min de lectura · <a href="${esc(enlace(n))}" style="color:var(--rojo)">Leer completa →</a></span>`;
+        <span class="meta">${nombresFuentes(n) ? "Fuentes: " + esc(nombresFuentes(n)) + " · " : ""}${minutos(n)} min de lectura · <a href="${esc(enlace(n))}" style="color:var(--acento)">Leer completa →</a></span>`;
 
       const feed = $("[data-feed]");
       const resto = todas.slice(1, 6);

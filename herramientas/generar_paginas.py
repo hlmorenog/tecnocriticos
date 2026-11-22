@@ -195,7 +195,7 @@ def bloque_hype():
     filas = "".join(f"""<div class="hyp"><h4>{t}</h4><div class="barra"><div class="pista"><i class="promesa" style="width:{p}%"></i><i class="realidad" style="width:{r}%"></i></div><span>−{p - r}</span></div><p>{v}</p></div>"""
                     for t, p, r, v in HYPE)
     return f"""<section class="hype" id="hype" data-quitar="2"><h3>⚡ Hype-ómetro <span class="meta">promesa vs. realidad</span></h3>{filas}
-  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--rojo)"></i>Realidad</span><span>Distancia en puntos</span></div></section>"""
+  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--acento)"></i>Realidad</span><span>Distancia en puntos</span></div></section>"""
 
 
 def bloque_podcast():
