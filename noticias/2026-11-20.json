@@ -98,12 +98,9 @@
       ],
       "imagen": {
         "archivo": "img/noticias/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.jpg",
-        "alt": "Consola y control de videojuegos (imagen ilustrativa)",
-        "autor": "Evan-Amos",
-        "licencia": "Dominio público",
-        "fuente": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Xbox-360-Pro-wController.jpg",
-        "encuadre": "completa"
+        "alt": "Consola Xbox de la generación Series con dos controles",
+        "autor": "Helmuhd Moreno",
+        "fuente": "Tecnocríticos"
       },
       "titular_corto": "GTA VI llega sin disco",
       "por_que_importa": "la caja física no trae disco: lo que se compra es, en la práctica, una licencia digital.",
