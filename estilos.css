@@ -22,6 +22,7 @@
 }
 
 * { box-sizing: border-box; }
+@media (max-width: 1100px) { html { scroll-padding-top: 76px; } }
 html, body { background: var(--fondo); }
 body { margin: 0; color: var(--tinta); font-family: var(--f-titular); -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
@@ -43,7 +44,7 @@ button { font: inherit; }
 
 /* ---------- Cabecera ---------- */
 .cab { border-bottom: 1px solid var(--linea); }
-.cab .w { display: flex; align-items: center; gap: 28px; height: 68px; }
+.cab > .w { display: flex; align-items: center; gap: 28px; height: 68px; }
 .logo { font: 900 26px var(--f-titular); letter-spacing: -.04em; display: flex; align-items: center; gap: 8px; flex: none; }
 .logo__punto { width: 14px; height: 14px; border-radius: 50%; background: var(--rojo); }
 .logo small { font: 600 9px var(--f-mono); letter-spacing: .1em; color: var(--gris); text-transform: uppercase; margin-left: 6px; }
@@ -215,7 +216,30 @@ button { font: inherit; }
 .barra-progreso { position: fixed; top: 0; left: 0; height: 3px; background: var(--rojo); width: 0; z-index: 50; }
 
 /* ---------- Celular ---------- */
-@media (max-width: 1100px) { .menu { display: none; } }
+/* ---------- Marco superior y menú del celular ---------- */
+.menu-btn { display: none; }
+.menu-movil[hidden] { display: none; }
+@media (max-width: 1100px) {
+  .menu { display: none; }
+  .cab { position: sticky; top: 0; z-index: 40; background: var(--fondo); }
+  .cab > .w { gap: 12px; }
+  .cab .logo { flex: 1; }
+  .menu-btn { display: grid; place-items: center; width: 44px; height: 44px; margin-left: -10px; border: 0; background: none; cursor: pointer; flex: none; }
+  .menu-btn__icono, .menu-btn__icono::before, .menu-btn__icono::after { display: block; width: 22px; height: 2.5px; border-radius: 2px; background: var(--tinta); position: relative; transition: transform .2s, background .2s; }
+  .menu-btn__icono::before, .menu-btn__icono::after { content: ""; position: absolute; left: 0; }
+  .menu-btn__icono::before { top: -7px; } .menu-btn__icono::after { top: 7px; }
+  .menu-btn[aria-expanded="true"] .menu-btn__icono { background: transparent; }
+  .menu-btn[aria-expanded="true"] .menu-btn__icono::before { transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .menu-btn__icono::after { transform: translateY(-7px) rotate(-45deg); }
+  .menu-movil { position: absolute; left: 0; right: 0; top: 100%; background: var(--fondo); border-bottom: 3px solid var(--tinta); max-height: calc(100vh - 68px); overflow-y: auto; box-shadow: 0 18px 30px rgba(0, 0, 0, .12); }
+  .menu-movil .w { display: flex; flex-direction: column; padding-top: 8px; padding-bottom: 20px; }
+  .menu-movil a { font: 700 19px var(--f-titular); letter-spacing: -.01em; padding: 13px 0; border-bottom: 1px solid var(--linea); }
+  .menu-movil a[aria-current="page"], .menu-movil a:hover { color: var(--rojo); }
+  .menu-movil__lab { font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin: 18px 0 2px; }
+  .menu-movil a.menu-movil__cta { margin-top: 20px; border: 0; text-align: center; background: var(--rojo); color: #fff; border-radius: 999px; padding: 14px; font-size: 16px; }
+  html.menu-abierto { overflow: hidden; }
+}
+@media (max-width: 480px) { .cta__extra { display: none; } .cab > .w { height: 60px; } .menu-movil { max-height: calc(100vh - 60px); } .logo { font-size: 23px; } }
 @media (max-width: 860px) {
   .w { padding: 0 16px; }
   .logo small { display: none; }
