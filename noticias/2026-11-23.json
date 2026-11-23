@@ -217,6 +217,38 @@
           "url": "https://www.koreatimes.co.kr/southkorea/society/20261122/education-minister-offers-to-resign-over-college-exam-controversy-amid-ai-cheating-fears"
         }
       ]
+    },
+    {
+      "id": "2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud",
+      "seccion": "Colombia",
+      "titular": "Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud",
+      "titular_corto": "IA en la gestión de la salud",
+      "entradilla": "Durante tres noches, académicos de Colombia, Costa Rica y Brasil discuten cómo la inteligencia artificial, los datos y la innovación cambian la forma de gestionar la salud.",
+      "lead": "El II Congreso Internacional de Innovación y Retos en la Administración en Salud, CIIRAS 2026, comenzó este lunes 23 de noviembre en Bogotá, en la Fundación Universitaria del Área Andina, con transmisión en vivo por YouTube.",
+      "por_que_importa": "la inteligencia artificial y el análisis de datos ya hacen parte de la formación de quienes administran hospitales y servicios de salud.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "Las tres noches se transmiten por YouTube desde las 6:00 p. m."
+      },
+      "cuerpo": [
+        "El congreso lo organizan la Fundación Universitaria del Área Andina y la Corporación Universitaria Iberoamericana, a través de sus programas de Administración en salud. Va hasta el miércoles 25 de noviembre, con sesiones desde las 6:00 p. m. en formato híbrido: presencial en el auditorio Pablo Oliveros Marmolejo, en Bogotá, los días 23 y 25, y solo virtual el 24.",
+        "La primera noche abrió con el taller «IA generativa en acción: creación de agentes automatizados en salud», a cargo de Helmuhd Moreno, de ConSentido. El martes habrá charlas sobre cómo construir un emprendimiento de salud sostenible en Colombia, la sostenibilidad del sistema de salud de Costa Rica, un modelo de atención centrado en el paciente y los avances en tecnología e inteligencia artificial en los servicios de salud del país.",
+        "El miércoles, Angie Ruiz, desde Brasil, hablará de inteligencia artificial en la transformación de los sistemas de salud, y el cierre incluirá conferencias sobre la gestión del talento humano en salud y el uso de big data en el sector.",
+        "Nota de transparencia: Helmuhd Moreno, de ConSentido y conferencista del taller inaugural, es también el director de Tecnocríticos."
+      ],
+      "mirada": "Que la IA llegue a la gerencia de la salud es buena noticia; la prueba será que mejore la atención, no solo los indicadores.",
+      "fuentes": [
+        {
+          "nombre": "Inscripción oficial al II CIIRAS 2026 (Areandina e Iberoamericana)",
+          "url": "https://forms.cloud.microsoft/r/wm6udGGWPb?origin=lprLink"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.jpg",
+        "alt": "Helmuhd Moreno, de ConSentido, durante el taller inaugural del CIIRAS 2026 en Bogotá",
+        "autor": "Tecnocríticos",
+        "fuente": "Tecnocríticos"
+      }
     }
   ]
 }
