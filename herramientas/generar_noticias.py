@@ -234,7 +234,7 @@ def pagina_quienes():
    <p>Si una nota publicada tiene un error, la corregimos y lo indicamos al final de la nota, con la fecha de la corrección.</p>
 
    <h2>Síguenos</h2>
-   <p>Recibe las noticias por <a href="rss.html">RSS</a> o en el <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
+   <p>Recibe las noticias por <a href="rss.html">RSS</a> o en el <a href="index.html#boletin">Boletín Tecnocríticos</a> de cada lunes.</p>
   </div>
  </article></div>
  <aside class="rail">{gp.bloque_minuto()}{gp.bloque_mesa()}{gp.bloque_columna()}{gp.bloque_hype()}{gp.bloque_explora()}</aside>
@@ -267,7 +267,7 @@ def pagina_rss():
    <div class="rss-url"><code>{feed}</code><button type="button" data-copiar-texto="{feed}">Copiar dirección</button></div>
    <h2>¿Qué es RSS?</h2>
    <p>Es una forma abierta de seguir sitios web: tu lector revisa el sitio por ti y te muestra lo nuevo en orden, sin publicidad ni filtros. Si nunca has usado uno, Feedly e Inoreader son gratuitos y funcionan en el celular y en el computador.</p>
-   <p>¿Prefieres el correo? Suscríbete al <a href="index.html#boletin">Boletín Crítico</a> de cada lunes.</p>
+   <p>¿Prefieres el correo? Suscríbete al <a href="index.html#boletin">Boletín Tecnocríticos</a> de cada lunes.</p>
   </div>
  </article></div>
  <aside class="rail">{gp.bloque_minuto()}{gp.bloque_mesa()}{gp.bloque_columna()}{gp.bloque_hype()}{gp.bloque_explora()}</aside>
@@ -276,12 +276,58 @@ def pagina_rss():
 """ + gp.pie())
 
 
+def pagina_privacidad():
+    return (gp.cabeza("Política de privacidad — Tecnocríticos",
+                      "Cómo trata Tecnocríticos los datos de quienes se suscriben al Boletín Tecnocríticos y qué servicios externos usa el sitio.",
+                      "website", "privacidad.html")
+            + gp.cabecera()
+            + """<main class="w grid">
+ <div class="principal"><article class="art">
+  <span class="lab">Tecnocríticos</span>
+  <h1>Política de privacidad</h1>
+  <p class="entradilla">Pedimos solo lo necesario: tu correo, para enviarte el Boletín Tecnocríticos. No lo vendemos, no lo prestamos y puedes irte cuando quieras.</p>
+  <div class="cuerpo">
+   <h2 id="responsable">Quién es el responsable</h2>
+   <p>Tecnocríticos, medio de periodismo de tecnología dirigido por Helmuhd Moreno, es el responsable del tratamiento de los datos que recogemos en tecnocriticos.com, de acuerdo con la Ley 1581 de 2012 de Colombia y sus normas reglamentarias.</p>
+
+   <h2 id="datos">Qué datos recogemos y para qué</h2>
+   <ul>
+    <li><b>Tu correo electrónico</b>, cuando te suscribes al Boletín Tecnocríticos. Lo usamos únicamente para enviarte el boletín y, de forma ocasional, avisos sobre el propio boletín.</li>
+    <li><b>Datos técnicos del envío</b> que registra nuestra plataforma de correo, como la fecha de suscripción, la confirmación y si abres los correos. Los usamos para saber si el boletín llega y es útil.</li>
+   </ul>
+   <p>Para leer el sitio no necesitas registrarte, y no usamos herramientas de analítica ni publicidad que te rastreen.</p>
+
+   <h2 id="confirmacion">Doble confirmación</h2>
+   <p>Después de dejar tu correo te enviamos un mensaje para confirmar la suscripción. Si no confirmas, no recibirás el boletín.</p>
+
+   <h2 id="terceros">Servicios de terceros</h2>
+   <ul>
+    <li><b>MailerLite</b> gestiona la lista de suscriptores y el envío del boletín. Sus servidores pueden estar fuera de Colombia, en países con medidas de protección de datos adecuadas, como la Unión Europea, donde se aplica el RGPD.</li>
+    <li><b>Google reCAPTCHA</b> protege el formulario contra bots y puede procesar datos técnicos de tu navegador según las políticas de Google.</li>
+    <li><b>Google Fonts</b> sirve las tipografías del sitio, y los videos de YouTube se muestran en modo de privacidad mejorada.</li>
+   </ul>
+
+   <h2 id="derechos">Tus derechos</h2>
+   <p>Puedes conocer, actualizar, rectificar y suprimir tus datos, y revocar tu autorización en cualquier momento. La forma más rápida de darte de baja es el enlace «cancelar suscripción» que aparece al final de cada boletín. Para cualquier otra solicitud, responde a cualquier edición del boletín y la atenderemos en los plazos que fija la ley: diez días hábiles para consultas y quince para reclamos.</p>
+
+   <h2 id="conservacion">Cuánto tiempo los guardamos</h2>
+   <p>Conservamos tu correo mientras sigas suscrito. Si te das de baja, deja de recibir el boletín y lo eliminamos de la lista activa.</p>
+
+   <h2 id="cambios">Cambios</h2>
+   <p>Si cambiamos esta política, publicaremos la nueva versión en esta página. Última actualización: 23 de noviembre de 2026.</p>
+  </div>
+ </article></div>
+ <aside class="rail">""" + gp.bloque_minuto() + gp.bloque_columna() + gp.bloque_explora() + """</aside>
+</main>
+""" + gp.pie())
+
+
 def sitemap(todas):
     hoy = date.today().isoformat()
     ultima = todas[0]["fecha"] if todas else hoy
     urls = [("", ultima, "daily", "1.0"), ("noticias.html", ultima, "daily", "0.9"),
             ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"), ("quienes-somos.html", hoy, "monthly", "0.5"),
-            ("rss.html", hoy, "monthly", "0.3")]
+            ("rss.html", hoy, "monthly", "0.3"), ("privacidad.html", hoy, "yearly", "0.2")]
     filas = [f"  <url><loc>{SITIO}/{r}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>"
              for r, m, c, p in urls]
     for n in todas:

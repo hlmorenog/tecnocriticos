@@ -60,7 +60,7 @@ Las cuatro páginas se generan con `herramientas/generar_paginas.py`, para que l
 ## Pendiente
 
 - **La Mesa**: hoy el voto se guarda solo en el navegador de cada visitante. Para sumar votos reales y publicar argumentos hace falta un servicio externo de encuestas y comentarios.
-- **Boletín**: el formulario aún no está conectado (sugerencia: Buttondown).
+- **Boletín Tecnocríticos**: formulario incrustado de MailerLite (grupo «Boletín Tecnocríticos», doble confirmación). La función `boletin()` de `herramientas/generar_paginas.py` tiene el ID y la dirección del formulario; la política está en `privacidad.html`.
 - **Comentarios de La Columna**: por conectar.
 - **Podcast Ruido de Fondo** y **Reseñas**: secciones previstas, sin contenido todavía.
 - **Logo definitivo**: reemplazar el logo provisional de la cabecera (`.logo` en `herramientas/generar_paginas.py`) y `logo-icono.svg`.
