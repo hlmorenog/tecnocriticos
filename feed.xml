@@ -5,9 +5,41 @@
   <link>https://tecnocriticos.com/</link>
   <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
   <language>es-co</language>
-  <lastBuildDate>Sun, 22 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 06:00:00 -0500</lastBuildDate>
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>Un matemático de Anthropic dice haber demostrado con Claude la hipótesis de Riemann</title>
+   <link>https://tecnocriticos.com/n/2026-11-23-claude-y-la-hipotesis-de-riemann.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-claude-y-la-hipotesis-de-riemann.html</guid>
+   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Es el problema abierto más famoso de las matemáticas, y el anuncio llega con aplausos, dudas sobre su redacción y una demostración rival escrita solo por humanos. Por qué importa: si la demostración se confirma, una IA habría ayudado a resolver el problema que muchos matemáticos consideran el más importante de su campo.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-claude-y-la-hipotesis-de-riemann.jpg" length="121980" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>MinTIC formula cargos a Starlink y a cuatro operadores móviles por señal en cárceles</title>
+   <link>https://tecnocriticos.com/n/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.html</guid>
+   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>El Gobierno los culpa de que desde las prisiones se sigan coordinando extorsiones; los operadores dicen que cumplen y que el problema es que los celulares entran a los penales. Por qué importa: el Gobierno pone la responsabilidad de las extorsiones desde las cárceles también en las empresas de telecomunicaciones, incluido el internet satelital.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.jpg" length="167419" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Los juegos del hambre vuelve con un estreno de 225 millones de dólares pese a GTA VI</title>
+   <link>https://tecnocriticos.com/n/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.html</guid>
+   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>La precuela demostró que un gran estreno de cine y el videojuego más esperado de la década pueden convivir el mismo fin de semana. Por qué importa: el estreno coincidió con el lanzamiento de GTA VI, y la taquilla muestra que el videojuego no le quitó público al cine.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.jpg" length="128373" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Las startups de Medellín ya captaron en 2026 más capital que en todo 2025</title>
+   <link>https://tecnocriticos.com/n/2026-11-23-startups-de-medellin-superan-capital-de-2025.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-startups-de-medellin-superan-capital-de-2025.html</guid>
+   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>El informe del Distrito de Ciencia, Tecnología e Innovación muestra más inversión y más empleo, pero también una brecha en la colaboración científica. Por qué importa: Medellín gana terreno como polo de startups, aunque Bogotá sigue concentrando la mayor parte de la inversión del país.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-startups-de-medellin-superan-capital-de-2025.jpg" length="134070" type="image/jpeg"/>
+  </item>
   <item>
    <title>El comercial de kung fu de Apple Pay se parece mucho a uno del BCP de 2006</title>
    <link>https://tecnocriticos.com/n/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.html</link>
