@@ -24,11 +24,21 @@ DEBATE = {
     "cierre": "dom. 29 nov.",
     "opciones": ["Sí, sin dudarlo", "Sí, si fuera barata", "No, prefiero lo gratuito", "Ya no uso redes sociales"],
 }
-COLUMNA = {
-    "titulo": "Nadie nos pidió permiso para el futuro",
-    "resumen": "Cada keynote promete liberarnos. Cada actualización nos ata un poco más.",
-    "fecha": "2026-11-16",
-}
+# Columnas de opinión, de la más reciente a la más antigua. La primera se publica en columna.html;
+# las anteriores quedan en c/<slug>.html. El cuerpo de cada una está en herramientas/columnas/<slug>.html.
+COLUMNAS = [
+    {"slug": "2026-11-23-compraste-una-caja-no-un-videojuego", "titulo": "Compraste una caja, no un videojuego",
+     "resumen": "GTA VI llegó a las tiendas con caja, carátula y precio de juego físico. Adentro, lo que hay es un código.",
+     "fecha": "2026-11-23", "semana": "Semana 48 · 23 de noviembre"},
+    {"slug": "2026-11-16-nadie-nos-pidio-permiso-para-el-futuro", "titulo": "Nadie nos pidió permiso para el futuro",
+     "resumen": "Cada keynote promete liberarnos. Cada actualización nos ata un poco más.",
+     "fecha": "2026-11-16", "semana": "Semana 47 · 16 de noviembre"},
+]
+COLUMNA = COLUMNAS[0]
+
+
+def url_columna(c):
+    return "columna.html" if c is COLUMNAS[0] else f"c/{c['slug']}.html"
 HYPE = [  # (tema, promesa, realidad, veredicto)
     ("Agentes de IA que «trabajan por ti»", 96, 48, "Útiles con supervisión. Autónomos, todavía no."),
     ("Gafas de realidad mixta", 88, 35, "Impresionantes en demo, incómodas a la hora."),
@@ -330,17 +340,20 @@ def pagina_noticia():
 """ + pie())
 
 
-def pagina_columna():
-    cuerpo = (RAIZ / "herramientas" / "columna_actual.html").read_text(encoding="utf-8")
-    datos = {"@type": "OpinionNewsArticle", "headline": COLUMNA["titulo"], "description": COLUMNA["resumen"],
-             "url": f"{SITIO}/columna.html", "mainEntityOfPage": f"{SITIO}/columna.html", "inLanguage": "es-CO",
-             "datePublished": COLUMNA["fecha"], "dateModified": COLUMNA["fecha"], "image": [f"{SITIO}/img/compartir.png"],
+def pagina_columna(col=None):
+    col = col or COLUMNA
+    ruta = url_columna(col)
+    cuerpo = (RAIZ / "herramientas" / "columnas" / f"{col['slug']}.html").read_text(encoding="utf-8")
+    archivo = "".join(f'<li><span>{c["semana"]}</span><a href="{url_columna(c)}"><b>{c["titulo"]}</b></a></li>' for c in COLUMNAS)
+    datos = {"@type": "OpinionNewsArticle", "headline": col["titulo"], "description": col["resumen"],
+             "url": f"{SITIO}/{ruta}", "mainEntityOfPage": f"{SITIO}/{ruta}", "inLanguage": "es-CO",
+             "datePublished": col["fecha"], "dateModified": col["fecha"], "image": [f"{SITIO}/img/compartir.png"],
              "author": {"@type": "Person", "name": "Helmuhd Moreno", "jobTitle": "Director de Tecnocríticos",
                         "url": f"{SITIO}/quienes-somos.html#direccion"},
              "publisher": {k: v for k, v in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
-    return (cabeza(f"{COLUMNA['titulo']} — La Columna · Tecnocríticos", COLUMNA["resumen"], "article", "columna.html",
-                   f"{COLUMNA['titulo']} · La Columna de Tecnocríticos", jsonld=datos,
-                   extra=f'\n  <meta property="article:published_time" content="{COLUMNA["fecha"]}">\n  <meta property="article:author" content="Helmuhd Moreno">')
+    return (cabeza(f"{col['titulo']} — La Columna · Tecnocríticos", col["resumen"], "article", ruta,
+                   f"{col['titulo']} · La Columna de Tecnocríticos", jsonld=datos, base=ruta.startswith("c/"),
+                   extra=f'\n  <meta property="article:published_time" content="{col["fecha"]}">\n  <meta property="article:author" content="Helmuhd Moreno">')
             + '<div class="barra-progreso" aria-hidden="true"></div>\n'
             + cabecera("columna")
             + f"""<main class="w grid">
@@ -350,7 +363,7 @@ def pagina_columna():
  <aside class="rail">
   <section class="caja"><h3>Sobre el autor</h3><div class="quien" style="display:flex;gap:12px;align-items:center;margin-top:10px"><span class="avatar">HM</span><div><strong style="font:700 15px var(--f-titular)">Helmuhd Moreno</strong><div class="meta">Director de Tecnocríticos</div></div></div>
    <p>Comunicador social y periodista con más de 20 años de experiencia en agencias, oficinas de prensa y departamentos de mercadeo. MBA, especialista en Alta Gerencia, docente universitario y experto en marketing, comunicación digital, comunicación organizacional y periodismo. Apasionado por la tecnología, las nuevas tendencias del mercado y las redes sociales.</p></section>
-  <section class="caja" data-quitar="1"><h3>Archivo de columnas</h3><ul class="archivo-col"><li><span>Semana 47 · 16 de noviembre</span><b>{COLUMNA['titulo']}</b></li></ul><p>Esta es la primera columna. Cada lunes, una nueva.</p></section>
+  <section class="caja" data-quitar="1"><h3>Archivo de columnas</h3><ul class="archivo-col">{archivo}</ul><p>Cada lunes, una nueva.</p></section>
   {bloque_mesa()}{bloque_hype()}{bloque_podcast()}{bloque_explora()}
  </aside>
 </main>
@@ -369,4 +382,8 @@ if __name__ == "__main__":
                          ("privacidad.html", generar_noticias.pagina_privacidad())]:
         (RAIZ / nombre).write_text(html, encoding="utf-8")
         print("generado", nombre)
+    (RAIZ / "c").mkdir(exist_ok=True)
+    for c in COLUMNAS[1:]:
+        (RAIZ / url_columna(c)).write_text(pagina_columna(c), encoding="utf-8")
+        print("generado", url_columna(c))
     generar_noticias.main()

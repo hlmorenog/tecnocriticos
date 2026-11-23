@@ -326,7 +326,8 @@ def sitemap(todas):
     hoy = date.today().isoformat()
     ultima = todas[0]["fecha"] if todas else hoy
     urls = [("", ultima, "daily", "1.0"), ("noticias.html", ultima, "daily", "0.9"),
-            ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"), ("quienes-somos.html", hoy, "monthly", "0.5"),
+            ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"),
+            *[(gp.url_columna(c), c["fecha"], "yearly", "0.5") for c in gp.COLUMNAS[1:]], ("quienes-somos.html", hoy, "monthly", "0.5"),
             ("rss.html", hoy, "monthly", "0.3"), ("privacidad.html", hoy, "yearly", "0.2")]
     filas = [f"  <url><loc>{SITIO}/{r}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>"
              for r, m, c, p in urls]
