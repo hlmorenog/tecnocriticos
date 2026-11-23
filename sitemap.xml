@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://tecnocriticos.com/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tecnocriticos.com/noticias.html</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tecnocriticos.com/</loc><lastmod>2026-11-23</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tecnocriticos.com/noticias.html</loc><lastmod>2026-11-23</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://tecnocriticos.com/columna.html</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tecnocriticos.com/quienes-somos.html</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://tecnocriticos.com/rss.html</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://tecnocriticos.com/privacidad.html</loc><lastmod>2026-11-23</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-23-claude-y-la-hipotesis-de-riemann.html</loc><lastmod>2026-11-23</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-23-claude-y-la-hipotesis-de-riemann.jpg</image:loc></image:image></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.html</loc><lastmod>2026-11-23</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.jpg</image:loc></image:image></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.html</loc><lastmod>2026-11-23</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.jpg</image:loc></image:image></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-23-startups-de-medellin-superan-capital-de-2025.html</loc><lastmod>2026-11-23</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-23-startups-de-medellin-superan-capital-de-2025.jpg</image:loc></image:image></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.html</loc><lastmod>2026-11-22</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-22-apple-pay-kung-fu-comercial-bcp-2006.jpg</image:loc></image:image></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-22-eeuu-aprobo-879000-chips-de-ia-para-china.html</loc><lastmod>2026-11-22</lastmod><image:image><image:loc>https://tecnocriticos.com/img/noticias/2026-11-22-eeuu-aprobo-879000-chips-de-ia-para-china.jpg</image:loc></image:image></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-22-signal-bloquea-capturas-asistentes-ia.html</loc><lastmod>2026-11-22</lastmod></url>
