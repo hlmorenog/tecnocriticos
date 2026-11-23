@@ -2,6 +2,43 @@
   "fecha": "2026-11-23",
   "noticias": [
     {
+      "id": "2026-11-23-nvidia-restituye-a-jensen-huang",
+      "seccion": "IA y tecnología",
+      "titular": "Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia",
+      "titular_corto": "Jensen Huang vuelve a Nvidia",
+      "entradilla": "La empresa que domina los chips de inteligencia artificial recupera a su fundador tras una salida rodeada de preguntas sobre seguridad nacional, y su acción se disparó.",
+      "lead": "La junta directiva de Nvidia restituyó este lunes 23 de noviembre a Jensen Huang como presidente, director ejecutivo y miembro de la junta, con efecto inmediato, dos semanas después de su renuncia, informó la compañía.",
+      "por_que_importa": "Nvidia es la empresa clave de la industria de la IA, y su liderazgo pesa en los mercados y en la disputa tecnológica entre Estados Unidos y China.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "La acción de Nvidia subió más de 30 % tras el anuncio, según CNN."
+      },
+      "cuerpo": [
+        "Según el comunicado de Nvidia, la junta votó por unanimidad el regreso de Huang después de varias reuniones con él, y recibió opiniones de altos niveles del Gobierno de Estados Unidos que la llevaron a concluir que su regreso no representa un riesgo para la seguridad nacional. Colette Kress, que ocupaba el cargo de forma interina, vuelve a su puesto de directora financiera, y Harvey Jones sigue como presidente de la junta.",
+        "Huang había renunciado tras reportes sobre su vida personal, entre ellos una relación con una mujer que funcionarios estadounidenses temían que trabajara con la inteligencia china, según CNN. Nvidia aclaró que el comité de directores independientes que investiga los reportes de que Huang fue blanco de una operación de inteligencia extranjera seguirá hasta el final, y que Huang colaborará. La empresa también anunció la búsqueda de un nuevo director de cumplimiento.",
+        "El presidente Donald Trump afirmó que Huang no hizo nada malo y, según CNN, habló directamente con la junta sobre su regreso. El líder demócrata en la Cámara de Representantes, Hakeem Jeffries, calificó la decisión de indefendible y anunció que el Congreso investigará."
+      ],
+      "mirada": "El regreso lo decidió una junta con opiniones del Gobierno; el resultado de la investigación sobre seguridad nacional, en cambio, todavía no se conoce.",
+      "imagen": {
+        "archivo": "img/noticias/2026-11-23-nvidia-restituye-a-jensen-huang.jpg",
+        "alt": "Jensen Huang con estudiantes en la Universidad de Stanford, en abril de 2026",
+        "autor": "Anders Eidesvik",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-30_025.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "Nvidia (comunicado oficial)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        },
+        {
+          "nombre": "CNN",
+          "url": "https://edition.cnn.com/2026/11/23/business/live-news/jensen-huang-reinstated-as-ceo-of-nvidia"
+        }
+      ]
+    },
+    {
       "id": "2026-11-23-claude-y-la-hipotesis-de-riemann",
       "seccion": "IA y tecnología",
       "titular": "Un matemático de Anthropic dice haber demostrado con Claude la hipótesis de Riemann",
@@ -178,43 +215,6 @@
         {
           "nombre": "The Korea Times (Yonhap)",
           "url": "https://www.koreatimes.co.kr/southkorea/society/20261122/education-minister-offers-to-resign-over-college-exam-controversy-amid-ai-cheating-fears"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-23-nvidia-restituye-a-jensen-huang",
-      "seccion": "IA y tecnología",
-      "titular": "Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia",
-      "titular_corto": "Jensen Huang vuelve a Nvidia",
-      "entradilla": "La empresa que domina los chips de inteligencia artificial recupera a su fundador tras una salida rodeada de preguntas sobre seguridad nacional, y su acción se disparó.",
-      "lead": "La junta directiva de Nvidia restituyó este lunes 23 de noviembre a Jensen Huang como presidente, director ejecutivo y miembro de la junta, con efecto inmediato, dos semanas después de su renuncia, informó la compañía.",
-      "por_que_importa": "Nvidia es la empresa clave de la industria de la IA, y su liderazgo pesa en los mercados y en la disputa tecnológica entre Estados Unidos y China.",
-      "dato": {
-        "etiqueta": "En cifras",
-        "texto": "La acción de Nvidia subió más de 30 % tras el anuncio, según CNN."
-      },
-      "cuerpo": [
-        "Según el comunicado de Nvidia, la junta votó por unanimidad el regreso de Huang después de varias reuniones con él, y recibió opiniones de altos niveles del Gobierno de Estados Unidos que la llevaron a concluir que su regreso no representa un riesgo para la seguridad nacional. Colette Kress, que ocupaba el cargo de forma interina, vuelve a su puesto de directora financiera, y Harvey Jones sigue como presidente de la junta.",
-        "Huang había renunciado tras reportes sobre su vida personal, entre ellos una relación con una mujer que funcionarios estadounidenses temían que trabajara con la inteligencia china, según CNN. Nvidia aclaró que el comité de directores independientes que investiga los reportes de que Huang fue blanco de una operación de inteligencia extranjera seguirá hasta el final, y que Huang colaborará. La empresa también anunció la búsqueda de un nuevo director de cumplimiento.",
-        "El presidente Donald Trump afirmó que Huang no hizo nada malo y, según CNN, habló directamente con la junta sobre su regreso. El líder demócrata en la Cámara de Representantes, Hakeem Jeffries, calificó la decisión de indefendible y anunció que el Congreso investigará."
-      ],
-      "mirada": "El regreso lo decidió una junta con opiniones del Gobierno; el resultado de la investigación sobre seguridad nacional, en cambio, todavía no se conoce.",
-      "imagen": {
-        "archivo": "img/noticias/2026-11-23-nvidia-restituye-a-jensen-huang.jpg",
-        "alt": "Jensen Huang con estudiantes en la Universidad de Stanford, en abril de 2026",
-        "autor": "Anders Eidesvik",
-        "licencia": "CC BY 4.0",
-        "fuente": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-30_025.jpg"
-      },
-      "fuentes": [
-        {
-          "nombre": "Nvidia (comunicado oficial)",
-          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
-        },
-        {
-          "nombre": "CNN",
-          "url": "https://edition.cnn.com/2026/11/23/business/live-news/jensen-huang-reinstated-as-ceo-of-nvidia"
         }
       ]
     }
