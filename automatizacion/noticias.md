@@ -45,6 +45,7 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 - **`titular_corto`**: versión de 3 a 6 palabras para la lista «En 1 minuto» (por ejemplo, «GTA VI llega sin disco»).
 - **`por_que_importa`**: una frase que completa «Por qué importa: …», en minúscula inicial. Es la idea clave para el lector.
 - **`dato`**: la línea en negrita que acompaña la noticia en el listado. `etiqueta` es una de: «Por qué importa», «El dato», «En cifras», «Ojo», «Lo que no se dice». `texto` es una frase corta respaldada por la fuente.
+- **Temas judiciales y legales: precisión exacta.** Usa el término jurídico correcto para cada actuación y autoridad, y explica en lenguaje claro qué es. Un ministerio o una superintendencia abre *investigaciones administrativas* (no juzga ni condena); un juez *dicta sentencia*; la Fiscalía *imputa* o *acusa*. No presentes como sanción lo que es una investigación, ni como condena lo que es una imputación. Si la fuente usa un término técnico que el lector puede malinterpretar (por ejemplo, «formulación de cargos» en un proceso administrativo), tradúcelo y aclara el alcance. Ante la duda, sé más conservador.
 - **`lead`** (obligatorio): el lead periodístico, una o dos frases (entre 25 y 45 palabras) que cuentan lo esencial: qué pasó, quién, cuándo y dónde. Se muestra en negrita al inicio de la noticia. No repite la entradilla palabra por palabra y solo usa datos de las fuentes.
 
 ## Formato del archivo

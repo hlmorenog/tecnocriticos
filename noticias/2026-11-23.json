@@ -42,17 +42,17 @@
     {
       "id": "2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles",
       "seccion": "Colombia",
-      "titular": "MinTIC formula cargos a Starlink y a cuatro operadores móviles por señal en cárceles",
-      "titular_corto": "Cargos a Starlink por cárceles",
+      "titular": "MinTIC investiga a Starlink y a cuatro operadores móviles por la señal en cárceles",
+      "titular_corto": "Investigan a Starlink por cárceles",
       "entradilla": "El Gobierno los culpa de que desde las prisiones se sigan coordinando extorsiones; los operadores dicen que cumplen y que el problema es que los celulares entran a los penales.",
-      "lead": "El Ministerio TIC abrió investigaciones y formuló cargos contra Starlink y cuatro operadores móviles por presuntamente no restringir las señales en cárceles, anunció el 22 de noviembre el presidente Abelardo de la Espriella, tras hallazgos en La Picota.",
+      "lead": "El Ministerio TIC abrió investigaciones administrativas contra Starlink y cuatro operadores móviles por presuntamente no restringir las señales en cárceles, anunció el 22 de noviembre el presidente Abelardo de la Espriella, tras hallazgos en La Picota.",
       "por_que_importa": "el Gobierno pone la responsabilidad de las extorsiones desde las cárceles también en las empresas de telecomunicaciones, incluido el internet satelital.",
       "dato": {
         "etiqueta": "En cifras",
         "texto": "En La Picota hallaron 582 celulares, 3.754 tarjetas SIM, 38 módems y seis antenas Starlink."
       },
       "cuerpo": [
-        "Según Infobae, el Ministerio TIC detectó conexiones a internet por redes wifi de Starlink en cuatro cárceles: La Picota, en Bogotá; Bellavista, en Bello; Acacías, en Meta, y Las Heliconias, en Florencia. Los otros procesos son contra Partners Telecom (WOM), Colombia Telecomunicaciones, Comcel (Claro) y la unión temporal de Tigo, por las señales móviles dentro de La Picota. La ley obliga a los proveedores a atenuar las señales que cubren los penales. Las investigaciones no son sanciones: buscan establecer si las empresas cumplieron.",
+        "Según Infobae, el Ministerio TIC detectó conexiones a internet por redes wifi de Starlink en cuatro cárceles: La Picota, en Bogotá; Bellavista, en Bello; Acacías, en Meta, y Las Heliconias, en Florencia. Los otros procesos son contra Partners Telecom (WOM), Colombia Telecomunicaciones, Comcel (Claro) y la unión temporal de Tigo, por las señales móviles dentro de La Picota. La ley obliga a los proveedores a atenuar las señales que cubren los penales. Se trata de procesos administrativos del Ministerio, como autoridad de vigilancia del sector, no de procesos judiciales: no son sanciones y buscan establecer si las empresas cumplieron. Si se comprueba un incumplimiento, la consecuencia sería una sanción administrativa.",
         "Los operadores le dijeron a El Tiempo que no han recibido ninguna notificación y que vienen cumpliendo, con cifras del propio Gobierno: entre septiembre y octubre, las líneas bloqueadas en cárceles subieron 64 %. También advirtieron que bajar demasiado la señal deja sin servicio a los vecinos de las cárceles, que las aplicaciones de mensajería no tienen obligaciones similares y que el Estado debe impedir que los teléfonos entren a los penales.",
         "En el caso de Starlink, El Tiempo explica que el problema es más administrativo que técnico: cada antena tiene GPS y la empresa podría bloquear el servicio dentro de una cárcel sin afectar a nadie más. Según fuentes del Gobierno citadas por ese diario, la compañía no ha cumplido la orden y alega no tener presencia local para atender el requerimiento."
       ],
@@ -141,6 +141,43 @@
         {
           "nombre": "Impacto TIC",
           "url": "https://impactotic.co/innovacion/distrito-cti-de-medellin-pulso-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-corea-ministro-renuncia-por-trampas-con-ia",
+      "seccion": "IA y tecnología",
+      "titular": "Corea del Sur: renuncia el ministro de Educación por el miedo a las trampas con IA",
+      "titular_corto": "Corea: cae ministro por trampas con IA",
+      "entradilla": "El temor a que los estudiantes usaran inteligencia artificial en el examen de admisión a la universidad terminó con la salida del ministro.",
+      "lead": "Choi Kyo-jin, ministro de Educación de Corea del Sur, renunció el domingo 22 de noviembre tras las críticas por las medidas de último minuto contra las trampas con inteligencia artificial en el Suneung, el examen de ingreso a la universidad.",
+      "por_que_importa": "la IA ya obliga a los gobiernos a replantear cómo se vigilan los exámenes que deciden el futuro de millones de estudiantes.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Durante el examen se detectaron 111 casos de faltas con aparatos electrónicos, casi la mitad gracias a alertas enviadas a los celulares."
+      },
+      "cuerpo": [
+        "La alarma empezó una semana antes, cuando el mejor puntaje de un examen nacional para contadores tributarios confesó que había usado una cámara diminuta y un celular para lograr una calificación casi perfecta, según AFP en The Japan Times. El caso desató el temor a las trampas asistidas por IA a cuatro días del Suneung, una prueba de nueve horas que en Corea del Sur define el acceso a las mejores universidades.",
+        "El Gobierno reaccionó con medidas de urgencia, como bloquear el wifi público en las zonas del examen y cubrir con adhesivos los botones de la ropa de los estudiantes para evitar cámaras ocultas. El ministro, de 72 años, quedó en el centro de las críticas después de responder en una audiencia del Parlamento que, por su edad, no estaba seguro de poder detectar a quienes hicieran trampa.",
+        "Choi escribió en X que el examen terminó sin incidentes graves, pero que asumía la responsabilidad por no haberse preparado a tiempo. El presidente Lee Jae Myung aceptó la renuncia, informó la oficina presidencial."
+      ],
+      "mirada": "La IA no hizo trampa: dejó en evidencia que los controles del examen estaban pensados para un mundo sin cámaras diminutas ni chatbots.",
+      "imagen": {
+        "archivo": "img/noticias/2026-11-23-corea-ministro-renuncia-por-trampas-con-ia.jpg",
+        "alt": "Estudiantes salen de un colegio tras presentar el examen de ingreso a la universidad en Corea del Sur, en 2018 (imagen ilustrativa)",
+        "autor": "고려",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Students_returning_from_the_exam_location_(Puhung_High_School)_after_taking_South_Korea_College_Scholastic_Ability_Test,_2018.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "The Japan Times (AFP-Jiji)",
+          "url": "https://www.japantimes.co.jp/news/2026/11/22/asia-pacific/politics/south-korea-education-minister-resigns/"
+        },
+        {
+          "nombre": "The Korea Times (Yonhap)",
+          "url": "https://www.koreatimes.co.kr/southkorea/society/20261122/education-minister-offers-to-resign-over-college-exam-controversy-amid-ai-cheating-fears"
         }
       ]
     }
