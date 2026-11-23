@@ -46,11 +46,36 @@
     }));
   }
 
-  /* ---------- Boletín: todavía no está conectado a un proveedor ---------- */
-  $$("[data-boletin]").forEach((form) => form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    form.outerHTML = '<p class="bol__ok">Gracias. El Boletín Crítico abre muy pronto: estamos terminando de prepararlo.</p>';
-  }));
+  /* ---------- Boletín Tecnocríticos (MailerLite) ----------
+     El script de MailerLite y el reCAPTCHA se cargan solo cuando el formulario
+     se acerca a la pantalla o el lector toca el campo, para no frenar la página. */
+  $$("[data-boletin]").forEach((caja) => {
+    const id = caja.dataset.boletin;
+    window["ml_webform_success_" + id] = () => {
+      $(".row-form", caja).hidden = true;
+      $(".row-success", caja).hidden = false;
+    };
+    let cargado = false;
+    const cargar = () => {
+      if (cargado) return;
+      cargado = true;
+      [["https://www.google.com/recaptcha/api.js?hl=es-419"],
+       ["https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"]].forEach(([src]) => {
+        const s = document.createElement("script");
+        s.src = src; s.async = true;
+        document.head.appendChild(s);
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      const obs = new IntersectionObserver((e) => {
+        if (e.some((x) => x.isIntersecting)) { cargar(); obs.disconnect(); }
+      }, { rootMargin: "400px" });
+      obs.observe(caja);
+    } else cargar();
+    caja.addEventListener("focusin", cargar);
+    // Si alguien envía antes de que cargue el script de MailerLite, no salimos del sitio.
+    $("form", caja).addEventListener("submit", (e) => { if (!window.ml_jQuery) { e.preventDefault(); cargar(); } });
+  });
 
   /* ---------- Compartir en redes ----------
      Cada noticia se comparte con su página n/<id>.html, que tiene la vista previa

@@ -166,10 +166,19 @@ button { font: inherit; }
 .bol .w > div { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px 0; align-items: center; border-top: 3px solid var(--tinta); border-bottom: 1px solid var(--linea); }
 .bol h3 { font: 800 34px/1.1 var(--f-titular); letter-spacing: -.03em; margin: 8px 0; }
 .bol p { color: var(--tinta-2); font: 400 16px/1.5 var(--f-texto); margin: 0; }
-.bol form { display: flex; gap: 8px; }
 .bol input { flex: 1; min-width: 0; padding: 14px 16px; border-radius: 999px; border: 1px solid var(--tinta); font: 15px var(--f-titular); }
 .bol button { background: var(--acento); color: #fff; border: 0; border-radius: 999px; padding: 14px 22px; font: 700 14px var(--f-titular); cursor: pointer; }
-.bol__ok { font: 600 15px var(--f-titular); margin: 0; }
+.bol__ok { font: 400 16px/1.5 var(--f-texto); margin: 0; padding: 16px 18px; background: var(--suave); border-left: 3px solid var(--acento); }
+.bol__ok b { font-family: var(--f-titular); }
+.bol__fila { display: flex; gap: 8px; }
+.bol__campo { flex: 1; min-width: 0; display: flex; }
+.bol__campo input { width: 100%; }
+.bol button.loading { opacity: .7; cursor: wait; }
+.bol__captcha { margin-top: 12px; min-height: 78px; }
+.bol__legal { font: 400 13px/1.5 var(--f-texto) !important; color: #555 !important; margin-top: 10px !important; }
+.bol__legal a { color: inherit; text-decoration: underline; }
+.bol .ml-error input { border-color: #C62828; box-shadow: 0 0 0 1px #C62828; }
+.bol .ml-error iframe { outline: 1px solid #C62828; }
 
 /* ---------- Pie de página (franja de color: pie--verde, pie--negro o pie--gris) ---------- */
 .pie { --pie-fondo: var(--tinta); --pie-texto: #fff; --pie-suave: rgba(255, 255, 255, .68); --pie-linea: rgba(255, 255, 255, .18); --pie-punto: var(--acento);
@@ -271,7 +280,7 @@ button { font: inherit; }
   .item > a[aria-hidden] { grid-column: 1; grid-row: auto; order: -1; margin-bottom: 10px; }
   .mas4 { grid-template-columns: minmax(0, 1fr); gap: 22px; } .mas4 p { display: none; }
   .manifiesto__rej { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .bol .w > div { grid-template-columns: 1fr; gap: 18px; } .bol form { flex-direction: column; } .bol h3 { font-size: 28px; }
+  .bol .w > div { grid-template-columns: 1fr; gap: 18px; } .bol__fila { flex-direction: column; } .bol h3 { font-size: 28px; }
   .titulo-pag h1 { font-size: 32px; }
   .cuerpo { font-size: 18.5px; }
   .firma { flex-wrap: wrap; } .firma__acc { margin-left: 0; }
