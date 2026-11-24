@@ -5,9 +5,49 @@
   <link>https://tecnocriticos.com/</link>
   <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
   <language>es-co</language>
-  <lastBuildDate>Mon, 23 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 06:00:00 -0500</lastBuildDate>
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>MinTIC le pide a X suspender la cuenta de Petro por presunta incitación a la violencia</title>
+   <link>https://tecnocriticos.com/n/2026-11-24-mintic-pide-a-x-suspender-cuenta-de-petro.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-24-mintic-pide-a-x-suspender-cuenta-de-petro.html</guid>
+   <pubDate>Tue, 24 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>La decisión es de la red social: el Ministerio solo puede pedirlo. El partido del expresidente lo califica de censura. Por qué importa: un gobierno le pide a una plataforma privada silenciar a un expresidente de la oposición, lo que pone a prueba los límites de la libertad de expresión en las redes.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-24-mintic-pide-a-x-suspender-cuenta-de-petro.jpg" length="187152" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Lean y Mathlib certifican como correcta la prueba de Riemann hecha con Claude</title>
+   <link>https://tecnocriticos.com/n/2026-11-24-prueba-de-riemann-verificada.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-24-prueba-de-riemann-verificada.html</guid>
+   <pubDate>Tue, 24 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>La verificación por computador respalda la demostración, aunque ningún matemático entiende todavía cómo funciona. Por qué importa: la prueba superó la revisión más exigente que existe para una demostración, pero los matemáticos aún deben explicar las ideas que contiene.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-24-prueba-de-riemann-verificada.jpg" length="121980" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>El 5G llega al 30,6 % del área de las cabeceras municipales de Colombia, según la CRC</title>
+   <link>https://tecnocriticos.com/n/2026-11-24-cobertura-5g-colombia-crc.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-24-cobertura-5g-colombia-crc.html</guid>
+   <pubDate>Tue, 24 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>Las antenas 5G se multiplicaron por 2,6 en año y medio, pero la cobertura se concentra en Bogotá y las ciudades grandes. Por qué importa: fuera de las grandes ciudades, el 4G sigue siendo la red que sostiene casi todas las conexiones móviles del país.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-24-cobertura-5g-colombia-crc.jpg" length="92966" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Activision busca patentar una IA que aprende del chat de los jugadores para provocarlos</title>
+   <link>https://tecnocriticos.com/n/2026-11-24-activision-patente-ia-voz-jugadores.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-24-activision-patente-ia-voz-jugadores.html</guid>
+   <pubDate>Tue, 24 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>El sistema grabaría fragmentos de las conversaciones de voz y texto en las partidas para que los personajes reaccionen como humanos. Por qué importa: convertir las conversaciones de los jugadores en material de entrenamiento abre preguntas sobre privacidad y consentimiento.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-24-activision-patente-ia-voz-jugadores.jpg" length="64383" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Spotify tuvo fallas para iniciar sesión este martes en la mañana y ya las solucionó</title>
+   <link>https://tecnocriticos.com/n/2026-11-24-spotify-caida-inicio-de-sesion.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-24-spotify-caida-inicio-de-sesion.html</guid>
+   <pubDate>Tue, 24 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>Los problemas empezaron hacia las 6:30 a. m. y afectaron sobre todo el ingreso a las cuentas. Por qué importa: es una nueva interrupción en un servicio digital masivo, en semanas con varias caídas de plataformas usadas a diario.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-24-spotify-caida-inicio-de-sesion.jpg" length="76878" type="image/jpeg"/>
+  </item>
   <item>
    <title>Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia</title>
    <link>https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html</link>
