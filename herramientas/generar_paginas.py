@@ -47,7 +47,7 @@ HYPE = [  # (tema, promesa, realidad, veredicto)
 ]
 MANIFIESTO = [
     ("No somos fans", "Nos gusta la tecnología lo suficiente como para exigirle más. Ninguna marca es nuestro equipo."),
-    ("Contexto antes que prisa", "Preferimos llegar segundos y explicar bien que ser los primeros en copiar una nota de prensa."),
+    ("Contexto antes que prisa", "No competimos por ser los primeros, sino por ser los que mejor explican lo que pasa."),
     ("Criticar no es odiar", "Celebramos lo que funciona y señalamos lo que no. Con argumentos, no con ruido."),
     ("Tú también opinas", "La Mesa es tuya. Un portal crítico necesita lectores críticos, incluso con nosotros."),
 ]
