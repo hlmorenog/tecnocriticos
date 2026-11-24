@@ -457,3 +457,6 @@ button { font: inherit; }
   .mmz__modal-media video, .mmz__modal-media img { max-height: 70vh; }
   .mmz__modal-txt { padding: 22px 20px 26px; }
 }
+
+.fijas a.fijas__mm { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+.fijas a.fijas__mm:hover { background: var(--acento); border-color: var(--acento); }
