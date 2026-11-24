@@ -273,7 +273,7 @@ button { font: inherit; }
   .logo small { display: none; }
   .grid { display: flex; flex-direction: column; gap: 28px; padding-top: 24px; align-items: stretch; }
   .principal, .rail { display: contents; }
-  .hero { order: 1; } .rail > .mesa { order: 2; } .rail > .esencial { order: 3; }
+  .hero, .mm--home { order: 1; } .rail > .mesa { order: 2; } .rail > .esencial { order: 3; }
   .feed, .art-cuerpo { order: 4; } .rail > section { order: 5; }
   .hero h1, .art h1 { font-size: 32px; }
   .dato { flex-direction: column; gap: 6px; } .dato strong { font-size: 38px; } .dato span { font-size: 15px; }
