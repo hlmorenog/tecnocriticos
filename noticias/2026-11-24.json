@@ -2,6 +2,35 @@
   "fecha": "2026-11-24",
   "noticias": [
     {
+      "id": "2026-11-24-tidal-eliminara-la-musica-hecha-por-ia",
+      "seccion": "Videojuegos y series",
+      "titular": "Tidal eliminará de su catálogo la música hecha por completo con IA desde el 9 de diciembre",
+      "entradilla": "Es el primer servicio de música por suscripción que prohíbe del todo esas canciones: casi la mitad de lo que le llegaba en los últimos meses estaba hecho con IA.",
+      "lead": "Tidal, el servicio de música por suscripción de la empresa Block, anunció este martes 24 de noviembre que desde el 9 de diciembre empezará a retirar de su catálogo las canciones generadas por completo con inteligencia artificial y dejará de aceptar nuevas.",
+      "cuerpo": [
+        "Según la compañía, el 43 % de las canciones que le enviaron las distribuidoras en los últimos 90 días fueron detectadas como hechas por completo con IA, y el 6 de noviembre la proporción llegó al 60 %. El responsable de Tidal en Block explicó que la medida implicará borrar cerca de 29 millones de canciones y rechazar entre 80.000 y 85.000 al día, y que a comienzos de 2027 ya no deberían quedar en la plataforma.",
+        "Tidal asegura que sus suscriptores casi no escuchan esa música: el 96 % de las canciones marcadas como IA no tuvo ninguna reproducción en los últimos tres meses. Hace unos cinco meses ya había dejado de pagarles regalías, las había etiquetado y había permitido a los usuarios ocultarlas.",
+        "La decisión va más allá de lo que hacen sus competidores. Apple Music anunció que etiquetará las canciones hechas o asistidas con IA, y Spotify marca como «AI Persona» a los artistas que considera creados con esa tecnología, pero ninguno de los dos ha prohibido del todo esa música."
+      ],
+      "mirada": "Si casi la mitad de lo que llega es IA y nadie lo escucha, el problema no es artístico: es spam que inunda los catálogos.",
+      "titular_corto": "Tidal borra la música hecha con IA",
+      "por_que_importa": "la música generada con IA ya es una parte enorme de lo que llega a las plataformas, y Tidal es la primera que decide sacarla en vez de solo etiquetarla.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "43 % de las canciones recibidas en 90 días eran hechas por completo con IA."
+      },
+      "fuentes": [
+        {
+          "nombre": "Variety",
+          "url": "https://variety.com/2026/music/news/tidal-bans-ai-generated-music-1236956924/"
+        },
+        {
+          "nombre": "PCMag",
+          "url": "https://www.pcmag.com/news/tidal-to-ban-fully-ai-generated-music-remove-millions-of-existing-tracks"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-crowdstrike-comprara-zscaler",
       "seccion": "IA y tecnología",
       "titular": "CrowdStrike comprará Zscaler por 43.900 millones de dólares para sumar la seguridad de red",
