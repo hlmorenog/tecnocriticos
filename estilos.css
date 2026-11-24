@@ -390,6 +390,9 @@ button { font: inherit; }
 }
 .mm__rej--solo { grid-template-columns: minmax(0, 360px) !important; }
 .mmx__solo { max-width: 420px; margin: 22px 0 6px; }
+.mmx__info { margin: 8px 0 26px; }
+.mmx__info img { width: 100%; height: auto; display: block; border: 1px solid var(--linea); border-radius: 10px; }
+.mmx__info figcaption { font: 400 13px/1.4 var(--f-texto); color: var(--gris); margin-top: 8px; }
 .mmx__pieza .mmx__btns { margin: 14px 0 24px; }
 .mmx__rel { font: 600 15px var(--f-titular); margin: 18px 0; }
 .mmx__rel a { color: var(--acento); }

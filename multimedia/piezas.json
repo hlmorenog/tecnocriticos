@@ -1,6 +1,78 @@
 {
   "piezas": [
     {
+      "id": "2026-11-24-que-app-de-musica-te-conviene",
+      "fecha": "2026-11-24",
+      "seccion": "Videojuegos y series",
+      "titulo": "Spotify, Apple Music, YouTube Music, Deezer, Tidal y Amazon: qué app de música te conviene",
+      "entradilla": "Precio en Colombia, plan gratis, calidad de sonido y lo que trae cada una, en un video y una infografía.",
+      "descripcion": "Comparativa de los principales servicios de música por suscripción: cuota de mercado mundial, precios del plan individual en Colombia, versión gratuita, calidad de sonido y lo que ofrece cada uno además de las canciones.",
+      "texto": [
+        "## Quién manda",
+        "Al cierre de 2025 había 921,6 millones de suscripciones pagas de música en el mundo, según la firma de análisis MIDiA Research. Spotify tiene el 31,4 %; le siguen Tencent Music, que opera sobre todo en China (13,8 %), Apple Music (12,6 %), YouTube Music (12,4 %) y Amazon Music (8,5 %). MIDiA señala a YouTube Music como el servicio que más crece y prevé que en 2026 supere en suscriptores a Apple Music.",
+        "Spotify informó que al 30 de septiembre de 2026 tenía 306 millones de suscriptores Premium y 788 millones de usuarios activos al mes, contando a quienes usan la versión gratuita.",
+        "## Cuánto cuestan en Colombia",
+        "En sus páginas oficiales para Colombia, Spotify Premium Individual y Apple Music Individual cuestan lo mismo: 18.500 pesos al mes. Spotify ofrece además los planes Duo por 24.500 pesos, Familiar por 30.500 y Estudiantes por 10.100; Apple Music tiene plan Familiar por 30.500 pesos y Estudiantes por 9.900.",
+        "Para YouTube Music, Deezer y Tidal no encontramos un precio oficial en pesos publicado en sus sitios web. Lo que sí es público es lo que cobran dentro de la App Store de Colombia cuando se paga desde un iPhone: 23.900 pesos al mes por YouTube Music y por Deezer Premium, y 24.000 por Tidal. Pagar desde la tienda de aplicaciones suele salir más caro que hacerlo en la web de cada servicio, así que vale la pena comparar antes de suscribirse.",
+        "## Gratis o de pago",
+        "Spotify, YouTube Music y Amazon Music tienen una versión gratuita con anuncios. Apple Music no: solo ofrece un mes de prueba para nuevos suscriptores.",
+        "## Cómo suenan",
+        "Apple Music, Tidal y Deezer ofrecen audio sin pérdida, es decir, sin la compresión que elimina detalles del sonido, con una resolución de hasta 24 bits y 192 kHz. Deezer anunció esa mejora en octubre de 2026. Apple Music y Tidal también ofrecen sonido envolvente con Dolby Atmos.",
+        "Spotify, en su página para Colombia, ofrece una calidad de hasta 320 kbps, que es un formato comprimido. YouTube Music llega a 256 kbps en su opción de calidad alta, según su página de ayuda. Con audífonos comunes o el parlante del celular la diferencia es difícil de notar; con buenos audífonos o un equipo de sonido se aprecia más.",
+        "## Más allá de las canciones",
+        "Spotify incluye podcasts y, en sus planes Premium, 12 horas al mes de audiolibros. YouTube Music aprovecha el catálogo de YouTube: videos, presentaciones en vivo y covers que no están en otras apps. Amazon Music Unlimited suma un audiolibro de Audible al mes. Deezer apuesta por Flow, una lista infinita que se adapta a cada usuario, y por letras con traducción.",
+        "## La mirada crítica",
+        "El precio de lista se parece y los catálogos también: los que publican la cifra superan los 100 millones de canciones. La diferencia real está en el sonido, en los anuncios y en cuánto se queda la tienda del celular cuando pagas desde la app."
+      ],
+      "video": {
+        "archivo": "media/2026-11-24-que-app-de-musica-te-conviene.mp4",
+        "poster": "media/2026-11-24-que-app-de-musica-te-conviene-poster.jpg",
+        "duracion": "98 s"
+      },
+      "infografia": {
+        "archivo": "img/multimedia/2026-11-24-que-app-de-musica-te-conviene-infografia.jpg",
+        "alt": "Infografía que compara Spotify, Apple Music, YouTube Music, Deezer, Tidal y Amazon Music: cuota de suscriptores en el mundo, precio en Colombia, plan gratis, calidad de sonido y fortalezas de cada servicio"
+      },
+      "fuentes": [
+        {
+          "nombre": "Spotify Premium Colombia (planes y precios)",
+          "url": "https://www.spotify.com/co-es/premium/"
+        },
+        {
+          "nombre": "Apple Music Colombia (planes y precios)",
+          "url": "https://www.apple.com/co/apple-music/"
+        },
+        {
+          "nombre": "App Store Colombia: YouTube Music",
+          "url": "https://apps.apple.com/co/app/youtube-music/id1017492454"
+        },
+        {
+          "nombre": "App Store Colombia: Deezer",
+          "url": "https://apps.apple.com/co/app/deezer-m%C3%BAsica-y-podcast/id292738169"
+        },
+        {
+          "nombre": "App Store Colombia: TIDAL",
+          "url": "https://apps.apple.com/co/app/tidal-music/id913943275"
+        },
+        {
+          "nombre": "App Store Colombia: Amazon Music",
+          "url": "https://apps.apple.com/co/app/amazon-music-m%C3%BAsica-y-podcasts/id510855668"
+        },
+        {
+          "nombre": "Ayuda de YouTube Music: calidad del audio",
+          "url": "https://support.google.com/youtubemusic/answer/9076559?hl=es-419"
+        },
+        {
+          "nombre": "Spotify: informe del tercer trimestre de 2026 (SEC)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001639920/000114036126040435/ef20084028_ex99-1.htm"
+        },
+        {
+          "nombre": "Music Business Worldwide: cuotas de suscriptores de MIDiA Research",
+          "url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-el-iphone-de-2007-al-duo",
       "fecha": "2026-11-24",
       "seccion": "IA y tecnología",
