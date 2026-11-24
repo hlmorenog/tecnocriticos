@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url><loc>https://tecnocriticos.com/n/2026-11-24-crowdstrike-comprara-zscaler.html</loc><news:news>
+    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
+    <news:publication_date>2026-11-24</news:publication_date><news:title>CrowdStrike comprará Zscaler por 43.900 millones de dólares para sumar la seguridad de red</news:title>
+  </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-24-mintic-pide-a-x-suspender-cuenta-de-petro.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
     <news:publication_date>2026-11-24</news:publication_date><news:title>MinTIC le pide a X suspender la cuenta de Petro por presunta incitación a la violencia</news:title>
@@ -19,10 +23,6 @@
   <url><loc>https://tecnocriticos.com/n/2026-11-24-spotify-caida-inicio-de-sesion.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
     <news:publication_date>2026-11-24</news:publication_date><news:title>Spotify tuvo fallas para iniciar sesión este martes en la mañana y ya las solucionó</news:title>
-  </news:news></url>
-  <url><loc>https://tecnocriticos.com/n/2026-11-24-crowdstrike-comprara-zscaler.html</loc><news:news>
-    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
-    <news:publication_date>2026-11-24</news:publication_date><news:title>CrowdStrike comprará Zscaler por 43.900 millones de dólares para sumar la seguridad de red</news:title>
   </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>

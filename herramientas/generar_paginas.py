@@ -13,6 +13,14 @@ Aquí se editan los bloques fijos: menú, La Mesa, Hype-ómetro, La Columna, man
 import html as _html
 import json
 from pathlib import Path
+import hashlib
+
+# Versión de estilos y scripts: cambia cuando cambia el archivo, para que los navegadores
+# (sobre todo Safari) no sigan usando una copia vieja.
+def _version(nombre):
+    return hashlib.sha1((Path(__file__).resolve().parent.parent / nombre).read_bytes()).hexdigest()[:8]
+VERSION_CSS = _version("estilos.css")
+VERSION_JS = _version("main.js")
 
 RAIZ = Path(__file__).resolve().parent.parent
 
@@ -143,7 +151,7 @@ def cabeza(titulo, descripcion, tipo="website", ruta="", titulo_social=None, ima
   <link rel="icon" href="logo-icono.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/logo-tecnocriticos.png">
   {FUENTES}
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css?v={VERSION_CSS}">
 {bloque_jsonld(jsonld) if jsonld else ''}</head>
 <body>
 """
@@ -267,7 +275,7 @@ def pie():
  </div>
  <div class="pie__base"><span>© <span data-anio>2026</span> tecnocriticos.com</span><span>Hecho en Colombia</span></div>
 </div></footer>
-<script src="main.js"></script>
+<script src="main.js?v={VERSION_JS}"></script>
 <!-- Cloudflare Web Analytics: conteo de visitas sin cookies -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "4e70f7ad49a74aa4a60d9463aae782dd"}}'></script>
 </body>
