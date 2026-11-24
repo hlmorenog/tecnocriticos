@@ -89,7 +89,8 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 - `multimedia` es opcional, para piezas propias de Tecnocríticos: `{ "titulo": "Explicado en imágenes", "video": { "archivo": "media/<id>.mp4", "poster": "media/<id>-poster.jpg", "titulo": "…", "duracion": "40 s" }, "infografia": { "archivo": "img/noticias/<id>-infografia.jpg", "alt": "…" } }`. Solo con aprobación de la dirección.
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
-- **Noticia principal**: debe ser reciente para el lector (preferiblemente de las últimas 24 horas). Si una actualización del día es más reciente e igual o más importante que la principal, propón a la dirección subirla al primer lugar.
+- **Noticia principal**: debe ser reciente para el lector (preferiblemente de las últimas 24 horas).
+- **Actualizaciones del día** (9:00, 12:00, 4:00, 7:00 y 9:00): cada actualización entra como **noticia principal**, es decir, en el primer lugar del archivo del día; las demás bajan un puesto. Por eso su foto debe cumplir la regla de la foto principal.
 - **Foto de la principal**: debe ser horizontal y llenar el formato 16:9. Las fotos verticales o con `"encuadre": "completa"` solo van en noticias secundarias.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).
 - Después, regenera el sitio: `python3 herramientas/generar_paginas.py`. Crea la página completa de cada noticia (`n/<id>.html`, que es la que leen Google, los buscadores con IA y las redes sociales), actualiza la portada y el listado, y rehace `sitemap.xml`, `sitemap-noticias.xml`, `feed.xml`, `robots.txt` y `llms.txt`. **Sin este paso, las noticias del día no existen para los buscadores** y se comparten sin foto ni titular.
