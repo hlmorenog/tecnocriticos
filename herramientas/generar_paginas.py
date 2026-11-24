@@ -153,13 +153,13 @@ def cabecera(activo=""):
     def a(href, txt, clave):
         return f'<a href="{href}"{" class=\"on\"" if activo == clave else ""}>{txt}</a>'
     menu = a("index.html", "Hoy", "hoy") + "".join(a(f"noticias.html?seccion={q}", s, s) for s, q in SEC) \
-        + a("noticias.html", "Todas las noticias", "noticias") + a("columna.html", "La Columna", "columna")
+        + a("noticias.html", "Todas las noticias", "noticias") + a("multimedia.html", "Multimedia", "multimedia") + a("columna.html", "La Columna", "columna")
     chips = "".join(f'<a href="noticias.html?seccion={q}">{s}</a>' for s, q in SEC)
     # Menú desplegable del celular (y de pantallas angostas, donde el menú horizontal no cabe)
     def m(href, txt, clave=""):
         return f'<a href="{href}"{" aria-current=\"page\"" if clave and activo == clave else ""}>{txt}</a>'
     movil = (m("index.html", "Hoy", "hoy") + "".join(m(f"noticias.html?seccion={q}", s, s) for s, q in SEC)
-             + m("noticias.html", "Todas las noticias", "noticias") + m("columna.html", "La Columna", "columna"))
+             + m("noticias.html", "Todas las noticias", "noticias") + m("multimedia.html", "Multimedia", "multimedia") + m("columna.html", "La Columna", "columna"))
     movil2 = (m("index.html#hype", "⚡ Hype-ómetro") + m("index.html#mesa", "🗳 La Mesa")
               + m("quienes-somos.html", "Quiénes somos") + m("rss.html", "RSS"))
     return f"""<header class="cab"><div class="w">
@@ -173,7 +173,7 @@ def cabecera(activo=""):
   <span class="menu-movil__lab">Más</span>{movil2}
   <a class="menu-movil__cta" href="index.html#boletin">Suscríbete al Boletín Tecnocríticos</a>
 </div></nav></header>
-<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
+<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="multimedia.html">▶ Multimedia</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
 """
 
 
@@ -261,7 +261,7 @@ def pie():
    <p>La tecnología, sin fanatismo. Periodismo de tecnología potenciado por IA, con noticias y análisis cada día.</p></div>
   <nav class="pie__cols" aria-label="Pie de página">
    <div><h4>Noticias</h4><ul><li><a href="index.html">Hoy</a></li>{secciones}<li><a href="noticias.html">Todas las noticias</a></li></ul></div>
-   <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="index.html#hype">Hype-ómetro</a></li></ul></div>
+   <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="index.html#hype">Hype-ómetro</a></li><li><a href="multimedia.html">Multimedia</a></li></ul></div>
    <div><h4>Recíbelo</h4><ul><li><a href="index.html#boletin">Boletín Tecnocríticos</a></li><li><a href="rss.html">RSS</a></li><li><a href="privacidad.html">Privacidad</a></li><li><a href="privacidad.html#cookies" data-cookies>Preferencias de cookies</a></li></ul></div>
   </nav>
  </div>
@@ -302,6 +302,147 @@ def bloque_explicado(noticias):
                 f'<h3 class="mm__tit"><a href="{url_noticia(n)}">{esc(n["titular"])}</a></h3><div class="mm__rej">{piezas}</div>'
                 f'<p class="mm__mas"><a href="{url_noticia(n)}">Leer la nota completa →</a></p></section>')
     return ""
+
+
+def cargar_piezas():
+    """Piezas multimedia independientes (explicadores), en multimedia/piezas.json."""
+    p = RAIZ / "multimedia" / "piezas.json"
+    if not p.is_file():
+        return []
+    return [x for x in json.loads(p.read_text(encoding="utf-8")).get("piezas", []) if x.get("id")]
+
+
+def url_pieza(p, absoluta=False):
+    return (f"{SITIO}/" if absoluta else "") + f"m/{p['id']}.html"
+
+
+def resolver_enlace(url):
+    if url.startswith("columna:"):
+        slug = url.split(":", 1)[1]
+        c = next((c for c in COLUMNAS if c["slug"] == slug), None)
+        return url_columna(c) if c else "columna.html"
+    return url
+
+
+def piezas_multimedia(noticias):
+    """Todas las piezas (de noticias y explicadores), de la más reciente a la más antigua.
+    Cada una: tipo (video/infografia), archivo, poster, duracion, alt, titulo, seccion, fecha, url (página de destino)."""
+    res = []
+    for p in cargar_piezas():
+        v = p.get("video") or {}
+        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
+            res.append({"tipo": "video", **v, "titulo": p["titulo"], "seccion": p["seccion"], "fecha": p["fecha"],
+                        "url": url_pieza(p), "entradilla": p.get("entradilla", ""), "grupo": p["id"]})
+    for n in noticias:
+        mm = n.get("multimedia") or {}
+        for tipo in ("video", "infografia"):
+            x = mm.get(tipo) or {}
+            if x.get("archivo") and (RAIZ / x["archivo"]).is_file():
+                res.append({"tipo": tipo, **x, "titulo": n["titular"], "seccion": n["seccion"], "fecha": n["fecha"],
+                            "url": url_noticia(n), "entradilla": n.get("entradilla", ""), "grupo": n["id"]})
+    return sorted(res, key=lambda x: x["fecha"], reverse=True)  # orden estable: explicadores antes que noticias del mismo día
+
+
+def html_video(v):
+    poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
+    return (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}">'
+            f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
+
+
+def tarjeta_mmz(p, grande=False):
+    """Tarjeta vertical tipo «reel». Al tocarla se abre el reproductor (o la infografía) encima de la página."""
+    img = p.get("poster") if p["tipo"] == "video" else p["archivo"]
+    dur = f'<span class="mmz__dur">{esc(p["duracion"])}</span>' if p.get("duracion") else ""
+    icono = '<span class="mmz__play" aria-hidden="true"></span>' if p["tipo"] == "video" else '<span class="mmz__lupa" aria-hidden="true">+</span>'
+    datos = (f'data-mmz-ver data-tipo="{p["tipo"]}" data-src="{esc(p["archivo"])}" data-poster="{esc(p.get("poster") or "")}" '
+             f'data-titulo="{esc(p["titulo"])}" data-url="{esc(p["url"])}" data-desc="{esc(p.get("entradilla") or "")}"')
+    return (f'<article class="mmz__card mmz__card--{p["tipo"]}{" mmz__card--grande" if grande else ""}">'
+            f'<a class="mmz__media" href="{esc(p["url"])}" {datos} aria-label="{"Ver video" if p["tipo"] == "video" else "Ver infografía"}: {esc(p["titulo"])}">'
+            f'<img src="{esc(img or "")}" alt="{esc(p.get("alt") or p["titulo"])}" loading="lazy">{icono}{dur}</a>'
+            f'<div class="mmz__info"><span class="mmz__sec">{esc(p["seccion"])} · {int(p["fecha"][8:10])}/{p["fecha"][5:7]}</span>'
+            f'<h3><a href="{esc(p["url"])}">{esc(p["titulo"])}</a></h3>'
+            f'<a class="mmz__desc" href="{esc(p["archivo"])}" download>↓ Descargar</a></div></article>')
+
+
+def pagina_multimedia():
+    piezas = piezas_multimedia(cargar_noticias())
+    videos = [p for p in piezas if p["tipo"] == "video"]
+    infos = [p for p in piezas if p["tipo"] == "infografia"]
+    dest = videos[0] if videos else (piezas[0] if piezas else None)
+    heroe = ""
+    if dest:
+        es_pieza = dest["url"].startswith("m/")
+        heroe = f"""<div class="mmz__dest">
+   <div class="mmz__marco">{html_video(dest) if dest["tipo"] == "video" else f'<img src="{esc(dest["archivo"])}" alt="{esc(dest.get("alt") or dest["titulo"])}">'}</div>
+   <div class="mmz__dest-txt">
+    <span class="mmz__kick">● Estreno · {esc(dest["seccion"])}</span>
+    <h2><a href="{esc(dest["url"])}">{esc(dest["titulo"])}</a></h2>
+    <p>{esc(dest.get("entradilla") or "")}</p>
+    <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" href="{esc(dest["url"])}">{"Ver la pieza y sus fuentes" if es_pieza else "Leer la nota"}</a><a class="mmz__btn" href="{esc(dest["archivo"])}" download>↓ Descargar</a></div>
+   </div>
+  </div>"""
+    fila_v = "".join(tarjeta_mmz(p) for p in videos)
+    fila_i = "".join(tarjeta_mmz(p) for p in infos)
+    filas = ""
+    if fila_v:
+        filas += f'<section class="mmz__fila"><div class="mmz__fila-cab"><h2>Videos</h2><span>{len(videos)} piezas · formato vertical</span></div><div class="mmz__carril">{fila_v}</div></section>'
+    if fila_i:
+        filas += f'<section class="mmz__fila"><div class="mmz__fila-cab"><h2>Infografías</h2><span>{len(infos)} {"pieza" if len(infos) == 1 else "piezas"}</span></div><div class="mmz__carril mmz__carril--info">{fila_i}</div></section>'
+    vacio = '' if piezas else '<p class="mmz__vacio">Muy pronto, nuestros primeros videos e infografías.</p>'
+    return (cabeza("Multimedia — Tecnocríticos",
+                   "Videos e infografías de Tecnocríticos para entender en un minuto la tecnología: explicadores e historias de los temas que importan.",
+                   ruta="multimedia.html")
+            + cabecera("multimedia")
+            + f"""<main class="mmz">
+ <section class="mmz__heroe"><div class="w">
+  <div class="mmz__cab"><span class="mmz__kick">Multimedia · Tecnocríticos</span>
+   <h1>Explicado en <em>imágenes</em></h1>
+   <p>La tecnología en un minuto: videos verticales e infografías con datos verificados y fuentes. Míralos aquí, descárgalos y compártelos citando a Tecnocríticos.</p></div>
+  {heroe}
+ </div></section>
+ <div class="mmz__cuerpo"><div class="w">{filas}{vacio}</div></div>
+</main>
+<dialog class="mmz__modal" data-mmz-modal aria-label="Reproductor">
+ <button class="mmz__cerrar" type="button" data-mmz-cerrar aria-label="Cerrar">×</button>
+ <div class="mmz__modal-media" data-mmz-media></div>
+ <div class="mmz__modal-txt"><h3 data-mmz-titulo></h3><p data-mmz-desc></p>
+  <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" data-mmz-url href="#">Ver la pieza</a><a class="mmz__btn" data-mmz-bajar href="#" download>↓ Descargar</a></div></div>
+</dialog>
+{boletin()}
+""" + pie())
+
+
+def pagina_pieza(p):
+    """Página propia de un explicador: m/<id>.html (para buscadores y para compartir)."""
+    v = p.get("video") or {}
+    fuentes = "".join(f'<li><a href="{esc(f["url"])}" target="_blank" rel="noopener">{esc(f.get("nombre") or f["url"])}</a></li>' for f in p.get("fuentes", []))
+    rel = p.get("relacionada")
+    relacionada = f'<p class="mmx__rel">Relacionado: <a href="{resolver_enlace(rel["url"])}">{esc(rel["titulo"])}</a></p>' if rel else ""
+    datos = {"@type": "VideoObject", "name": p["titulo"], "description": p.get("entradilla", ""), "uploadDate": p["fecha"],
+             "thumbnailUrl": [f"{SITIO}/{v.get('poster', '')}"], "contentUrl": f"{SITIO}/{v.get('archivo', '')}", "inLanguage": "es-CO",
+             "publisher": {k: x for k, x in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
+    imagen = (v["poster"], 720, 1280, esc(p["titulo"])) if v.get("poster") else None
+    return (cabeza(f"{p['titulo']} — Multimedia · Tecnocríticos", p.get("entradilla", ""), "video.other", url_pieza(p), p["titulo"],
+                   imagen=imagen, jsonld=datos, base=True)
+            + cabecera("multimedia")
+            + f"""<main class="w grid">
+ <div class="principal"><article class="art mm mmx__pieza">
+  <nav class="miga" aria-label="Ruta"><a href="index.html">Hoy</a> / <a href="multimedia.html">Multimedia</a></nav>
+  <span class="lab">Explicado · {esc(p['seccion'])}</span>
+  <h1>{esc(p['titulo'])}</h1>
+  <p class="entradilla">{esc(p.get('entradilla', ''))}</p>
+  <div class="compartir compartir--arriba" data-compartir></div>
+  <div class="mmx__solo">{html_video({**v, "titulo": p["titulo"]}) if v.get("archivo") else ""}</div>
+  <div class="mmx__btns"><a class="mmx__btn" href="{esc(v.get('archivo', ''))}" download>↓ Descargar video</a><a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
+  <div class="cuerpo"><p>{esc(p.get('descripcion', ''))}</p></div>
+  {relacionada}
+  <div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>
+  <div class="compartir" data-compartir></div>
+ </article></div>
+ <aside class="rail">{bloque_minuto()}{bloque_columna()}{bloque_explora()}</aside>
+</main>
+{boletin()}
+""" + pie())
 
 
 def portada():
@@ -404,11 +545,16 @@ if __name__ == "__main__":
                          ("noticia.html", pagina_noticia()), ("columna.html", pagina_columna()),
                          ("quienes-somos.html", generar_noticias.pagina_quienes()),
                          ("rss.html", generar_noticias.pagina_rss()),
-                         ("privacidad.html", generar_noticias.pagina_privacidad())]:
+                         ("privacidad.html", generar_noticias.pagina_privacidad()),
+                         ("multimedia.html", pagina_multimedia())]:
         (RAIZ / nombre).write_text(html, encoding="utf-8")
         print("generado", nombre)
     (RAIZ / "c").mkdir(exist_ok=True)
     for c in COLUMNAS[1:]:
         (RAIZ / url_columna(c)).write_text(pagina_columna(c), encoding="utf-8")
         print("generado", url_columna(c))
+    (RAIZ / "m").mkdir(exist_ok=True)
+    for pz in cargar_piezas():
+        (RAIZ / url_pieza(pz)).write_text(pagina_pieza(pz), encoding="utf-8")
+        print("generado", url_pieza(pz))
     generar_noticias.main()

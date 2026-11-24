@@ -86,7 +86,7 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 
 - `id`: la fecha más un slug en minúsculas, sin tildes, con guiones. Debe ser único.
 - `videos` es opcional: solo si el video aporta a la noticia (por ejemplo, comparar dos comerciales). Es una lista de `{ "titulo": "…", "youtube": "ID de 11 caracteres", "descripcion": "…" }`; `videos_titulo` es el encabezado del bloque. Verifica cada video con `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ID&format=json` (debe responder 200) y di en la descripción quién lo subió si no es el canal oficial.
-- `multimedia` es opcional, para piezas propias de Tecnocríticos: `{ "titulo": "Explicado en imágenes", "video": { "archivo": "media/<id>.mp4", "poster": "media/<id>-poster.jpg", "titulo": "…" }, "infografia": { "archivo": "img/noticias/<id>-infografia.jpg", "alt": "…" } }`. Solo con aprobación de la dirección.
+- `multimedia` es opcional, para piezas propias de Tecnocríticos: `{ "titulo": "Explicado en imágenes", "video": { "archivo": "media/<id>.mp4", "poster": "media/<id>-poster.jpg", "titulo": "…", "duracion": "40 s" }, "infografia": { "archivo": "img/noticias/<id>-infografia.jpg", "alt": "…" } }`. Solo con aprobación de la dirección.
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - **Noticia principal**: debe ser reciente para el lector (preferiblemente de las últimas 24 horas). Si una actualización del día es más reciente e igual o más importante que la principal, propón a la dirección subirla al primer lugar.
