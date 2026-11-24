@@ -68,7 +68,19 @@
           "nombre": "CNN",
           "url": "https://edition.cnn.com/2026/11/23/business/live-news/jensen-huang-reinstated-as-ceo-of-nvidia"
         }
-      ]
+      ],
+      "multimedia": {
+        "titulo": "Explicado en imágenes",
+        "video": {
+          "archivo": "media/2026-11-23-nvidia-restituye-a-jensen-huang.mp4",
+          "poster": "media/2026-11-23-nvidia-restituye-a-jensen-huang-poster.jpg",
+          "titulo": "Video: el regreso de Jensen Huang y lo que pasó con la acción de Nvidia, en 40 segundos."
+        },
+        "infografia": {
+          "archivo": "img/noticias/2026-11-23-nvidia-restituye-a-jensen-huang-infografia.jpg",
+          "alt": "Infografía: la acción de Nvidia cayó 27,7 % entre el 11 y el 20 de noviembre y subió 31,5 % el 23 de noviembre, el día del regreso de Jensen Huang"
+        }
+      }
     },
     {
       "id": "2026-11-23-claude-y-la-hipotesis-de-riemann",

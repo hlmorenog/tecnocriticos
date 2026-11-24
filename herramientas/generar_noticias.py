@@ -150,6 +150,23 @@ def pagina_noticia(n, todas):
             for v in lista_v)
         titulo_v = esc(n.get("videos_titulo") or "Videos")
         videos = f'<section class="videos" aria-label="{titulo_v}"><h2 class="videos__tit">{titulo_v}</h2><div class="videos__rej">{items}</div></section>'
+    multimedia = ""
+    mm = n.get("multimedia") or {}
+    piezas = []
+    v = mm.get("video") or {}
+    if v.get("archivo") and (RAIZ / v["archivo"]).is_file() and ".." not in v["archivo"]:
+        poster = f' poster="{esc(v["poster"])}"' if v.get("poster") and (RAIZ / v["poster"]).is_file() else ""
+        piezas.append(f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}">'
+                      f'<source src="{esc(v["archivo"])}" type="video/mp4"></video>'
+                      f'<figcaption>{esc(v.get("titulo") or "")}</figcaption></figure>')
+    ig = mm.get("infografia") or {}
+    if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file() and ".." not in ig["archivo"]:
+        piezas.append(f'<figure class="mm__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener">'
+                      f'<img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy"></a>'
+                      f'<figcaption>Infografía · <a href="{esc(ig["archivo"])}" target="_blank" rel="noopener">Ver en grande</a></figcaption></figure>')
+    if piezas:
+        titulo_mm = esc(mm.get("titulo") or "Explicado en imágenes")
+        multimedia = f'<section class="mm" aria-label="{titulo_mm}"><h2 class="videos__tit">{titulo_mm}</h2><div class="mm__rej">{"".join(piezas)}</div></section>'
     fuentes = "".join(f'<li><a href="{esc(fu["url"])}" target="_blank" rel="noopener">{esc(fu.get("nombre") or fu["url"])}</a></li>'
                       for fu in n.get("fuentes", []) if fu.get("url"))
     fuentes = f'<div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>' if fuentes else ""
@@ -177,6 +194,7 @@ def pagina_noticia(n, todas):
   {importa}
   <div class="cuerpo">{cuerpo}</div>
   {videos}
+  {multimedia}
   {tri}
   {fuentes}
   <div class="compartir" data-compartir></div>
