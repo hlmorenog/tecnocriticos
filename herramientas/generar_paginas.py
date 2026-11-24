@@ -153,13 +153,13 @@ def cabecera(activo=""):
     def a(href, txt, clave):
         return f'<a href="{href}"{" class=\"on\"" if activo == clave else ""}>{txt}</a>'
     menu = a("index.html", "Hoy", "hoy") + "".join(a(f"noticias.html?seccion={q}", s, s) for s, q in SEC) \
-        + a("noticias.html", "Todas las noticias", "noticias") + a("multimedia.html", "Multimedia", "multimedia") + a("columna.html", "La Columna", "columna")
+        + a("noticias.html", "Todas las noticias", "noticias") + a("multimedia.html", "▶ Multimedia", "multimedia") + a("columna.html", "La Columna", "columna")
     chips = "".join(f'<a href="noticias.html?seccion={q}">{s}</a>' for s, q in SEC)
     # Menú desplegable del celular (y de pantallas angostas, donde el menú horizontal no cabe)
     def m(href, txt, clave=""):
         return f'<a href="{href}"{" aria-current=\"page\"" if clave and activo == clave else ""}>{txt}</a>'
-    movil = (m("index.html", "Hoy", "hoy") + "".join(m(f"noticias.html?seccion={q}", s, s) for s, q in SEC)
-             + m("noticias.html", "Todas las noticias", "noticias") + m("multimedia.html", "Multimedia", "multimedia") + m("columna.html", "La Columna", "columna"))
+    movil = (m("index.html", "Hoy", "hoy") + m("multimedia.html", "▶ Videos · Multimedia", "multimedia") + "".join(m(f"noticias.html?seccion={q}", s, s) for s, q in SEC)
+             + m("noticias.html", "Todas las noticias", "noticias") + m("columna.html", "La Columna", "columna"))
     movil2 = (m("index.html#hype", "⚡ Hype-ómetro") + m("index.html#mesa", "🗳 La Mesa")
               + m("quienes-somos.html", "Quiénes somos") + m("rss.html", "RSS"))
     return f"""<header class="cab"><div class="w">
@@ -173,7 +173,7 @@ def cabecera(activo=""):
   <span class="menu-movil__lab">Más</span>{movil2}
   <a class="menu-movil__cta" href="index.html#boletin">Suscríbete al Boletín Tecnocríticos</a>
 </div></nav></header>
-<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="multimedia.html">▶ Multimedia</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
+<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a class="fijas__mm" href="multimedia.html">▶ Videos · Multimedia</a><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
 """
 
 
