@@ -204,7 +204,15 @@
           "nombre": "The Jerusalem Post",
           "url": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-915922"
         }
-      ]
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-24-crowdstrike-comprara-zscaler.jpg",
+        "alt": "Edificio de oficinas de CrowdStrike en Sunnyvale, California",
+        "autor": "Coolcaesar",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:150_Mathilda_Place.jpg"
+      }
     }
   ]
 }
