@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  <url><loc>https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</loc><news:news>
-    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
-    <news:publication_date>2026-11-23</news:publication_date><news:title>Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud</news:title>
-  </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
     <news:publication_date>2026-11-23</news:publication_date><news:title>Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia</news:title>
+  </news:news></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</loc><news:news>
+    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
+    <news:publication_date>2026-11-23</news:publication_date><news:title>Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud</news:title>
   </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-23-claude-y-la-hipotesis-de-riemann.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>

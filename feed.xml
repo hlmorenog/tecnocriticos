@@ -9,20 +9,20 @@
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
   <item>
-   <title>Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud</title>
-   <link>https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</guid>
-   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Colombia</category>
-   <description>Durante tres noches, académicos de Colombia, Costa Rica y Brasil discuten cómo la inteligencia artificial, los datos y la innovación cambian la forma de gestionar la salud. Por qué importa: la inteligencia artificial y el análisis de datos ya hacen parte de la formación de quienes administran hospitales y servicios de salud.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.jpg" length="58051" type="image/jpeg"/>
-  </item>
-  <item>
    <title>Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia</title>
    <link>https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html</link>
    <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html</guid>
    <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
    <category>IA y tecnología</category>
    <description>La empresa que domina los chips de inteligencia artificial recupera a su fundador tras una salida rodeada de preguntas sobre seguridad nacional, y su acción se disparó. Por qué importa: Nvidia es la empresa clave de la industria de la IA, y su liderazgo pesa en los mercados y en la disputa tecnológica entre Estados Unidos y China.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-nvidia-restituye-a-jensen-huang.jpg" length="153260" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud</title>
+   <link>https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html</guid>
+   <pubDate>Mon, 23 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>Durante tres noches, académicos de Colombia, Costa Rica y Brasil discuten cómo la inteligencia artificial, los datos y la innovación cambian la forma de gestionar la salud. Por qué importa: la inteligencia artificial y el análisis de datos ya hacen parte de la formación de quienes administran hospitales y servicios de salud.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.jpg" length="58051" type="image/jpeg"/>
   </item>
   <item>
    <title>Un matemático de Anthropic dice haber demostrado con Claude la hipótesis de Riemann</title>
