@@ -308,6 +308,7 @@ def pagina_privacidad():
    <ul>
     <li><b>MailerLite</b> gestiona la lista de suscriptores y el envío del boletín. Sus servidores pueden estar fuera de Colombia, en países con medidas de protección de datos adecuadas, como la Unión Europea, donde se aplica el RGPD.</li>
     <li><b>Google Analytics</b> mide la audiencia del sitio, solo si lo aceptas en el aviso de cookies.</li>
+    <li><b>Cloudflare Web Analytics</b> cuenta las visitas de forma agregada, sin cookies y sin identificarte, para conocer el tráfico total del sitio.</li>
     <li><b>Google reCAPTCHA</b> protege el formulario contra bots y puede procesar datos técnicos de tu navegador según las políticas de Google.</li>
     <li><b>Google Fonts</b> sirve las tipografías del sitio, y los videos de YouTube se muestran en modo de privacidad mejorada.</li>
    </ul>
