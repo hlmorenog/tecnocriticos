@@ -349,50 +349,65 @@ def html_video(v):
             f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
 
 
+def tarjeta_mmz(p, grande=False):
+    """Tarjeta vertical tipo «reel». Al tocarla se abre el reproductor (o la infografía) encima de la página."""
+    img = p.get("poster") if p["tipo"] == "video" else p["archivo"]
+    dur = f'<span class="mmz__dur">{esc(p["duracion"])}</span>' if p.get("duracion") else ""
+    icono = '<span class="mmz__play" aria-hidden="true"></span>' if p["tipo"] == "video" else '<span class="mmz__lupa" aria-hidden="true">+</span>'
+    datos = (f'data-mmz-ver data-tipo="{p["tipo"]}" data-src="{esc(p["archivo"])}" data-poster="{esc(p.get("poster") or "")}" '
+             f'data-titulo="{esc(p["titulo"])}" data-url="{esc(p["url"])}" data-desc="{esc(p.get("entradilla") or "")}"')
+    return (f'<article class="mmz__card mmz__card--{p["tipo"]}{" mmz__card--grande" if grande else ""}">'
+            f'<a class="mmz__media" href="{esc(p["url"])}" {datos} aria-label="{"Ver video" if p["tipo"] == "video" else "Ver infografía"}: {esc(p["titulo"])}">'
+            f'<img src="{esc(img or "")}" alt="{esc(p.get("alt") or p["titulo"])}" loading="lazy">{icono}{dur}</a>'
+            f'<div class="mmz__info"><span class="mmz__sec">{esc(p["seccion"])} · {int(p["fecha"][8:10])}/{p["fecha"][5:7]}</span>'
+            f'<h3><a href="{esc(p["url"])}">{esc(p["titulo"])}</a></h3>'
+            f'<a class="mmz__desc" href="{esc(p["archivo"])}" download>↓ Descargar</a></div></article>')
+
+
 def pagina_multimedia():
     piezas = piezas_multimedia(cargar_noticias())
-    destacado = ""
-    if piezas:
-        g = piezas[0]["grupo"]
-        grupo = [p for p in piezas if p["grupo"] == g]
-        v = next((p for p in grupo if p["tipo"] == "video"), None)
-        ig = next((p for p in grupo if p["tipo"] == "infografia"), None)
-        base = grupo[0]
-        medios, botones = "", f'<a class="mmx__btn mmx__btn--principal" href="{base["url"]}">{"Ver la pieza" if base["url"].startswith("m/") else "Leer la nota"}</a>'
-        if v:
-            medios += html_video(v)
-            botones += f'<a class="mmx__btn" href="{esc(v["archivo"])}" download>↓ Descargar video</a>'
-        if ig:
-            medios += f'<figure class="mm__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}"></a></figure>'
-            botones += f'<a class="mmx__btn" href="{esc(ig["archivo"])}" download>↓ Descargar infografía</a>'
-        destacado = (f'<section class="mm mmx__dest"><span class="lab">Lo más reciente · {esc(base["seccion"])}</span>'
-                     f'<h2><a href="{base["url"]}">{esc(base["titulo"])}</a></h2><p class="bl">{esc(base["entradilla"])}</p>'
-                     f'<div class="mm__rej{" mm__rej--solo" if not ig else ""}">{medios}</div><div class="mmx__btns">{botones}</div></section>')
-    tarjetas = ""
-    for p in piezas:
-        img = p.get("poster") if p["tipo"] == "video" else p["archivo"]
-        insignia = ("▶ Video" + (f" · {esc(p['duracion'])}" if p.get("duracion") else "")) if p["tipo"] == "video" else "Infografía"
-        tarjetas += (f'<article class="mmx__card" data-tipo="{p["tipo"]}"><a class="mmx__media mmx__media--{p["tipo"]}" href="{p["url"]}">'
-                     f'<img src="{esc(img or "")}" alt="{esc(p.get("alt") or p["titulo"])}" loading="lazy"><span class="mmx__ins">{insignia}</span></a>'
-                     f'<div class="mmx__txt"><span class="meta">{esc(p["seccion"])} · {int(p["fecha"][8:10])}/{p["fecha"][5:7]}</span>'
-                     f'<h3><a href="{p["url"]}">{esc(p["titulo"])}</a></h3>'
-                     f'<a class="mmx__desc" href="{esc(p["archivo"])}" download>↓ Descargar</a></div></article>')
-    vacio = '' if piezas else '<p class="vacio">Muy pronto, nuestros primeros videos e infografías.</p>'
-    botones_f = ''.join(f'<button type="button" data-mm-filtro="{k}" aria-pressed="{"true" if k == "todo" else "false"}">{t}</button>'
-                        for k, t in [("todo", "Todo"), ("video", "Videos"), ("infografia", "Infografías")])
+    videos = [p for p in piezas if p["tipo"] == "video"]
+    infos = [p for p in piezas if p["tipo"] == "infografia"]
+    dest = videos[0] if videos else (piezas[0] if piezas else None)
+    heroe = ""
+    if dest:
+        es_pieza = dest["url"].startswith("m/")
+        heroe = f"""<div class="mmz__dest">
+   <div class="mmz__marco">{html_video(dest) if dest["tipo"] == "video" else f'<img src="{esc(dest["archivo"])}" alt="{esc(dest.get("alt") or dest["titulo"])}">'}</div>
+   <div class="mmz__dest-txt">
+    <span class="mmz__kick">● Estreno · {esc(dest["seccion"])}</span>
+    <h2><a href="{esc(dest["url"])}">{esc(dest["titulo"])}</a></h2>
+    <p>{esc(dest.get("entradilla") or "")}</p>
+    <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" href="{esc(dest["url"])}">{"Ver la pieza y sus fuentes" if es_pieza else "Leer la nota"}</a><a class="mmz__btn" href="{esc(dest["archivo"])}" download>↓ Descargar</a></div>
+   </div>
+  </div>"""
+    fila_v = "".join(tarjeta_mmz(p) for p in videos)
+    fila_i = "".join(tarjeta_mmz(p) for p in infos)
+    filas = ""
+    if fila_v:
+        filas += f'<section class="mmz__fila"><div class="mmz__fila-cab"><h2>Videos</h2><span>{len(videos)} piezas · formato vertical</span></div><div class="mmz__carril">{fila_v}</div></section>'
+    if fila_i:
+        filas += f'<section class="mmz__fila"><div class="mmz__fila-cab"><h2>Infografías</h2><span>{len(infos)} {"pieza" if len(infos) == 1 else "piezas"}</span></div><div class="mmz__carril mmz__carril--info">{fila_i}</div></section>'
+    vacio = '' if piezas else '<p class="mmz__vacio">Muy pronto, nuestros primeros videos e infografías.</p>'
     return (cabeza("Multimedia — Tecnocríticos",
                    "Videos e infografías de Tecnocríticos para entender en un minuto la tecnología: explicadores e historias de los temas que importan.",
                    ruta="multimedia.html")
             + cabecera("multimedia")
-            + f"""<section class="w titulo-pag"><span class="lab">Multimedia</span><h1>Explicado en imágenes</h1>
-  <p>Videos cortos e infografías para entender en un minuto lo que pasa en tecnología. Cada pieza cita sus fuentes. Puedes descargarlas y compartirlas citando a Tecnocríticos.</p></section>
-<main class="w mmx">
- {destacado}
- <section class="mmx__archivo"><div class="sech">Todas las piezas</div>
-  <div class="filtros" role="group" aria-label="Filtrar por tipo">{botones_f}</div>
-  <div class="mmx__rej" data-mm-rej>{tarjetas}</div>{vacio}
- </section>
+            + f"""<main class="mmz">
+ <section class="mmz__heroe"><div class="w">
+  <div class="mmz__cab"><span class="mmz__kick">Multimedia · Tecnocríticos</span>
+   <h1>Explicado en <em>imágenes</em></h1>
+   <p>La tecnología en un minuto: videos verticales e infografías con datos verificados y fuentes. Míralos aquí, descárgalos y compártelos citando a Tecnocríticos.</p></div>
+  {heroe}
+ </div></section>
+ <div class="mmz__cuerpo"><div class="w">{filas}{vacio}</div></div>
 </main>
+<dialog class="mmz__modal" data-mmz-modal aria-label="Reproductor">
+ <button class="mmz__cerrar" type="button" data-mmz-cerrar aria-label="Cerrar">×</button>
+ <div class="mmz__modal-media" data-mmz-media></div>
+ <div class="mmz__modal-txt"><h3 data-mmz-titulo></h3><p data-mmz-desc></p>
+  <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" data-mmz-url href="#">Ver la pieza</a><a class="mmz__btn" data-mmz-bajar href="#" download>↓ Descargar</a></div></div>
+</dialog>
 {boletin()}
 """ + pie())
 

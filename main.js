@@ -493,4 +493,27 @@
     $$("[data-mm-filtro]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
     $$(".mmx__card", rejMM).forEach((c) => { c.hidden = b.dataset.mmFiltro !== "todo" && c.dataset.tipo !== b.dataset.mmFiltro; });
   }));
+
+  /* ---------- Multimedia: reproductor encima de la página ---------- */
+  const modalMM = $("[data-mmz-modal]");
+  if (modalMM && typeof modalMM.showModal === "function") {
+    const media = $("[data-mmz-media]", modalMM);
+    const cerrarMM = () => { media.innerHTML = ""; if (modalMM.open) modalMM.close(); };
+    $$("[data-mmz-ver]").forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const d = a.dataset;
+      media.innerHTML = d.tipo === "video"
+        ? `<video controls autoplay playsinline poster="${esc(d.poster)}"><source src="${esc(d.src)}" type="video/mp4"></video>`
+        : `<img src="${esc(d.src)}" alt="${esc(d.titulo)}">`;
+      $("[data-mmz-titulo]", modalMM).textContent = d.titulo;
+      $("[data-mmz-desc]", modalMM).textContent = d.desc;
+      const ver = $("[data-mmz-url]", modalMM);
+      ver.href = d.url; ver.textContent = d.url.indexOf("m/") === 0 ? "Ver la pieza y sus fuentes" : "Leer la nota";
+      $("[data-mmz-bajar]", modalMM).href = d.src;
+      modalMM.showModal();
+    }));
+    $("[data-mmz-cerrar]", modalMM).addEventListener("click", cerrarMM);
+    modalMM.addEventListener("click", (e) => { if (e.target === modalMM) cerrarMM(); });
+    modalMM.addEventListener("close", () => { media.innerHTML = ""; });
+  }
 })();
