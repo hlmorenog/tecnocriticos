@@ -486,4 +486,11 @@
   if (eleccion === "si") cargarGA();
   else if (eleccion !== "no") avisoCookies();
   $$("[data-cookies]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); avisoCookies(); }));
+
+  /* ---------- Multimedia: filtro por tipo ---------- */
+  const rejMM = $("[data-mm-rej]");
+  if (rejMM) $$("[data-mm-filtro]").forEach((b) => b.addEventListener("click", () => {
+    $$("[data-mm-filtro]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    $$(".mmx__card", rejMM).forEach((c) => { c.hidden = b.dataset.mmFiltro !== "todo" && c.dataset.tipo !== b.dataset.mmFiltro; });
+  }));
 })();
