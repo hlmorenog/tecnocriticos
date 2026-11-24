@@ -329,10 +329,11 @@ def piezas_multimedia(noticias):
     Cada una: tipo (video/infografia), archivo, poster, duracion, alt, titulo, seccion, fecha, url (página de destino)."""
     res = []
     for p in cargar_piezas():
-        v = p.get("video") or {}
-        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
-            res.append({"tipo": "video", **v, "titulo": p["titulo"], "seccion": p["seccion"], "fecha": p["fecha"],
-                        "url": url_pieza(p), "entradilla": p.get("entradilla", ""), "grupo": p["id"]})
+        for tipo in ("video", "infografia"):
+            x = p.get(tipo) or {}
+            if x.get("archivo") and (RAIZ / x["archivo"]).is_file():
+                res.append({"tipo": tipo, **x, "titulo": p["titulo"], "seccion": p["seccion"], "fecha": p["fecha"],
+                            "url": url_pieza(p), "entradilla": p.get("entradilla", ""), "grupo": p["id"]})
     for n in noticias:
         mm = n.get("multimedia") or {}
         for tipo in ("video", "infografia"):
@@ -415,6 +416,13 @@ def pagina_multimedia():
 def pagina_pieza(p):
     """Página propia de un explicador: m/<id>.html (para buscadores y para compartir)."""
     v = p.get("video") or {}
+    ig = p.get("infografia") or {}
+    # Texto largo opcional: lista de párrafos; los que empiezan con «## » son subtítulos.
+    cuerpo = "".join(f"<h2>{esc(t[3:])}</h2>" if t.startswith("## ") else f"<p>{esc(t)}</p>"
+                     for t in (p.get("texto") or [p.get("descripcion", "")]))
+    infografia = (f'<figure class="mmx__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener">'
+                  f'<img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or p["titulo"])}" ></a>'
+                  f'<figcaption>Infografía: {esc(p["titulo"])}. Toca la imagen para verla en tamaño completo.</figcaption></figure>') if ig.get("archivo") else ""
     fuentes = "".join(f'<li><a href="{esc(f["url"])}" target="_blank" rel="noopener">{esc(f.get("nombre") or f["url"])}</a></li>' for f in p.get("fuentes", []))
     rel = p.get("relacionada")
     relacionada = f'<p class="mmx__rel">Relacionado: <a href="{resolver_enlace(rel["url"])}">{esc(rel["titulo"])}</a></p>' if rel else ""
@@ -433,8 +441,8 @@ def pagina_pieza(p):
   <p class="entradilla">{esc(p.get('entradilla', ''))}</p>
   <div class="compartir compartir--arriba" data-compartir></div>
   <div class="mmx__solo">{html_video({**v, "titulo": p["titulo"]}) if v.get("archivo") else ""}</div>
-  <div class="mmx__btns"><a class="mmx__btn" href="{esc(v.get('archivo', ''))}" download>↓ Descargar video</a><a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
-  <div class="cuerpo"><p>{esc(p.get('descripcion', ''))}</p></div>
+  <div class="mmx__btns">{f'<a class="mmx__btn" href="{esc(v["archivo"])}" download>↓ Descargar video</a>' if v.get("archivo") else ""}{f'<a class="mmx__btn" href="{esc(ig["archivo"])}" download>↓ Descargar infografía</a>' if ig.get("archivo") else ""}<a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
+  {infografia}<div class="cuerpo">{cuerpo}</div>
   {relacionada}
   <div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>
   <div class="compartir" data-compartir></div>
