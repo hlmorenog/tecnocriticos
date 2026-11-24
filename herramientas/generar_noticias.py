@@ -295,7 +295,11 @@ def pagina_privacidad():
     <li><b>Tu correo electrónico</b>, cuando te suscribes al Boletín Tecnocríticos. Lo usamos únicamente para enviarte el boletín y, de forma ocasional, avisos sobre el propio boletín.</li>
     <li><b>Datos técnicos del envío</b> que registra nuestra plataforma de correo, como la fecha de suscripción, la confirmación y si abres los correos. Los usamos para saber si el boletín llega y es útil.</li>
    </ul>
-   <p>Para leer el sitio no necesitas registrarte, y no usamos herramientas de analítica ni publicidad que te rastreen.</p>
+   <p>Para leer el sitio no necesitas registrarte, y no mostramos publicidad que te rastree.</p>
+
+   <h2 id="cookies">Cookies y medición de audiencia</h2>
+   <p>Si lo aceptas en el aviso de cookies, usamos <b>Google Analytics</b> para medir cuántas personas visitan el sitio, desde dónde llegan y qué noticias se leen. Google Analytics instala cookies en tu navegador y recoge datos técnicos de tu visita, como el tipo de dispositivo, las páginas vistas y una ubicación aproximada; Google trata esos datos según sus propias políticas y pueden almacenarse fuera de Colombia. Usamos esta información solo de forma agregada, para mejorar el sitio, y no la vendemos.</p>
+   <p>Si rechazas, no cargamos Google Analytics y el sitio funciona igual. Puedes cambiar tu elección cuando quieras en <a href="privacidad.html#cookies" data-cookies>Preferencias de cookies</a>, al final de cada página. El sitio también guarda en tu navegador tu elección y algunas preferencias de lectura, sin enviarlas a ningún servidor.</p>
 
    <h2 id="confirmacion">Doble confirmación</h2>
    <p>Después de dejar tu correo te enviamos un mensaje para confirmar la suscripción. Si no confirmas, no recibirás el boletín.</p>
@@ -303,6 +307,7 @@ def pagina_privacidad():
    <h2 id="terceros">Servicios de terceros</h2>
    <ul>
     <li><b>MailerLite</b> gestiona la lista de suscriptores y el envío del boletín. Sus servidores pueden estar fuera de Colombia, en países con medidas de protección de datos adecuadas, como la Unión Europea, donde se aplica el RGPD.</li>
+    <li><b>Google Analytics</b> mide la audiencia del sitio, solo si lo aceptas en el aviso de cookies.</li>
     <li><b>Google reCAPTCHA</b> protege el formulario contra bots y puede procesar datos técnicos de tu navegador según las políticas de Google.</li>
     <li><b>Google Fonts</b> sirve las tipografías del sitio, y los videos de YouTube se muestran en modo de privacidad mejorada.</li>
    </ul>
@@ -314,7 +319,7 @@ def pagina_privacidad():
    <p>Conservamos tu correo mientras sigas suscrito. Si te das de baja, deja de recibir el boletín y lo eliminamos de la lista activa.</p>
 
    <h2 id="cambios">Cambios</h2>
-   <p>Si cambiamos esta política, publicaremos la nueva versión en esta página. Última actualización: 23 de noviembre de 2026.</p>
+   <p>Si cambiamos esta política, publicaremos la nueva versión en esta página. Última actualización: 24 de noviembre de 2026.</p>
   </div>
  </article></div>
  <aside class="rail">""" + gp.bloque_minuto() + gp.bloque_columna() + gp.bloque_explora() + """</aside>

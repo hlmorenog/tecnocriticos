@@ -443,4 +443,47 @@
     principalEl.addEventListener("load", programar, true); // fotos cargadas después
     programar();
   }
+
+  /* ---------- Medición (Google Analytics 4) ----------
+     Solo se carga si el lector acepta en el aviso de cookies. La elección se guarda
+     en este navegador; «Preferencias de cookies», en el pie, permite cambiarla. */
+  const GA_ID = "G-Z0GWP2011V";
+  const CLAVE_COOKIES = "tc-cookies";
+  const leerEleccion = () => { try { return localStorage.getItem(CLAVE_COOKIES); } catch (e) { return null; } };
+  const guardarEleccion = (v) => { try { localStorage.setItem(CLAVE_COOKIES, v); } catch (e) {} };
+  let gaCargado = false;
+  const cargarGA = () => {
+    if (gaCargado) return;
+    gaCargado = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+  };
+  const cerrarAviso = (aviso) => aviso.parentNode && aviso.parentNode.removeChild(aviso);
+  const avisoCookies = () => {
+    if ($(".cookies")) return;
+    const aviso = document.createElement("div");
+    aviso.className = "cookies";
+    aviso.setAttribute("role", "dialog");
+    aviso.setAttribute("aria-label", "Aviso de cookies");
+    aviso.innerHTML = '<p>Usamos cookies de Google Analytics para saber qué noticias se leen y mejorar el sitio. ' +
+      'No vendemos tus datos. <a href="privacidad.html#cookies">Más información</a></p>' +
+      '<div class="cookies__btns"><button type="button" data-cookies-no>Rechazar</button>' +
+      '<button type="button" class="cookies__si" data-cookies-si>Aceptar</button></div>';
+    document.body.appendChild(aviso);
+    $("[data-cookies-si]", aviso).addEventListener("click", () => { guardarEleccion("si"); cerrarAviso(aviso); cargarGA(); });
+    $("[data-cookies-no]", aviso).addEventListener("click", () => {
+      guardarEleccion("no"); cerrarAviso(aviso);
+      if (gaCargado) location.reload(); // si ya se había cargado, se recarga sin medición
+    });
+  };
+  const eleccion = leerEleccion();
+  if (eleccion === "si") cargarGA();
+  else if (eleccion !== "no") avisoCookies();
+  $$("[data-cookies]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); avisoCookies(); }));
 })();
