@@ -304,69 +304,127 @@ def bloque_explicado(noticias):
     return ""
 
 
+def cargar_piezas():
+    """Piezas multimedia independientes (explicadores), en multimedia/piezas.json."""
+    p = RAIZ / "multimedia" / "piezas.json"
+    if not p.is_file():
+        return []
+    return [x for x in json.loads(p.read_text(encoding="utf-8")).get("piezas", []) if x.get("id")]
+
+
+def url_pieza(p, absoluta=False):
+    return (f"{SITIO}/" if absoluta else "") + f"m/{p['id']}.html"
+
+
+def resolver_enlace(url):
+    if url.startswith("columna:"):
+        slug = url.split(":", 1)[1]
+        c = next((c for c in COLUMNAS if c["slug"] == slug), None)
+        return url_columna(c) if c else "columna.html"
+    return url
+
+
 def piezas_multimedia(noticias):
-    """Lista de piezas propias (videos e infografías), de la más reciente a la más antigua."""
+    """Todas las piezas (de noticias y explicadores), de la más reciente a la más antigua.
+    Cada una: tipo (video/infografia), archivo, poster, duracion, alt, titulo, seccion, fecha, url (página de destino)."""
     res = []
+    for p in cargar_piezas():
+        v = p.get("video") or {}
+        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
+            res.append({"tipo": "video", **v, "titulo": p["titulo"], "seccion": p["seccion"], "fecha": p["fecha"],
+                        "url": url_pieza(p), "entradilla": p.get("entradilla", ""), "grupo": p["id"]})
     for n in noticias:
         mm = n.get("multimedia") or {}
-        v, ig = mm.get("video") or {}, mm.get("infografia") or {}
-        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
-            res.append({"tipo": "video", "n": n, **v})
-        if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
-            res.append({"tipo": "infografia", "n": n, **ig})
-    return res
+        for tipo in ("video", "infografia"):
+            x = mm.get(tipo) or {}
+            if x.get("archivo") and (RAIZ / x["archivo"]).is_file():
+                res.append({"tipo": tipo, **x, "titulo": n["titular"], "seccion": n["seccion"], "fecha": n["fecha"],
+                            "url": url_noticia(n), "entradilla": n.get("entradilla", ""), "grupo": n["id"]})
+    return sorted(res, key=lambda x: x["fecha"], reverse=True)  # orden estable: explicadores antes que noticias del mismo día
+
+
+def html_video(v):
+    poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
+    return (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}">'
+            f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
 
 
 def pagina_multimedia():
-    noticias = cargar_noticias()
-    piezas = piezas_multimedia(noticias)
+    piezas = piezas_multimedia(cargar_noticias())
     destacado = ""
     if piezas:
-        n = piezas[0]["n"]
-        v = next((p for p in piezas if p["n"] is n and p["tipo"] == "video"), None)
-        ig = next((p for p in piezas if p["n"] is n and p["tipo"] == "infografia"), None)
-        medios, botones = "", f'<a class="mmx__btn mmx__btn--principal" href="{url_noticia(n)}">Leer la nota</a>'
+        g = piezas[0]["grupo"]
+        grupo = [p for p in piezas if p["grupo"] == g]
+        v = next((p for p in grupo if p["tipo"] == "video"), None)
+        ig = next((p for p in grupo if p["tipo"] == "infografia"), None)
+        base = grupo[0]
+        medios, botones = "", f'<a class="mmx__btn mmx__btn--principal" href="{base["url"]}">{"Ver la pieza" if base["url"].startswith("m/") else "Leer la nota"}</a>'
         if v:
-            poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
-            medios += f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}"><source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>'
+            medios += html_video(v)
             botones += f'<a class="mmx__btn" href="{esc(v["archivo"])}" download>↓ Descargar video</a>'
         if ig:
             medios += f'<figure class="mm__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}"></a></figure>'
             botones += f'<a class="mmx__btn" href="{esc(ig["archivo"])}" download>↓ Descargar infografía</a>'
-        destacado = (f'<section class="mm mmx__dest"><span class="lab">Lo más reciente · {esc(n["seccion"])}</span>'
-                     f'<h2><a href="{url_noticia(n)}">{esc(n["titular"])}</a></h2><p class="bl">{esc(n.get("entradilla"))}</p>'
-                     f'<div class="mm__rej">{medios}</div><div class="mmx__btns">{botones}</div></section>')
+        destacado = (f'<section class="mm mmx__dest"><span class="lab">Lo más reciente · {esc(base["seccion"])}</span>'
+                     f'<h2><a href="{base["url"]}">{esc(base["titulo"])}</a></h2><p class="bl">{esc(base["entradilla"])}</p>'
+                     f'<div class="mm__rej{" mm__rej--solo" if not ig else ""}">{medios}</div><div class="mmx__btns">{botones}</div></section>')
     tarjetas = ""
     for p in piezas:
-        n = p["n"]
-        if p["tipo"] == "video":
-            img = p.get("poster") or ""
-            insignia = "▶ Video" + (f" · {esc(p['duracion'])}" if p.get("duracion") else "")
-            enlace = p["archivo"]
-        else:
-            img = p["archivo"]
-            insignia = "Infografía"
-            enlace = p["archivo"]
-        tarjetas += (f'<article class="mmx__card" data-tipo="{p["tipo"]}"><a class="mmx__media mmx__media--{p["tipo"]}" href="{esc(enlace)}" target="_blank" rel="noopener">'
-                     f'<img src="{esc(img)}" alt="{esc(p.get("alt") or p.get("titulo") or n["titular"])}" loading="lazy"><span class="mmx__ins">{insignia}</span></a>'
-                     f'<div class="mmx__txt"><span class="meta">{esc(n["seccion"])} · {esc(n["fecha"][8:10].lstrip("0"))}/{esc(n["fecha"][5:7])}</span>'
-                     f'<h3><a href="{url_noticia(n)}">{esc(n["titular"])}</a></h3>'
+        img = p.get("poster") if p["tipo"] == "video" else p["archivo"]
+        insignia = ("▶ Video" + (f" · {esc(p['duracion'])}" if p.get("duracion") else "")) if p["tipo"] == "video" else "Infografía"
+        tarjetas += (f'<article class="mmx__card" data-tipo="{p["tipo"]}"><a class="mmx__media mmx__media--{p["tipo"]}" href="{p["url"]}">'
+                     f'<img src="{esc(img or "")}" alt="{esc(p.get("alt") or p["titulo"])}" loading="lazy"><span class="mmx__ins">{insignia}</span></a>'
+                     f'<div class="mmx__txt"><span class="meta">{esc(p["seccion"])} · {int(p["fecha"][8:10])}/{p["fecha"][5:7]}</span>'
+                     f'<h3><a href="{p["url"]}">{esc(p["titulo"])}</a></h3>'
                      f'<a class="mmx__desc" href="{esc(p["archivo"])}" download>↓ Descargar</a></div></article>')
     vacio = '' if piezas else '<p class="vacio">Muy pronto, nuestros primeros videos e infografías.</p>'
     botones_f = ''.join(f'<button type="button" data-mm-filtro="{k}" aria-pressed="{"true" if k == "todo" else "false"}">{t}</button>'
                         for k, t in [("todo", "Todo"), ("video", "Videos"), ("infografia", "Infografías")])
     return (cabeza("Multimedia — Tecnocríticos",
-                   "Videos e infografías de Tecnocríticos para entender en un minuto las noticias de tecnología.",
+                   "Videos e infografías de Tecnocríticos para entender en un minuto la tecnología: explicadores e historias de los temas que importan.",
                    ruta="multimedia.html")
             + cabecera("multimedia")
             + f"""<section class="w titulo-pag"><span class="lab">Multimedia</span><h1>Explicado en imágenes</h1>
-  <p>Videos cortos e infografías para entender en un minuto lo que pasa en tecnología. Cada pieza enlaza a su nota completa y cita sus fuentes. Puedes descargarlas y compartirlas citando a Tecnocríticos.</p></section>
+  <p>Videos cortos e infografías para entender en un minuto lo que pasa en tecnología. Cada pieza cita sus fuentes. Puedes descargarlas y compartirlas citando a Tecnocríticos.</p></section>
 <main class="w mmx">
  {destacado}
  <section class="mmx__archivo"><div class="sech">Todas las piezas</div>
   <div class="filtros" role="group" aria-label="Filtrar por tipo">{botones_f}</div>
   <div class="mmx__rej" data-mm-rej>{tarjetas}</div>{vacio}
  </section>
+</main>
+{boletin()}
+""" + pie())
+
+
+def pagina_pieza(p):
+    """Página propia de un explicador: m/<id>.html (para buscadores y para compartir)."""
+    v = p.get("video") or {}
+    fuentes = "".join(f'<li><a href="{esc(f["url"])}" target="_blank" rel="noopener">{esc(f.get("nombre") or f["url"])}</a></li>' for f in p.get("fuentes", []))
+    rel = p.get("relacionada")
+    relacionada = f'<p class="mmx__rel">Relacionado: <a href="{resolver_enlace(rel["url"])}">{esc(rel["titulo"])}</a></p>' if rel else ""
+    datos = {"@type": "VideoObject", "name": p["titulo"], "description": p.get("entradilla", ""), "uploadDate": p["fecha"],
+             "thumbnailUrl": [f"{SITIO}/{v.get('poster', '')}"], "contentUrl": f"{SITIO}/{v.get('archivo', '')}", "inLanguage": "es-CO",
+             "publisher": {k: x for k, x in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
+    imagen = (v["poster"], 720, 1280, esc(p["titulo"])) if v.get("poster") else None
+    return (cabeza(f"{p['titulo']} — Multimedia · Tecnocríticos", p.get("entradilla", ""), "video.other", url_pieza(p), p["titulo"],
+                   imagen=imagen, jsonld=datos, base=True)
+            + cabecera("multimedia")
+            + f"""<main class="w grid">
+ <div class="principal"><article class="art mm mmx__pieza">
+  <nav class="miga" aria-label="Ruta"><a href="index.html">Hoy</a> / <a href="multimedia.html">Multimedia</a></nav>
+  <span class="lab">Explicado · {esc(p['seccion'])}</span>
+  <h1>{esc(p['titulo'])}</h1>
+  <p class="entradilla">{esc(p.get('entradilla', ''))}</p>
+  <div class="compartir compartir--arriba" data-compartir></div>
+  <div class="mmx__solo">{html_video({**v, "titulo": p["titulo"]}) if v.get("archivo") else ""}</div>
+  <div class="mmx__btns"><a class="mmx__btn" href="{esc(v.get('archivo', ''))}" download>↓ Descargar video</a><a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
+  <div class="cuerpo"><p>{esc(p.get('descripcion', ''))}</p></div>
+  {relacionada}
+  <div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>
+  <div class="compartir" data-compartir></div>
+ </article></div>
+ <aside class="rail">{bloque_minuto()}{bloque_columna()}{bloque_explora()}</aside>
 </main>
 {boletin()}
 """ + pie())
@@ -480,4 +538,8 @@ if __name__ == "__main__":
     for c in COLUMNAS[1:]:
         (RAIZ / url_columna(c)).write_text(pagina_columna(c), encoding="utf-8")
         print("generado", url_columna(c))
+    (RAIZ / "m").mkdir(exist_ok=True)
+    for pz in cargar_piezas():
+        (RAIZ / url_pieza(pz)).write_text(pagina_pieza(pz), encoding="utf-8")
+        print("generado", url_pieza(pz))
     generar_noticias.main()

@@ -388,3 +388,8 @@ button { font: inherit; }
   .mmx__dest .mm__rej { grid-template-columns: 1fr; }
   .mmx__rej { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
+.mm__rej--solo { grid-template-columns: minmax(0, 360px) !important; }
+.mmx__solo { max-width: 420px; margin: 22px 0 6px; }
+.mmx__pieza .mmx__btns { margin: 14px 0 24px; }
+.mmx__rel { font: 600 15px var(--f-titular); margin: 18px 0; }
+.mmx__rel a { color: var(--acento); }
