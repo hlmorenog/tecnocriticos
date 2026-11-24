@@ -282,6 +282,28 @@ def item_estatico(n):
             f'{esc(n["titular"])}</a></h3><p>{esc(n.get("entradilla"))}</p><span class="meta">{esc(n["fecha"])}</span></div></article>')
 
 
+def bloque_explicado(noticias):
+    """Portada: la pieza multimedia propia más reciente (video vertical + infografía) de los últimos 7 días."""
+    from datetime import date, timedelta
+    limite = (date.fromisoformat(noticias[0]["fecha"]) - timedelta(days=7)).isoformat() if noticias else ""
+    for n in noticias:
+        mm = n.get("multimedia") or {}
+        v, ig = mm.get("video") or {}, mm.get("infografia") or {}
+        if n["fecha"] < limite or not (v.get("archivo") or ig.get("archivo")):
+            continue
+        piezas = ""
+        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
+            poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
+            piezas += (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}">'
+                       f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
+        if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
+            piezas += (f'<figure class="mm__info"><a href="{url_noticia(n)}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy"></a></figure>')
+        return (f'<section class="mm mm--home" aria-label="Explicado en imágenes"><h2 class="videos__tit">Explicado en imágenes</h2>'
+                f'<h3 class="mm__tit"><a href="{url_noticia(n)}">{esc(n["titular"])}</a></h3><div class="mm__rej">{piezas}</div>'
+                f'<p class="mm__mas"><a href="{url_noticia(n)}">Leer la nota completa →</a></p></section>')
+    return ""
+
+
 def portada():
     noticias = cargar_noticias()
     hoy = [n for n in noticias if noticias and n["fecha"] == noticias[0]["fecha"]]
@@ -301,6 +323,7 @@ def portada():
             + f"""<main class="w grid">
  <div class="principal">
   <article class="hero" data-hero>{hero}</article>
+  {bloque_explicado(noticias)}
   <section class="feed"><h2>Lo que pasó <span class="meta" data-edicion></span></h2><div data-feed>{feed}</div></section>
  </div>
  <aside class="rail">{bloque_minuto()}{bloque_mesa()}{bloque_columna()}{bloque_hype()}{bloque_podcast()}{bloque_explora()}</aside>
