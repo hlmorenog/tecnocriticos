@@ -28,7 +28,15 @@
           "nombre": "PCMag",
           "url": "https://www.pcmag.com/news/tidal-to-ban-fully-ai-generated-music-remove-millions-of-existing-tracks"
         }
-      ]
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-24-tidal-eliminara-la-musica-hecha-por-ia.jpg",
+        "alt": "Mujer con audífonos escuchando música en su celular (imagen ilustrativa)",
+        "autor": "Vu Hoang",
+        "licencia": "CC BY 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Woman_listening_music_on_her_smartphone_(50810304846).jpg"
+      }
     },
     {
       "id": "2026-11-24-crowdstrike-comprara-zscaler",
