@@ -2,6 +2,39 @@
   "fecha": "2026-11-24",
   "noticias": [
     {
+      "id": "2026-11-24-jurado-de-eeuu-declara-culpable-a-huawei",
+      "seccion": "IA y tecnología",
+      "titular": "Jurado de EE. UU. halla a Huawei culpable de conspirar para robar secretos y de fraude",
+      "entradilla": "La absolvió del cargo más grave, el de crimen organizado. Todavía no hay pena: la fijará un juez en septiembre de 2027 y Huawei apelará.",
+      "lead": "Un jurado federal de Nueva York declaró culpable a Huawei este martes 24 de noviembre de conspirar para robar secretos comerciales, de fraude bancario y de violar las sanciones de Estados Unidos contra Irán, pero la absolvió del cargo más grave: conspiración de crimen organizado.",
+      "cuerpo": [
+        "El jurado halló culpables a Huawei y a tres de sus filiales en 10 de los 12 cargos, tras un juicio de tres meses en un tribunal federal de Brooklyn. Entre ellos están conspiración para robar secretos comerciales, fraude bancario y electrónico, conspiración para violar las sanciones contra Irán y conspiración para lavar dinero. La absolvió de conspiración de crimen organizado, conocida en Estados Unidos como RICO y usada sobre todo contra mafias y carteles, y de conspiración para obstruir la justicia.",
+        "Un veredicto no es todavía la condena final. En el proceso no hay personas acusadas, solo las empresas, así que las penas son económicas: multas, decomiso de bienes y restitución, que pueden sumar miles de millones de dólares. Un juez federal las fijará en una audiencia prevista para el 14 de septiembre de 2027, y Huawei anunció que apelará.",
+        "Según la Fiscalía, Huawei mintió a bancos sobre sus negocios en Irán, donde, de acuerdo con el Departamento de Justicia, ayudó a vigilar a los usuarios de internet, y copió tecnología de empresas como Cisco, Motorola Solutions y T-Mobile. Huawei sostiene que esos casos de secretos comerciales fueron disputas civiles ya resueltas y que ningún tribunal la había declarado responsable de robarlos. El caso empezó en 2019, y desde entonces la empresa no puede vender equipos a los operadores de Estados Unidos."
+      ],
+      "mirada": "El jurado creyó a la Fiscalía en el robo y el fraude, pero no en la tesis de una empresa criminal de arriba abajo.",
+      "titular_corto": "Huawei, culpable en EE. UU.",
+      "por_que_importa": "es la primera condena penal contra Huawei en Estados Unidos y llega en plena disputa tecnológica con China, cuando la empresa ya compite con Nvidia en chips de IA.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Es un veredicto del jurado: la pena la fija un juez en septiembre de 2027 y Huawei apelará."
+      },
+      "fuentes": [
+        {
+          "nombre": "AP",
+          "url": "https://apnews.com/article/huawei-racketeering-trial-verdict-b39ac780e2e31140015a1be02f0329ab"
+        },
+        {
+          "nombre": "Departamento de Justicia de EE. UU.",
+          "url": "https://www.justice.gov/opa/pr/chinese-tech-giant-huawei-and-subsidiaries-convicted-sanctions-violations-fraud-conspiracy"
+        },
+        {
+          "nombre": "Huawei: declaración sobre el veredicto",
+          "url": "https://www.huawei.com/en/news/2026/11/statement-on-jury-verdict"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-tidal-eliminara-la-musica-hecha-por-ia",
       "seccion": "Videojuegos y series",
       "titular": "Tidal eliminará de su catálogo la música hecha por completo con IA desde el 9 de diciembre",

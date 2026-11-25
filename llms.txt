@@ -13,6 +13,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Últimas noticias
 
+- [Jurado de EE. UU. halla a Huawei culpable de conspirar para robar secretos y de fraude](https://tecnocriticos.com/n/2026-11-24-jurado-de-eeuu-declara-culpable-a-huawei.html): La absolvió del cargo más grave, el de crimen organizado. Todavía no hay pena: la fijará un juez en septiembre de 2027 y Huawei apelará.
 - [Tidal eliminará de su catálogo la música hecha por completo con IA desde el 9 de diciembre](https://tecnocriticos.com/n/2026-11-24-tidal-eliminara-la-musica-hecha-por-ia.html): Es el primer servicio de música por suscripción que prohíbe del todo esas canciones: casi la mitad de lo que le llegaba en los últimos meses estaba hecho con IA.
 - [CrowdStrike comprará Zscaler por 43.900 millones de dólares para sumar la seguridad de red](https://tecnocriticos.com/n/2026-11-24-crowdstrike-comprara-zscaler.html): Es una de las compras más grandes de la historia de la ciberseguridad: supera los 32.000 millones que pagó Google por Wiz y deja la protección de equipos y de conexiones en una sola empresa.
 - [MinTIC le pide a X suspender la cuenta de Petro por presunta incitación a la violencia](https://tecnocriticos.com/n/2026-11-24-mintic-pide-a-x-suspender-cuenta-de-petro.html): La decisión es de la red social: el Ministerio solo puede pedirlo. El partido del expresidente lo califica de censura.
@@ -32,7 +33,6 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Signal bloquea las capturas de pantalla para que la IA del celular no lea tus chats](https://tecnocriticos.com/n/2026-11-22-signal-bloquea-capturas-asistentes-ia.html): La aplicación de mensajería cifrada considera que los asistentes de IA integrados en iOS y Android ponen en riesgo la privacidad de las conversaciones.
 - [Agentes de IA encontraron y explotaron una falla desconocida en 11 minutos, según Amazon](https://tecnocriticos.com/n/2026-11-22-agentes-de-ia-explotaron-falla-desconocida-en-11-minutos.html): Unos atacantes solo le pidieron a una plataforma de agentes de IA que consiguiera acceso a un servidor, y los agentes hicieron el resto.
 - [¿Estalló la burbuja de la IA?](https://tecnocriticos.com/n/2026-11-21-estallo-la-burbuja-de-la-ia.html): Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año.
-- [La Comisión Europea confirma un ciberataque hecho con una herramienta de IA](https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html): El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo.
 
 ## Datos
 
