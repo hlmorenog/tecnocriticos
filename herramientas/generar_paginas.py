@@ -358,6 +358,14 @@ def html_video(v):
             f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
 
 
+def boton_enviar(p, clase):
+    """Botón que envía el archivo de video (no solo el enlace) a WhatsApp, Instagram, etc. desde el celular."""
+    if p.get("tipo") != "video":
+        return ""
+    return (f'<button type="button" class="{clase}" data-enviar-video data-src="{esc(p["archivo"])}" '
+            f'data-titulo="{esc(p["titulo"])}" data-url="{esc(p["url"])}" hidden>Enviar el video</button>')
+
+
 def tarjeta_mmz(p, grande=False):
     """Tarjeta vertical tipo «reel». Al tocarla se abre el reproductor (o la infografía) encima de la página."""
     img = p.get("poster") if p["tipo"] == "video" else p["archivo"]
@@ -387,7 +395,8 @@ def pagina_multimedia():
     <span class="mmz__kick">● Estreno · {esc(dest["seccion"])}</span>
     <h2><a href="{esc(dest["url"])}">{esc(dest["titulo"])}</a></h2>
     <p>{esc(dest.get("entradilla") or "")}</p>
-    <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" href="{esc(dest["url"])}">{"Ver la pieza y sus fuentes" if es_pieza else "Leer la nota"}</a><a class="mmz__btn" href="{esc(dest["archivo"])}" download>↓ Descargar</a></div>
+    <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" href="{esc(dest["url"])}">{"Ver la pieza y sus fuentes" if es_pieza else "Leer la nota"}</a><a class="mmz__btn" href="{esc(dest["archivo"])}" download>↓ Descargar</a>{boton_enviar(dest, "mmz__btn")}</div>
+    <div class="compartir compartir--oscuro" data-compartir-url="{esc(dest["url"])}" data-titulo="{esc(dest["titulo"])}" data-desc="{esc(dest.get("entradilla") or "")}"></div>
    </div>
   </div>"""
     fila_v = "".join(tarjeta_mmz(p) for p in videos)
@@ -415,7 +424,8 @@ def pagina_multimedia():
  <button class="mmz__cerrar" type="button" data-mmz-cerrar aria-label="Cerrar">×</button>
  <div class="mmz__modal-media" data-mmz-media></div>
  <div class="mmz__modal-txt"><h3 data-mmz-titulo></h3><p data-mmz-desc></p>
-  <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" data-mmz-url href="#">Ver la pieza</a><a class="mmz__btn" data-mmz-bajar href="#" download>↓ Descargar</a></div></div>
+  <div class="mmz__btns"><a class="mmz__btn mmz__btn--si" data-mmz-url href="#">Ver la pieza</a><a class="mmz__btn" data-mmz-bajar href="#" download>↓ Descargar</a><button type="button" class="mmz__btn" data-enviar-video data-mmz-enviar hidden>Enviar el video</button></div>
+  <div class="compartir compartir--oscuro" data-mmz-compartir></div></div>
 </dialog>
 {boletin()}
 """ + pie())
@@ -438,8 +448,12 @@ def pagina_pieza(p):
              "thumbnailUrl": [f"{SITIO}/{v.get('poster', '')}"], "contentUrl": f"{SITIO}/{v.get('archivo', '')}", "inLanguage": "es-CO",
              "publisher": {k: x for k, x in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
     imagen = (v["poster"], 720, 1280, esc(p["titulo"])) if v.get("poster") else None
+    og_video = (f'\n  <meta property="og:video" content="{SITIO}/{v["archivo"]}">'
+                f'\n  <meta property="og:video:secure_url" content="{SITIO}/{v["archivo"]}">'
+                f'\n  <meta property="og:video:type" content="video/mp4">'
+                f'\n  <meta property="og:video:width" content="1080">\n  <meta property="og:video:height" content="1920">') if v.get("archivo") else ""
     return (cabeza(f"{p['titulo']} — Multimedia · Tecnocríticos", p.get("entradilla", ""), "video.other", url_pieza(p), p["titulo"],
-                   imagen=imagen, jsonld=datos, base=True)
+                   imagen=imagen, jsonld=datos, base=True, extra=og_video)
             + cabecera("multimedia")
             + f"""<main class="w grid">
  <div class="principal"><article class="art mm mmx__pieza">
@@ -449,7 +463,7 @@ def pagina_pieza(p):
   <p class="entradilla">{esc(p.get('entradilla', ''))}</p>
   <div class="compartir compartir--arriba" data-compartir></div>
   <div class="mmx__solo">{html_video({**v, "titulo": p["titulo"]}) if v.get("archivo") else ""}</div>
-  <div class="mmx__btns">{f'<a class="mmx__btn" href="{esc(v["archivo"])}" download>↓ Descargar video</a>' if v.get("archivo") else ""}{f'<a class="mmx__btn" href="{esc(ig["archivo"])}" download>↓ Descargar infografía</a>' if ig.get("archivo") else ""}<a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
+  <div class="mmx__btns">{f'<a class="mmx__btn" href="{esc(v["archivo"])}" download>↓ Descargar video</a>' if v.get("archivo") else ""}{boton_enviar({"tipo": "video", "archivo": v["archivo"], "titulo": p["titulo"], "url": url_pieza(p)}, "mmx__btn mmx__btn--principal") if v.get("archivo") else ""}{f'<a class="mmx__btn" href="{esc(ig["archivo"])}" download>↓ Descargar infografía</a>' if ig.get("archivo") else ""}<a class="mmx__btn" href="multimedia.html">Más piezas multimedia</a></div>
   {infografia}<div class="cuerpo">{cuerpo}</div>
   {relacionada}
   <div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>

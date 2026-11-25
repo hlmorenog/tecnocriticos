@@ -293,6 +293,17 @@ button { font: inherit; }
 /* ---------- Compartir en redes ---------- */
 .compartir { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 26px 0 8px; padding: 16px 0; border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
 .compartir:empty { display: none; }
+.compartir--oscuro { border-color: rgba(255,255,255,.14); margin: 18px 0 0; }
+.compartir--oscuro .compartir__lab, .compartir--oscuro .compartir__aviso { color: rgba(255,255,255,.7); }
+.compartir.compartir--oscuro .red { background: transparent; border-color: rgba(255,255,255,.3); color: #fff; }
+.compartir.compartir--oscuro .red:hover, .compartir.compartir--oscuro .red:focus-visible { background: #fff; border-color: #fff; color: var(--tinta); }
+.compartir.compartir--oscuro .red[data-red="WhatsApp"] { background: #25D366; border-color: #25D366; color: #fff; }
+.compartir.compartir--oscuro .red--nativo { background: var(--acento); border-color: var(--acento); color: #fff; }
+button.mmz__btn, button.mmx__btn { font: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
+button.mmz__btn { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); font: 700 14px var(--f-titular); padding: 12px 20px; border-radius: 999px; }
+button.mmz__btn:hover { background: rgba(255,255,255,.12); }
+button.mmx__btn { font: 700 14px var(--f-titular); padding: 11px 18px; }
+button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
 .compartir--arriba { margin: -8px 0 22px; padding: 0 0 18px; border-top: 0; }
 .compartir__lab { font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-right: 4px; }
 .compartir .red { display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0; border-radius: 50%; border: 1px solid var(--linea); background: #fff; color: var(--tinta); cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
