@@ -494,6 +494,43 @@
     $$(".mmx__card", rejMM).forEach((c) => { c.hidden = b.dataset.mmFiltro !== "todo" && c.dataset.tipo !== b.dataset.mmFiltro; });
   }));
 
+  /* ---------- Enviar el archivo de video (WhatsApp, Instagram…) desde el celular ---------- */
+  const archivosVideo = new Map();
+  const traerVideo = (src) => {
+    if (!archivosVideo.has(src)) {
+      archivosVideo.set(src, fetch(src)
+        .then((r) => { if (!r.ok) throw new Error("descarga"); return r.blob(); })
+        .then((b) => new File([b], src.split("/").pop(), { type: "video/mp4" }))
+        .catch((e) => { archivosVideo.set(src, null); throw e; }));
+    }
+    return archivosVideo.get(src) || (archivosVideo.clear(), traerVideo(src));
+  };
+  const puedeEnviar = !!(navigator.share && navigator.canShare) && (() => {
+    try { return navigator.canShare({ files: [new File([""], "v.mp4", { type: "video/mp4" })] }); } catch (e) { return false; }
+  })();
+  const activarEnviar = (btn) => {
+    if (!puedeEnviar || btn.dataset.activo) return;
+    btn.dataset.activo = "1";
+    const etiqueta = btn.textContent;
+    // Empieza a bajar el video apenas el dedo toca el botón, para que el menú de compartir abra rápido.
+    btn.addEventListener("pointerdown", () => { if (btn.dataset.src) traerVideo(btn.dataset.src).catch(() => {}); });
+    btn.addEventListener("click", async () => {
+      if (!btn.dataset.src) return;
+      btn.disabled = true; btn.textContent = "Preparando…";
+      try {
+        const archivo = await traerVideo(btn.dataset.src);
+        const url = new URL(btn.dataset.url || "", document.baseURI).href;
+        await navigator.share({ files: [archivo], title: btn.dataset.titulo, text: `${btn.dataset.titulo} — ${url}` });
+        btn.textContent = etiqueta;
+      } catch (e) {
+        // Si el celular pide volver a tocar (el video tardó en bajar), queda listo para el segundo toque.
+        btn.textContent = e && e.name === "NotAllowedError" ? "Listo: toca otra vez" : etiqueta;
+      } finally { btn.disabled = false; }
+    });
+  };
+  $$("[data-enviar-video]").forEach((b) => { if (b.dataset.src) { activarEnviar(b); b.hidden = !puedeEnviar; } });
+  $$("[data-compartir-url]").forEach((caja) => barraCompartir(caja, new URL(caja.dataset.compartirUrl, document.baseURI).href, caja.dataset.titulo, caja.dataset.desc));
+
   /* ---------- Multimedia: reproductor encima de la página ---------- */
   const modalMM = $("[data-mmz-modal]");
   if (modalMM && typeof modalMM.showModal === "function") {
@@ -510,6 +547,10 @@
       const ver = $("[data-mmz-url]", modalMM);
       ver.href = d.url; ver.textContent = d.url.indexOf("m/") === 0 ? "Ver la pieza y sus fuentes" : "Leer la nota";
       $("[data-mmz-bajar]", modalMM).href = d.src;
+      const enviar = $("[data-mmz-enviar]", modalMM);
+      Object.assign(enviar.dataset, { src: d.tipo === "video" ? d.src : "", titulo: d.titulo, url: d.url });
+      activarEnviar(enviar); enviar.hidden = !puedeEnviar || d.tipo !== "video";
+      barraCompartir($("[data-mmz-compartir]", modalMM), new URL(d.url, document.baseURI).href, d.titulo, d.desc);
       modalMM.showModal();
     }));
     $("[data-mmz-cerrar]", modalMM).addEventListener("click", cerrarMM);
