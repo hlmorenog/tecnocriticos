@@ -13,6 +13,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Últimas noticias
 
+- [Wall Street vuelve a castigar a la IA: el Nasdaq cae cerca de 4 % y Nvidia más de 8 %](https://tecnocriticos.com/n/2026-11-25-wall-street-vuelve-a-castigar-a-la-ia.html): Dos días después del rebote por el regreso de Jensen Huang, los inversionistas vuelven a vender tecnológicas por dudas sobre el auge de la IA, nuevos aranceles y tasas de interés más altas.
 - [OpenAI afirma haber resuelto cuánto cuesta multiplicar matrices, un problema abierto desde 1969](https://tecnocriticos.com/n/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.html): Es un preprint, todavía sin revisión de otros matemáticos: si se confirma, fijaría el límite exacto de la operación que más repiten los computadores de la inteligencia artificial.
 - [Anthropic cae por debajo de su precio de salida a bolsa cinco días después de su debut récord](https://tecnocriticos.com/n/2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa.html): La euforia de la mayor salida a bolsa de la historia duró menos de una semana, y en medio se supo que Dario y Daniela Amodei vendieron acciones por más de 280 millones de dólares cada uno.
 - [Starlink y Claro pasan a la fase de pruebas del sandbox de internet satelital rural del MinTIC](https://tecnocriticos.com/n/2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic.html): Probarán soluciones de conectividad satelital para zonas rurales y apartadas, en la misma semana en que el ministerio investiga a Starlink por la señal en las cárceles.
@@ -32,7 +33,6 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud](https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html): Durante tres noches, académicos de Colombia, Costa Rica y Brasil discuten cómo la inteligencia artificial, los datos y la innovación cambian la forma de gestionar la salud.
 - [Un matemático de Anthropic dice haber demostrado con Claude la hipótesis de Riemann](https://tecnocriticos.com/n/2026-11-23-claude-y-la-hipotesis-de-riemann.html): Es el problema abierto más famoso de las matemáticas, y el anuncio llega con aplausos, dudas sobre su redacción y una demostración rival escrita solo por humanos.
 - [MinTIC investiga a Starlink y a cuatro operadores móviles por la señal en cárceles](https://tecnocriticos.com/n/2026-11-23-mintic-cargos-starlink-y-operadores-por-senal-en-carceles.html): El Gobierno los culpa de que desde las prisiones se sigan coordinando extorsiones; los operadores dicen que cumplen y que el problema es que los celulares entran a los penales.
-- [Los juegos del hambre vuelve con un estreno de 225 millones de dólares pese a GTA VI](https://tecnocriticos.com/n/2026-11-23-hunger-games-amanecer-en-la-cosecha-taquilla.html): La precuela demostró que un gran estreno de cine y el videojuego más esperado de la década pueden convivir el mismo fin de semana.
 
 ## Datos
 

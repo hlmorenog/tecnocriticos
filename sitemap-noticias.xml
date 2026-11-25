@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url><loc>https://tecnocriticos.com/n/2026-11-25-wall-street-vuelve-a-castigar-a-la-ia.html</loc><news:news>
+    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
+    <news:publication_date>2026-11-25</news:publication_date><news:title>Wall Street vuelve a castigar a la IA: el Nasdaq cae cerca de 4 % y Nvidia más de 8 %</news:title>
+  </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
     <news:publication_date>2026-11-25</news:publication_date><news:title>OpenAI afirma haber resuelto cuánto cuesta multiplicar matrices, un problema abierto desde 1969</news:title>

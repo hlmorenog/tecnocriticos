@@ -2,6 +2,43 @@
   "fecha": "2026-11-25",
   "noticias": [
     {
+      "id": "2026-11-25-wall-street-vuelve-a-castigar-a-la-ia",
+      "seccion": "IA y tecnología",
+      "titular": "Wall Street vuelve a castigar a la IA: el Nasdaq cae cerca de 4 % y Nvidia más de 8 %",
+      "entradilla": "Dos días después del rebote por el regreso de Jensen Huang, los inversionistas vuelven a vender tecnológicas por dudas sobre el auge de la IA, nuevos aranceles y tasas de interés más altas.",
+      "lead": "Las acciones tecnológicas volvieron a caer con fuerza este miércoles 25 de noviembre en Wall Street: en la primera hora, el Nasdaq perdía 3,8 %, Nvidia 8,5 % y Anthropic 7 %, según CNN, por las dudas sobre el auge de la inteligencia artificial.",
+      "cuerpo": [
+        "A la ansiedad por la IA se sumaron dos golpes. El presidente Donald Trump anunció nuevos aranceles, que reavivan el temor a una guerra comercial con China, y un dato de inflación de octubre, de 3,3 % anual sin contar alimentos ni energía, reforzó las apuestas a que la Reserva Federal suba las tasas de interés en diciembre. El S&P 500 caía 2,6 % y el Dow Jones, 1,7 %.",
+        "La caída empezó antes en Asia: el Kospi de Corea del Sur, dominado por los fabricantes de memorias SK Hynix y Samsung, cerró con una baja de 6,2 % y acumula una caída de 48 % desde su pico de junio. El lunes, Nvidia había subido más de 30 % por la restitución de Huang, y Anthropic, que el martes cerró por debajo de su precio de salida a bolsa, siguió bajando.",
+        "Las cifras cambian durante la jornada. Más tarde, el Financial Times reportó caídas de más de 4 % en el índice Nasdaq 100 y de más de 9 % en Nvidia y Anthropic."
+      ],
+      "mirada": "El mercado ya no premia cada anuncio de IA: ahora castiga la duda, y la duda llega más rápido que las ganancias.",
+      "titular_corto": "Nueva caída de la IA en bolsa",
+      "por_que_importa": "las empresas de IA pesan tanto en la bolsa que sus caídas arrastran a los mercados de todo el mundo, como mostró Corea del Sur.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "−3,8 % el Nasdaq en la primera hora del miércoles, según CNN."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-wall-street-vuelve-a-castigar-a-la-ia.jpg",
+        "alt": "Letrero de Wall Street en Nueva York (imagen ilustrativa)",
+        "autor": "southbendvoice",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/126015850@N02/15667498393"
+      },
+      "fuentes": [
+        {
+          "nombre": "CNN",
+          "url": "https://edition.cnn.com/2026/11/25/business/ai-sell-off-despite-huang-nvidia-return"
+        },
+        {
+          "nombre": "Financial Times",
+          "url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices",
       "seccion": "IA y tecnología",
       "titular": "OpenAI afirma haber resuelto cuánto cuesta multiplicar matrices, un problema abierto desde 1969",
