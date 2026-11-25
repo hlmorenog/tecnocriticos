@@ -73,6 +73,8 @@ SITIO = "https://tecnocriticos.com"
 
 NOMBRE = "Tecnocríticos"
 LOGO = f"{SITIO}/img/logo-tecnocriticos.png"
+YOUTUBE = "https://www.youtube.com/@tecnocriticos"  # canal de Shorts de Tecnocríticos
+
 ORGANIZACION = {
     "@type": "NewsMediaOrganization",
     "@id": f"{SITIO}/#organizacion",
@@ -80,6 +82,7 @@ ORGANIZACION = {
     "url": f"{SITIO}/",
     "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512},
     "slogan": "La tecnología, sin fanatismo",
+    "sameAs": [YOUTUBE],
     "description": "Medio de comunicación de periodismo de tecnología potenciado por IA: noticias y análisis diarios del sector, con opiniones editoriales que fijan posición frente a productos, servicios y organizaciones del mundo tech.",
     "foundingLocation": {"@type": "Place", "name": "Colombia"},
     "publishingPrinciples": f"{SITIO}/quienes-somos.html",
@@ -270,7 +273,7 @@ def pie():
   <nav class="pie__cols" aria-label="Pie de página">
    <div><h4>Noticias</h4><ul><li><a href="index.html">Hoy</a></li>{secciones}<li><a href="noticias.html">Todas las noticias</a></li></ul></div>
    <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="index.html#hype">Hype-ómetro</a></li><li><a href="multimedia.html">Multimedia</a></li></ul></div>
-   <div><h4>Recíbelo</h4><ul><li><a href="index.html#boletin">Boletín Tecnocríticos</a></li><li><a href="rss.html">RSS</a></li><li><a href="privacidad.html">Privacidad</a></li><li><a href="privacidad.html#cookies" data-cookies>Preferencias de cookies</a></li></ul></div>
+   <div><h4>Recíbelo</h4><ul><li><a href="index.html#boletin">Boletín Tecnocríticos</a></li><li><a href="{YOUTUBE}" target="_blank" rel="noopener">YouTube</a></li><li><a href="rss.html">RSS</a></li><li><a href="privacidad.html">Privacidad</a></li><li><a href="privacidad.html#cookies" data-cookies>Preferencias de cookies</a></li></ul></div>
   </nav>
  </div>
  <div class="pie__base"><span>© <span data-anio>2026</span> tecnocriticos.com</span><span>Hecho en Colombia</span></div>
@@ -415,7 +418,8 @@ def pagina_multimedia():
  <section class="mmz__heroe"><div class="w">
   <div class="mmz__cab"><span class="mmz__kick">Multimedia · Tecnocríticos</span>
    <h1>Explicado en <em>imágenes</em></h1>
-   <p>La tecnología en un minuto: videos verticales e infografías con datos verificados y fuentes. Míralos aquí, descárgalos y compártelos citando a Tecnocríticos.</p></div>
+   <p>La tecnología en un minuto: videos verticales e infografías con datos verificados y fuentes. Míralos aquí, descárgalos y compártelos citando a Tecnocríticos.</p>
+   <a class="mmz__yt" href="{YOUTUBE}" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Síguenos en YouTube · @tecnocriticos</a></div>
   {heroe}
  </div></section>
  <div class="mmz__cuerpo"><div class="w">{filas}{vacio}</div></div>
