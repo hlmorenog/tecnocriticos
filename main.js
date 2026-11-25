@@ -519,8 +519,8 @@
       btn.disabled = true; btn.textContent = "Preparando…";
       try {
         const archivo = await traerVideo(btn.dataset.src);
-        const url = new URL(btn.dataset.url || "", document.baseURI).href;
-        await navigator.share({ files: [archivo], title: btn.dataset.titulo, text: `${btn.dataset.titulo} — ${url}` });
+        // Solo el archivo: si se agrega texto o enlace, el iPhone oculta Instagram (y otras apps de video) en el menú.
+        await navigator.share({ files: [archivo] });
         btn.textContent = etiqueta;
       } catch (e) {
         // Si el celular pide volver a tocar (el video tardó en bajar), queda listo para el segundo toque.
