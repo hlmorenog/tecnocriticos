@@ -5,9 +5,57 @@
   <link>https://tecnocriticos.com/</link>
   <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
   <language>es-co</language>
-  <lastBuildDate>Tue, 24 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <lastBuildDate>Wed, 25 Nov 2026 06:00:00 -0500</lastBuildDate>
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>OpenAI afirma haber resuelto cuánto cuesta multiplicar matrices, un problema abierto desde 1969</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Es un preprint, todavía sin revisión de otros matemáticos: si se confirma, fijaría el límite exacto de la operación que más repiten los computadores de la inteligencia artificial. Por qué importa: multiplicar matrices es la operación que más repiten los computadores que entrenan y ejecutan la inteligencia artificial.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.jpg" length="62908" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Anthropic cae por debajo de su precio de salida a bolsa cinco días después de su debut récord</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>La euforia de la mayor salida a bolsa de la historia duró menos de una semana, y en medio se supo que Dario y Daniela Amodei vendieron acciones por más de 280 millones de dólares cada uno. Por qué importa: la mayor salida a bolsa de la historia es un termómetro de cuánto cree el mercado en el negocio de la inteligencia artificial.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa.jpg" length="55970" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Starlink y Claro pasan a la fase de pruebas del sandbox de internet satelital rural del MinTIC</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>Probarán soluciones de conectividad satelital para zonas rurales y apartadas, en la misma semana en que el ministerio investiga a Starlink por la señal en las cárceles. Por qué importa: el internet satelital es la apuesta más rápida para conectar las zonas rurales, y estas pruebas definirán cómo se regula en Colombia.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic.jpg" length="82586" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Tenjo tendrá el mayor centro de datos del país, y sus vecinos dicen que nadie les explicó nada</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-tenjo-centro-de-datos-odata-vecinos.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-tenjo-centro-de-datos-odata-vecinos.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>Es un proyecto de 120 megavatios para la nube y la inteligencia artificial, en un momento en que Bogotá pide ahorrar energía y el país no tiene reglas propias para estos centros. Por qué importa: la llegada de grandes centros de datos para inteligencia artificial pone a prueba un sistema eléctrico que ya pide ahorro.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-25-tenjo-centro-de-datos-odata-vecinos.jpg" length="84269" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Oregón y Virginia demandan a la empresa de Musk por las imágenes sexuales que genera Grok</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-oregon-y-virginia-demandan-a-xai-por-grok.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-oregon-y-virginia-demandan-a-xai-por-grok.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Son demandas civiles de protección al consumidor: acusan a xAI y a X de vender como seguro un chatbot que creó imágenes sexualizadas de personas reales, incluidos menores. Por qué importa: es una de las primeras ofensivas judiciales de gobiernos contra una empresa de IA por las imágenes que su chatbot crea de personas reales.</description>
+  </item>
+  <item>
+   <title>Blade Runner 2099 llega a Prime Video con sus 8 episodios y Michelle Yeoh al frente</title>
+   <link>https://tecnocriticos.com/n/2026-11-25-blade-runner-2099-llega-a-prime-video.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-25-blade-runner-2099-llega-a-prime-video.html</guid>
+   <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>La miniserie retoma la saga 50 años después de Blade Runner 2049, tras un rodaje retrasado por las huelgas de Hollywood. Por qué importa: vuelve una de las sagas que mejor anticiparon el debate sobre máquinas que parecen humanas.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-25-blade-runner-2099-llega-a-prime-video.jpg" length="99811" type="image/jpeg"/>
+  </item>
   <item>
    <title>Shein pagará 100 millones de dólares para cerrar acusaciones de engaño en EE. UU.</title>
    <link>https://tecnocriticos.com/n/2026-11-24-shein-pagara-100-millones-a-la-ftc.html</link>

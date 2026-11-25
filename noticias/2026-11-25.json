@@ -1,0 +1,223 @@
+{
+  "fecha": "2026-11-25",
+  "noticias": [
+    {
+      "id": "2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices",
+      "seccion": "IA y tecnología",
+      "titular": "OpenAI afirma haber resuelto cuánto cuesta multiplicar matrices, un problema abierto desde 1969",
+      "entradilla": "Es un preprint, todavía sin revisión de otros matemáticos: si se confirma, fijaría el límite exacto de la operación que más repiten los computadores de la inteligencia artificial.",
+      "lead": "OpenAI publicó el 24 de noviembre un preprint que afirma demostrar que el exponente de la multiplicación de matrices es exactamente 9/4: multiplicar dos tablas de n por n números exige, en el límite, del orden de n elevado a 2,25 operaciones.",
+      "cuerpo": [
+        "Multiplicar matrices es la base de los gráficos, las simulaciones y las redes neuronales. El método escolar para dos tablas de n por n necesita del orden de n al cubo operaciones, pero en 1969 Volker Strassen mostró que se podía hacer con menos. Desde entonces, los matemáticos buscan el límite exacto, al que llaman ω: el mejor resultado publicado antes de OpenAI lo dejaba por debajo de 2,371, y muchos sospechaban que podía bajar hasta 2.",
+        "En octubre, OpenAI ya había publicado un método que alcanzaba 9/4, es decir, 2,25, y otros investigadores lo extendieron a todo tipo de números. El nuevo documento afirma lo contrario: que ningún método puede hacerlo mejor, porque cualquier circuito necesitaría al menos n elevado a 9/4, dividido entre dos, multiplicaciones. La prueba es por contradicción: si se pudiera bajar de 9/4, se podría comprimir otra tarea, comprobar que los elementos de varias listas son distintos, más de lo que está demostrado que es posible.",
+        "El resultado no ha pasado por la revisión de otros matemáticos, que es lo que convierte una afirmación en un teorema aceptado. Según el medio RuntimeWire, el manuscrito lo produjo un modelo interno de OpenAI que la empresa no identificó, y varios especialistas lo recibieron con asombro. Tampoco hará más rápidos los computadores de inmediato: el resultado habla del número mínimo de operaciones para matrices enormes, no del tiempo real en un equipo."
+      ],
+      "mirada": "Si se confirma, una IA habría cerrado un problema de 57 años; hasta que otros matemáticos la revisen, es una afirmación, no un teorema.",
+      "titular_corto": "OpenAI y el límite de las matrices",
+      "por_que_importa": "multiplicar matrices es la operación que más repiten los computadores que entrenan y ejecutan la inteligencia artificial.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Es un preprint: todavía no tiene revisión de otros matemáticos."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-openai-prueba-exponente-multiplicacion-de-matrices.jpg",
+        "alt": "Logo de OpenAI visto a través de una lupa (imagen ilustrativa)",
+        "autor": "Jernej Furman",
+        "licencia": "CC BY 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/w/index.php?curid=134006159"
+      },
+      "fuentes": [
+        {
+          "nombre": "OpenAI: preprint «The matrix multiplication exponent is nine fourths»",
+          "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+        },
+        {
+          "nombre": "alphaXiv: resumen del preprint",
+          "url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound"
+        },
+        {
+          "nombre": "Unite.AI",
+          "url": "https://www.unite.ai/openai-preprint-reports-9-4-bound-for-matrix-multiplication/"
+        },
+        {
+          "nombre": "RuntimeWire",
+          "url": "https://runtimewire.com/article/openai-preprint-claims-the-matrix-multiplication-exponent-is-exactly-9-4"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa",
+      "seccion": "IA y tecnología",
+      "titular": "Anthropic cae por debajo de su precio de salida a bolsa cinco días después de su debut récord",
+      "entradilla": "La euforia de la mayor salida a bolsa de la historia duró menos de una semana, y en medio se supo que Dario y Daniela Amodei vendieron acciones por más de 280 millones de dólares cada uno.",
+      "lead": "Las acciones de Anthropic, la empresa que desarrolla el asistente de inteligencia artificial Claude, cerraron el martes 24 de noviembre en 81,91 dólares, por debajo de los 83 dólares a los que salieron a bolsa, apenas cinco días después de su debut en el Nasdaq.",
+      "cuerpo": [
+        "La acción abrió en 111,50 dólares el 19 de noviembre y ese día cerró un 17 % por encima del precio de la oferta. Desde entonces, una venta generalizada de acciones tecnológicas, que llevó a los índices S&P 500 y Dow Jones a terreno de corrección, borró esa ganancia. El martes cerró con una caída del 6,54 %, según Reuters.",
+        "Un documento presentado ante el regulador bursátil de Estados Unidos mostró que el director ejecutivo, Dario Amodei, y la presidenta, Daniela Amodei, vendieron cada uno más de 3,37 millones de acciones, por más de 280 millones de dólares, a los bancos que organizaron la salida a bolsa, un día después del debut. Las ventas eran parte de una oferta prevista en la que cada uno de los siete cofundadores ofreció el mismo número de acciones. Los bancos también compraron acciones adicionales, lo que llevó la oferta a 93.500 millones de dólares y, según Reuters, le quitó a la acción un posible respaldo.",
+        "Los analistas consultados por Reuters lo atribuyen a un precio de salida alto y al temor de que se frene la construcción de centros de datos. Aun así, tres corredoras empezaron a seguir la acción con recomendaciones positivas y precios objetivo de hasta 150 dólares, y MSCI la incluirá en sus índices globales al cierre del 30 de noviembre."
+      ],
+      "mirada": "En cinco días se evaporó la euforia del debut: el mercado ya no paga cualquier precio por una promesa de inteligencia artificial.",
+      "titular_corto": "Anthropic, bajo su precio de salida",
+      "por_que_importa": "la mayor salida a bolsa de la historia es un termómetro de cuánto cree el mercado en el negocio de la inteligencia artificial.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "81,91 dólares al cierre del martes, frente a los 83 del precio de salida."
+      },
+      "fuentes": [
+        {
+          "nombre": "Reuters",
+          "url": "https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/"
+        },
+        {
+          "nombre": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-shares-below-83-ipo-price-first-time-amodei-sales-analysts"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-anthropic-cae-bajo-su-precio-de-salida-a-bolsa.jpg",
+        "alt": "Dario Amodei, director ejecutivo de Anthropic, en TechCrunch Disrupt 2023",
+        "autor": "TechCrunch",
+        "licencia": "CC BY 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/w/index.php?curid=148412072"
+      }
+    },
+    {
+      "id": "2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic",
+      "seccion": "Colombia",
+      "titular": "Starlink y Claro pasan a la fase de pruebas del sandbox de internet satelital rural del MinTIC",
+      "entradilla": "Probarán soluciones de conectividad satelital para zonas rurales y apartadas, en la misma semana en que el ministerio investiga a Starlink por la señal en las cárceles.",
+      "lead": "El MinTIC, la CRC y la ANE publicaron el informe de evaluación de la primera convocatoria del Sandbox Regulatorio Sectorial 2026: las propuestas de Starlink y Claro cumplieron los requisitos y pasarán a probar internet satelital en zonas rurales y apartadas del país.",
+      "cuerpo": [
+        "Un sandbox regulatorio es un espacio de experimentación supervisada: las empresas prueban servicios o tecnologías en condiciones controladas, y el Estado usa los resultados para decidir si ajusta la regulación. Esta primera convocatoria busca soluciones de conectividad satelital para llevar telecomunicaciones a zonas rurales, apartadas y de difícil acceso.",
+        "Según el informe, publicado el 23 de noviembre, ambas propuestas superaron el análisis técnico, jurídico y regulatorio, y ahora empiezan las actividades previas a la fase de implementación y seguimiento de las pruebas. El comunicado del ministerio no detalla en qué municipios se harán ni cuánto durarán.",
+        "La decisión coincide con la investigación administrativa que el MinTIC abrió contra Starlink y cuatro operadores, entre ellos Claro, por las señales de telefonía e internet que llegan a las cárceles. Son procesos distintos: el sandbox evalúa propuestas de conectividad rural, y la investigación todavía no ha terminado en ninguna sanción."
+      ],
+      "mirada": "El Estado prueba con Starlink la conectividad rural mientras la investiga por las cárceles: necesita el satélite, pero aún no sabe controlarlo.",
+      "titular_corto": "Starlink y Claro, a pruebas rurales",
+      "por_que_importa": "el internet satelital es la apuesta más rápida para conectar las zonas rurales, y estas pruebas definirán cómo se regula en Colombia.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Pasar al sandbox no es una licencia: son pruebas supervisadas."
+      },
+      "fuentes": [
+        {
+          "nombre": "MinTIC",
+          "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442616:MinTIC-publica-el-informe-de-evaluacion-de-propuestas-del-Sandbox-Regulatorio-Sectorial-2026"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-starlink-y-claro-pasan-al-sandbox-satelital-del-mintic.jpg",
+        "alt": "Satélites de Starlink a punto de ser liberados en órbita sobre la Tierra",
+        "autor": "Steve Jurvetson",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/44124348109@N01/47926209216"
+      }
+    },
+    {
+      "id": "2026-11-25-tenjo-centro-de-datos-odata-vecinos",
+      "seccion": "Colombia",
+      "titular": "Tenjo tendrá el mayor centro de datos del país, y sus vecinos dicen que nadie les explicó nada",
+      "entradilla": "Es un proyecto de 120 megavatios para la nube y la inteligencia artificial, en un momento en que Bogotá pide ahorrar energía y el país no tiene reglas propias para estos centros.",
+      "lead": "En Tenjo (Cundinamarca), a unos 25 kilómetros de Bogotá, la multinacional ODATA construye el que presenta como el mayor centro de datos de Colombia, de 120 megavatios, mientras vecinos del municipio denuncian que nadie les ha explicado qué se construye ni qué riesgos trae.",
+      "cuerpo": [
+        "El proyecto, llamado DC BG03, hace parte de una inversión de ODATA de 1.300 millones de dólares en Colombia, que incluye otro campus de 24 megavatios en Mosquera. Está pensado para servicios en la nube y aplicaciones de inteligencia artificial, y queda dentro de la Zona Franca Metropolitana. ODATA pertenece a Aligned Data Centers, comprada en 2026 por un consorcio en el que participan fondos ligados a BlackRock, Microsoft y Nvidia.",
+        "En septiembre, la ANLA otorgó la licencia ambiental para la línea de transmisión de 220 kilovoltios que alimentará el centro de datos. Según Enter.co, esa licencia registra una conexión de 50 megavatios, menos de la mitad de lo anunciado, una diferencia que puede corresponder a una primera fase. La empresa asegura que usará refrigeración por aire, que no requiere grandes volúmenes de agua.",
+        "Un ecólogo consultado por medios señaló que los principales impactos serían el calor y el ruido, y que ni la alcaldía ni el concejo conocerían el proyecto en detalle. La representante a la Cámara María del Mar Pizarro calcula que el complejo consumiría tanta electricidad como unos 100.000 hogares y pidió al Congreso legislar sobre estos centros, que hoy no tienen una regulación integral en Colombia."
+      ],
+      "mirada": "La nube no flota: pesa sobre la red eléctrica de un municipio que, según sus vecinos, se enteró por las grúas.",
+      "titular_corto": "Centro de datos gigante en Tenjo",
+      "por_que_importa": "la llegada de grandes centros de datos para inteligencia artificial pone a prueba un sistema eléctrico que ya pide ahorro.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "120 megavatios anunciados; la licencia eléctrica registra 50."
+      },
+      "fuentes": [
+        {
+          "nombre": "Enter.co",
+          "url": "https://www.enter.co/colombia/tenjo-centro-datos-odata-vecinos-sin-informacion/"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-tenjo-centro-de-datos-odata-vecinos.jpg",
+        "alt": "Pasillo de servidores en un centro de datos (imagen ilustrativa)",
+        "autor": "Cory M. Grenier",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/26087974@N05/11387253605"
+      }
+    },
+    {
+      "id": "2026-11-25-oregon-y-virginia-demandan-a-xai-por-grok",
+      "seccion": "IA y tecnología",
+      "titular": "Oregón y Virginia demandan a la empresa de Musk por las imágenes sexuales que genera Grok",
+      "entradilla": "Son demandas civiles de protección al consumidor: acusan a xAI y a X de vender como seguro un chatbot que creó imágenes sexualizadas de personas reales, incluidos menores.",
+      "lead": "Los fiscales generales de Oregón y Virginia, en Estados Unidos, presentaron demandas separadas contra xAI y la red social X, empresas de SpaceX, por permitir que el chatbot Grok creara imágenes sexualizadas de personas reales, incluidos menores, mientras promocionaban su seguridad.",
+      "cuerpo": [
+        "La demanda de Oregón se presentó en un tribunal del condado de Multnomah y la de Virginia, en el tribunal de circuito de la ciudad de Richmond, con base en las leyes estatales de protección al consumidor. No son acusaciones penales, sino demandas civiles que un juez deberá resolver.",
+        "Las demandas sostienen que xAI debilitó las salvaguardas habituales de la industria y promocionó un «modo picante» que permitía crear desnudos e imágenes sexualizadas. Citan un estudio del Center for Countering Digital Hate según el cual, entre el 29 de diciembre de 2025 y el 8 de enero de 2026, Grok generó y publicó en X unos tres millones de imágenes sexualizadas, de las cuales cerca de 23.000 parecían mostrar a menores.",
+        "Según el mismo estudio, casi el 30 % de esas imágenes de menores seguía visible una semana o más después de detectada. La empresa había puesto parte de esas funciones detrás de un muro de pago y bloqueado algunas solicitudes, pero pruebas posteriores del medio The Verge encontraron que esas restricciones hacían poco para impedir los montajes. Las demandas todavía deben resolverse en los tribunales."
+      ],
+      "mirada": "Cuando la falta de límites se vende como «modo picante», no es un error del producto: es el producto.",
+      "titular_corto": "Dos estados demandan por Grok",
+      "por_que_importa": "es una de las primeras ofensivas judiciales de gobiernos contra una empresa de IA por las imágenes que su chatbot crea de personas reales.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Unos 3 millones de imágenes sexualizadas en 11 días, según el estudio citado."
+      },
+      "fuentes": [
+        {
+          "nombre": "KTVZ",
+          "url": "https://ktvz.com/news/2026/11/23/oregon-and-virginia-ags-sue-xai-and-x-over-groks-failure-to-stop-csam/"
+        },
+        {
+          "nombre": "Enter.co",
+          "url": "https://www.enter.co/chips-bits/demanda-grok-imagenes-intimas-sin-consentimiento/"
+        },
+        {
+          "nombre": "Departamento de Justicia de Oregón: demanda",
+          "url": "https://www.doj.state.or.us/wp-content/uploads/2026/11/ODOJ-Grok-Complaint-Final-Submitted-2026-11-22.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-blade-runner-2099-llega-a-prime-video",
+      "seccion": "Videojuegos y series",
+      "titular": "Blade Runner 2099 llega a Prime Video con sus 8 episodios y Michelle Yeoh al frente",
+      "entradilla": "La miniserie retoma la saga 50 años después de Blade Runner 2049, tras un rodaje retrasado por las huelgas de Hollywood.",
+      "lead": "Prime Video estrena este miércoles 25 de noviembre Blade Runner 2099, una miniserie de ocho episodios ambientada 50 años después de Blade Runner 2049, protagonizada por Michelle Yeoh y Hunter Schafer y con Ridley Scott como productor ejecutivo.",
+      "cuerpo": [
+        "La historia transcurre en Los Ángeles, donde los replicantes, los humanos artificiales de la saga, tomaron el control tras una rebelión y los humanos quedaron como ciudadanos de segunda. Yeoh interpreta a Olwen, una replicante al final de su vida que se une a Cora, una humana que se hace pasar por replicante, para cazar a una banda de replicantes rebeldes.",
+        "La showrunner es Silka Luisa y los ocho episodios llegan el mismo día, en lugar de uno por semana. El rodaje, previsto para la primavera de 2023 en Belfast, se aplazó por las huelgas de guionistas y actores de Hollywood, y la serie también cambió de director para sus primeros episodios.",
+        "Es la tercera entrega en imagen real de la saga, que empezó con la película de Ridley Scott de 1982, basada en una novela de Philip K. Dick, y siguió con Blade Runner 2049, dirigida por Denis Villeneuve en 2017. Entre ambas se estrenó en 2021 la serie animada Blade Runner: Black Lotus."
+      ],
+      "mirada": "Blade Runner siempre preguntó qué nos hace humanos; en 2026, con la inteligencia artificial en todas partes, la pregunta ya no suena a ciencia ficción.",
+      "titular_corto": "Blade Runner 2099 ya está aquí",
+      "por_que_importa": "vuelve una de las sagas que mejor anticiparon el debate sobre máquinas que parecen humanas.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "Ocho episodios, todos el mismo día, 50 años después de Blade Runner 2049."
+      },
+      "fuentes": [
+        {
+          "nombre": "Espinof",
+          "url": "https://www.espinof.com/todo-lo-que-sabemos/blade-runner-2099-fecha-estreno-reparto-trailer-todo-que-sabemos-miniserie-ciencia-ficcion-para-amazon-prime-video"
+        },
+        {
+          "nombre": "Amazon (About Amazon)",
+          "url": "https://www.aboutamazon.com/news/entertainment/blade-runner-2099-prime-video"
+        }
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-blade-runner-2099-llega-a-prime-video.jpg",
+        "alt": "Estrella con las huellas de las manos y la firma de Michelle Yeoh",
+        "autor": "Rob Young",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/76562640@N00/2043368358"
+      }
+    }
+  ]
+}
