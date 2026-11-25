@@ -474,3 +474,7 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
 
 .fijas a.fijas__mm { background: var(--tinta); color: #fff; border-color: var(--tinta); }
 .fijas a.fijas__mm:hover { background: var(--acento); border-color: var(--acento); }
+
+.mmz__yt { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 11px 18px; border-radius: 999px; background: #FF0033; color: #fff !important; font: 700 14px var(--f-titular); text-decoration: none; }
+.mmz__yt:hover { background: #d9002b; }
+.mmz__yt span { font-size: 12px; }
