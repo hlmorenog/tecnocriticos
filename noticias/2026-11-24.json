@@ -32,7 +32,15 @@
           "nombre": "Huawei: declaración sobre el veredicto",
           "url": "https://www.huawei.com/en/news/2026/11/statement-on-jury-verdict"
         }
-      ]
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-24-jurado-de-eeuu-declara-culpable-a-huawei.jpg",
+        "alt": "Fachada del tribunal federal del Distrito Este de Nueva York, en Brooklyn, donde se dictó el veredicto contra Huawei",
+        "autor": "Ajay Suresh",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/83136374@N05/48228039566"
+      }
     },
     {
       "id": "2026-11-24-tidal-eliminara-la-musica-hecha-por-ia",
