@@ -2,6 +2,43 @@
   "fecha": "2026-11-24",
   "noticias": [
     {
+      "id": "2026-11-24-shein-pagara-100-millones-a-la-ftc",
+      "seccion": "IA y tecnología",
+      "titular": "Shein pagará 100 millones de dólares para cerrar acusaciones de engaño en EE. UU.",
+      "entradilla": "Es un acuerdo con la autoridad de protección al consumidor de Estados Unidos: el dinero servirá para reembolsar a compradores, y Shein no admite responsabilidad.",
+      "lead": "Shein aceptó pagar 100 millones de dólares para cerrar las acusaciones de la FTC, la autoridad de protección al consumidor de Estados Unidos, que la señala de engañar sobre los tiempos de entrega, filtrar reseñas negativas y exagerar las virtudes de sus proveedores.",
+      "cuerpo": [
+        "Según la demanda de la FTC, presentada ante un tribunal el 24 de noviembre junto con el acuerdo, Shein prometía envíos rápidos aunque sabía que muchos paquetes llegaban con días o meses de retraso, o nunca llegaban. La agencia también sostiene que la empresa excluía de su sitio las reseñas más negativas y que, para atender las llamadas de los clientes de Estados Unidos, adonde envía cerca de un millón de paquetes al día, tenía solo cinco personas.",
+        "La FTC cuestiona además el sello «evoluSHEIN», que según la empresa identificaba prendas de proveedores con buenas calificaciones en auditorías sociales, porque Shein no pudo mostrar auditorías independientes que lo respaldaran. También pone en duda sus pruebas sobre el origen del algodón, un tema sensible por las denuncias de trabajo forzoso en la región china de Xinjiang.",
+        "Se trata de un acuerdo, no de una condena. El dinero se usará para reembolsar a los compradores afectados en Estados Unidos, y la orden propuesta le prohíbe a Shein mentir sobre los tiempos de envío y bloquear reseñas negativas, y la obliga a ofrecer un servicio al cliente adecuado. Shein dijo que el acuerdo no implica admitir responsabilidad y que no está de acuerdo con parte de lo que afirma la FTC."
+      ],
+      "mirada": "Si la FTC tiene razón, cinco personas atendían un millón de paquetes al día: en Shein lo barato también era el servicio al cliente.",
+      "titular_corto": "Shein paga 100 millones a la FTC",
+      "por_que_importa": "las reseñas y los tiempos de envío son justo lo que miran millones de compradores, también en Colombia, antes de pagar en tiendas como Shein.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Es un acuerdo, no una condena: Shein no admite responsabilidad."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-24-shein-pagara-100-millones-a-la-ftc.jpg",
+        "alt": "Fila de compradores frente a una tienda Shein en Tokio",
+        "autor": "Dick Thomas Johnson",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/31029865@N06/52638367738"
+      },
+      "fuentes": [
+        {
+          "nombre": "Reuters (vía The Straits Times)",
+          "url": "https://www.straitstimes.com/business/shein-to-pay-100-million-to-settle-us-shipping-customer-service-claims"
+        },
+        {
+          "nombre": "CBS News",
+          "url": "https://www.cbsnews.com/news/shein-100-million-ftc-deceptive-practices-settlement/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-jurado-de-eeuu-declara-culpable-a-huawei",
       "seccion": "IA y tecnología",
       "titular": "Jurado de EE. UU. halla a Huawei culpable de conspirar para robar secretos y de fraude",
