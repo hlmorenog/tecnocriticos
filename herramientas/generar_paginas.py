@@ -322,7 +322,8 @@ def bloque_explicado(noticias):
         piezas += (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or c["titulo"])}">'
                    f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
     if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
-        piezas += (f'<figure class="mm__info"><a href="{c["url"]}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy"></a></figure>')
+        piezas += (f'<figure class="mm__info"><a href="{c["url"]}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy">'
+                   f'<span class="mm__vermas">Ver la infografía completa ↓</span></a></figure>')
     return (f'<section class="mm mm--home" aria-label="Explicado en imágenes"><h2 class="videos__tit">Explicado en imágenes</h2>'
             f'<h3 class="mm__tit"><a href="{c["url"]}">{esc(c["titulo"])}</a></h3><div class="mm__rej">{piezas}</div>'
             f'<p class="mm__mas"><a href="{c["url"]}">{c["mas"]} →</a></p></section>')
