@@ -219,7 +219,11 @@
           "nombre": "Wikipedia: historia de Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV",
           "url": "https://en.wikipedia.org/wiki/HBO_Max"
         }
-      ]
+      ],
+      "relacionada": {
+        "titulo": "Mira el video: ¿cuál plataforma de streaming manda en Colombia?",
+        "url": "m/2026-11-26-las-plataformas-de-streaming-que-mandan.html"
+      }
     }
   ]
 }
