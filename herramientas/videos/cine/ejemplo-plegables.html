@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Estilo Tecnocríticos animado · demo plegables</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script src="telefonos.js"></script>
+<style>
+/* Misma línea de diseño de los videos anteriores (motor.html): Inter Tight, JetBrains Mono, verde #00875A, menta #7FD1B0,
+   escenas oscuras (#111) y claras (#fff), etiqueta + título grande, chips de cada teléfono, barra de progreso verde.
+   Nuevo: animación continua, líneas que se dibujan, partículas, cifras que cuentan, cámara y subtítulos palabra por palabra. */
+:root { --tinta:#111111; --papel:#F4F4F1; --acento:#00875A; --menta:#7FD1B0; --suave:#6b6b66; --linea:#E4E4E0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--tinta); font-family: Inter, sans-serif; }
+#lienzo { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+.fondo { position: absolute; inset: 0; }
+#f-osc { background: radial-gradient(1000px 800px at 50% 45%, #1b1f1d 0%, #111 60%, #0b0b0b 100%); }
+#f-cla { background: #fff; }
+svg#esc { position: absolute; inset: 0; }
+#grano { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .03; pointer-events: none; mix-blend-mode: overlay; }
+.marca { position: absolute; top: 72px; left: 84px; right: 84px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font: 900 44px 'Inter Tight'; letter-spacing: -.04em; display: flex; align-items: center; gap: 14px; }
+.logo i { width: 24px; height: 24px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.tag { font: 700 22px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; }
+#cab { position: absolute; left: 84px; right: 84px; top: 230px; }
+.kick { font: 700 30px 'JetBrains Mono'; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 22px; }
+.tit { font: 900 84px/1.04 'Inter Tight'; letter-spacing: -.035em; }
+.tit.h1 { font-size: 112px; line-height: 1; }
+.tit span { display: inline-block; margin-right: .22em; }
+#sub { position: absolute; left: 84px; right: 84px; top: 1560px; text-align: center; font: 800 54px/1.2 'Inter Tight'; letter-spacing: -.02em; }
+#sub span { display: inline-block; margin: 0 .11em; }
+.barra-prog { position: absolute; left: 0; bottom: 0; height: 10px; background: var(--acento); }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div class="fondo" id="f-osc"></div><div class="fondo" id="f-cla"></div>
+  <svg id="esc" viewBox="0 0 1080 1920"></svg>
+  <svg id="grano" viewBox="0 0 1080 1920" preserveAspectRatio="none"><filter id="ruido"><feTurbulence id="turb" type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="1"/></filter><rect width="1080" height="1920" filter="url(#ruido)"/></svg>
+  <div class="marca"><div class="logo" id="logo"><i></i>tecnocríticos</div><div class="tag" id="tag"></div></div>
+  <div id="cab"><div class="kick" id="kick"></div><div class="tit" id="tit"></div></div>
+  <div id="sub"></div>
+  <div class="barra-prog" id="barra"></div>
+</div>
+<script>
+const V = "#00875A", M = "#7FD1B0", T = "#111111", PL = "#E8E8E4", PLo = "#8d9299", AZ = "#2F6FED", R = "#C0392B";
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = (x) => { x = cl(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const out = (x) => 1 - Math.pow(1 - cl(x), 3);
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const lerp = (a, b, k) => a + (b - a) * k;
+
+/* Locución (tiempos de la mezcla final). 1 = palabra clave. */
+const PALABRAS = [[0,"iPhone",1],[0.78,"Duo",1],[1.04,"o"],[1.5,"Galaxy",1],[1.76,"Z",1],[2.08,"Fold",1],[2.34,"8.",1],
+ [3.2,"La"],[3.46,"ficha"],[3.62,"técnica"],[4.0,"dice"],[4.26,"mucho,"],[4.84,"pero"],[5.02,"no",1],[5.14,"todo.",1],
+ [5.78,"Te"],[5.94,"contamos"],[6.32,"cómo"],[6.8,"es"],[7.0,"vivir",1],[7.16,"con"],[7.46,"cada"],[7.66,"uno,"],
+ [8.28,"según"],[8.48,"quienes"],[8.86,"ya"],[9.0,"lo"],[9.12,"usan.",1],
+ [10.22,"La"],[10.74,"primera"],[10.96,"diferencia"],[11.44,"se"],[11.64,"siente"],[11.9,"en"],[12.04,"la"],[12.14,"mano.",1],
+ [12.68,"El"],[12.8,"Fold",1],[13.0,"8",1],[13.38,"pesa"],[13.74,"201",1],[14.22,"gramos",1],[15.04,"y"],[15.18,"se"],[15.28,"siente"],[15.54,"casi"],[15.8,"como"],[16.1,"un"],[16.22,"celular"],[16.5,"normal.",1],
+ [17.46,"El"],[17.68,"Duo",1],[17.86,"pesa"],[18.2,"254.",1],
+ [19.5,"Un"],[19.74,"reseñista"],[20.16,"contó"],[20.66,"que"],[21.0,"después"],[21.28,"de"],[21.46,"un"],[21.56,"buen"],[21.64,"rato"],[21.96,"de"],[22.12,"uso"],[22.32,"le"],[22.6,"dolía",1],[22.84,"la"],[22.96,"muñeca.",1],
+ [23.84,"A"],[24.08,"cambio,"],[24.68,"el"],[24.7,"Duo",1],[24.9,"es"],[25.04,"más"],[25.18,"corto",1],[25.6,"y"],[25.68,"el"],[25.78,"pulgar",1],[26.16,"llega"],[26.44,"mejor"],[26.82,"a"],[26.94,"la"],[27.0,"parte"],[27.28,"de"],[27.46,"arriba.",1]];
+const DUR = 28.6; window.DURACION = DUR;
+
+/* Escenas: tema (oscura/clara), etiqueta, título. La portada muestra el título grande en vez de subtítulos. */
+const ESC = [
+  { desde: 0, tema: "oscura", tag: "Comparativa · Plegables", kick: "Comparativa", tit: "iPhone Duo vs. Galaxy Z Fold 8", h1: true, sinSub: true },
+  { desde: 3.15, tema: "oscura", tag: "Comparativa · Plegables", kick: "La ficha técnica", tit: "No todo está en los números" },
+  { desde: 10.0, tema: "clara", tag: "En la mano", kick: "En la mano", tit: "La diferencia se siente en la muñeca" },
+  { desde: 23.7, tema: "clara", tag: "En la mano", kick: "El alcance", tit: "El pulgar llega mejor arriba" }
+];
+const escenaDe = (t) => ESC.reduce((a, e, i) => (t >= e.desde ? i : a), 0);
+
+const FRASES = []; { let f = []; PALABRAS.forEach((p, i) => { f.push(p); const resto = PALABRAS.slice(i + 1).findIndex((q) => /[.,]$/.test(q[1])) + 1;
+  if (/[.,]$/.test(p[1]) || (f.length >= 7 && resto > 2) || i === PALABRAS.length - 1) { FRASES.push(f); f = []; } }); }
+function subtitulos(t, clara) {
+  if (ESC[escenaDe(t)].sinSub) return "";
+  const idx = FRASES.findIndex((f, i) => t >= f[0][0] - 0.12 && (i === FRASES.length - 1 || t < FRASES[i + 1][0][0] - 0.12));
+  if (idx < 0) return "";
+  const k = clara ? V : M, base = clara ? T : "#fff";
+  return FRASES[idx].map((p) => { const a = out(tramo(t, p[0] - 0.05, p[0] + 0.18));
+    return `<span style="color:${p[2] ? k : base};opacity:${0.16 + 0.84 * a};transform:translateY(${(1 - a) * 16}px)">${p[1]}</span>`; }).join("");
+}
+
+/* ===== Dibujo ===== */
+function defs() {
+  return `<defs><radialGradient id="halo"><stop offset="0" stop-color="${M}" stop-opacity=".45"/><stop offset="1" stop-color="${M}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="haloR"><stop offset="0" stop-color="${R}" stop-opacity=".45"/><stop offset="1" stop-color="${R}" stop-opacity="0"/></radialGradient>
+    <filter id="sombra" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".18"/></filter></defs>`;
+}
+/* Teléfono ilustrado (los mismos dibujos de los videos anteriores). */
+function tel(k, cx, cy, w, op = 1, esc = 1) {
+  const h = w * 280 / 340, svg = TEL(k).replace("<svg ", `<svg x="${cx - w * esc / 2}" y="${cy - h * esc / 2}" width="${w * esc}" height="${h * esc}" `);
+  return `<g opacity="${op}">${svg}</g>`;
+}
+function chip(k, cx, cy, w, op = 1) {
+  const a = k === "a";
+  return `<g opacity="${op}"><rect x="${cx - w / 2}" y="${cy - 34}" width="${w}" height="68" rx="14" fill="${a ? PL : AZ}"/>
+    <text x="${cx}" y="${cy + 13}" text-anchor="middle" font-family="Inter Tight" font-weight="800" font-size="38" letter-spacing="-.5" fill="${a ? T : "#fff"}">${a ? "iPhone Duo" : "Galaxy Z Fold 8"}</text></g>`;
+}
+/* Línea que se dibuja (k) con partículas que viajan cuando está completa. */
+function linea(x1, y1, x2, y2, k, t, color, ancho = 4, n = 3, part = "#fff") {
+  let s = `<line x1="${x1}" y1="${y1}" x2="${lerp(x1, x2, k)}" y2="${lerp(y1, y2, k)}" stroke="${color}" stroke-width="${ancho}" stroke-linecap="round"/>`;
+  if (k >= 1) for (let i = 0; i < n; i++) { const u = (t * 0.45 + i / n) % 1;
+    s += `<circle cx="${lerp(x1, x2, u)}" cy="${lerp(y1, y2, u)}" r="${ancho + 3}" fill="${part}" opacity="${Math.sin(u * Math.PI)}"/>`; }
+  return s;
+}
+const mono = (x, y, txt, color, op = 1, tam = 26, anchor = "middle") => `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="JetBrains Mono" font-weight="700" font-size="${tam}" letter-spacing="3" fill="${color}" opacity="${op}">${txt}</text>`;
+
+function escena(t) {
+  let g = "";
+  const e = escenaDe(t);
+  // Cámara: empujes suaves, sin quedarse quieta.
+  let zoom = 1 + 0.035 * Math.sin(t * 0.35), camY = 0;
+  if (t < 10) {
+    zoom *= lerp(1, 1.05, ease(tramo(t, 0, 3))) * lerp(1, 0.96, ease(tramo(t, 3.2, 5.6)));
+    const xa = 300, xb = 780, y0 = 930;
+    const ka = out(tramo(t, 0.55, 1.2)), kb = out(tramo(t, 1.85, 2.5)), sal = 1 - ease(tramo(t, 9.5, 10.0));
+    g += `<circle cx="${xa}" cy="${y0}" r="${260 * ka}" fill="url(#halo)" opacity="${sal}"/><circle cx="${xb}" cy="${y0}" r="${260 * kb}" fill="url(#halo)" opacity="${sal}"/>`;
+    if (t > 2.4) g += `<g opacity="${sal}">${linea(xa + 190, y0, xb - 190, y0, out(tramo(t, 2.4, 3.0)), t, M, 4, 3)}</g>`;
+    // La ficha técnica: datos que salen de cada teléfono y se apagan en «pero no todo».
+    if (t > 3.2 && t < 6.2) {
+      const apaga = 1 - ease(tramo(t, 4.9, 5.7));
+      [["7,6″ + 5,4″", -170], ["A20 Pro", -60], ["IP68", 50], ["254 g", 160]].forEach(([txt, dy], i) => {
+        const k = out(tramo(t, 3.3 + i * .14, 3.9 + i * .14)) * apaga;
+        g += `<g opacity="${k}">${linea(xa - 120, y0, 100, y0 + dy * 1.7, 1, t, "rgba(232,232,228,.45)", 2, 1)}${mono(96, y0 + dy * 1.7 - 16, txt, PL, 1, 26, "start")}</g>`; });
+      [["7,6″ + 5,5″", -170], ["Snapdragon", -60], ["IP48", 50], ["201 g", 160]].forEach(([txt, dy], i) => {
+        const k = out(tramo(t, 3.4 + i * .14, 4.0 + i * .14)) * apaga;
+        g += `<g opacity="${k}">${linea(xb + 120, y0, 980, y0 + dy * 1.7, 1, t, "rgba(76,134,245,.6)", 2, 1, "#9fbaff")}${mono(984, y0 + dy * 1.7 - 16, txt, "#9fbaff", 1, 26, "end")}</g>`; });
+    }
+    const flota = (f) => Math.sin(t * 1.1 + f) * 10;
+    g += tel("a", xa, y0 + flota(0), 330, sal, ka) + tel("b", xb, y0 + flota(1.7), 330, sal, kb);
+    g += chip("a", xa, y0 + 200, 300, out(tramo(t, 0.9, 1.4)) * sal) + chip("b", xb, y0 + 200, 340, out(tramo(t, 2.2, 2.7)) * sal);
+    // «Según quienes ya lo usan»: usuarios que aparecen alrededor.
+    if (t > 8.2) {
+      for (let i = 0; i < 16; i++) { const lado = i % 2 ? xb : xa, a = i / 16 * Math.PI * 2 + t * 0.2, r = 250 + 24 * Math.sin(i * 2.3);
+        const k = out(tramo(t, 8.3 + i * 0.05, 8.7 + i * 0.05)) * sal;
+        g += `<g transform="translate(${lado + Math.cos(a) * r} ${y0 + Math.sin(a) * r * 0.62})" opacity="${k}"><circle r="9" cy="-16" fill="${M}"/><path d="M-13 8 Q0 -10 13 8" stroke="${M}" stroke-width="5" fill="none" stroke-linecap="round"/></g>`; }
+      g += mono(540, y0 + 330, "QUIENES YA LOS USAN", M, out(tramo(t, 8.6, 9.1)) * sal, 26);
+    }
+  } else if (t < 23.7) {
+    // Balanza (fondo claro). El lado que más pesa BAJA.
+    const entra = out(tramo(t, 10.05, 11.0));
+    const kf = tramo(t, 13.7, 14.9), kd = tramo(t, 18.2, 19.3);
+    // Primero solo está el Fold (201 g): baja la derecha. Luego entra el Duo (254 g): la balanza se va hacia la izquierda.
+    const inc = lerp(0, 7, ease(kf)) + lerp(0, -16, ease(kd)); // grados; positivo = baja la derecha
+    const sube = ease(tramo(t, 19.3, 20.2)), vete = 1 - ease(tramo(t, 23.3, 23.7));
+    const cx = 540, cy = lerp(900, 640, sube), esc = lerp(1, 0.66, sube), L = 340;
+    let b = `<g opacity="${entra * vete}" transform="translate(${cx} ${cy}) scale(${esc})">`;
+    b += `<path d="M-90 420 L90 420 L18 0 L-18 0 Z" fill="${V}" fill-opacity=".1" stroke="${V}" stroke-width="5" stroke-linejoin="round"/>`;
+    b += `<g transform="rotate(${inc})">${linea(-L, 0, L, 0, out(tramo(t, 10.3, 11.1)), t, T, 8, 4, V)}`;
+    const plato = (x, k, nombre, val, kv, inicio) => { const a = k === "a";
+      return `<g transform="translate(${x} 0) rotate(${-inc})">
+        <line x1="0" y1="0" x2="-88" y2="170" stroke="${T}" stroke-width="3"/><line x1="0" y1="0" x2="88" y2="170" stroke="${T}" stroke-width="3"/>
+        <path d="M-135 170 Q0 225 135 170" fill="none" stroke="${T}" stroke-width="7" stroke-linecap="round"/>
+        ${tel(k, 0, 108, 190, out(tramo(t, inicio, inicio + 0.6)), lerp(0.6, 1, out(tramo(t, inicio, inicio + 0.6))))}
+        <text y="318" text-anchor="middle" font-family="Inter Tight" font-weight="900" font-size="104" letter-spacing="-3" fill="${a ? T : AZ}" opacity="${out(kv * 3)}">${Math.round(val * out(kv))} g</text>
+        ${chip(k, 0, 380, a ? 270 : 320, out(kv * 3))}</g>`; };
+    b += plato(-L, "a", "Duo", 254, kd, 17.5) + plato(L, "b", "Fold", 201, kf, 12.7);
+    b += `</g><circle r="22" fill="${V}"/><circle r="9" fill="#fff"/></g>`;
+    g += b;
+    // «casi como un celular normal»: silueta de un celular normal junto al Fold.
+    const kn = out(tramo(t, 16.1, 16.7)) * (1 - ease(tramo(t, 17.3, 17.9)));
+    if (kn > 0) g += `<g opacity="${kn}" filter="url(#sombra)"><rect x="880" y="560" width="96" height="186" rx="18" fill="#fff" stroke="${V}" stroke-width="5"/><rect x="896" y="580" width="64" height="140" rx="6" fill="${V}" fill-opacity=".12"/></g>${mono(928, 790, "CELULAR NORMAL", V, kn, 20)}`;
+    // «le dolía la muñeca»: antebrazo con el teléfono y un pulso rojo en la muñeca.
+    const km = out(tramo(t, 19.6, 20.4)) * vete;
+    if (km > 0) {
+      const kb2 = out(tramo(t, 19.8, 20.7)), pul = t > 22.6 ? 0.5 + 0.5 * Math.sin(t * 9) : 0, kw = tramo(t, 22.5, 22.9);
+      const tubo = (d, w) => `<path d="${d}" fill="none" stroke="${T}" stroke-width="${w + 10}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+      g += `<g opacity="${km}" transform="translate(600 1180)">
+        ${tubo(`M-360 250 L${lerp(-360, -70, kb2)} ${lerp(250, 40, kb2)}`, 88)}
+        ${kb2 > .95 ? tubo("M-70 40 Q10 -20 70 -50", 108) : ""}
+        ${tel("a", 120, -150, 260, out(tramo(t, 20.5, 21.2)))}
+        <circle cx="-70" cy="40" r="${70 + 26 * pul}" fill="url(#haloR)" opacity="${kw}"/>
+        <circle cx="-70" cy="40" r="18" fill="${R}" opacity="${kw}"/>
+        ${mono(-70, 175, "MUÑECA", R, kw, 26)}</g>`;
+    }
+  } else {
+    // El pulgar: dos teléfonos de frente, con el arco que alcanza el pulgar.
+    const kp = out(tramo(t, 23.75, 24.5));
+    const ka = ease(tramo(t, 25.8, 27.3));
+    const fon = (x, w, h, k) => { const a = k === "a", top = 980 - h / 2, base = 980 + h / 2;
+      const alto = a ? h - 60 : (h - 60) * 0.68, yArco = base - alto * ka;
+      return `<g filter="url(#sombra)"><rect x="${x - w / 2}" y="${top}" width="${w}" height="${h}" rx="36" fill="#fff" stroke="${a ? PLo : AZ}" stroke-width="8"/></g>
+        <rect x="${x - w / 2 + 18}" y="${top + 18}" width="${w - 36}" height="${h - 36}" rx="22" fill="${a ? PL : AZ}" fill-opacity="${a ? .5 : .1}"/>
+        <line x1="${x - w / 2 + 20}" x2="${x + w / 2 - 20}" y1="${top + 70}" y2="${top + 70}" stroke="${a ? V : R}" stroke-width="4" stroke-dasharray="10 10" opacity="${ka}"/>
+        <path d="M${x - w / 2 - 30} ${base + 20} Q ${x - w / 2 + 40} ${yArco + 40} ${x + (a ? 20 : -10)} ${yArco}" fill="none" stroke="${a ? V : R}" stroke-width="12" stroke-linecap="round" opacity="${ka > 0 ? 1 : 0}"/>
+        <circle cx="${x + (a ? 20 : -10)}" cy="${yArco}" r="16" fill="${a ? V : R}" opacity="${ka}"/>
+        ${chip(k, x, base + 90, a ? 270 : 320)}
+        ${mono(x, base + 170, a ? "LLEGA ARRIBA" : "SE QUEDA CORTO", a ? V : R, tramo(t, 27.0, 27.4), 24)}`; };
+    g += `<g opacity="${kp}" transform="translate(0 ${lerp(60, 0, kp)})">${fon(300, 300, 400, "a")}${fon(780, 320, 560, "b")}</g>`;
+  }
+  return defs() + `<g transform="translate(540 ${960 + camY}) scale(${zoom}) translate(-540 -960)">${g}</g>`;
+}
+
+window.render = (t) => {
+  const e = ESC[escenaDe(t)], clara = e.tema === "clara";
+  const mezcla = ease(tramo(t, 9.7, 10.2)); // de la escena oscura a la clara
+  document.getElementById("f-cla").style.opacity = mezcla;
+  document.getElementById("esc").innerHTML = escena(t);
+  document.getElementById("logo").style.color = mezcla > .5 ? T : "#fff";
+  const tag = document.getElementById("tag"); tag.textContent = e.tag; tag.style.color = clara ? V : M;
+  // Etiqueta y título de cada escena, con entrada palabra por palabra.
+  const ini = e.desde, cab = document.getElementById("cab");
+  const salida = (() => { const sig = ESC[ESC.indexOf(e) + 1]; return sig ? 1 - ease(tramo(t, sig.desde - 0.35, sig.desde)) : 1; })();
+  cab.style.opacity = salida;
+  const kick = document.getElementById("kick"); kick.textContent = e.kick; kick.style.color = clara ? V : M; kick.style.opacity = out(tramo(t, ini + .05, ini + .45));
+  const tit = document.getElementById("tit"); tit.className = "tit" + (e.h1 ? " h1" : ""); tit.style.color = clara ? T : "#fff";
+  const palabras = e.tit.split(" ");
+  tit.innerHTML = palabras.map((w, i) => {
+    const ti = e.h1 ? [0, 0.78, 1.3, 1.5, 1.76, 2.08, 2.34][i] ?? ini : ini + 0.2 + i * 0.09;
+    const a = out(tramo(t, ti - 0.05, ti + 0.3));
+    const verde = e.h1 && i >= 3;
+    return `<span style="opacity:${a};transform:translateY(${(1 - a) * 30}px);${verde ? `color:${M}` : ""}">${w}</span>`; }).join("");
+  document.getElementById("sub").innerHTML = subtitulos(t, clara);
+  document.getElementById("turb").setAttribute("seed", String(Math.floor(t * 24) % 97));
+  document.getElementById("barra").style.width = (t / DUR * 100) + "%";
+};
+window.render(0);
+</script>
+</body>
+</html>
