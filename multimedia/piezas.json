@@ -1,6 +1,68 @@
 {
   "piezas": [
     {
+      "id": "2026-11-26-iphone-duo-vs-galaxy-z-fold-8",
+      "fecha": "2026-11-26",
+      "seccion": "IA y tecnología",
+      "titulo": "iPhone Duo vs. Galaxy Z Fold 8: cómo es vivir con cada uno",
+      "entradilla": "La ficha técnica dice mucho, pero no todo. Comparamos los dos plegables según quienes ya los usan, en un video y una infografía.",
+      "descripcion": "Comparativa del iPhone Duo y el Galaxy Z Fold 8 basada en la experiencia de uso: peso en la mano, pantalla, batería en el día a día, velocidad, apps, resistencia y cámaras, además de precios en Estados Unidos y Colombia.",
+      "texto": [
+        "## Lo básico",
+        "Por fuera se parecen mucho. El iPhone Duo tiene una pantalla exterior de 5,4 pulgadas y el Galaxy Z Fold 8, una de 5,5; por dentro, los dos abren una pantalla de 7,6 pulgadas. El Duo usa el chip A20 Pro de Apple y el Fold 8, el Snapdragon 8 Elite Gen 5 de Qualcomm.",
+        "En Estados Unidos, la versión de 256 GB del Duo cuesta 1.999 dólares y la del Fold 8, 1.899. En Colombia, el iPhone Duo arranca en 9.199.000 pesos; Samsung todavía no ha publicado un precio oficial del Fold 8 en el país.",
+        "## En la mano",
+        "La primera diferencia se siente al cargarlo. El Fold 8 pesa 201 gramos y mide 9,7 mm cerrado: se siente casi como un celular normal. El Duo pesa 254 gramos y mide 11,3 mm. Un reseñista que lo usó durante un mes contó que, después de un buen rato, le dolía la muñeca. A cambio, el Duo es más corto y el pulgar llega mejor a la parte de arriba de la pantalla.",
+        "## La pantalla",
+        "En los dos el pliegue casi no se ve, aunque se siente con el dedo. La pantalla interior del Duo es mate, y quienes lo usan dicen que leer en ella se parece a leer en papel. La del Fold 8 es brillante: se ve más viva, pero refleja más la luz.",
+        "## Batería en la vida real",
+        "En la prueba de un periodista de la cadena irlandesa RTÉ, con días de unas 15 horas de uso, el Duo llegaba a la noche con más del 50 % de batería y el Fold 8, con cerca del 40 %.",
+        "## Velocidad",
+        "El Duo tiene el chip más potente, y con videos y juegos pesados se nota. Pero en el día a día el Fold 8 se siente igual de rápido, y con dos apps en la pantalla dividida no se traba.",
+        "## Las apps",
+        "Aquí pesa la experiencia de Samsung: el Fold 8 es su octava generación de plegables tipo libro. En el Duo, un mes después del lanzamiento todavía hay apps que no llenan la pantalla grande y dejan franjas negras, aunque cada semana son menos.",
+        "## Resistencia",
+        "El Duo tiene certificación IP68 contra agua y polvo; el Fold 8, IP48, que protege menos del polvo. Tras el lanzamiento aparecieron unidades del Duo con la pantalla interior rota; Apple reconoce el problema en pocas unidades y las cambia. Samsung, por su parte, reemplaza gratis el protector de pantalla durante el primer año en Estados Unidos.",
+        "## Cámaras",
+        "Ninguno tiene teleobjetivo. La cámara principal es de 48 megapíxeles en el Duo y de 50 en el Fold 8, y las fotos de los dos son buenas. El Duo va un paso adelante en video y el Fold 8 da selfis más nítidas en videollamadas.",
+        "## ¿Cuál te conviene?",
+        "Si quieres un plegable liviano o trabajas con varias apps a la vez, el Galaxy Z Fold 8. Si vienes del iPhone, lees mucho o quieres escribir con lápiz, el iPhone Duo.",
+        "## La mirada crítica",
+        "El mejor plegable no es el de más números, sino el que te hace olvidar que se dobla."
+      ],
+      "video": {
+        "archivo": "media/2026-11-26-iphone-duo-vs-galaxy-z-fold-8.mp4",
+        "poster": "media/2026-11-26-iphone-duo-vs-galaxy-z-fold-8-poster.jpg",
+        "duracion": "160 s"
+      },
+      "infografia": {
+        "archivo": "img/multimedia/2026-11-26-iphone-duo-vs-galaxy-z-fold-8-infografia.jpg",
+        "alt": "Infografía que compara el iPhone Duo y el Galaxy Z Fold 8: precio en Estados Unidos y Colombia, pantallas, peso y grosor, batería al final del día, chip, resistencia al agua y al polvo, cámara principal, lo que cuentan quienes los usan y cuál conviene según el uso."
+      },
+      "fuentes": [
+        {
+          "nombre": "RTÉ: iPhone Duo vs. Galaxy Z Fold 8",
+          "url": "https://www.rte.ie/lifestyle/living/2026/1124/1599707-foldable-phones-apple-iphone-duo-vs-samsung-galaxy-z-fold-8/"
+        },
+        {
+          "nombre": "Trusted Reviews: Apple iPhone Duo vs. Samsung Galaxy Z Fold 8",
+          "url": "https://www.trustedreviews.com/versus/apple-iphone-duo-vs-samsung-galaxy-z-fold-8"
+        },
+        {
+          "nombre": "Absolute Geeks: un mes con el iPhone Duo",
+          "url": "https://www.absolutegeeks.com/reviews/iphone-duo-one-month-in-still-folding-still-not-cracking-still-not-sorry-and-heres-what-surprised-me/"
+        },
+        {
+          "nombre": "MakeUseOf: el Galaxy Z Fold 8 frente al iPhone Duo",
+          "url": "https://www.makeuseof.com/i-used-galaxy-z-fold-8-still-beats-iphone-duo/"
+        },
+        {
+          "nombre": "Enter.co: precios oficiales del iPhone Duo en Colombia",
+          "url": "https://www.enter.co/smartphones/el-iphone-duo-ya-esta-a-la-venta-en-colombia-estos-son-sus-precios-oficiales/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-que-app-de-musica-te-conviene",
       "fecha": "2026-11-24",
       "seccion": "Videojuegos y series",
