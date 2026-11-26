@@ -542,3 +542,22 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
   .inf__card h3 { font-size: 15px; }
   .inf__cuerpo { padding: 8px 16px 44px; }
 }
+
+/* ---------- Flechas de los carriles horizontales (solo con mouse) ---------- */
+.flechas { position: relative; }
+.flechas__b { position: absolute; top: 50%; z-index: 4; width: 40px; height: 40px; margin-top: -20px; border-radius: 50%; border: 1px solid var(--linea); background: #fff; color: var(--tinta);
+  display: grid; place-items: center; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.18); padding: 0; transition: transform .15s; }
+.flechas__b:hover { transform: scale(1.08); }
+.flechas__b[hidden] { display: none; }
+.flechas__b svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.flechas__b--izq { left: 4px; } .flechas__b--der { right: 4px; }
+.mmz .flechas__b, .dr-nav .flechas__b { border-color: transparent; box-shadow: 0 4px 18px rgba(0,0,0,.55); }
+.mmz .flechas__b { top: 42%; }
+.fijas .flechas__b { width: 32px; height: 32px; margin-top: -16px; }
+.fijas .flechas__b svg { width: 16px; height: 16px; }
+/* Desvanecido en el borde para que se note que hay más contenido */
+.flechas--mas::after, .flechas--menos::before { content: ""; position: absolute; top: 0; bottom: 0; width: 56px; pointer-events: none; z-index: 3; }
+.flechas--mas::after { right: 0; background: linear-gradient(90deg, transparent, var(--flechas-fondo, #fff)); }
+.flechas--menos::before { left: 0; background: linear-gradient(270deg, transparent, var(--flechas-fondo, #fff)); }
+.mmz .flechas { --flechas-fondo: #0d0d0c; } .dr-nav .flechas { --flechas-fondo: #111; }
+@media (hover: none) { .flechas__b { display: none !important; } }

@@ -565,4 +565,36 @@
     modalMM.addEventListener("click", (e) => { if (e.target === modalMM) cerrarMM(); });
     modalMM.addEventListener("close", () => { media.innerHTML = ""; });
   }
+
+  /* ---------- Carriles horizontales: flechas para quien usa mouse (sin trackpad ni pantalla táctil) ---------- */
+  const flechas = (car) => {
+    if (car.dataset.flechas) return;
+    car.dataset.flechas = "1";
+    const caja = document.createElement("div");
+    caja.className = "flechas";
+    car.parentNode.insertBefore(caja, car); caja.appendChild(car);
+    const boton = (dir) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = `flechas__b flechas__b--${dir}`; b.hidden = true;
+      b.setAttribute("aria-label", dir === "izq" ? "Ver los anteriores" : "Ver más");
+      b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${dir === "izq" ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"}"/></svg>`;
+      b.addEventListener("click", () => car.scrollBy({ left: (dir === "izq" ? -1 : 1) * Math.max(car.clientWidth * 0.8, 160), behavior: "smooth" }));
+      caja.appendChild(b);
+      return b;
+    };
+    const izq = boton("izq"), der = boton("der");
+    const revisar = () => {
+      const max = car.scrollWidth - car.clientWidth;
+      izq.hidden = car.scrollLeft <= 4;
+      der.hidden = car.scrollLeft >= max - 4;
+      caja.classList.toggle("flechas--mas", !der.hidden);
+      caja.classList.toggle("flechas--menos", !izq.hidden);
+    };
+    car.addEventListener("scroll", revisar, { passive: true });
+    window.addEventListener("resize", revisar);
+    revisar();
+  };
+  const buscarCarriles = () => $$(".mmz__carril, .dr-nav__carril, .fijas .w").forEach(flechas);
+  buscarCarriles();
+  window.addEventListener("load", buscarCarriles); // la infografía interactiva arma su menú después
 })();
