@@ -19,6 +19,11 @@ La duración y el audio siguen las reglas de `herramientas/audio/README.md` (ide
 7. **Cabecera mínima.** Logo arriba a la izquierda; arriba a la derecha, la etiqueta del momento en mayúsculas, JetBrains Mono, en menta (cambia con cada parte del guion).
 8. **Metáforas visuales.** Cada idea del guion tiene su imagen (una balanza para el peso, una muñeca con un pulso de luz para el cansancio, el arco del pulgar para el alcance).
 
+## Nitidez (ajuste de la dirección: «los videos se ven desenfocados»)
+- El brillo va **detrás** del trazo y es tenue; el trazo, el texto y las cifras siempre quedan nítidos encima. Nunca se desenfoca un texto.
+- Grano de película muy suave (3–4 %), sin velar la imagen.
+- Cuadros en PNG (no JPG) y codificación H.264 con `-crf 15 -preset slow -tune animation`.
+
 ## Colores
 - Verde de la marca #00875A y menta #7FD1B0 para lo principal.
 - Ámbar #F0C36B para alertas o contrastes (dolor, problema, límite).
@@ -28,7 +33,7 @@ La duración y el audio siguen las reglas de `herramientas/audio/README.md` (ide
 1. Guion con cifras en números → grabación de la dirección → corte de tomas y mezcla (ver `herramientas/audio`).
 2. Transcripción de la mezcla final con tiempos por palabra; se corrigen las palabras mal reconocidas.
 3. Animación en HTML/SVG controlada por tiempo (`window.render(t)`), escena por escena, amarrada a los tiempos de las palabras.
-4. Render a 1080×1920 y 30 cuadros por segundo; codificación H.264 con el audio en AAC a 192 kbps.
+4. Render a 1080×1920 y 30 cuadros por segundo, cuadros en PNG; codificación H.264 (`-crf 15 -preset slow -tune animation`) con el audio en AAC a 192 kbps.
 5. Revisión de cuadros de muestra antes del render completo.
 
 ## Archivos
