@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Las plataformas de streaming que mandan — versión en imagen</title>
+<!-- Plantilla para generar la imagen descargable con Playwright. No se publica como página. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --tinta:#111; --tinta2:#3d3d3a; --suave:#6b6b66; --linea:#E4E4E0; --papel:#F4F4F1; --acento:#00875A; --menta:#7FD1B0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 1080px; background: #fff; font-family: Inter, sans-serif; color: var(--tinta); }
+.lienzo { padding: 52px 56px 36px; }
+.top { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--tinta); padding-bottom: 16px; }
+.logo { font: 900 34px 'Inter Tight'; letter-spacing: -.04em; display: flex; align-items: center; gap: 10px; }
+.logo i { width: 18px; height: 18px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.tag { font: 700 15px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); }
+.kicker { font: 700 15px 'JetBrains Mono'; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); margin: 26px 0 10px; }
+h1 { font: 900 58px/1 'Inter Tight'; letter-spacing: -.04em; }
+h1 em { font-style: normal; color: var(--acento); }
+.sub { font: 400 20px/1.45 Inter; color: var(--tinta2); margin-top: 12px; }
+h2 { font: 800 22px 'Inter Tight'; margin: 26px 0 12px; display: flex; justify-content: space-between; align-items: baseline; }
+h2 span { font: 500 14px Inter; color: var(--suave); }
+table { width: 100%; border-collapse: collapse; }
+th { font: 700 11.5px 'JetBrains Mono'; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); text-align: left; padding: 0 8px 8px 0; border-bottom: 3px solid var(--tinta); }
+td { padding: 11px 8px 11px 0; border-bottom: 1px solid var(--linea); font: 700 19px 'Inter Tight'; vertical-align: middle; }
+td small { display: block; font: 500 12.5px Inter; color: var(--suave); margin-top: 2px; }
+.m { font: 900 22px 'Inter Tight'; letter-spacing: -.02em; }
+.arco { background: linear-gradient(120deg, #ff5f6d, #f5a623, #2fb383, #3d8bff, #8a5cff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sw { display: inline-block; width: 22px; height: 22px; border-radius: 6px; vertical-align: middle; margin-right: 3px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+.bar { display: inline-block; height: 9px; border-radius: 0 4px 4px 0; vertical-align: middle; margin-right: 8px; }
+.fusion { margin-top: 20px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; background: var(--papel); border-radius: 10px; padding: 16px 22px; }
+.fusion b { font: 900 52px/1 'Inter Tight'; letter-spacing: -.04em; color: var(--acento); }
+.fusion p { font: 500 16px/1.45 Inter; color: var(--tinta2); }
+.mirada { margin-top: 18px; background: var(--tinta); color: #fff; border-radius: 10px; padding: 20px 26px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.mirada .lab { font: 700 14px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--menta); }
+.mirada p { font: 700 22px/1.35 'Inter Tight'; }
+.ver { margin-top: 16px; font: 700 17px 'Inter Tight'; color: var(--acento); }
+.pie { margin-top: 18px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-top: 14px; border-top: 1px solid var(--linea); }
+.pie .fuentes { font: 400 12.5px/1.5 Inter; color: var(--suave); max-width: 800px; }
+.pie .url { font: 700 16px 'JetBrains Mono'; white-space: nowrap; }
+</style>
+<script src="datos.js"></script>
+</head>
+<body>
+<div class="lienzo">
+  <div class="top"><div class="logo"><i></i>tecnocríticos</div><div class="tag">Infografía · Streaming</div></div>
+  <div class="kicker">Comparativa · 26 de noviembre de 2026</div>
+  <h1>Las plataformas de streaming <em>que mandan</em></h1>
+  <p class="sub">Suscriptores, lo que se ve en Colombia, cuándo nacieron y llegaron, sus colores y sus premios.</p>
+  <h2>Frente a frente <span>último dato oficial de cada empresa</span></h2>
+  <table><thead><tr><th style="width:190px">Plataforma</th><th style="width:220px">Suscriptores en el mundo</th><th style="width:150px">Colombia</th><th style="width:110px">Nació</th><th style="width:120px">Llegó a Latam</th><th style="width:130px">Sus colores</th><th>Emmy 2026</th></tr></thead><tbody id="filas"></tbody></table>
+  <div class="fusion"><b>203 M</b><p><strong>HBO, HBO Max y Paramount+ juntos.</strong> Desde el 6 de octubre de 2026 tienen el mismo dueño, Skydance (la antigua Paramount), que compró Warner Bros. Discovery. En 2027 se venderán en un paquete.</p></div>
+  <div class="mirada"><div class="lab">La mirada<br>crítica</div><p>En Colombia ya no hay un rey: cuatro plataformas se reparten el 71 % y la próxima pelea será de paquetes, no de catálogos.</p></div>
+  <p class="ver">La versión interactiva, con una ficha completa de cada plataforma, está en tecnocriticos.com/infografias</p>
+  <div class="pie">
+    <div class="fuentes">Suscriptores: Netflix, fin de 2025; Disney+, septiembre de 2025; HBO Max, fin de 2025; Paramount+, septiembre de 2026. Amazon y Apple no publican la cifra. Colombia: cuota de mercado de JustWatch en el tercer trimestre de 2025 (entre paréntesis, primer semestre de 2026). Emmy: Gold Derby, con Artes Creativas. Fuentes: cartas a accionistas y reportes de Netflix, Disney, Warner Bros. Discovery y Skydance; JustWatch vía La República y Agencia PI; Gold Derby; Wikipedia.</div>
+    <div class="url">tecnocriticos.com</div>
+  </div>
+</div>
+<script>
+const emmy = Object.fromEntries(EMMY26), arco = "linear-gradient(120deg,#ff5f6d,#f5a623,#2fb383,#3d8bff,#8a5cff)";
+document.getElementById("filas").innerHTML = PLATAFORMAS.map((p) => `<tr>
+  <td><span class="m ${p.id === "apple-tv" ? "arco" : ""}" style="color:${p.id === "apple-tv" ? "" : p.color}">${p.nombre}</span></td>
+  <td>${p.subs ? `<span class="bar" style="width:${Math.round(p.subs / 325 * 90)}px;background:${p.color}"></span>${String(p.subs).replace(".", ",")} M` : `<small style="font-size:14px">${p.subsTxt}</small>`}</td>
+  <td>${p.co} %${p.co26 ? ` <small style="display:inline">(${p.co26} %)</small>` : ""}</td>
+  <td>${p.nace}</td><td>${p.latamAnio}</td>
+  <td>${p.colores.map(([, c]) => `<span class="sw" style="background:${c === "arcoiris" ? arco : c}"></span>`).join("")}</td>
+  <td>${emmy[p.id] ?? "—"}</td></tr>`).join("");
+</script>
+</body>
+</html>

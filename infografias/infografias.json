@@ -1,6 +1,79 @@
 {
   "infografias": [
     {
+      "id": "2026-11-26-plataformas-de-streaming",
+      "fecha": "2026-11-26",
+      "seccion": "Videojuegos y series",
+      "titulo": "Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV: las plataformas de streaming que mandan",
+      "entradilla": "Suscriptores, lo que se ve en Colombia, cuándo nacieron, cómo cambiaron de color y cuántos premios ganan, con una ficha para cada plataforma.",
+      "archivo": "img/infografias/2026-11-26-plataformas-de-streaming.jpg",
+      "alt": "Infografía que compara Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV: suscriptores en el mundo, cuota de mercado en Colombia, año de nacimiento y de llegada a Latinoamérica, cambios de color de su marca y premios Emmy de 2026.",
+      "ancho": 1080,
+      "alto": 1143,
+      "interactiva": {
+        "html": "infografias/streaming-2026/app.html",
+        "css": [
+          "infografias/drones-2026/app.css",
+          "infografias/streaming-2026/app.css"
+        ],
+        "js": [
+          "infografias/streaming-2026/datos.js",
+          "infografias/streaming-2026/app.js"
+        ]
+      },
+      "texto": [
+        "## Cómo leer esta infografía",
+        "Las cifras de suscriptores son las últimas que publicó cada empresa. Disney y Warner Bros. Discovery dejaron de reportarlas en 2025, y Skydance, la antigua Paramount, dejará de hacerlo cada trimestre a partir del cuarto trimestre de 2026. Amazon y Apple nunca han publicado cuántos suscriptores tienen Prime Video y Apple TV.",
+        "En Colombia no hay cifras oficiales de suscriptores por plataforma. Usamos la cuota de mercado que mide JustWatch con la actividad de sus usuarios en el país: en el tercer trimestre de 2025, Netflix y Disney+ empataron con 20 %, seguidas por Prime Video (19 %), HBO Max (12 %), Apple TV (8 %) y Paramount+ (7 %). En el primer semestre de 2026, Netflix siguió con 20 % y Apple TV subió a 12 %, empatada con HBO Max.",
+        "## El gran cambio de 2026",
+        "El 6 de octubre de 2026, Paramount Skydance completó la compra de Warner Bros. Discovery y quedó como dueña de HBO Max y de Paramount+. Entre HBO, HBO Max y Paramount+ suman 203 millones de suscriptores, y en 2027 se venderán en un paquete.",
+        "## La mirada crítica",
+        "En Colombia ya no hay un rey: cuatro plataformas se reparten el 71 % y la próxima pelea será de paquetes, no de catálogos."
+      ],
+      "fuentes": [
+        {
+          "nombre": "Netflix: carta a accionistas del cuarto trimestre de 2024 (suscriptores por región)",
+          "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2024/q4/FINAL-Q4-24-Shareholder-Letter.pdf"
+        },
+        {
+          "nombre": "Axios: Netflix supera los 325 millones de suscriptores",
+          "url": "https://www.axios.com/2026/01/20/netflix-stock-nflx-subscribers-warner-bros"
+        },
+        {
+          "nombre": "Variety: suscriptores de Disney+ a septiembre de 2025",
+          "url": "https://variety.com/2025/tv/news/disney-plus-hulu-subscriber-gains-kimmel-controversy-1236580606/"
+        },
+        {
+          "nombre": "Variety: HBO Max cierra 2025 cerca de 132 millones",
+          "url": "https://variety.com/2026/film/news/hbo-max-subscribers-132-million-warner-bros-discovery-earnings-1236673104/"
+        },
+        {
+          "nombre": "TheWrap: resultados de Skydance del tercer trimestre de 2026",
+          "url": "https://www.thewrap.com/industry-news/business/paramount-earnings-q3-2026/"
+        },
+        {
+          "nombre": "La República: cuota de JustWatch en Colombia, tercer trimestre de 2025",
+          "url": "https://www.larepublica.co/ocio/por-primera-vez-disney-empata-a-netflix-en-cuota-de-mercado-en-el-streaming-4281327"
+        },
+        {
+          "nombre": "Agencia PI: JustWatch en Colombia, primer semestre de 2026",
+          "url": "https://www.agenciapi.co/noticia/estilo-de-vida/apple-tv-lidera-el-crecimiento-del-streaming-en-colombia"
+        },
+        {
+          "nombre": "Gold Derby: Emmy 2026 por plataforma",
+          "url": "https://www.goldderby.com/tv/2026/2026-emmy-wins-by-network-apple-tv-hbo-netflix-totals/"
+        },
+        {
+          "nombre": "Gold Derby: Óscar 2026 por estudio",
+          "url": "https://goldderby.com/film/2026/2026-oscars-scorecard-wins-by-film"
+        },
+        {
+          "nombre": "Wikipedia: historia de Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV",
+          "url": "https://en.wikipedia.org/wiki/HBO_Max"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-los-10-drones-que-importan",
       "fecha": "2026-11-26",
       "seccion": "IA y tecnología",
