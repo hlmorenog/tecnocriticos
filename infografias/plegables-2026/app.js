@@ -53,11 +53,12 @@
       <rect x="0" y="0" width="470" height="90" rx="22" fill="#fff" stroke="#111" stroke-width="7"/><rect x="478" y="28" width="20" height="34" rx="6" fill="#111"/>
       <rect x="12" y="12" width="446" height="66" rx="13" fill="${p === A ? "#00875A" : "#2F6FED"}" class="pl-carga" style="--fin:${fin}"/>
       <text x="530" y="62" class="pl-cifra" fill="${p === A ? "#00875A" : "#2F6FED"}">${p === A ? "50 %" : "40 %"}</text></g>`;
-    return `<svg viewBox="0 0 700 380" class="pl-svg" role="img" aria-label="Batería al final del día: 50 % y 40 %">
-      <path d="M90 92 A 260 120 0 0 1 610 92" fill="none" stroke="#111" stroke-opacity=".12" stroke-width="3" stroke-dasharray="8 10"/>
-      <circle r="20" fill="#F0C36B" class="pl-sol"><animateMotion dur="3s" fill="freeze" path="M90 92 A 260 120 0 0 1 610 92"/></circle>
-      <text x="350" y="60" text-anchor="middle" class="pl-mono">UN DÍA DE 15 HORAS</text>
-      ${bat(A, 160, 0.5)}${bat(B, 290, 0.4)}</svg>`;
+    // El arco del sol cabe completo (punto más alto en y = 30) y la segunda batería deja margen abajo.
+    return `<svg viewBox="0 0 700 480" class="pl-svg" role="img" aria-label="Batería al final del día: 50 % y 40 %">
+      <path d="M90 170 A 260 140 0 0 1 610 170" fill="none" stroke="#111" stroke-opacity=".12" stroke-width="3" stroke-dasharray="8 10"/>
+      <circle r="20" fill="#F0C36B" class="pl-sol"><animateMotion dur="3s" fill="freeze" path="M90 170 A 260 140 0 0 1 610 170"/></circle>
+      <text x="350" y="125" text-anchor="middle" class="pl-mono">UN DÍA DE 15 HORAS</text>
+      ${bat(A, 230, 0.5)}${bat(B, 360, 0.4)}</svg>`;
   }
   function pantallaSvg() {
     const lineas = Array.from({ length: 8 }, (_, i) => `<rect x="80" y="${110 + i * 26}" width="${i % 3 === 2 ? 120 : 200}" height="10" rx="5" fill="#6b6b66" opacity=".55" class="pl-linea" style="--d:${0.15 * i}s"/>`).join("");
