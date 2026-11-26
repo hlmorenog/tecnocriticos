@@ -2,6 +2,43 @@
   "fecha": "2026-11-26",
   "noticias": [
     {
+      "id": "2026-11-26-microsoft-hackers-de-china-y-corea-del-norte-usan-artex",
+      "seccion": "IA y tecnología",
+      "titular": "Microsoft: hackers de China y Corea del Norte ya atacan con ARTEX, una herramienta de IA",
+      "entradilla": "Es una plataforma de agentes de IA que encadena un ataque casi sin intervención humana y que funciona con casi cualquier modelo, incluso uno sin filtros de seguridad.",
+      "lead": "Microsoft Threat Intelligence publicó el miércoles 25 de noviembre un informe según el cual grupos de hackers respaldados por China y Corea del Norte, entre ellos Salt Typhoon, ya usan ARTEX, una herramienta de código abierto que automatiza ataques con agentes de inteligencia artificial.",
+      "cuerpo": [
+        "Según Microsoft, desde que apareció en julio de 2026, ARTEX ha sido usada para explorar redes, robar credenciales y atacar aplicaciones web. El informe nombra a los grupos chinos Salt Typhoon y Crystal Typhoon, a los norcoreanos Onyx Sleet y Pearl Sleet y a dos grupos con fines económicos. La herramienta reparte el trabajo entre varios agentes de IA: uno fija los objetivos, otro planea los pasos y otros los ejecutan con herramientas de ataque reales. Microsoft advierte que, según las defensas del objetivo, puede pasar del reconocimiento a un acceso privilegiado en cuestión de minutos.",
+        "ARTEX no inventa técnicas nuevas: usa herramientas de pruebas de penetración conocidas, pero a la velocidad de una máquina. Como puede funcionar con casi cualquier modelo de lenguaje, incluso con modelos a los que les quitaron los filtros de seguridad, ningún proveedor de IA puede frenarla por sí solo. Un usuario de GitHub la publicó como código abierto en julio; la retiró en octubre, pero otros siguen publicando sus propias versiones, y en noviembre la empresa china de ciberseguridad ThreatBook dijo ser su dueña y empezó a vender una versión comercial.",
+        "Microsoft recomienda reducir los sistemas expuestos a internet, proteger contraseñas y claves, y vigilar ráfagas de actividad a velocidad de máquina, que son la señal más confiable de estos ataques. También sugiere señuelos que distraigan a los agentes de IA de los sistemas reales."
+      ],
+      "mirada": "La IA no les dio a los hackers técnicas nuevas, sino velocidad: el atacante ya no se cansa y el defensor sigue trabajando a mano.",
+      "titular_corto": "Hackers estatales usan ARTEX",
+      "por_que_importa": "las mismas herramientas que automatizan ataques de gobiernos están en internet al alcance de cualquiera, y apuntan a sistemas desactualizados y contraseñas expuestas.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Según Microsoft, ARTEX puede llegar a un acceso privilegiado en minutos."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-microsoft-hackers-de-china-y-corea-del-norte-usan-artex.jpg",
+        "alt": "Letrero de Microsoft en su campus de Redmond, en Estados Unidos",
+        "autor": "Wonderlane",
+        "licencia": "CC0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/wonderlane/4335272889"
+      },
+      "fuentes": [
+        {
+          "nombre": "Microsoft Threat Intelligence",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/"
+        },
+        {
+          "nombre": "The Next Web",
+          "url": "https://thenextweb.com/news/microsoft-artex-salt-typhoon-north-korea-state-hackers"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-nvidia-frena-envios-de-servidores-al-sudeste-asiatico",
       "seccion": "IA y tecnología",
       "titular": "Nvidia frena los envíos de servidores con sus chips a cuatro países del sudeste asiático",
