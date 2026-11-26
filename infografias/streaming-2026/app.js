@@ -6,7 +6,7 @@
   const P = window.PLATAFORMAS, porId = Object.fromEntries(P.map((p) => [p.id, p]));
   const num = (n) => String(n).replace(".", ",");
   const marca = (p, tam = "") => `<span class="st-marca${tam}" style="--c:${p.color}">${p.nombre}</span>`;
-  const muestra = (c) => c === "arcoiris" ? "linear-gradient(120deg,#ff5f6d,#ffc371,#7FD1B0,#5aa9ff,#a46bff)" : c;
+  const muestra = (c) => c === "negro-color" ? "linear-gradient(120deg,#ff5f6d,#f5a623,#2fb383,#3d8bff,#8a5cff) center / 62% 34% no-repeat, #111" : c;  // fondo negro con el degradado del logo de 2025
 
   /* ---------- Panorama ---------- */
   const mundo = () => {
