@@ -2,6 +2,47 @@
   "fecha": "2026-11-26",
   "noticias": [
     {
+      "id": "2026-11-26-nvidia-frena-envios-de-servidores-al-sudeste-asiatico",
+      "seccion": "IA y tecnología",
+      "titular": "Nvidia frena los envíos de servidores con sus chips a cuatro países del sudeste asiático",
+      "entradilla": "Es el primer efecto visible de la nueva regla de EE. UU. para que los chips de IA no lleguen a China por terceros países, una regla que también incluye a Brasil.",
+      "lead": "Nvidia les pidió a fabricantes como Dell y Supermicro que dejen de enviar servidores con sus chips a Malasia, Singapur, Tailandia e Indonesia, según informó este jueves 26 de noviembre el Financial Times, citado por Reuters.",
+      "cuerpo": [
+        "Según el diario británico, esos fabricantes, que arman los servidores con los chips de Nvidia, les avisaron a sus compradores en los cuatro países que Nvidia no autorizaría la entrega de sus pedidos. No está claro si la pausa es temporal mientras las empresas se ajustan a los nuevos controles. Nvidia, Dell y Supermicro no respondieron de inmediato a Reuters.",
+        "La medida llega después de una regla del Departamento de Comercio de EE. UU., vigente desde la semana pasada, que exige licencia para exportar chips avanzados de IA a Indonesia, Malasia, Singapur, Tailandia y Brasil, países que Washington considera con un riesgo mayor de que los chips terminen desviados a China. La regla también limita el acceso remoto a esa capacidad de cómputo desde centros de datos de otros países.",
+        "El trasfondo es Megaspeed, una empresa con sede en Singapur, socia de Nvidia, que alquila capacidad de cómputo en sus centros de datos y está bajo la lupa por el posible desvío ilegal de chips avanzados a China. El Departamento de Comercio publicó la regla pocos días después de la renuncia de Jensen Huang como presidente ejecutivo de Nvidia; la junta directiva lo restituyó en el cargo el 23 de noviembre."
+      ],
+      "mirada": "La geopolítica de los chips ya no se juega solo entre EE. UU. y China: Brasil está en la lista y Latinoamérica debería tomar nota.",
+      "titular_corto": "Nvidia frena envíos a Asia",
+      "por_que_importa": "la regla que provocó el freno incluye a Brasil, así que los controles a los chips de IA ya tocan a Latinoamérica.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Brasil es el único país latinoamericano en la nueva lista de licencias de EE. UU."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-nvidia-frena-envios-de-servidores-al-sudeste-asiatico.jpg",
+        "alt": "Técnicos instalan sistemas Nvidia DGX-2 en un centro de datos universitario en Estados Unidos (imagen ilustrativa)",
+        "autor": "Oregon State University",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/oregonstateuniversity/48267502451"
+      },
+      "fuentes": [
+        {
+          "nombre": "New Straits Times (Reuters)",
+          "url": "https://www.nst.com.my/world/world/2026/11/1586240/nvidia-halts-server-shipments-four-southeast-asian-countries-including"
+        },
+        {
+          "nombre": "U.S. News (Reuters)",
+          "url": "https://www.usnews.com/news/top-news/articles/2026-11-26/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports"
+        },
+        {
+          "nombre": "Katten: nuevas reglas de exportación de chips de IA",
+          "url": "https://katten.com/insights/advisories/commerce-department-releases-new-export-rules-for-advanced-ai-chips-and-data-centers"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-nueva-york-prohibe-juguetes-con-chatbots-de-ia",
       "seccion": "IA y tecnología",
       "titular": "Nueva York prohíbe por cinco años los juguetes con chatbots de IA para niños",

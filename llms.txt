@@ -13,6 +13,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Últimas noticias
 
+- [Nvidia frena los envíos de servidores con sus chips a cuatro países del sudeste asiático](https://tecnocriticos.com/n/2026-11-26-nvidia-frena-envios-de-servidores-al-sudeste-asiatico.html): Es el primer efecto visible de la nueva regla de EE. UU. para que los chips de IA no lleguen a China por terceros países, una regla que también incluye a Brasil.
 - [Nueva York prohíbe por cinco años los juguetes con chatbots de IA para niños](https://tecnocriticos.com/n/2026-11-26-nueva-york-prohibe-juguetes-con-chatbots-de-ia.html): Pruebas a juguetes para niños de 3 a 12 años hallaron conversaciones sexuales y consejos peligrosos; la norma llega justo antes de la temporada de regalos.
 - [Atacan la oficina de EE. UU. que rastrea el lavado de dinero y apaga parte de sus sistemas](https://tecnocriticos.com/n/2026-11-26-fincen-confirma-acceso-no-autorizado-a-sus-sistemas.html): FinCEN guarda los reportes de operaciones sospechosas de todo el sistema financiero estadounidense, y aún no dice qué se vio ni quién entró.
 - [Un atentado a la red eléctrica dejó sin luz a cinco departamentos del suroccidente](https://tecnocriticos.com/n/2026-11-26-atentado-deja-sin-luz-al-suroccidente-de-colombia.html): Menos de un día después, el servicio iba en 68 % y el Gobierno ordenó un plan especial para proteger la infraestructura eléctrica y de gas.
@@ -32,7 +33,6 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Shein pagará 100 millones de dólares para cerrar acusaciones de engaño en EE. UU.](https://tecnocriticos.com/n/2026-11-24-shein-pagara-100-millones-a-la-ftc.html): Es un acuerdo con la autoridad de protección al consumidor de Estados Unidos: el dinero servirá para reembolsar a compradores, y Shein no admite responsabilidad.
 - [Jurado de EE. UU. halla a Huawei culpable de conspirar para robar secretos y de fraude](https://tecnocriticos.com/n/2026-11-24-jurado-de-eeuu-declara-culpable-a-huawei.html): La absolvió del cargo más grave, el de crimen organizado. Todavía no hay pena: la fijará un juez en septiembre de 2027 y Huawei apelará.
 - [Tidal eliminará de su catálogo la música hecha por completo con IA desde el 9 de diciembre](https://tecnocriticos.com/n/2026-11-24-tidal-eliminara-la-musica-hecha-por-ia.html): Es el primer servicio de música por suscripción que prohíbe del todo esas canciones: casi la mitad de lo que le llegaba en los últimos meses estaba hecho con IA.
-- [CrowdStrike comprará Zscaler por 43.900 millones de dólares para sumar la seguridad de red](https://tecnocriticos.com/n/2026-11-24-crowdstrike-comprara-zscaler.html): Es una de las compras más grandes de la historia de la ciberseguridad: supera los 32.000 millones que pagó Google por Wiz y deja la protección de equipos y de conexiones en una sola empresa.
 
 ## Datos
 
