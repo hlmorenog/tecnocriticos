@@ -89,6 +89,62 @@
       ]
     },
     {
+      "id": "2026-11-26-iphone-duo-vs-galaxy-z-fold-8-interactiva",
+      "fecha": "2026-11-26",
+      "seccion": "IA y tecnología",
+      "titulo": "iPhone Duo vs. Galaxy Z Fold 8: la comparación interactiva para saber cuál te conviene",
+      "entradilla": "Frente a frente, pruebas animadas de peso, batería, pantalla, alcance, resistencia y apps, y un test para elegir según lo que te importa.",
+      "archivo": "img/multimedia/2026-11-26-iphone-duo-vs-galaxy-z-fold-8-infografia.jpg",
+      "alt": "Infografía que compara el iPhone Duo y el Galaxy Z Fold 8: precios, pantallas, peso, batería, chip, resistencia, cámara, lo que cuentan quienes los usan y cuál conviene según el uso.",
+      "ancho": 1080,
+      "alto": 1882,
+      "interactiva": {
+        "html": "infografias/plegables-2026/app.html",
+        "css": [
+          "infografias/drones-2026/app.css",
+          "infografias/streaming-2026/app.css",
+          "infografias/plegables-2026/app.css"
+        ],
+        "js": [
+          "infografias/plegables-2026/telefonos.js",
+          "infografias/plegables-2026/app.js"
+        ]
+      },
+      "texto": [
+        "## Cómo leer esta comparación",
+        "Los datos técnicos salen de las fichas y de las comparaciones de Trusted Reviews y RTÉ; las experiencias de uso, de las pruebas de RTÉ, Absolute Geeks (un mes con el iPhone Duo) y MakeUseOf; y los precios en Colombia, de Enter.co. La batería se midió en la prueba de un periodista de RTÉ, con días de unas 15 horas de uso.",
+        "El test de «¿Cuál te conviene?» suma las prioridades que marques: cada una apunta al teléfono que, según esas pruebas, lo hace mejor.",
+        "## La mirada crítica",
+        "El mejor plegable no es el de más números, sino el que te hace olvidar que se dobla."
+      ],
+      "relacionada": {
+        "titulo": "Mira el video: iPhone Duo vs. Galaxy Z Fold 8, cómo es vivir con cada uno",
+        "url": "m/2026-11-26-iphone-duo-vs-galaxy-z-fold-8.html"
+      },
+      "fuentes": [
+        {
+          "nombre": "RTÉ: iPhone Duo vs. Galaxy Z Fold 8",
+          "url": "https://www.rte.ie/lifestyle/living/2026/1124/1599707-foldable-phones-apple-iphone-duo-vs-samsung-galaxy-z-fold-8/"
+        },
+        {
+          "nombre": "Trusted Reviews: Apple iPhone Duo vs. Samsung Galaxy Z Fold 8",
+          "url": "https://www.trustedreviews.com/versus/apple-iphone-duo-vs-samsung-galaxy-z-fold-8"
+        },
+        {
+          "nombre": "Absolute Geeks: un mes con el iPhone Duo",
+          "url": "https://www.absolutegeeks.com/reviews/iphone-duo-one-month-in-still-folding-still-not-cracking-still-not-sorry-and-heres-what-surprised-me/"
+        },
+        {
+          "nombre": "MakeUseOf: el Galaxy Z Fold 8 frente al iPhone Duo",
+          "url": "https://www.makeuseof.com/i-used-galaxy-z-fold-8-still-beats-iphone-duo/"
+        },
+        {
+          "nombre": "Enter.co: precios oficiales del iPhone Duo en Colombia",
+          "url": "https://www.enter.co/smartphones/el-iphone-duo-ya-esta-a-la-venta-en-colombia-estos-son-sus-precios-oficiales/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-plataformas-de-streaming",
       "fecha": "2026-11-26",
       "seccion": "Videojuegos y series",
