@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Así vive Colombia en internet — versión en imagen</title>
+<!-- Plantilla para generar la imagen descargable con Playwright. No se publica como página. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --tinta:#111; --tinta2:#3d3d3a; --suave:#6b6b66; --linea:#E4E4E0; --papel:#F4F4F1; --acento:#00875A; --menta:#7FD1B0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 1080px; background: #fff; font-family: Inter, sans-serif; color: var(--tinta); }
+.lienzo { padding: 52px 56px 36px; }
+.top { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--tinta); padding-bottom: 16px; }
+.logo { font: 900 34px 'Inter Tight'; letter-spacing: -.04em; display: flex; align-items: center; gap: 10px; }
+.logo i { width: 18px; height: 18px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.tag { font: 700 15px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); }
+.kicker { font: 700 15px 'JetBrains Mono'; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); margin: 26px 0 10px; }
+h1 { font: 900 60px/1 'Inter Tight'; letter-spacing: -.04em; }
+h1 em { font-style: normal; color: var(--acento); }
+.sub { font: 400 20px/1.45 Inter; color: var(--tinta2); margin-top: 12px; }
+.cifras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+.cifras div { background: var(--papel); border-radius: 12px; padding: 16px 16px 14px; }
+.cifras b { display: block; font: 900 40px/1 'Inter Tight'; letter-spacing: -.03em; }
+.cifras b small { font-size: 18px; }
+.cifras span { display: block; margin-top: 6px; font: 600 14px/1.3 'Inter Tight'; color: var(--tinta2); }
+.cifras div:first-child b, .cifras div:nth-child(3) b { color: var(--acento); }
+h2 { font: 800 22px 'Inter Tight'; margin: 26px 0 12px; display: flex; justify-content: space-between; align-items: baseline; }
+h2 span { font: 500 14px Inter; color: var(--suave); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.fila { display: grid; grid-template-columns: 26px 1fr 100px; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--linea); font: 700 16.5px 'Inter Tight'; }
+.fila i { font: 700 12px 'JetBrains Mono'; color: var(--suave); font-style: normal; }
+.fila b { text-align: right; font-weight: 900; white-space: nowrap; }
+.bar { display: grid; grid-template-columns: 110px 1fr 62px; gap: 10px; align-items: center; padding: 5px 0; font: 700 16px 'Inter Tight'; }
+.bar span:nth-child(2) { height: 16px; background: #F1F1EE; border-radius: 0 5px 5px 0; overflow: hidden; }
+.bar span:nth-child(2) i { display: block; height: 100%; }
+.bar b { text-align: right; font-weight: 900; }
+.mirada { margin-top: 24px; background: var(--tinta); color: #fff; border-radius: 10px; padding: 20px 26px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.mirada .lab { font: 700 14px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--menta); }
+.mirada p { font: 700 21px/1.35 'Inter Tight'; }
+.ver { margin-top: 16px; font: 700 17px 'Inter Tight'; color: var(--acento); }
+.pie { margin-top: 18px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-top: 14px; border-top: 1px solid var(--linea); }
+.pie .fuentes { font: 400 12.5px/1.5 Inter; color: var(--suave); max-width: 800px; }
+.pie .url { font: 700 16px 'JetBrains Mono'; white-space: nowrap; }
+</style>
+<script src="datos.js"></script>
+</head>
+<body>
+<div class="lienzo">
+  <div class="top"><div class="logo"><i></i>tecnocríticos</div><div class="tag">Infografía · Colombia digital</div></div>
+  <div class="kicker">Digital 2027 · Datos a octubre de 2026</div>
+  <h1>Así vive Colombia <em>en internet</em></h1>
+  <p class="sub">Horas conectados, los sitios más visitados, las redes que usamos y cuánto ya usamos la inteligencia artificial.</p>
+  <div class="cifras">
+    <div><b>43,7 <small>M</small></b><span>usan internet: 80,9 % de los 54,1 millones de colombianos</span></div>
+    <div><b>10,3 <small>M</small></b><span>siguen sin internet (19,1 %)</span></div>
+    <div><b>48 h 38</b><span>conectados a la semana; 25 h 11 en redes (mundo: 19 h 18)</span></div>
+    <div><b>91,6 %</b><span>de los internautas usó IA el último mes; 6 % paga por ella</span></div>
+  </div>
+  <div class="dos">
+    <div><h2>Los sitios más visitados <span>visitas al mes</span></h2><div id="sitios"></div></div>
+    <div><h2>Las redes más usadas <span>% de internautas</span></h2><div id="redes"></div>
+      <h2>Tiempo diario por app <span>por usuario</span></h2><div id="apps"></div></div>
+  </div>
+  <div class="mirada"><div class="lab">La mirada<br>crítica</div><p>Colombia ya pasa más horas en redes que casi todo el mundo, pero uno de cada cinco colombianos sigue sin internet: el país conectado avanza más rápido que el país incluido.</p></div>
+  <p class="ver">La versión interactiva, con población, búsquedas, dispositivos e IA, está en tecnocriticos.com/infografias</p>
+  <div class="pie">
+    <div class="fuentes">Fuente: DataReportal, «Digital 2027: Colombia» (5 de noviembre de 2026) y «Digital 2027 Global Overview Report», de We Are Social y Meltwater, con datos de GWI (internautas de 16 años o más, segundo trimestre de 2026), Similarweb (sitios: junio a agosto de 2026; apps: agosto de 2026), GSMA Intelligence y Naciones Unidas.</div>
+    <div class="url">tecnocriticos.com</div>
+  </div>
+</div>
+<script>
+const D = window.CO27, n = (v, d = 1) => Number(v).toFixed(d).replace(".", ",");
+document.getElementById("sitios").innerHTML = D.sitios.slice(0, 12).map((s, i) => `<div class="fila"><i>${String(i + 1).padStart(2, "0")}</i><span>${s[0]}</span><b>${s[1] >= 1000 ? "1.060 M" : n(s[1], s[1] < 100 ? 1 : 0) + " M"}</b></div>`).join("");
+document.getElementById("redes").innerHTML = D.redesUso.slice(0, 7).map(([r, v, c]) => `<div class="bar"><span>${r}</span><span><i style="width:${v}%;background:${c}"></i></span><b>${n(v)} %</b></div>`).join("");
+document.getElementById("apps").innerHTML = D.appMin.slice(0, 5).map(([r, m]) => `<div class="bar"><span>${r}</span><span><i style="width:${m / 139 * 100}%;background:#F59E0B"></i></span><b>${m >= 60 ? Math.floor(m / 60) + " h " + String(m % 60).padStart(2, "0") : m + " min"}</b></div>`).join("");
+</script>
+</body>
+</html>

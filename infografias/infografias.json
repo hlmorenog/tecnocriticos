@@ -93,6 +93,49 @@
       }
     },
     {
+      "id": "2026-11-26-colombia-digital-2027",
+      "fecha": "2026-11-26",
+      "seccion": "Colombia",
+      "titulo": "Así vive Colombia en internet: horas conectados, sitios, redes, población e IA",
+      "entradilla": "48 horas a la semana conectados, WhatsApp en 93 de cada 100 internautas y 9 de cada 10 usando IA: el informe Digital 2027 explicado para Colombia.",
+      "archivo": "img/infografias/2026-11-26-colombia-digital-2027.jpg",
+      "alt": "Infografía sobre Colombia digital en 2027: 43,7 millones de usuarios de internet (80,9 %), 10,3 millones sin conexión, 48 horas y 38 minutos semanales conectados, 91,6 % de internautas que usan inteligencia artificial, los sitios más visitados, las redes más usadas y el tiempo diario en cada app.",
+      "ancho": 1080,
+      "alto": 1233,
+      "texto": [
+        "## De dónde salen los datos",
+        "Esta infografía usa el informe Digital 2027: Colombia, publicado por DataReportal el 5 de noviembre de 2026 con We Are Social y Meltwater, y el Digital 2027 Global Overview Report, del 21 de octubre de 2026. Las cifras de población son de Naciones Unidas; las de uso y tiempo, de la encuesta de GWI a internautas de 16 años o más (segundo trimestre de 2026); las de sitios y apps, de Similarweb; las búsquedas, de Google Trends, y las velocidades, de Ookla.",
+        "## Lo esencial",
+        "En octubre de 2026, 43,7 millones de colombianos usaban internet, el 80,9 % de una población de 54,1 millones; 10,3 millones seguían desconectados. Los internautas pasan en promedio 48 horas y 38 minutos a la semana conectados, y 25 horas y 11 minutos en redes sociales y video, frente a 19 horas y 18 minutos del promedio mundial.",
+        "WhatsApp es la red más usada (93,1 % de los internautas) y la favorita (34,2 %), y TikTok es la app en la que más tiempo se pasa: 2 horas y 19 minutos al día por usuario. Google es el sitio más visitado, y ChatGPT y Gemini ya están entre los 10 primeros. El 91,6 % de los internautas usó alguna herramienta de inteligencia artificial en el último mes, pero solo el 6 % paga por una.",
+        "## Cómo leer las cifras de redes",
+        "Las audiencias que reporta cada plataforma son las personas a las que dice poder mostrarles anuncios: no son usuarios activos y pueden incluir cuentas duplicadas o falsas. Por eso, DataReportal habla de «identidades» y no de personas, y algunas cifras superan a la población adulta.",
+        "## La mirada crítica",
+        "Colombia ya pasa más horas en redes que casi todo el mundo, pero uno de cada cinco colombianos sigue sin internet: el país conectado avanza más rápido que el país incluido."
+      ],
+      "fuentes": [
+        {
+          "nombre": "DataReportal: Digital 2027: Colombia (5 de noviembre de 2026)",
+          "url": "https://datareportal.com/reports/digital-2027-colombia"
+        },
+        {
+          "nombre": "DataReportal: Digital 2027 Global Overview Report (21 de octubre de 2026)",
+          "url": "https://datareportal.com/reports/digital-2027-global-overview-report"
+        }
+      ],
+      "interactiva": {
+        "html": "infografias/colombia-digital-2027/app.html",
+        "css": [
+          "infografias/drones-2026/app.css",
+          "infografias/colombia-digital-2027/app.css"
+        ],
+        "js": [
+          "infografias/colombia-digital-2027/datos.js",
+          "infografias/colombia-digital-2027/app.js"
+        ]
+      }
+    },
+    {
       "id": "2026-11-26-iphone-duo-vs-galaxy-z-fold-8-interactiva",
       "fecha": "2026-11-26",
       "seccion": "IA y tecnología",
