@@ -2,6 +2,88 @@
   "fecha": "2026-11-25",
   "noticias": [
     {
+      "id": "2026-11-25-fcc-autoriza-a-spacex-un-millon-de-satelites",
+      "seccion": "IA y tecnología",
+      "titular": "EE. UU. autoriza a SpaceX a poner hasta un millón de satélites con centros de datos en órbita",
+      "entradilla": "Es la primera autorización de su tipo: multiplicaría unas 50 veces los satélites que hay en órbita, pese a las objeciones de Amazon y de los astrónomos.",
+      "lead": "La Comisión Federal de Comunicaciones (FCC) de Estados Unidos autorizó este miércoles 25 de noviembre, de forma condicional, que SpaceX despliegue Starmind, una constelación de hasta un millón de satélites que funcionarían como centros de datos para inteligencia artificial.",
+      "cuerpo": [
+        "Según Ars Technica, si se despliega completa, la constelación multiplicaría por unas 50 veces el número de satélites que hay hoy en órbita. SpaceX tiene siete años para poner en funcionamiento el primero, hasta noviembre de 2035 para llegar a 100.000 y hasta noviembre de 2040 para completarla. Los satélites se comunicarían sobre todo por láser, también con los de Starlink, y orbitarían entre unos 500 y 1.000 kilómetros de altura.",
+        "La FCC aprobó el plan pese a las objeciones de Amazon, que compite con Starlink y lo describió como una ambición sin detalles, de la empresa Viasat y de la Sociedad Astronómica Estadounidense, que advirtieron sobre basura espacial, congestión, interferencias e impacto ambiental. La agencia descartó algunas de esas preocupaciones, como el daño a la investigación científica, por considerar que no le corresponde regularlas.",
+        "La autorización tiene condiciones. Por falta de información, la FCC no aceptó la propuesta de SpaceX de retirar los satélites que operen por encima de 600 kilómetros llevándolos a otras órbitas, o incluso alrededor del Sol, en lugar de hacerlos caer a la atmósfera. Además, aprobar el plan no demuestra que sea viable: SpaceX aún debe abaratar la fabricación y los lanzamientos, resolver cómo enfriar los procesadores en el espacio y financiar los chips."
+      ],
+      "mirada": "Un millón de satélites para alimentar la IA: el cielo, que es de todos, empieza a repartirse como si fuera un terreno privado.",
+      "titular_corto": "SpaceX: un millón de satélites",
+      "por_que_importa": "la órbita baja es un espacio que comparten todos los países, y esta autorización le reserva a una sola empresa una parte enorme.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Hasta 1 millón de satélites: unas 50 veces los que hay hoy en órbita."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-fcc-autoriza-a-spacex-un-millon-de-satelites.jpg",
+        "alt": "Estela de un cohete Falcon 9 de SpaceX lanzado desde la base de Vandenberg, vista de noche",
+        "autor": "ikewinski",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/73449134@N04/53110196207"
+      },
+      "fuentes": [
+        {
+          "nombre": "FCC: comunicado oficial",
+          "url": "https://docs.fcc.gov/public/attachments/DOC-427572A1.pdf"
+        },
+        {
+          "nombre": "Ars Technica",
+          "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/"
+        },
+        {
+          "nombre": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-1password-confirma-robo-de-datos-de-clientes",
+      "seccion": "IA y tecnología",
+      "titular": "1Password confirma que le robaron nombres y correos de clientes, pero no sus contraseñas",
+      "entradilla": "Las bóvedas con las contraseñas no fueron tocadas, pero quien tenga cuenta debe desconfiar de correos inesperados que digan venir de 1Password.",
+      "lead": "El gestor de contraseñas 1Password confirmó este miércoles que un atacante entró a parte de sus sistemas internos y copió nombres, correos y otros datos de cuenta de un grupo de clientes, aunque asegura que las bóvedas con las contraseñas no fueron afectadas.",
+      "cuerpo": [
+        "Según la empresa, el 19 de noviembre empezó a investigar señales de que alguien había tomado la cuenta corporativa de GitHub, la plataforma donde guarda su código, de uno de sus empleados. Con ese acceso, el atacante cambió código de sus servidores y descargó datos administrativos de clientes: nombres, correos de acceso, fechas de creación de la cuenta y del último ingreso, y otros datos técnicos que la compañía califica como no secretos.",
+        "El atacante también copió código fuente privado y entró al sistema con el que la empresa publica sus actualizaciones. 1Password dice que cambió todas las credenciales que pudieron quedar expuestas, que sus aplicaciones y extensiones funcionan con normalidad y que nunca tiene acceso a las contraseñas ni a las claves secretas de sus usuarios. Tampoco ha dicho cuántos clientes fueron afectados.",
+        "Los usuarios no tienen que cambiar nada en su cuenta, según la empresa, pero sí deben estar atentos a correos de suplantación: invitaciones o solicitudes de recuperación de cuenta que no hayan pedido. Como precaución, 1Password alargó los códigos de esos correos de seis números a diez caracteres."
+      ],
+      "mirada": "Ni el guardián de las contraseñas está a salvo: el eslabón débil fue la cuenta de un empleado, como casi siempre.",
+      "titular_corto": "1Password, atacado",
+      "por_que_importa": "con nombres y correos reales, los atacantes pueden enviar mensajes falsos muy creíbles a usuarios que confían su seguridad a 1Password.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Desconfíe de correos de 1Password que no haya pedido, en especial los de recuperación de cuenta."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-1password-confirma-robo-de-datos-de-clientes.jpg",
+        "alt": "Contraseña escrita en una pantalla de inicio de sesión (imagen ilustrativa)",
+        "autor": "Christiaan Colen",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/132889348@N07/20632467275"
+      },
+      "fuentes": [
+        {
+          "nombre": "1Password: comunicado sobre el incidente",
+          "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+        },
+        {
+          "nombre": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/1password-said-hackers-broke-into-its-internal-systems-but-customer-passwords-are-safe/"
+        },
+        {
+          "nombre": "PCMag",
+          "url": "https://www.pcmag.com/news/hacker-accesses-1password-customer-names-emails-but-vault-data-is-safe"
+        }
+      ]
+    },
+    {
       "id": "2026-11-25-wall-street-vuelve-a-castigar-a-la-ia",
       "seccion": "IA y tecnología",
       "titular": "Wall Street vuelve a castigar a la IA: el Nasdaq cae cerca de 4 % y Nvidia más de 8 %",
