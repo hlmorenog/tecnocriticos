@@ -594,28 +594,39 @@ def pagina_infografia(i):
              "creditText": "Tecnocríticos", "copyrightNotice": "Tecnocríticos",
              "creator": {k: x for k, x in ORGANIZACION.items() if k in ("@type", "@id", "name", "url")},
              "publisher": {k: x for k, x in ORGANIZACION.items() if k in ("@type", "@id", "name", "url", "logo")}}
+    inter = i.get("interactiva") or {}
+    app = ""
+    if inter.get("html") and (RAIZ / inter["html"]).is_file():
+        def v(r):
+            return hashlib.sha256((RAIZ / r).read_bytes()).hexdigest()[:10]
+        app = ("".join(f'<link rel="stylesheet" href="{r}?v={v(r)}">' for r in inter.get("css", []))
+               + (RAIZ / inter["html"]).read_text(encoding="utf-8")
+               + "".join(f'<script src="{r}?v={v(r)}" defer></script>' for r in inter.get("js", [])))
     social = i.get("social") or {}
     imagen = (social["archivo"], 1200, 630, esc(i["titulo"])) if social.get("archivo") else (i["archivo"], ancho, alto, esc(i["titulo"]))
     return (cabeza(f"{i['titulo']} — Infografías · Tecnocríticos", esc(i.get("entradilla", "")), "article", url_infografia(i), esc(i["titulo"]),
                    imagen=imagen, jsonld=datos, base=True)
             + cabecera("infografias")
-            + f"""<main class="w grid">
- <div class="principal"><article class="art inf__pagina">
+            + (f"""<main class="w inf__ancha">
+ <article class="art inf__pagina">""" if app else """<main class="w grid">
+ <div class="principal"><article class="art inf__pagina">""")
+            + f"""
   <nav class="miga" aria-label="Ruta"><a href="index.html">Hoy</a> / <a href="infografias.html">Infografías</a></nav>
   <span class="lab">Infografía · {esc(i['seccion'])}</span>
   <h1>{esc(i['titulo'])}</h1>
   <p class="entradilla">{esc(i.get('entradilla', ''))}</p>
   <p class="inf__fecha">{fecha_larga(i["fecha"])}</p>
   <div class="compartir compartir--arriba" data-compartir></div>
-  <figure class="inf__grande"><a href="{esc(i["archivo"])}" target="_blank" rel="noopener"><img src="{esc(i["archivo"])}" alt="{esc(i.get("alt") or i["titulo"])}" width="{ancho}" height="{alto}"></a>
+  {app}{'<h2 class="inf__vimg">La versión en imagen, para descargar y compartir</h2>' if app else ""}
+  <figure class="inf__grande{' inf__grande--chica' if app else ''}"><a href="{esc(i["archivo"])}" target="_blank" rel="noopener"><img src="{esc(i["archivo"])}" alt="{esc(i.get("alt") or i["titulo"])}" width="{ancho}" height="{alto}"></a>
    <figcaption>Toca la imagen para verla en tamaño completo.</figcaption></figure>
   <div class="mmx__btns"><a class="mmx__btn mmx__btn--principal" href="{esc(i["archivo"])}" download>↓ Descargar la infografía</a>{boton_enviar({"tipo": "infografia", "archivo": i["archivo"], "titulo": i["titulo"], "url": url_infografia(i)}, "mmx__btn")}<a class="mmx__btn" href="infografias.html">Más infografías</a></div>
   {f'<div class="cuerpo">{cuerpo}</div>' if cuerpo else ""}
   {relacionada}
   <div class="fuentes"><span class="lab" style="color:var(--gris)">Fuentes</span><ul>{fuentes}</ul></div>
   <div class="compartir" data-compartir></div>
- </article></div>
- <aside class="rail">{bloque_minuto()}{bloque_columna()}{bloque_explora()}</aside>
+ </article>""" + ("" if app else """</div>
+ <aside class="rail">""" + bloque_minuto() + bloque_columna() + bloque_explora() + "</aside>") + f"""
 </main>
 {boletin()}
 """ + pie())

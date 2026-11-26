@@ -530,6 +530,10 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
 .inf__grande img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 0 1px var(--linea), 0 14px 40px rgba(17,17,17,.08); }
 .inf__grande figcaption { font: 400 13px/1.4 var(--f-texto); color: var(--gris); margin-top: 8px; }
 .inf__pagina .mmx__btns { margin: 12px 0 26px; }
+.inf__ancha { padding-top: 26px; padding-bottom: 20px; }
+.inf__ancha > .inf__pagina > h1, .inf__ancha > .inf__pagina > .entradilla { max-width: 900px; }
+.inf__vimg { font: 800 22px var(--f-titular); letter-spacing: -.02em; margin: 40px 0 0; padding-top: 16px; border-top: 3px solid var(--tinta); }
+.inf__grande--chica { max-width: 560px; }
 @media (max-width: 760px) {
   .inf__heroe { padding: 32px 0 40px; }
   .inf__dest { grid-template-columns: 1fr; gap: 28px; margin-top: 28px; }

@@ -1,0 +1,92 @@
+{
+  "infografias": [
+    {
+      "id": "2026-11-26-los-10-drones-que-importan",
+      "fecha": "2026-11-26",
+      "seccion": "IA y tecnología",
+      "titulo": "Los 10 drones que importan: velocidad, altura, controles y reglas para volar en Colombia",
+      "entradilla": "DJI, Antigravity, HOVERAir, Potensic, Skydio y Parrot frente a frente, con una ficha para cada dron, recorridos de vuelo simulados y lo que exige la Aerocivil.",
+      "archivo": "img/infografias/2026-11-26-los-10-drones-que-importan.jpg",
+      "alt": "Infografía que compara 10 drones de DJI, Antigravity, HOVERAir, Potensic, Skydio y Parrot: velocidad máxima, autonomía, peso, altitud de despegue, tipos de control y si requieren registro en Colombia, con las reglas de la Aerocivil para volar.",
+      "ancho": 1080,
+      "alto": 1579,
+      "interactiva": {
+        "html": "infografias/drones-2026/app.html",
+        "css": [
+          "infografias/drones-2026/app.css"
+        ],
+        "js": [
+          "infografias/drones-2026/datos.js",
+          "infografias/drones-2026/app.js"
+        ]
+      },
+      "texto": [
+        "## Cómo leer esta infografía",
+        "Elegimos 10 drones que hoy marcan el mercado, de seis marcas: cinco de DJI, incluido el Neo 2, y cinco de otros fabricantes, desde un dron de bolsillo de 151 gramos hasta equipos profesionales de más de un kilo. Todos los datos salen de las fichas técnicas oficiales de cada fabricante, consultadas el 26 de noviembre de 2026.",
+        "La velocidad es la horizontal máxima que declara cada marca, normalmente en modo Sport y sin viento. La autonomía se mide en condiciones ideales: en la vida real, con viento y frío, se vuela menos. La «altura de despegue» es la altitud sobre el nivel del mar desde la que el dron puede despegar, por ejemplo en un páramo; no es cuánto puede subir.",
+        "## Lo que dice la ley en Colombia",
+        "Para uso recreativo, el reglamento RAC 100 de la Aerocivil fija un techo de 122 metros (400 pies) sobre el terreno, una distancia máxima de 750 metros con el dron siempre a la vista y al menos 30 metros de separación de personas ajenas al vuelo. Desde los 200 gramos, el dron debe registrarse en la Plataforma UAS de la Aerocivil; el trámite no tiene costo. Volar con gafas exige un observador, y para usar el dron con fines comerciales se necesitan licencia y permiso de vuelo.",
+        "## La mirada crítica",
+        "La ficha dice hasta dónde llega el dron; la ley, hasta dónde puedes llegar tú: en Colombia, 122 metros y a la vista."
+      ],
+      "fuentes": [
+        {
+          "nombre": "DJI: especificaciones del Neo 2",
+          "url": "https://www.dji.com/se/neo-2/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Mini 5 Pro",
+          "url": "https://www.dji.com/se/mini-5-pro/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Mavic 4 Pro",
+          "url": "https://www.dji.com/se/mavic-4-pro/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Avata 360",
+          "url": "https://www.dji.com/se/avata-360/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Lito X1",
+          "url": "https://www.dji.com/se/lito-x1/specs"
+        },
+        {
+          "nombre": "Antigravity: especificaciones del A1",
+          "url": "https://www.antigravity.tech/drone/antigravity-a1/specs"
+        },
+        {
+          "nombre": "HOVERAir: X1 PRO y PROMAX",
+          "url": "https://hoverair.com/pages/x1-pro-and-promax"
+        },
+        {
+          "nombre": "HOVERAir: comparativa oficial de modelos",
+          "url": "https://support.hoverair.com/hc/en-us/articles/44558370815257"
+        },
+        {
+          "nombre": "Potensic: especificaciones del Atom 2",
+          "url": "https://www.potensic.com/atom-2-specs.html"
+        },
+        {
+          "nombre": "Skydio: X10",
+          "url": "https://www.skydio.com/x10"
+        },
+        {
+          "nombre": "Parrot: especificaciones del ANAFI UKR",
+          "url": "https://www.parrot.com/en/anafi-ukr-technical-specifications"
+        },
+        {
+          "nombre": "Aerocivil: preguntas frecuentes sobre drones",
+          "url": "https://www.aerocivil.gov.co/preguntas-frecuentes/18/drones-y-movilidad-urbana-aerea/"
+        },
+        {
+          "nombre": "RAC 100, Resolución 01983 de 2023 (texto del reglamento)",
+          "url": "https://idc.apddrones.com/wp-content/uploads/2023/10/RAC-100-UAS.pdf"
+        },
+        {
+          "nombre": "UAV Coach: el veto de la FCC a DJI en EE. UU.",
+          "url": "https://uavcoach.com/dji-ban/"
+        }
+      ]
+    }
+  ]
+}

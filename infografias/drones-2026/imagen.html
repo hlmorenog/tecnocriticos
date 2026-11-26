@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Los 10 drones que importan — versión en imagen</title>
+<!-- Plantilla para generar la imagen descargable (img/infografias/…jpg) con Playwright. No se publica como página. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --tinta:#111; --tinta2:#3d3d3a; --suave:#6b6b66; --linea:#E4E4E0; --papel:#F4F4F1; --acento:#00875A; --menta:#7FD1B0; --rojo:#C0392B; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 1080px; background: #fff; font-family: Inter, sans-serif; color: var(--tinta); }
+.lienzo { padding: 52px 56px 36px; }
+.top { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--tinta); padding-bottom: 16px; }
+.logo { font: 900 34px 'Inter Tight'; letter-spacing: -.04em; display: flex; align-items: center; gap: 10px; }
+.logo i { width: 18px; height: 18px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.tag { font: 700 15px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); }
+.kicker { font: 700 15px 'JetBrains Mono'; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); margin: 26px 0 10px; }
+h1 { font: 900 60px/1 'Inter Tight'; letter-spacing: -.04em; }
+h1 em { font-style: normal; color: var(--acento); }
+.sub { font: 400 20px/1.45 Inter; color: var(--tinta2); margin-top: 12px; }
+h2 { font: 800 22px 'Inter Tight'; margin: 28px 0 12px; display: flex; justify-content: space-between; align-items: baseline; }
+h2 span { font: 500 14px Inter; color: var(--suave); }
+table { width: 100%; border-collapse: collapse; }
+th { font: 700 11.5px 'JetBrains Mono'; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); text-align: left; padding: 0 6px 8px 0; border-bottom: 3px solid var(--tinta); }
+td { padding: 7px 6px 7px 0; border-bottom: 1px solid var(--linea); font: 700 18px 'Inter Tight'; vertical-align: middle; }
+td.d > div { display: flex; align-items: center; gap: 10px; }
+td.d svg { height: 40px; width: auto; flex: none; }
+td.d small { display: block; font: 600 11px 'JetBrains Mono'; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+td .bar { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; background: var(--acento); vertical-align: middle; margin-right: 8px; }
+td.c svg { width: 20px; height: 20px; fill: none; stroke: var(--acento); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; margin-right: 3px; vertical-align: middle; }
+.ley { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font: 500 13px Inter; color: var(--tinta2); }
+.ley svg { width: 17px; height: 17px; fill: none; stroke: var(--acento); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; vertical-align: -4px; margin-right: 4px; }
+.reg { font: 700 13px Inter; padding: 3px 8px; border-radius: 999px; }
+.reg.si { background: #F6E1DE; color: var(--rojo); } .reg.no { background: #DDF1E7; color: var(--acento); }
+.reglas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.reglas div { background: var(--papel); border-top: 4px solid var(--acento); padding: 12px 14px 14px; border-radius: 0 0 8px 8px; }
+.reglas b { font: 900 28px 'Inter Tight'; letter-spacing: -.03em; } .reglas p { font: 500 14px/1.35 Inter; color: var(--tinta2); margin-top: 4px; }
+.mirada { margin-top: 22px; background: var(--tinta); color: #fff; border-radius: 10px; padding: 20px 26px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.mirada .lab { font: 700 14px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--menta); }
+.mirada p { font: 700 22px/1.35 'Inter Tight'; }
+.ver { margin-top: 16px; font: 700 17px 'Inter Tight'; color: var(--acento); }
+.pie { margin-top: 18px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-top: 14px; border-top: 1px solid var(--linea); }
+.pie .fuentes { font: 400 12.5px/1.5 Inter; color: var(--suave); max-width: 800px; }
+.pie .url { font: 700 16px 'JetBrains Mono'; white-space: nowrap; }
+</style>
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<div class="lienzo">
+  <div class="top"><div class="logo"><i></i>tecnocríticos</div><div class="tag">Infografía · Drones</div></div>
+  <div class="kicker">Comparativa · 26 de noviembre de 2026</div>
+  <h1>Los 10 drones <em>que importan</em></h1>
+  <p class="sub">Velocidad, autonomía, peso, controles y lo que exige la ley para volarlos en Colombia.</p>
+  <h2>Frente a frente <span>datos de cada fabricante · ordenados por peso</span></h2>
+  <table><thead><tr><th style="width:250px">Dron</th><th style="width:170px">Velocidad máx.</th><th style="width:130px">Autonomía</th><th style="width:120px">Peso</th><th style="width:130px">Despega hasta</th><th>Controles</th><th style="width:90px">Registro</th></tr></thead><tbody id="filas"></tbody></table>
+  <div class="ley" id="ley"></div>
+  <h2>Para volar en Colombia <span>categoría abierta · RAC 100 de la Aerocivil</span></h2>
+  <div class="reglas">
+    <div><b>122 m</b><p>altura máxima sobre el terreno</p></div>
+    <div><b>750 m</b><p>de distancia máxima, siempre a la vista</p></div>
+    <div><b>30 m</b><p>mínimo de personas ajenas al vuelo</p></div>
+    <div><b>200 g</b><p>desde este peso hay que registrarlo (gratis)</p></div>
+    <div><b>9 km</b><p>de los aeropuertos; entre 6 y 9 km, máximo 61 m</p></div>
+    <div><b>2 km</b><p>de bases militares o de policía, cárceles e infraestructura crítica</p></div>
+    <div><b>FPV</b><p>con gafas, siempre con un observador</p></div>
+    <div><b>Sin lucro</b><p>para trabajar se necesitan licencia y permiso</p></div>
+  </div>
+  <div class="mirada"><div class="lab">La mirada<br>crítica</div><p>La ficha dice hasta dónde llega el dron; la ley, hasta dónde puedes llegar tú: en Colombia, 122 metros y a la vista.</p></div>
+  <p class="ver">La versión interactiva, con una ficha y recorridos de vuelo de cada dron, está en tecnocriticos.com/infografias</p>
+  <div class="pie">
+    <div class="fuentes">Velocidad horizontal máxima declarada por cada fabricante (HOVERAir: velocidad de seguimiento). Autonomía con la batería estándar, en condiciones ideales. «Despega hasta»: altitud máxima de despegue sobre el nivel del mar (Skydio y Parrot: techo de servicio). Fuentes: fichas técnicas de DJI, Antigravity, HOVERAir, Potensic, Skydio y Parrot (consultadas el 26 nov. 2026); RAC 100 y preguntas frecuentes de la Aerocivil. Ilustraciones de Tecnocríticos.</div>
+    <div class="url">tecnocriticos.com</div>
+  </div>
+</div>
+<script>
+const kmh = (v) => Math.round(v * 3.6), mil = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const peso = (d) => d.pesoTxt ? d.pesoTxt.replace("menos de ", "< ") : (d.peso < 1000 ? `${String(d.peso).replace(".", ",")} g` : `${(d.peso / 1000).toFixed(2).replace(".", ",")} kg`);
+document.getElementById("filas").innerHTML = [...DRONES].sort((a, b) => a.peso - b.peso).map((d) => `<tr>
+  <td class="d"><div>${DR_DIBUJO(d, 40)}<span><small>${d.marca}</small>${d.nombre}</span></div></td>
+  <td><span class="bar" style="width:${Math.round(kmh(d.vel) / 90 * 70)}px"></span>${kmh(d.vel)} km/h</td>
+  <td>${d.min} min</td><td>${peso(d)}</td><td>${mil(d.techo)} m</td>
+  <td class="c">${d.controles.map((k) => DR_ICONO(k)).join("")}</td>
+  <td><span class="reg ${d.peso >= 200 ? "si" : "no"}">${d.peso >= 200 ? "Sí" : "No"}</span></td></tr>`).join("");
+document.getElementById("ley").innerHTML = Object.keys(CONTROLES).map((k) => `<span>${DR_ICONO(k)}${CONTROLES[k][0]}</span>`).join("");
+</script>
+</body>
+</html>
