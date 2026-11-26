@@ -2,6 +2,43 @@
   "fecha": "2026-11-25",
   "noticias": [
     {
+      "id": "2026-11-25-whatsapp-permite-programar-mensajes",
+      "seccion": "IA y tecnología",
+      "titular": "WhatsApp ya deja programar mensajes hasta 14 días antes, aunque el celular esté apagado",
+      "entradilla": "Era una de las funciones más pedidas y llega tarde frente a Telegram y Signal: sirve para chats individuales y de grupo, con texto, fotos y videos.",
+      "lead": "WhatsApp empezó a habilitar este miércoles 25 de noviembre los mensajes programados: se escriben ahora y se envían solos entre 10 minutos y 14 días después, en chats individuales y de grupo, incluso si el celular está apagado o sin batería.",
+      "cuerpo": [
+        "Para programar un mensaje hay que escribirlo, mantener presionado el botón de enviar y elegir la fecha y la hora. Quien lo recibe lo ve como cualquier otro mensaje. La aplicación muestra la lista de mensajes pendientes y permite borrarlos antes de que salgan; no está claro si se puede cambiar la hora de uno ya programado.",
+        "Funciona con texto, fotos y videos, y según WhatsApp los mensajes siguen cifrados de extremo a extremo, de modo que ni la empresa puede leerlos. La función llega a todos los países en Android y iPhone, pero de forma escalonada durante las próximas semanas, así que puede tardar en aparecer.",
+        "WhatsApp, que pertenece a Meta, la presenta como una de sus funciones más pedidas, útil para felicitar a alguien a la medianoche o escribir a personas en otros husos horarios. Sus rivales Telegram y Signal la ofrecían desde hace tiempo."
+      ],
+      "mirada": "Llega años tarde, pero llega a la aplicación donde los colombianos ya organizan su vida, su familia y su trabajo.",
+      "titular_corto": "WhatsApp programa mensajes",
+      "por_que_importa": "WhatsApp es la aplicación de mensajería más usada en Colombia, tanto para la vida personal como para el trabajo.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Mantenga presionado el botón de enviar; si no le aparece, llegará en las próximas semanas."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-25-whatsapp-permite-programar-mensajes.jpg",
+        "alt": "Ícono de WhatsApp en la pantalla de un celular (imagen ilustrativa)",
+        "autor": "Yuri Samoilov",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/110751683@N02/49897226177"
+      },
+      "fuentes": [
+        {
+          "nombre": "Blog de WhatsApp",
+          "url": "https://blog.whatsapp.com/say-it-at-the-right-time-with-scheduled-messages"
+        },
+        {
+          "nombre": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/whatsapp-now-lets-you-schedule-messages-in-group-and-individual-chats/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-25-fcc-autoriza-a-spacex-un-millon-de-satelites",
       "seccion": "IA y tecnología",
       "titular": "EE. UU. autoriza a SpaceX a poner hasta un millón de satélites con centros de datos en órbita",

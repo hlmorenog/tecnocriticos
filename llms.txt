@@ -13,6 +13,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 
 ## Últimas noticias
 
+- [WhatsApp ya deja programar mensajes hasta 14 días antes, aunque el celular esté apagado](https://tecnocriticos.com/n/2026-11-25-whatsapp-permite-programar-mensajes.html): Era una de las funciones más pedidas y llega tarde frente a Telegram y Signal: sirve para chats individuales y de grupo, con texto, fotos y videos.
 - [EE. UU. autoriza a SpaceX a poner hasta un millón de satélites con centros de datos en órbita](https://tecnocriticos.com/n/2026-11-25-fcc-autoriza-a-spacex-un-millon-de-satelites.html): Es la primera autorización de su tipo: multiplicaría unas 50 veces los satélites que hay en órbita, pese a las objeciones de Amazon y de los astrónomos.
 - [1Password confirma que le robaron nombres y correos de clientes, pero no sus contraseñas](https://tecnocriticos.com/n/2026-11-25-1password-confirma-robo-de-datos-de-clientes.html): Las bóvedas con las contraseñas no fueron tocadas, pero quien tenga cuenta debe desconfiar de correos inesperados que digan venir de 1Password.
 - [Wall Street vuelve a castigar a la IA: el Nasdaq cae cerca de 4 % y Nvidia más de 8 %](https://tecnocriticos.com/n/2026-11-25-wall-street-vuelve-a-castigar-a-la-ia.html): Dos días después del rebote por el regreso de Jensen Huang, los inversionistas vuelven a vender tecnológicas por dudas sobre el auge de la IA, nuevos aranceles y tasas de interés más altas.
@@ -32,7 +33,6 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Activision busca patentar una IA que aprende del chat de los jugadores para provocarlos](https://tecnocriticos.com/n/2026-11-24-activision-patente-ia-voz-jugadores.html): El sistema grabaría fragmentos de las conversaciones de voz y texto en las partidas para que los personajes reaccionen como humanos.
 - [Spotify tuvo fallas para iniciar sesión este martes en la mañana y ya las solucionó](https://tecnocriticos.com/n/2026-11-24-spotify-caida-inicio-de-sesion.html): Los problemas empezaron hacia las 6:30 a. m. y afectaron sobre todo el ingreso a las cuentas.
 - [Nvidia devuelve a Jensen Huang la dirección, dos semanas después de su renuncia](https://tecnocriticos.com/n/2026-11-23-nvidia-restituye-a-jensen-huang.html): La empresa que domina los chips de inteligencia artificial recupera a su fundador tras una salida rodeada de preguntas sobre seguridad nacional, y su acción se disparó.
-- [Arranca en Bogotá el CIIRAS 2026, congreso sobre IA e innovación en la gestión de la salud](https://tecnocriticos.com/n/2026-11-23-ciiras-2026-congreso-ia-administracion-en-salud.html): Durante tres noches, académicos de Colombia, Costa Rica y Brasil discuten cómo la inteligencia artificial, los datos y la innovación cambian la forma de gestionar la salud.
 
 ## Datos
 
