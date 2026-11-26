@@ -611,12 +611,14 @@ def pagina_infografia(i):
  <article class="art inf__pagina">""" if app else """<main class="w grid">
  <div class="principal"><article class="art inf__pagina">""")
             + f"""
+  {'<div class="inf__cabeza"><div>' if app else ''}
   <nav class="miga" aria-label="Ruta"><a href="index.html">Hoy</a> / <a href="infografias.html">Infografías</a></nav>
   <span class="lab">Infografía · {esc(i['seccion'])}</span>
   <h1>{esc(i['titulo'])}</h1>
   <p class="entradilla">{esc(i.get('entradilla', ''))}</p>
   <p class="inf__fecha">{fecha_larga(i["fecha"])}</p>
-  <div class="compartir compartir--arriba" data-compartir></div>
+  {f"""</div><aside class="inf__lado"><span class="inf__lado-t">Compártela</span><div class="compartir compartir--lado" data-compartir></div>
+   <a class="mmx__btn mmx__btn--principal" href="{esc(i["archivo"])}" download>↓ Descargar la imagen</a></aside></div>""" if app else '<div class="compartir compartir--arriba" data-compartir></div>'}
   {app}{'<h2 class="inf__vimg">La versión en imagen, para descargar y compartir</h2>' if app else ""}
   <figure class="inf__grande{' inf__grande--chica' if app else ''}"><a href="{esc(i["archivo"])}" target="_blank" rel="noopener"><img src="{esc(i["archivo"])}" alt="{esc(i.get("alt") or i["titulo"])}" width="{ancho}" height="{alto}"></a>
    <figcaption>Toca la imagen para verla en tamaño completo.</figcaption></figure>
