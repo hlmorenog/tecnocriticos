@@ -1,5 +1,7 @@
 # Instrucciones: edición diaria de noticias de Tecnocríticos
 
+> **Idioma con la dirección:** todos los mensajes, propuestas y resúmenes se escriben siempre en español (regla del 26 de noviembre de 2026).
+
 Estas son las instrucciones que sigue la tarea programada que prepara las noticias cada mañana.
 Si quieres cambiar el tono, los temas o la cantidad de noticias, edita este archivo: la tarea lo lee en cada ejecución.
 
