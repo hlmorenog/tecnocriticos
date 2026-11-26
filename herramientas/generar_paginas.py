@@ -294,25 +294,35 @@ def item_estatico(n):
 
 
 def bloque_explicado(noticias):
-    """Portada: la pieza multimedia propia más reciente (video vertical + infografía) de los últimos 7 días."""
+    """Portada: la pieza multimedia propia más reciente (video vertical + infografía) de los últimos 7 días,
+    sea de una noticia o un explicador de la sección Multimedia (multimedia/piezas.json)."""
     from datetime import date, timedelta
     limite = (date.fromisoformat(noticias[0]["fecha"]) - timedelta(days=7)).isoformat() if noticias else ""
+    candidatos = []
+    for p in cargar_piezas():  # los explicadores van primero: ganan si empatan en fecha con una noticia
+        candidatos.append({"fecha": p["fecha"], "titulo": p["titulo"], "url": url_pieza(p),
+                           "video": p.get("video") or {}, "infografia": p.get("infografia") or {}, "mas": "Ver la pieza completa"})
     for n in noticias:
         mm = n.get("multimedia") or {}
-        v, ig = mm.get("video") or {}, mm.get("infografia") or {}
-        if n["fecha"] < limite or not (v.get("archivo") or ig.get("archivo")):
-            continue
-        piezas = ""
-        if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
-            poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
-            piezas += (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or "Video")}">'
-                       f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
-        if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
-            piezas += (f'<figure class="mm__info"><a href="{url_noticia(n)}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy"></a></figure>')
-        return (f'<section class="mm mm--home" aria-label="Explicado en imágenes"><h2 class="videos__tit">Explicado en imágenes</h2>'
-                f'<h3 class="mm__tit"><a href="{url_noticia(n)}">{esc(n["titular"])}</a></h3><div class="mm__rej">{piezas}</div>'
-                f'<p class="mm__mas"><a href="{url_noticia(n)}">Leer la nota completa →</a></p></section>')
-    return ""
+        candidatos.append({"fecha": n["fecha"], "titulo": n["titular"], "url": url_noticia(n),
+                           "video": mm.get("video") or {}, "infografia": mm.get("infografia") or {}, "mas": "Leer la nota completa"})
+    validos = [c for c in candidatos if c["fecha"] >= limite and (
+        (c["video"].get("archivo") and (RAIZ / c["video"]["archivo"]).is_file()) or
+        (c["infografia"].get("archivo") and (RAIZ / c["infografia"]["archivo"]).is_file()))]
+    if not validos:
+        return ""
+    c = max(validos, key=lambda x: x["fecha"])  # max conserva el primero en caso de empate
+    v, ig = c["video"], c["infografia"]
+    piezas = ""
+    if v.get("archivo") and (RAIZ / v["archivo"]).is_file():
+        poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
+        piezas += (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or c["titulo"])}">'
+                   f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
+    if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
+        piezas += (f'<figure class="mm__info"><a href="{c["url"]}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy"></a></figure>')
+    return (f'<section class="mm mm--home" aria-label="Explicado en imágenes"><h2 class="videos__tit">Explicado en imágenes</h2>'
+            f'<h3 class="mm__tit"><a href="{c["url"]}">{esc(c["titulo"])}</a></h3><div class="mm__rej">{piezas}</div>'
+            f'<p class="mm__mas"><a href="{c["url"]}">{c["mas"]} →</a></p></section>')
 
 
 def cargar_piezas():
