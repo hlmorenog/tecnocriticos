@@ -1,6 +1,78 @@
 {
   "piezas": [
     {
+      "id": "2026-11-26-las-plataformas-de-streaming-que-mandan",
+      "fecha": "2026-11-26",
+      "seccion": "Videojuegos y series",
+      "titulo": "¿Cuál plataforma de streaming manda en Colombia?",
+      "entradilla": "Netflix es la más grande del mundo, pero en Colombia empató con Disney+. Te lo contamos en un video de 43 segundos y una infografía interactiva.",
+      "descripcion": "Video explicador sobre las plataformas de streaming en Colombia: la cuota de mercado de Netflix, Disney+, Prime Video, HBO Max, Apple TV y Paramount+ según JustWatch, los suscriptores en el mundo y la compra que dejó a HBO Max y Paramount+ con un mismo dueño.",
+      "texto": [
+        "## Ya no hay una sola",
+        "Netflix sigue siendo la plataforma más grande del mundo, con más de 325 millones de suscriptores. Pero en Colombia empató: en el tercer trimestre de 2025 tenía el 20 % del mercado, igual que Disney+, según la medición de JustWatch.",
+        "Detrás viene Prime Video, con 19 %. Amazon no publica cuántos suscriptores tiene, porque el servicio viene incluido con Prime. Luego están HBO Max, con 12 %; Apple TV, con 8 %, y Paramount+, con 7 %.",
+        "## Un mismo dueño",
+        "Desde el 6 de octubre de 2026, HBO Max y Paramount+ tienen el mismo dueño: Skydance, la antigua Paramount, que compró Warner Bros. Discovery. Entre HBO, HBO Max y Paramount+ suman 203 millones de suscriptores, y en 2027 se venderán en un paquete.",
+        "## La mirada crítica",
+        "La próxima pelea no será por catálogos, sino por paquetes."
+      ],
+      "video": {
+        "archivo": "media/2026-11-26-las-plataformas-de-streaming-que-mandan.mp4",
+        "poster": "media/2026-11-26-las-plataformas-de-streaming-que-mandan-poster.jpg",
+        "duracion": "43 s"
+      },
+      "infografia": {
+        "archivo": "img/infografias/2026-11-26-plataformas-de-streaming.jpg",
+        "alt": "Infografía que compara Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV: suscriptores en el mundo, cuota de mercado en Colombia, año de nacimiento y de llegada a Latinoamérica, cambios de color de su marca y premios Emmy de 2026."
+      },
+      "fuentes": [
+        {
+          "nombre": "Netflix: carta a accionistas del cuarto trimestre de 2024 (suscriptores por región)",
+          "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2024/q4/FINAL-Q4-24-Shareholder-Letter.pdf"
+        },
+        {
+          "nombre": "Axios: Netflix supera los 325 millones de suscriptores",
+          "url": "https://www.axios.com/2026/01/20/netflix-stock-nflx-subscribers-warner-bros"
+        },
+        {
+          "nombre": "Variety: suscriptores de Disney+ a septiembre de 2025",
+          "url": "https://variety.com/2025/tv/news/disney-plus-hulu-subscriber-gains-kimmel-controversy-1236580606/"
+        },
+        {
+          "nombre": "Variety: HBO Max cierra 2025 cerca de 132 millones",
+          "url": "https://variety.com/2026/film/news/hbo-max-subscribers-132-million-warner-bros-discovery-earnings-1236673104/"
+        },
+        {
+          "nombre": "The Hollywood Reporter: Prime Video con anuncios llega a 315 millones de espectadores al mes",
+          "url": "https://www.hollywoodreporter.com/business/business-news/prime-video-315-million-monthly-viewers-1236423744/"
+        },
+        {
+          "nombre": "TheWrap: resultados de Skydance del tercer trimestre de 2026",
+          "url": "https://www.thewrap.com/industry-news/business/paramount-earnings-q3-2026/"
+        },
+        {
+          "nombre": "La República: cuota de JustWatch en Colombia, tercer trimestre de 2025",
+          "url": "https://www.larepublica.co/ocio/por-primera-vez-disney-empata-a-netflix-en-cuota-de-mercado-en-el-streaming-4281327"
+        },
+        {
+          "nombre": "Agencia PI: JustWatch en Colombia, primer semestre de 2026",
+          "url": "https://www.agenciapi.co/noticia/estilo-de-vida/apple-tv-lidera-el-crecimiento-del-streaming-en-colombia"
+        },
+        {
+          "nombre": "Gold Derby: Emmy 2026 por plataforma",
+          "url": "https://www.goldderby.com/tv/2026/2026-emmy-wins-by-network-apple-tv-hbo-netflix-totals/"
+        },
+        {
+          "nombre": "Gold Derby: Óscar 2026 por estudio",
+          "url": "https://goldderby.com/film/2026/2026-oscars-scorecard-wins-by-film"
+        },
+        {
+          "nombre": "Wikipedia: historia de Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV",
+          "url": "https://en.wikipedia.org/wiki/HBO_Max"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-iphone-duo-vs-galaxy-z-fold-8",
       "fecha": "2026-11-26",
       "seccion": "IA y tecnología",
