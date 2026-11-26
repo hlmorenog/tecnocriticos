@@ -1,6 +1,91 @@
 {
   "piezas": [
     {
+      "id": "2026-11-26-que-dron-comprar-en-2026",
+      "fecha": "2026-11-26",
+      "seccion": "IA y tecnología",
+      "titulo": "¿Qué dron comprar en 2026? Los 10 que importan y lo que dice la ley en Colombia",
+      "entradilla": "Del DJI Neo 2, que despega desde la mano, al Skydio X10, que vuela solo de noche: 10 drones de 6 marcas y las reglas de la Aerocivil, en un video de 50 segundos.",
+      "descripcion": "Video explicador sobre los 10 drones más relevantes de 2026, de DJI, Antigravity, HOVERAir, Potensic, Skydio y Parrot, y las reglas para volar en Colombia: registro desde 200 gramos, altura máxima de 122 metros y distancia mínima de 9 kilómetros a los aeropuertos.",
+      "texto": [
+        "## 10 drones, 6 marcas",
+        "Escogimos 10 drones de 6 marcas, y no todos son DJI. El más pequeño es el DJI Neo 2: pesa 151 gramos, despega desde la mano y se maneja con gestos, con la voz o con el celular.",
+        "El más completo es el DJI Mavic 4 Pro: tiene 3 cámaras, vuela a 90 kilómetros por hora (25 metros por segundo) y aguanta 51 minutos en el aire, según su ficha técnica.",
+        "Y hay drones para todo: el Antigravity A1 graba en 360 grados, el HOVERAir X1 PROMAX pesa 192 gramos y el Skydio X10 vuela de forma autónoma, incluso de noche.",
+        "## La ley en Colombia",
+        "Según el RAC 100 de la Aerocivil, para uso recreativo un dron de 200 gramos o más debe registrarse en la Plataforma UAS, que es gratuita. No se puede volar a más de 122 metros de altura ni a menos de 9 kilómetros de un aeropuerto; entre 6 y 9 kilómetros se permite hasta 61 metros.",
+        "## La mirada crítica",
+        "La ficha dice hasta dónde llega el dron; la ley, hasta dónde puedes llegar tú."
+      ],
+      "video": {
+        "archivo": "media/2026-11-26-que-dron-comprar-en-2026.mp4",
+        "poster": "media/2026-11-26-que-dron-comprar-en-2026-poster.jpg",
+        "duracion": "50 s"
+      },
+      "infografia": {
+        "archivo": "img/infografias/2026-11-26-los-10-drones-que-importan.jpg",
+        "alt": "Infografía que compara 10 drones de DJI, Antigravity, HOVERAir, Potensic, Skydio y Parrot: velocidad máxima, autonomía, peso, altitud de despegue, tipos de control y si requieren registro en Colombia, con las reglas de la Aerocivil para volar."
+      },
+      "fuentes": [
+        {
+          "nombre": "DJI: especificaciones del Neo 2",
+          "url": "https://www.dji.com/se/neo-2/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Mini 5 Pro",
+          "url": "https://www.dji.com/se/mini-5-pro/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Mavic 4 Pro",
+          "url": "https://www.dji.com/se/mavic-4-pro/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Avata 360",
+          "url": "https://www.dji.com/se/avata-360/specs"
+        },
+        {
+          "nombre": "DJI: especificaciones del Lito X1",
+          "url": "https://www.dji.com/se/lito-x1/specs"
+        },
+        {
+          "nombre": "Antigravity: especificaciones del A1",
+          "url": "https://www.antigravity.tech/drone/antigravity-a1/specs"
+        },
+        {
+          "nombre": "HOVERAir: X1 PRO y PROMAX",
+          "url": "https://hoverair.com/pages/x1-pro-and-promax"
+        },
+        {
+          "nombre": "HOVERAir: comparativa oficial de modelos",
+          "url": "https://support.hoverair.com/hc/en-us/articles/44558370815257"
+        },
+        {
+          "nombre": "Potensic: especificaciones del Atom 2",
+          "url": "https://www.potensic.com/atom-2-specs.html"
+        },
+        {
+          "nombre": "Skydio: X10",
+          "url": "https://www.skydio.com/x10"
+        },
+        {
+          "nombre": "Parrot: especificaciones del ANAFI UKR",
+          "url": "https://www.parrot.com/en/anafi-ukr-technical-specifications"
+        },
+        {
+          "nombre": "Aerocivil: preguntas frecuentes sobre drones",
+          "url": "https://www.aerocivil.gov.co/preguntas-frecuentes/18/drones-y-movilidad-urbana-aerea/"
+        },
+        {
+          "nombre": "RAC 100, Resolución 01983 de 2023 (texto del reglamento)",
+          "url": "https://idc.apddrones.com/wp-content/uploads/2023/10/RAC-100-UAS.pdf"
+        },
+        {
+          "nombre": "UAV Coach: el veto de la FCC a DJI en EE. UU.",
+          "url": "https://uavcoach.com/dji-ban/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-las-plataformas-de-streaming-que-mandan",
       "fecha": "2026-11-26",
       "seccion": "Videojuegos y series",
