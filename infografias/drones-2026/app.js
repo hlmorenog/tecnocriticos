@@ -91,7 +91,7 @@
     cruise: (t) => ({ d: [-8 + 16 * t, -3 + 6 * t, 5] }),
     mapeo: (t) => {
       const f = 5, k = Math.min(Math.floor(t * f), f - 1), u = t * f - k, y = -6 + k * 3;
-      return { d: [k % 2 ? 6 - 12 * u : -6 + 12 * u, y, 6], area: true };
+      return { d: [k % 2 ? 6 - 12 * u : -6 + 12 * u, y, 4], area: true };
     },
     interior: (t) => {
       const P = [[-5, -4, 1.5], [5, -4, 1.5], [5, 4, 2], [-5, 4, 2], [-5, -4, 1.5]];
@@ -99,7 +99,7 @@
       return { d: P[k].map((v, i) => v + (P[k + 1][i] - v) * u), techo: true };
     }
   };
-  const ESC = 13, CX = 230, CY = 175;
+  const ESC = 12, CX = 230, CY = 222;
   const pr = ([x, y, z]) => [CX + (x - y) * 0.866 * ESC, CY + (x + y) * 0.5 * ESC - z * ESC];
   const pts = (a) => a.map((p) => pr(p).map((v) => v.toFixed(1)).join(",")).join(" ");
 
@@ -115,32 +115,61 @@
   const persona = ([x, y]) => { const [a, b] = pr([x, y, 0]); return `<g class="dr-sim__persona"><circle cx="${a}" cy="${b - 22}" r="5"/><path d="M${a} ${b - 17} v12 M${a - 6} ${b - 12} h12 M${a} ${b - 5} l-5 7 M${a} ${b - 5} l5 7"/></g>`; };
 
   function simulador(cont, d) {
+    // Estilo de los videos de Tecnocríticos: trazo nítido con halo detrás, partículas que viajan por la ruta,
+    // cámara que respira, el dron dibujado con hélices que giran y la descripción que aparece palabra por palabra.
     const rutas = d.recorridos.filter((r) => RUTAS[r]);
     cont.innerHTML = `<div class="dr-sim__btns" role="tablist">${rutas.map((r, i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-ruta="${r}">${R[r][0]}</button>`).join("")}</div>
-      <div class="dr-sim__lienzo"><svg viewBox="0 0 460 300" class="dr-sim__svg" aria-hidden="true"></svg>
-      <p class="dr-sim__desc" aria-live="polite"></p><span class="dr-sim__nota">Recorrido simulado · no está a escala</span></div>`;
-    const svg = cont.querySelector("svg"), desc = cont.querySelector(".dr-sim__desc");
-    let ruta = rutas[0], t0 = performance.now(), anim = 0;
-    const T = 5200;
+      <div class="dr-sim__lienzo"><span class="dr-sim__kick"></span><p class="dr-sim__desc" aria-live="polite"></p>
+      <svg viewBox="0 0 460 320" class="dr-sim__svg" aria-hidden="true"></svg><span class="dr-sim__nota">Recorrido simulado · no está a escala</span></div>`;
+    const svg = cont.querySelector("svg"), desc = cont.querySelector(".dr-sim__desc"), kick = cont.querySelector(".dr-sim__kick");
+    let ruta = rutas[0], t0 = performance.now(), anim = 0, palabras = [];
+    const T = 5600, PAUSA = 1400;
+    const suave = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : 1 - Math.pow(1 - x, 3));
+    const DEFS = `<defs><radialGradient id="sim-halo"><stop offset="0" stop-color="#7FD1B0" stop-opacity=".55"/><stop offset="1" stop-color="#7FD1B0" stop-opacity="0"/></radialGradient>
+      <radialGradient id="sim-suelo"><stop offset="0" stop-color="#7FD1B0" stop-opacity=".12"/><stop offset="1" stop-color="#7FD1B0" stop-opacity="0"/></radialGradient>
+      <radialGradient id="sim-ambar"><stop offset="0" stop-color="#f0c36b" stop-opacity=".5"/><stop offset="1" stop-color="#f0c36b" stop-opacity="0"/></radialGradient></defs>`;
+    const dron = (x, y, now, gira) => {
+      const g = (now / 30) % 360;
+      return `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})${gira ? ` rotate(${(now / 4) % 360})` : ""}">
+        <circle r="26" fill="url(#sim-halo)"/>
+        <path d="M-11 -7 L11 7 M-11 7 L11 -7" stroke="#e8e8e4" stroke-width="3" stroke-linecap="round"/>
+        ${[[-11, -7], [11, -7], [-11, 7], [11, 7]].map(([a, b], i) => `<g transform="translate(${a} ${b}) rotate(${g + i * 45})"><ellipse rx="7" ry="1.8" fill="#fff" opacity=".85"/></g>`).join("")}
+        <rect x="-5" y="-4" width="10" height="8" rx="3" fill="#00875A" stroke="#fff" stroke-width="1.5"/></g>`;
+    };
     const dibujar = (now) => {
-      const t = ((now - t0) % (T + 900)) / T, tt = Math.min(t, 1), f = RUTAS[ruta];
-      const traza = []; for (let i = 0; i <= 60; i++) traza.push(f((i / 60) * tt).d);
+      const ciclo = Math.max(0, now - t0) % (T + PAUSA), t = ciclo / T, tt = Math.min(t, 1), f = RUTAS[ruta];
+      const entra = suave(ciclo / 500), sale = 1 - suave((ciclo - T - PAUSA + 450) / 450);
+      const traza = []; for (let i = 0; i <= 70; i++) traza.push(f((i / 70) * tt).d);
+      const plan = []; for (let i = 0; i <= 70; i++) plan.push(f(i / 70).d);
       const r = f(tt), pd = pr(r.d), pb = pr([r.d[0], r.d[1], 0]);
       const sujeto = r.s || (["mapeo", "interior", "cruise", "waypoints", "fpv", "flip"].includes(ruta) ? null : [0, 0]);
-      let h = suelo(r.techo ? "techo" : r.area ? "area" : "");
+      const zoom = 1 + 0.025 * Math.sin(now / 1400), dx = 6 * Math.sin(now / 2300);
+      let h = DEFS + `<g transform="translate(${230 + dx} 200) scale(${zoom}) translate(-230 -200)" opacity="${entra * sale}">`;
+      h += `<ellipse cx="${CX}" cy="${CY}" rx="210" ry="120" fill="url(#sim-suelo)"/>` + suelo(r.techo ? "techo" : r.area ? "area" : "");
+      // Ruta prevista, tenue; la recorrida, con halo detrás y trazo nítido encima.
+      h += `<polyline points="${pts(plan)}" class="dr-sim__plan"/>`;
       if (r.s) { const sp = []; for (let i = 0; i <= 40; i++) sp.push(f((i / 40) * tt).s); h += `<polyline points="${pts(sp)}" class="dr-sim__sujeto"/>`; }
-      if (r.puntos) h += r.puntos.map((p, i) => { const [a, b] = pr(p); return `<circle cx="${a}" cy="${b}" r="5" class="dr-sim__wp"/><text x="${a + 7}" y="${b - 6}" class="dr-sim__wpn">${i + 1}</text>`; }).join("");
-      h += `<polyline points="${pts(traza)}" class="dr-sim__ruta"/>`;
-      h += `<line x1="${pd[0]}" y1="${pd[1]}" x2="${pb[0]}" y2="${pb[1]}" class="dr-sim__alt"/><ellipse cx="${pb[0]}" cy="${pb[1]}" rx="9" ry="4" class="dr-sim__sombra"/>`;
-      if (sujeto) h += persona(sujeto);
+      if (r.puntos) h += r.puntos.map((q, i) => { const [a, b] = pr(q); return `<circle cx="${a}" cy="${b}" r="6" class="dr-sim__wp"/><text x="${a + 9}" y="${b - 7}" class="dr-sim__wpn">${i + 1}</text>`; }).join("");
+      h += `<polyline points="${pts(traza)}" class="dr-sim__halo"/><polyline points="${pts(traza)}" class="dr-sim__ruta"/>`;
+      // Partículas de luz que viajan por el tramo recorrido.
+      for (let i = 0; i < 4; i++) { const u = ((now / 1600 + i / 4) % 1) * tt, q = pr(f(u).d);
+        h += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="2.6" fill="#fff" opacity="${(Math.sin(((now / 1600 + i / 4) % 1) * Math.PI) * 0.9).toFixed(2)}"/>`; }
+      const p0 = pr(f(0).d); h += `<circle cx="${p0[0]}" cy="${p0[1]}" r="4" fill="none" stroke="#7FD1B0" stroke-width="1.5" opacity=".7"/>`;
+      h += `<line x1="${pd[0]}" y1="${pd[1]}" x2="${pb[0]}" y2="${pb[1]}" class="dr-sim__alt"/><ellipse cx="${pb[0]}" cy="${pb[1]}" rx="10" ry="4" class="dr-sim__sombra"/>`;
+      if (sujeto) { const [a, b] = pr([sujeto[0], sujeto[1], 0]); h += `<ellipse cx="${a}" cy="${b - 14}" rx="22" ry="22" fill="url(#sim-ambar)"/>` + persona(sujeto); }
       if (sujeto && !["rocket", "birdseye"].includes(ruta)) { const ps = pr([sujeto[0], sujeto[1], 1.2]); h += `<line x1="${pd[0]}" y1="${pd[1]}" x2="${ps[0]}" y2="${ps[1]}" class="dr-sim__mira"/>`; }
-      if (r.apunta) { const pa = pr(r.apunta), pm = pr([0, 0, 1.4]); h += `<line x1="${pm[0]}" y1="${pm[1]}" x2="${pa[0]}" y2="${pa[1]}" class="dr-sim__apunta"/>`; h += persona([0, 0]); }
-      h += `<g transform="translate(${pd[0]},${pd[1]})${r.gira ? ` rotate(${(now / 4) % 360})` : ""}"><circle r="9" class="dr-sim__dron"/><path d="M-13 -5h8M5 -5h8M-13 5h8M5 5h8" class="dr-sim__helices"/></g>`;
+      if (r.apunta) { const pa = pr(r.apunta), pm = pr([0, 0, 1.4]); h += `<line x1="${pm[0]}" y1="${pm[1]}" x2="${pa[0]}" y2="${pa[1]}" class="dr-sim__apunta"/><circle cx="${pa[0]}" cy="${pa[1]}" r="5" fill="#f0c36b"/>` + persona([0, 0]); }
+      h += dron(pd[0], pd[1], now, r.gira) + `</g>`;
       svg.innerHTML = h;
+      // Descripción palabra por palabra, como los subtítulos de los videos.
+      palabras.forEach((el, i) => { const a = suave((ciclo - 250 - i * 70) / 220); el.style.opacity = String(0.15 + 0.85 * a); el.style.transform = `translateY(${(1 - a) * 6}px)`; });
       anim = requestAnimationFrame(dibujar);
     };
     const elegir = (r) => {
-      ruta = r; t0 = performance.now(); desc.textContent = R[r][1];
+      ruta = r; t0 = performance.now();
+      kick.textContent = `Recorrido · ${R[r][0]}`;
+      desc.innerHTML = R[r][1].split(" ").map((w) => `<span>${w}</span>`).join(" ");
+      palabras = [...desc.querySelectorAll("span")];
       cont.querySelectorAll("[data-ruta]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.ruta === r)));
     };
     cont.querySelector(".dr-sim__btns").addEventListener("click", (e) => { const b = e.target.closest("[data-ruta]"); if (b) elegir(b.dataset.ruta); });
@@ -303,6 +332,17 @@
     const d = D.find((x) => x.id === id);
     if (d) parar = simulador(raiz.querySelector(`[data-sim="${id}"]`), d);
     raiz.querySelectorAll(`[data-vista="${id}"] .dr-barra__p i, [data-vista="${id}"] .dr-alt i`).forEach((el) => { el.classList.remove("ve"); void el.offsetWidth; el.classList.add("ve"); });
+    // Las cifras cuentan hasta su valor al aparecer, como en los videos.
+    raiz.querySelectorAll(`[data-vista="${id}"] .dr-datos b, [data-vista="${id}"] .dr-barra__v, [data-vista="${id}"] .dr-alt__col b`).forEach((el) => {
+      const nodo = el.firstChild; if (!nodo || nodo.nodeType !== 3) return;
+      if (!el.dataset.final) el.dataset.final = nodo.textContent;
+      const txt = el.dataset.final, m = txt.match(/[\d.,]+/); if (!m) return;
+      const num = parseFloat(m[0].replace(/\./g, "").replace(",", ".")), dec = (m[0].split(",")[1] || "").length, ini = performance.now();
+      const paso = (now) => { const k = Math.min((now - ini) / 900, 1), e = 1 - Math.pow(1 - k, 3);
+        const v = (num * e).toFixed(dec).replace(".", ","), con = v.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        nodo.textContent = txt.replace(m[0], k < 1 ? (dec ? v : con) : m[0]); if (k < 1) requestAnimationFrame(paso); };
+      requestAnimationFrame(paso);
+    });
     if (desplazar) raiz.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const desdeAncla = (desplazar) => ir(decodeURIComponent(location.hash.slice(1)) || "panorama", desplazar);
