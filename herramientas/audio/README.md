@@ -2,6 +2,11 @@
 
 Configuración aprobada por la dirección (24 de noviembre de 2026). Todos los videos con voz se hacen así.
 
+## Duración (regla de la dirección, 26 de noviembre de 2026)
+- Los videos duran **idealmente 1 minuto** y **nunca más de 1:30**, incluidos la portada y el cierre.
+- Guion de locución: unas **150 palabras** para 1 minuto y **220 como máximo** para 1:30 (con la voz 18 % más rápida).
+- Si una grabación queda larga, se recortan bloques completos (nunca frases a la mitad) y se vuelven a sincronizar las escenas.
+
 ## Grabación (la hace la dirección)
 - Micrófono Hollyland Lark A1, **Mic 2** prendido en la camisa, a un palmo debajo de la barbilla.
 - En la app del Lark: **cancelación de ruido apagada**, **reverberación apagada**, modo **mono**, ecualización neutra (primera opción), volumen **4 de 6**.
