@@ -570,3 +570,15 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
 .flechas--menos::before { left: 0; background: linear-gradient(270deg, transparent, var(--flechas-fondo, #fff)); }
 .mmz .flechas { --flechas-fondo: #0d0d0c; } .dr-nav .flechas { --flechas-fondo: #111; }
 @media (hover: none) { .flechas__b { display: none !important; } }
+
+/* Portada, «Explicado en imágenes»: la infografía toma la altura del video (sin espacio vacío debajo del video). */
+.mm__vermas { display: none; }
+@media (min-width: 701px) {
+  .mm--home .mm__rej { align-items: stretch; }
+  .mm--home .mm__info { position: relative; min-height: 100%; }
+  .mm--home .mm__info a { position: absolute; inset: 0; display: block; overflow: hidden; border: 1px solid var(--linea); border-radius: 10px; }
+  .mm--home .mm__info img { border: 0; border-radius: 0; }
+  .mm--home .mm__info a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: linear-gradient(transparent, #fff 80%); }
+  .mm--home .mm__vermas { display: block; position: absolute; left: 50%; bottom: 18px; z-index: 1; transform: translateX(-50%); background: var(--tinta); color: #fff; font: 700 13px var(--f-titular); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+  .mm--home .mm__info a:hover .mm__vermas { background: var(--acento); }
+}
