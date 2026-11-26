@@ -5,7 +5,7 @@
   if (!raiz || !window.PLATAFORMAS) return;
   const P = window.PLATAFORMAS, porId = Object.fromEntries(P.map((p) => [p.id, p]));
   const num = (n) => String(n).replace(".", ",");
-  const marca = (p, tam = "") => `<span class="st-marca${tam}" style="--c:${p.color}"${p.id === "apple-tv" ? ' data-arcoiris' : ""}>${p.nombre}</span>`;
+  const marca = (p, tam = "") => `<span class="st-marca${tam}" style="--c:${p.color}">${p.nombre}</span>`;
   const muestra = (c) => c === "arcoiris" ? "linear-gradient(120deg,#ff5f6d,#ffc371,#7FD1B0,#5aa9ff,#a46bff)" : c;
 
   /* ---------- Panorama ---------- */
@@ -20,7 +20,7 @@
   const DONA = [["netflix", 20], ["disney-plus", 20], ["prime-video", 19], ["hbo-max", 12], ["apple-tv", 8], ["paramount-plus", 7], ["otras", 14]];
   const dona = () => {
     const R = 120, C = 2 * Math.PI * R; let acc = 0;
-    const arcos = DONA.map(([id, v], i) => { const p = porId[id], col = p ? (p.id === "apple-tv" ? "#8a8a85" : p.color) : "#D6D6D0", lon = v / 100 * C, ini = acc; acc += lon;
+    const arcos = DONA.map(([id, v], i) => { const p = porId[id], col = p ? p.color : "#D6D6D0", lon = v / 100 * C, ini = acc; acc += lon;
       return `<circle r="${R}" cx="160" cy="160" fill="none" stroke="${col}" stroke-width="56" stroke-dasharray="${lon - 3} ${C}" stroke-dashoffset="${-ini}" transform="rotate(-90 160 160)" class="st-arco" style="--d:${i * 0.12}s;--lon:${lon}"/>`; }).join("");
     const ley = DONA.map(([id, v]) => { const p = porId[id]; return `<li>${p ? `<a href="#${id}">${marca(p)}</a>` : `<span class="st-otras">Otras</span>`}<b>${v} %</b></li>`; }).join("");
     return `<div class="st-dona"><svg viewBox="0 0 320 320" role="img" aria-label="Cuota de mercado del streaming en Colombia, tercer trimestre de 2025">${arcos}
@@ -51,7 +51,7 @@
 
   const premios = () => `<div class="st-dos">
       <div><h4>Emmy 2026 · premios por plataforma</h4><div class="dr-barras">${window.EMMY26.map(([id, n]) => { const p = porId[id];
-        return `<a class="dr-barra" href="#${id}"><span class="dr-barra__n">${marca(p)}</span><span class="dr-barra__p"><i style="--v:${(n / 28 * 100).toFixed(1)}%;background:${p.id === "apple-tv" ? muestra("arcoiris") : p.color}"></i></span><span class="dr-barra__v">${n}</span></a>`; }).join("")}</div>
+        return `<a class="dr-barra" href="#${id}"><span class="dr-barra__n">${marca(p)}</span><span class="dr-barra__p"><i style="--v:${(n / 28 * 100).toFixed(1)}%;background:${p.color}"></i></span><span class="dr-barra__v">${n}</span></a>`; }).join("")}</div>
         <p class="dr-nota">Incluye las categorías de Artes Creativas. Disney suma todas sus marcas. Fuente: Gold Derby.</p></div>
       <div><h4>Óscar 2026</h4><ul class="st-oscar"><li>${marca(porId.netflix)}<b>7</b><span>igualó su récord</span></li><li>${marca(porId["apple-tv"])}<b>1</b><span>mejor sonido, por «F1»</span></li></ul>
         <h4 class="dr-mt">Hitos de la historia</h4><ul class="st-hitos">
@@ -107,7 +107,7 @@
   const aqui = location.pathname;
   raiz.innerHTML = (`<nav class="dr-nav" aria-label="Navegación de la infografía"><div class="dr-nav__carril">
       <a href="#panorama" data-ir="panorama"><span class="dr-nav__ico">▦</span>Panorama</a>
-      ${P.map((p) => `<a href="#${p.id}" data-ir="${p.id}"><span class="st-nav__p" style="--c:${p.color}${p.id === "apple-tv" ? `;--g:${muestra("arcoiris")}` : ""}"></span>${p.nombre}</a>`).join("")}
+      ${P.map((p) => `<a href="#${p.id}" data-ir="${p.id}"><span class="st-nav__p" style="--c:${p.color}"></span>${p.nombre}</a>`).join("")}
     </div></nav>
     <div class="dr-vistas">${panorama()}${P.map(ficha).join("")}</div>`).replace(/href="#/g, `href="${aqui}#`);
 

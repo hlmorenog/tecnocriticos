@@ -61,8 +61,8 @@ td small { display: block; font: 500 12.5px Inter; color: var(--suave); margin-t
 <script>
 const emmy = Object.fromEntries(EMMY26), arco = "linear-gradient(120deg,#ff5f6d,#f5a623,#2fb383,#3d8bff,#8a5cff)";
 document.getElementById("filas").innerHTML = PLATAFORMAS.map((p) => `<tr>
-  <td><span class="m ${p.id === "apple-tv" ? "arco" : ""}" style="color:${p.id === "apple-tv" ? "" : p.color}">${p.nombre}</span></td>
-  <td>${p.subs ? `<span class="bar" style="width:${Math.round(p.subs / 325 * 90)}px;background:${p.color}"></span>${String(p.subs).replace(".", ",")} M` : `<small style="font-size:14px">${p.subsTxt}</small>`}</td>
+  <td><span class="m" style="color:${p.color}">${p.nombre}</span></td>
+  <td>${p.subs ? `<span class="bar" style="width:${Math.round(p.subs / 325 * 90)}px;background:${p.color}"></span>${String(p.subs).replace(".", ",")} M` : `<small style="font-size:13px;line-height:1.3">${p.subsCorto || p.subsTxt}</small>`}</td>
   <td>${p.co} %${p.co26 ? ` <small style="display:inline">(${p.co26} %)</small>` : ""}</td>
   <td>${p.nace}</td><td>${p.latamAnio}</td>
   <td>${p.colores.map(([, c]) => `<span class="sw" style="background:${c === "arcoiris" ? arco : c}"></span>`).join("")}</td>
