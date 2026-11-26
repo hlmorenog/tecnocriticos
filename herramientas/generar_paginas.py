@@ -293,6 +293,14 @@ def item_estatico(n):
             f'{esc(n["titular"])}</a></h3><p>{esc(n.get("entradilla"))}</p><span class="meta">{esc(n["fecha"])}</span></div></article>')
 
 
+def interactiva_de(url):
+    """La infografía interactiva (i/<id>.html) que declara como «relacionada» la pieza o nota con esta url."""
+    for i in cargar_infografias():
+        if i.get("interactiva") and (i.get("relacionada") or {}).get("url") == url:
+            return i
+    return None
+
+
 def bloque_explicado(noticias):
     """Portada: la pieza multimedia propia más reciente (video vertical + infografía) de los últimos 7 días,
     sea de una noticia o un explicador de la sección Multimedia (multimedia/piezas.json)."""
@@ -321,12 +329,16 @@ def bloque_explicado(noticias):
         poster = f' poster="{esc(v["poster"])}"' if v.get("poster") else ""
         piezas += (f'<figure class="mm__video"><video controls playsinline preload="none"{poster} aria-label="{esc(v.get("titulo") or c["titulo"])}">'
                    f'<source src="{esc(v["archivo"])}" type="video/mp4"></video></figure>')
+    inter = interactiva_de(c["url"])
+    url_inf = url_infografia(inter) if inter else c["url"]
+    txt_inf = "Abrir la infografía interactiva →" if inter or c["mas"] == "Ver la infografía completa" else "Ver la infografía completa ↓"
     if ig.get("archivo") and (RAIZ / ig["archivo"]).is_file():
-        piezas += (f'<figure class="mm__info"><a href="{c["url"]}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy">'
-                   f'<span class="mm__vermas">Ver la infografía completa ↓</span></a></figure>')
+        piezas += (f'<figure class="mm__info"><a href="{url_inf}"><img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or "Infografía")}" loading="lazy">'
+                   f'<span class="mm__vermas">{txt_inf}</span></a></figure>')
     return (f'<section class="mm mm--home" aria-label="Explicado en imágenes"><h2 class="videos__tit">Explicado en imágenes</h2>'
             f'<h3 class="mm__tit"><a href="{c["url"]}">{esc(c["titulo"])}</a></h3><div class="mm__rej">{piezas}</div>'
-            f'<p class="mm__mas"><a href="{c["url"]}">{c["mas"]} →</a></p></section>')
+            f'<p class="mm__mas"><a href="{c["url"]}">{c["mas"]} →</a>'
+            + (f' <a href="{url_inf}">Infografía interactiva →</a>' if inter else "") + '</p></section>')
 
 
 def cargar_piezas():
@@ -455,9 +467,15 @@ def pagina_pieza(p):
     # Texto largo opcional: lista de párrafos; los que empiezan con «## » son subtítulos.
     cuerpo = "".join(f"<h2>{esc(t[3:])}</h2>" if t.startswith("## ") else f"<p>{esc(t)}</p>"
                      for t in (p.get("texto") or [p.get("descripcion", "")]))
-    infografia = (f'<figure class="mmx__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener">'
-                  f'<img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or p["titulo"])}" ></a>'
-                  f'<figcaption>Infografía: {esc(p["titulo"])}. Toca la imagen para verla en tamaño completo.</figcaption></figure>') if ig.get("archivo") else ""
+    inter = interactiva_de(url_pieza(p))
+    if inter:
+        infografia = (f'<figure class="mmx__info"><a href="{url_infografia(inter)}">'
+                      f'<img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or p["titulo"])}" ></a>'
+                      f'<figcaption>Infografía: {esc(p["titulo"])}. <a href="{url_infografia(inter)}"><b>Ábrela en su versión interactiva y animada →</b></a></figcaption></figure>') if ig.get("archivo") else ""
+    else:
+        infografia = (f'<figure class="mmx__info"><a href="{esc(ig["archivo"])}" target="_blank" rel="noopener">'
+                      f'<img src="{esc(ig["archivo"])}" alt="{esc(ig.get("alt") or p["titulo"])}" ></a>'
+                      f'<figcaption>Infografía: {esc(p["titulo"])}. Toca la imagen para verla en tamaño completo.</figcaption></figure>') if ig.get("archivo") else ""
     fuentes = "".join(f'<li><a href="{esc(f["url"])}" target="_blank" rel="noopener">{esc(f.get("nombre") or f["url"])}</a></li>' for f in p.get("fuentes", []))
     rel = p.get("relacionada")
     relacionada = f'<p class="mmx__rel">Relacionado: <a href="{resolver_enlace(rel["url"])}">{esc(rel["titulo"])}</a></p>' if rel else ""
