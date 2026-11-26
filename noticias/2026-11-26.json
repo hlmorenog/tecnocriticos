@@ -32,7 +32,15 @@
           "nombre": "Gobernación de Nueva York",
           "url": "https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot"
         }
-      ]
+      ],
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-nueva-york-prohibe-juguetes-con-chatbots-de-ia.jpg",
+        "alt": "Vista aérea del sur de Manhattan, en Nueva York (imagen ilustrativa)",
+        "autor": "James Cridland",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/jamescridland/4112400539"
+      }
     },
     {
       "id": "2026-11-26-fincen-confirma-acceso-no-autorizado-a-sus-sistemas",
