@@ -97,7 +97,7 @@
       "archivo": "img/infografias/2026-11-26-plataformas-de-streaming.jpg",
       "alt": "Infografía que compara Netflix, Disney+, Prime Video, HBO Max, Paramount+ y Apple TV: suscriptores en el mundo, cuota de mercado en Colombia, año de nacimiento y de llegada a Latinoamérica, cambios de color de su marca y premios Emmy de 2026.",
       "ancho": 1080,
-      "alto": 1143,
+      "alto": 1187,
       "interactiva": {
         "html": "infografias/streaming-2026/app.html",
         "css": [
@@ -111,7 +111,7 @@
       },
       "texto": [
         "## Cómo leer esta infografía",
-        "Las cifras de suscriptores son las últimas que publicó cada empresa. Disney y Warner Bros. Discovery dejaron de reportarlas en 2025, y Skydance, la antigua Paramount, dejará de hacerlo cada trimestre a partir del cuarto trimestre de 2026. Amazon y Apple nunca han publicado cuántos suscriptores tienen Prime Video y Apple TV.",
+        "Las cifras de suscriptores son las últimas que publicó cada empresa. Disney y Warner Bros. Discovery dejaron de reportarlas en 2025, y Skydance, la antigua Paramount, dejará de hacerlo cada trimestre a partir del cuarto trimestre de 2026. Apple nunca ha publicado cuántos suscriptores tiene Apple TV. Amazon tampoco publica los de Prime Video, porque viene incluido en Prime: su último dato oficial es de 2021, cuando Prime tenía más de 200 millones de miembros, y en 2025 dijo que la versión con anuncios de Prime Video llega a 315 millones de espectadores al mes en 16 países, una medida de alcance que no equivale a suscriptores.",
         "En Colombia no hay cifras oficiales de suscriptores por plataforma. Usamos la cuota de mercado que mide JustWatch con la actividad de sus usuarios en el país: en el tercer trimestre de 2025, Netflix y Disney+ empataron con 20 %, seguidas por Prime Video (19 %), HBO Max (12 %), Apple TV (8 %) y Paramount+ (7 %). En el primer semestre de 2026, Netflix siguió con 20 % y Apple TV subió a 12 %, empatada con HBO Max.",
         "## El gran cambio de 2026",
         "El 6 de octubre de 2026, Paramount Skydance completó la compra de Warner Bros. Discovery y quedó como dueña de HBO Max y de Paramount+. Entre HBO, HBO Max y Paramount+ suman 203 millones de suscriptores, y en 2027 se venderán en un paquete.",
@@ -134,6 +134,10 @@
         {
           "nombre": "Variety: HBO Max cierra 2025 cerca de 132 millones",
           "url": "https://variety.com/2026/film/news/hbo-max-subscribers-132-million-warner-bros-discovery-earnings-1236673104/"
+        },
+        {
+          "nombre": "The Hollywood Reporter: Prime Video con anuncios llega a 315 millones de espectadores al mes",
+          "url": "https://www.hollywoodreporter.com/business/business-news/prime-video-315-million-monthly-viewers-1236423744/"
         },
         {
           "nombre": "TheWrap: resultados de Skydance del tercer trimestre de 2026",
