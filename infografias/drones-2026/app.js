@@ -327,7 +327,9 @@
   const ir = (id, desplazar) => {
     if (!raiz.querySelector(`[data-vista="${id}"]`)) id = "panorama";
     raiz.querySelectorAll("[data-vista]").forEach((v) => { v.hidden = v.dataset.vista !== id; });
-    raiz.querySelectorAll("[data-ir]").forEach((a) => { if (a.dataset.ir === id) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest", inline: "center" }); } else a.removeAttribute("aria-current"); });
+    raiz.querySelectorAll("[data-ir]").forEach((a) => { if (a.dataset.ir === id) { a.setAttribute("aria-current", "page");
+      // Centra el dron activo moviendo solo la barra de lado (sin desplazar la página).
+      const car = a.parentElement; car.scrollTo({ left: a.offsetLeft - (car.clientWidth - a.offsetWidth) / 2, behavior: "smooth" }); } else a.removeAttribute("aria-current"); });
     if (parar) { parar(); parar = null; }
     const d = D.find((x) => x.id === id);
     if (d) parar = simulador(raiz.querySelector(`[data-sim="${id}"]`), d);
