@@ -1,0 +1,215 @@
+{
+  "fecha": "2026-11-26",
+  "noticias": [
+    {
+      "id": "2026-11-26-nueva-york-prohibe-juguetes-con-chatbots-de-ia",
+      "seccion": "IA y tecnología",
+      "titular": "Nueva York prohíbe por cinco años los juguetes con chatbots de IA para niños",
+      "entradilla": "Pruebas a juguetes para niños de 3 a 12 años hallaron conversaciones sexuales y consejos peligrosos; la norma llega justo antes de la temporada de regalos.",
+      "lead": "La gobernadora de Nueva York, Kathy Hochul, firmó el martes 24 de noviembre una ley que prohíbe durante cinco años fabricar, vender y distribuir juguetes con chatbots de inteligencia artificial, como muñecas, peluches y robots que conversan con los niños.",
+      "cuerpo": [
+        "La medida responde a pruebas de una organización nacional de defensa del consumidor a juguetes con IA dirigidos a niños de 3 a 12 años. Según la oficina de la gobernadora, algunos tuvieron conversaciones sexuales explícitas, les dijeron a los niños dónde encontrar fósforos en la casa y reaccionaron con molestia cuando el niño quería dejar de jugar. También encontró juguetes con pocos o ningún control parental, restricciones que se debilitaban a medida que avanzaba la conversación y algunos capaces de grabar la voz o escanear la cara de los niños.",
+        "La ley entra en vigor 90 días después de la firma, en febrero, así que no aplicará en esta temporada de compras navideñas. Quien la incumpla se expone a multas civiles de hasta 15.000 dólares por día, que cobrará la fiscal general del estado, Letitia James. Nueva York es el segundo estado de EE. UU. que prohíbe estos juguetes, después de California.",
+        "El senador estatal Andrew Gounardes, autor del proyecto, explicó que los cinco años servirán para estudiar el efecto de esta tecnología en los niños y crear más protecciones. Mientras tanto, el estado recomienda a las familias revisar si un juguete trae un compañero de IA, qué datos personales recoge y si permite conversaciones abiertas."
+      ],
+      "mirada": "Que un estado deba prohibir juguetes que hablan de sexo con niños retrata a una industria que vende IA sin probarla.",
+      "titular_corto": "Nueva York veta juguetes con IA",
+      "por_que_importa": "estos juguetes también se venden en línea en Colombia, y en Navidad son los padres quienes deben revisar qué escucha y qué dice un juguete conectado.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Antes de comprar, revise si el juguete trae IA, qué datos recoge y si conversa sin límites."
+      },
+      "fuentes": [
+        {
+          "nombre": "NBC News",
+          "url": "https://www.nbcnews.com/tech/tech-news/new-york-governor-kathy-hochul-sign-ai-toy-ban-law-rcna610962"
+        },
+        {
+          "nombre": "CBS6 Albany (WRGB)",
+          "url": "https://cbs6albany.com/news/local/gov-hochul-signs-five-year-ban-on-ai-chatbot-toys-in-new-york-chatgpt-child-safety-law-attorney-general-letitia-james-minors-foster-emotional-dependency-s9408a/a11144b-legislation-animals-hold-conversations-dangerous-cbs6-wrgb"
+        },
+        {
+          "nombre": "Gobernación de Nueva York",
+          "url": "https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fincen-confirma-acceso-no-autorizado-a-sus-sistemas",
+      "seccion": "IA y tecnología",
+      "titular": "Atacan la oficina de EE. UU. que rastrea el lavado de dinero y apaga parte de sus sistemas",
+      "entradilla": "FinCEN guarda los reportes de operaciones sospechosas de todo el sistema financiero estadounidense, y aún no dice qué se vio ni quién entró.",
+      "lead": "La Red de Ejecución de Crímenes Financieros (FinCEN), la unidad del Tesoro de Estados Unidos que persigue el lavado de dinero, confirmó esta semana que alguien sin autorización entró a una parte limitada de sus sistemas, y apagó algunos como precaución.",
+      "cuerpo": [
+        "El aviso apareció en el mismo portal donde bancos, cooperativas, comisionistas y casinos envían los reportes que exige la Ley de Secreto Bancario, como los de actividades sospechosas. FinCEN aseguró que ese portal sigue funcionando, aunque algunos servicios pueden no estar disponibles, y amplió los plazos para quienes no puedan presentar sus reportes a tiempo. Su línea telefónica para casos urgentes no fue afectada.",
+        "La agencia no ha explicado cómo ocurrió la intrusión, cuánto duró ni quién está detrás. Según CyberScoop, el FBI, la agencia de ciberseguridad CISA y peritos externos trabajan para medir el alcance, y hasta ahora no hay evidencia de que se hayan visto afectadas las bases de datos de beneficiarios finales de las empresas.",
+        "Los reportes que recibe FinCEN alimentan investigaciones penales, tributarias y de seguridad nacional sobre lavado de activos, narcotráfico y financiación del terrorismo. No es la primera vez que el Tesoro es blanco de un ataque: a finales de 2024 confirmó un acceso atribuido a hackers patrocinados por el Estado chino."
+      ],
+      "mirada": "Si la oficina que vigila el dinero sucio no sabe aún quién entró ni qué vio, el problema ya no es técnico sino de confianza.",
+      "titular_corto": "Hackean la oficina antilavado de EE. UU.",
+      "por_que_importa": "FinCEN concentra buena parte de la inteligencia financiera de Estados Unidos, que también se usa en casos de narcotráfico que tocan a Colombia.",
+      "dato": {
+        "etiqueta": "Lo que no se dice",
+        "texto": "FinCEN no ha dicho qué sistemas tocaron, cuánto tiempo ni si se llevaron datos."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-fincen-confirma-acceso-no-autorizado-a-sus-sistemas.jpg",
+        "alt": "Edificio del Departamento del Tesoro de Estados Unidos en Washington, con el obelisco al fondo",
+        "autor": "MeanieHyaena",
+        "licencia": "CC BY 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Us-treasury-building.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "CyberScoop",
+          "url": "https://cyberscoop.com/fincen-investigates-cybersecurity-incident-systems-offline/"
+        },
+        {
+          "nombre": "ENTER.CO",
+          "url": "https://www.enter.co/fintech/fincen-ciberataque-sistemas-apagados/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-atentado-deja-sin-luz-al-suroccidente-de-colombia",
+      "seccion": "Colombia",
+      "titular": "Un atentado a la red eléctrica dejó sin luz a cinco departamentos del suroccidente",
+      "entradilla": "Menos de un día después, el servicio iba en 68 % y el Gobierno ordenó un plan especial para proteger la infraestructura eléctrica y de gas.",
+      "lead": "Un atentado contra la red eléctrica dejó sin energía, desde la tarde del martes 24 de noviembre, a buena parte de Nariño, Putumayo, Cauca, el sur del Huila y Caquetá, según confirmó la Presidencia de la República.",
+      "cuerpo": [
+        "Según Cedenar, la distribuidora de energía de Nariño, hacia las 6:30 p. m. se cayeron al mismo tiempo los dos circuitos que unen la subestación San Bernardino, en el Cauca, con la subestación Jamondino, en Pasto, lo que cortó el enlace de la región con el Sistema Interconectado Nacional. XM, el operador del sistema, atribuyó primero el evento a la fragilidad que dejaron ataques recientes; luego la Presidencia confirmó que fue un atentado. Las autoridades no han dicho quiénes son los responsables.",
+        "El miércoles 25 de noviembre, el Ministerio de Minas y Energía informó que se había recuperado cerca del 68 % de la demanda de la región: Putumayo iba en 72 %, Cauca y Nariño en 71 %, el sur del Huila en 69 % y Caquetá apenas en 48 %. No dio un plazo para normalizar el servicio.",
+        "El presidente Abelardo de la Espriella ordenó un plan especial de defensa y protección de la infraestructura eléctrica. No es el primer golpe a la red de la zona: el 15 de noviembre otro atentado derribó torres en El Pital, en el Huila."
+      ],
+      "mirada": "Sin luz no hay internet, ni pagos, ni celular: la conectividad del sur depende de unas torres que nadie logra proteger.",
+      "titular_corto": "Atentado deja sin luz al sur",
+      "por_que_importa": "la energía sostiene las comunicaciones, los pagos digitales y los servicios en línea de millones de personas en el suroccidente.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Caquetá era el más rezagado: el miércoles solo tenía el 48 % de su demanda."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-atentado-deja-sin-luz-al-suroccidente-de-colombia.jpg",
+        "alt": "Postes y líneas de transmisión eléctrica sobre una avenida de Bogotá (imagen ilustrativa)",
+        "autor": "HighVoltage 5576",
+        "licencia": "CC BY-SA 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Bogota_steel_tube_pylons.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "El Colombiano",
+          "url": "https://www.elcolombiano.com/colombia/apagon-suroccidente-colombia-regiones-afectadas-restablecimiento-energia-HG44066540"
+        },
+        {
+          "nombre": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/11/25/revelan-que-provoco-el-apagon-en-el-suroccidente-de-colombia-gobierno-confirma-atentado-terrorista/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-openai-dice-que-gpt-6-disena-proteinas-que-funcionan-en-laboratorio",
+      "seccion": "IA y tecnología",
+      "titular": "OpenAI dice que GPT-6 diseña proteínas que se adhieren a su objetivo en el laboratorio",
+      "entradilla": "Es un paso hacia nuevos medicamentos, pero solo 35 de 322 diseños funcionaron y aún falta muchísimo para un tratamiento.",
+      "lead": "OpenAI publicó el 24 de noviembre una investigación según la cual sus modelos GPT-6 pueden diseñar proteínas usando solo razonamiento y código, y en pruebas de laboratorio con la empresa Onava algunos diseños se adhirieron a cinco proteínas objetivo.",
+      "cuerpo": [
+        "En el primer experimento, GPT-6.2 diseñó la forma de 322 proteínas pequeñas, llamadas minibinders, pensadas para pegarse a cinco proteínas del cuerpo, entre ellas PD-L1, que algunos cánceres usan para esconderse del sistema inmune. Otros modelos especializados propusieron las secuencias y ayudaron a escoger cuáles fabricar. De esas 322, 35 (el 10,9 %) se adhirieron a su objetivo; para cada uno de los cinco hubo al menos un acierto.",
+        "En otras pruebas, el modelo rediseñó partes de anticuerpos usados en terapias, y 179 de 272 fragmentos (66 %) siguieron uniéndose a su objetivo. OpenAI reconoce que estudios anteriores con herramientas especializadas reportaron tasas de acierto más altas, aunque advierte que dependen de cómo se filtren los diseños.",
+        "La empresa presenta el resultado como prueba de que un modelo de uso general puede hacer trabajo que antes requería varias herramientas de biología. Que una proteína se adhiera en el laboratorio es apenas el primer paso: no demuestra que sirva como medicamento ni que sea segura."
+      ],
+      "mirada": "Un 10,9 % de aciertos es un avance real, pero entre una proteína que se pega y un medicamento hay años de pruebas.",
+      "titular_corto": "GPT-6 diseña proteínas",
+      "por_que_importa": "si los modelos generales aprenden a diseñar proteínas, el desarrollo de medicamentos podría acelerarse, y también crece la pregunta sobre quién controla esa capacidad.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "35 de 322 proteínas diseñadas se adhirieron a su objetivo en el laboratorio."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-openai-dice-que-gpt-6-disena-proteinas-que-funcionan-en-laboratorio.jpg",
+        "alt": "Visualización en 3D de la estructura de una proteína en un laboratorio de realidad virtual (imagen ilustrativa)",
+        "autor": "Idaho National Laboratory",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/30369883@N03/5168203850",
+        "encuadre": "completa"
+      },
+      "fuentes": [
+        {
+          "nombre": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-meta-lleva-su-agente-muse-a-los-mensajes-de-instagram",
+      "seccion": "IA y tecnología",
+      "titular": "Meta mete su agente de IA Muse en los mensajes de Instagram, a tiempo para el Black Friday",
+      "entradilla": "Ya se puede pedirle desde un chat de Instagram que busque ofertas o arme un itinerario; en Latinoamérica, por ahora, solo llega a México.",
+      "lead": "Meta empezó a habilitar el 24 de noviembre su agente de inteligencia artificial Muse dentro de los mensajes directos de Instagram, en Estados Unidos, Canadá, México, Japón y Singapur, para iOS y Android.",
+      "cuerpo": [
+        "Los usuarios pueden compartirle a Muse una publicación y pedirle que actúe: por ejemplo, agregar un café a un itinerario de viaje o buscar una oferta de Black Friday para unos zapatos. Las conversaciones también aparecen en la aplicación de Muse. En Estados Unidos y Canadá, Muse además ofrece organizar en carpetas lo que la gente guarda en Instagram, convertir un video de receta en lista de mercado o un conjunto de reels de viajes en un itinerario.",
+        "Meta asegura que nada se comparte, publica ni envía sin aprobación del usuario, y que se le puede pedir a Muse que olvide información o deshaga acciones. Muse es un agente: no solo responde preguntas, también navega y completa tareas como reservar o comprar.",
+        "La empresa lanzó Muse el 5 de noviembre y México fue su primer mercado latinoamericano, según La República. Meta no ha anunciado una fecha para Colombia."
+      ],
+      "mirada": "Muse llega a donde la gente ya descubre productos: Instagram deja de ser vitrina y empieza a cobrar en la caja.",
+      "titular_corto": "Muse llega a Instagram",
+      "por_que_importa": "los agentes de IA empiezan a comprar y reservar dentro de las redes sociales, y eso cambia quién decide qué vemos y qué pagamos.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Todavía no está disponible en Colombia; en Latinoamérica solo funciona en México."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-meta-lleva-su-agente-muse-a-los-mensajes-de-instagram.jpg",
+        "alt": "Mano sosteniendo un celular con la aplicación de Instagram abierta (imagen ilustrativa)",
+        "autor": "Santeri Viinamäki",
+        "licencia": "CC BY-SA 4.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Instagram_app_on_smartphone.jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/"
+        },
+        {
+          "nombre": "La República",
+          "url": "https://www.larepublica.co/internet-economy/muse-ai-la-inteligencia-artificial-de-meta-platforms-que-llego-a-latinoamerica-4524678"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-the-witcher-4-saldra-el-mismo-dia-en-ps5-xbox-y-pc",
+      "seccion": "Videojuegos y series",
+      "titular": "The Witcher 4 tendrá alianza con PlayStation, pero saldrá el mismo día en Xbox y PC",
+      "entradilla": "CD Projekt Red despejó el temor a una exclusividad: el acuerdo con Sony es solo de promoción.",
+      "lead": "CD Projekt Red anunció un acuerdo de mercadeo con Sony para The Witcher 4 y aclaró el 25 de noviembre que el juego saldrá al mismo tiempo en PlayStation 5, Xbox Series X|S y PC.",
+      "cuerpo": [
+        "El codirector ejecutivo del estudio, Michał Nowakowski, explicó en redes sociales que The Witcher 4 y sus próximos títulos seguirán siendo multiplataforma. Ante la pregunta de si habría una exclusividad temporal, respondió que todas las plataformas reciben el juego el mismo día y que nadie se queda por fuera.",
+        "El acuerdo significa, en la práctica, que Sony promocionará el juego y que el estudio destacará la versión de PS5, como hizo Rockstar con GTA VI. La alianza sorprendió a algunos jugadores por la historia entre ambas empresas: en 2020, Sony retiró Cyberpunk 2077 de su tienda por los problemas que tenía en PS4, y solo lo volvió a poner a la venta seis meses después."
+      ],
+      "mirada": "Que el mercadeo ya no compre exclusividad es una buena noticia para los jugadores: el juego se elige por la consola que uno ya tiene.",
+      "titular_corto": "The Witcher 4, para todos",
+      "por_que_importa": "quien tenga Xbox o PC no tendrá que esperar ni cambiar de consola para jugar uno de los lanzamientos más esperados.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "El acuerdo con Sony es de mercadeo, no de exclusividad."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-the-witcher-4-saldra-el-mismo-dia-en-ps5-xbox-y-pc.jpg",
+        "alt": "Cosplayer caracterizado como Geralt de Rivia en el estand de CD Projekt en una feria de videojuegos (imagen ilustrativa)",
+        "autor": "Sergey Galyonkin",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Valery_as_Geralt_from_Witcher_3_at_Igromir_2013_(10101609736).jpg"
+      },
+      "fuentes": [
+        {
+          "nombre": "Video Games Chronicle",
+          "url": "https://www.videogameschronicle.com/news/no-one-gets-left-behind-cdpr-says-the-witcher-4-will-launch-on-xbox-day-one-despite-sony-agreement/"
+        }
+      ]
+    }
+  ]
+}
