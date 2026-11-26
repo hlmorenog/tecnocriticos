@@ -353,7 +353,8 @@ def sitemap(todas):
             ("columna.html", gp.COLUMNA["fecha"], "weekly", "0.8"),
             *[(gp.url_columna(c), c["fecha"], "yearly", "0.5") for c in gp.COLUMNAS[1:]],
             *[(gp.url_pieza(pz), pz["fecha"], "monthly", "0.6") for pz in gp.cargar_piezas()], ("quienes-somos.html", hoy, "monthly", "0.5"),
-            ("rss.html", hoy, "monthly", "0.3"), ("privacidad.html", hoy, "yearly", "0.2"), ("multimedia.html", hoy, "weekly", "0.6")]
+            ("rss.html", hoy, "monthly", "0.3"), ("privacidad.html", hoy, "yearly", "0.2"), ("multimedia.html", hoy, "weekly", "0.6"),
+            ("infografias.html", hoy, "weekly", "0.6"), *[(gp.url_infografia(i), i["fecha"], "monthly", "0.6") for i in gp.cargar_infografias()]]
     filas = [f"  <url><loc>{SITIO}/{r}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>"
              for r, m, c, p in urls]
     for n in todas:

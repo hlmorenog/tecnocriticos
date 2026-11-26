@@ -500,7 +500,7 @@
     if (!archivosVideo.has(src)) {
       archivosVideo.set(src, fetch(src)
         .then((r) => { if (!r.ok) throw new Error("descarga"); return r.blob(); })
-        .then((b) => new File([b], src.split("/").pop(), { type: "video/mp4" }))
+        .then((b) => new File([b], src.split("/").pop(), { type: /\.jpe?g$/i.test(src) ? "image/jpeg" : /\.png$/i.test(src) ? "image/png" : "video/mp4" }))
         .catch((e) => { archivosVideo.set(src, null); throw e; }));
     }
     return archivosVideo.get(src) || (archivosVideo.clear(), traerVideo(src));
@@ -530,6 +530,14 @@
   };
   $$("[data-enviar-video]").forEach((b) => { if (b.dataset.src) { activarEnviar(b); b.hidden = !puedeEnviar; } });
   $$("[data-compartir-url]").forEach((caja) => barraCompartir(caja, new URL(caja.dataset.compartirUrl, document.baseURI).href, caja.dataset.titulo, caja.dataset.desc));
+
+  /* ---------- Infografías: filtro por sección ---------- */
+  const filtrosInf = $("[data-inf-filtros]");
+  if (filtrosInf) filtrosInf.addEventListener("click", (ev) => {
+    const b = ev.target.closest("button"); if (!b) return;
+    $$("button", filtrosInf).forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    $$(".inf__card").forEach((c) => { c.hidden = !!b.dataset.seccion && c.dataset.seccion !== b.dataset.seccion; });
+  });
 
   /* ---------- Multimedia: reproductor encima de la página ---------- */
   const modalMM = $("[data-mmz-modal]");

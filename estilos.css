@@ -478,3 +478,67 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
 .mmz__yt { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 11px 18px; border-radius: 999px; background: #FF0033; color: #fff !important; font: 700 14px var(--f-titular); text-decoration: none; }
 .mmz__yt:hover { background: #d9002b; }
 .mmz__yt span { font-size: 12px; }
+
+/* ---------- Infografías: sección propia, clara, sobre papel milimetrado ---------- */
+.fijas a.fijas__inf { border-color: var(--acento); color: var(--acento); font-weight: 700; }
+.fijas a.fijas__inf:hover { background: var(--acento); color: #fff; }
+.mmz__ainf { display: block; margin-top: 44px; padding: 22px 24px; border-radius: 16px; border: 1px solid rgba(255,255,255,.14); text-decoration: none; }
+.mmz__ainf b { display: block; margin-top: 6px; font: 800 22px/1.2 var(--f-titular); color: #fff; }
+.mmz__ainf:hover { border-color: #7FD1B0; }
+.inf__heroe { padding: 48px 0 56px; border-bottom: 1px solid var(--linea);
+  background-color: #FAFAF7;
+  background-image: linear-gradient(rgba(0,135,90,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,135,90,.07) 1px, transparent 1px);
+  background-size: 28px 28px; }
+.inf__kick { font: 700 12px var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--acento); }
+.inf__cab h1 { font: 900 clamp(40px, 6.4vw, 84px)/.96 var(--f-titular); letter-spacing: -.045em; margin: 14px 0 16px; max-width: 900px; }
+.inf__cab h1 em { font-style: normal; color: var(--acento); }
+.inf__cab p { font: 400 18px/1.55 var(--f-texto); color: var(--tinta-2); max-width: 660px; margin: 0; }
+.inf__dest { display: grid; grid-template-columns: minmax(0, 520px) 1fr; gap: 48px; align-items: center; margin-top: 40px; }
+.inf__hoja { position: relative; display: block; max-height: 640px; overflow: hidden; background: #fff; border-radius: 6px; transform: rotate(-1.2deg);
+  box-shadow: 0 1px 0 var(--linea), 0 24px 60px rgba(17,17,17,.16), 0 0 0 1px var(--linea); transition: transform .25s ease; }
+.inf__hoja:hover { transform: rotate(0deg) translateY(-4px); }
+.inf__hoja img { display: block; width: 100%; height: auto; }
+.inf__hoja::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(transparent, #fff 85%); }
+.inf__hoja span { position: absolute; left: 50%; bottom: 18px; z-index: 1; transform: translateX(-50%); background: var(--tinta); color: #fff; font: 700 13px var(--f-titular); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+.inf__dest-txt h2 { font: 800 clamp(28px, 3.2vw, 42px)/1.06 var(--f-titular); letter-spacing: -.03em; margin: 12px 0 14px; }
+.inf__dest-txt h2 a { color: inherit; text-decoration: none; }
+.inf__dest-txt h2 a:hover { text-decoration: underline; }
+.inf__dest-txt p { font: 400 18px/1.55 var(--f-texto); color: var(--tinta-2); margin: 0 0 10px; max-width: 560px; }
+.inf__fecha { font: 500 12px var(--f-mono) !important; letter-spacing: .06em; text-transform: uppercase; color: var(--gris) !important; }
+.inf__dest-txt .mmx__btns { margin: 18px 0 16px; }
+.inf__cuerpo { padding: 8px 24px 56px; }
+.inf__archivo { margin-top: 40px; }
+.inf__archivo-cab { display: flex; align-items: baseline; gap: 14px; border-top: 3px solid var(--tinta); padding-top: 14px; }
+.inf__archivo-cab h2 { font: 800 26px var(--f-titular); letter-spacing: -.02em; margin: 0; }
+.inf__archivo-cab span { font: 500 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+.inf__rej { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px 24px; margin-top: 24px; }
+.inf__card[hidden] { display: none; }
+.inf__media { position: relative; display: block; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--linea); transition: transform .2s ease, box-shadow .2s ease; }
+.inf__media:hover, .inf__media:focus-visible { transform: translateY(-4px); box-shadow: 0 0 0 2px var(--acento), 0 16px 36px rgba(17,17,17,.12); }
+.inf__media img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
+.inf__origen { position: absolute; left: 10px; top: 10px; background: var(--tinta); color: #fff; font: 700 11px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; }
+.inf__sec { display: block; margin-top: 12px; font: 500 11px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--gris); }
+.inf__card h3 { font: 700 17px/1.3 var(--f-titular); margin: 6px 0 0; }
+.inf__card h3 a { color: inherit; text-decoration: none; }
+.inf__card h3 a:hover { text-decoration: underline; }
+.inf__vacio { color: var(--tinta-2); padding: 40px 0; }
+.inf__avid { display: block; margin-top: 48px; padding: 20px 24px; border-radius: 14px; background: #0d0d0c; color: #fff; font: 800 20px/1.25 var(--f-titular); text-decoration: none; }
+.inf__avid span { color: #7FD1B0; margin-right: 6px; }
+.inf__avid:hover { background: #1c1c1a; }
+.inf__pagina .inf__fecha { margin: -6px 0 14px; }
+.inf__grande { margin: 18px 0 10px; }
+.inf__grande img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 0 1px var(--linea), 0 14px 40px rgba(17,17,17,.08); }
+.inf__grande figcaption { font: 400 13px/1.4 var(--f-texto); color: var(--gris); margin-top: 8px; }
+.inf__pagina .mmx__btns { margin: 12px 0 26px; }
+.inf__ancha { padding-top: 26px; padding-bottom: 20px; }
+.inf__ancha > .inf__pagina > h1, .inf__ancha > .inf__pagina > .entradilla { max-width: 900px; }
+.inf__vimg { font: 800 22px var(--f-titular); letter-spacing: -.02em; margin: 40px 0 0; padding-top: 16px; border-top: 3px solid var(--tinta); }
+.inf__grande--chica { max-width: 560px; }
+@media (max-width: 760px) {
+  .inf__heroe { padding: 32px 0 40px; }
+  .inf__dest { grid-template-columns: 1fr; gap: 28px; margin-top: 28px; }
+  .inf__hoja { transform: none; max-height: 520px; }
+  .inf__rej { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; }
+  .inf__card h3 { font-size: 15px; }
+  .inf__cuerpo { padding: 8px 16px 44px; }
+}
