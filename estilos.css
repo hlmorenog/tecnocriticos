@@ -582,3 +582,4 @@ button[data-enviar-video]:disabled { opacity: .7; cursor: progress; }
   .mm--home .mm__vermas { display: block; position: absolute; left: 50%; bottom: 18px; z-index: 1; transform: translateX(-50%); background: var(--tinta); color: #fff; font: 700 13px var(--f-titular); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
   .mm--home .mm__info a:hover .mm__vermas { background: var(--acento); }
 }
+.mm__mas a + a { margin-left: 22px; }
