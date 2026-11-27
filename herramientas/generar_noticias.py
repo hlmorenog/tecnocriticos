@@ -224,7 +224,7 @@ def pagina_quienes():
   <div class="cuerpo">
    <h2 id="que-hacemos">Qué hacemos</h2>
    <p>Nuestro objetivo es que entiendas lo que pasa en el mundo de la tecnología sin tener que leerlo todo. Por eso actualizamos el sitio a diario con una edición que reúne las noticias y los análisis que más importan del sector: desde lo que pasa en Colombia hasta la inteligencia artificial, las grandes tecnológicas, los videojuegos y el entretenimiento digital. Puedes leerlas todas o por sección en <a href="noticias.html">Noticias</a>.</p>
-   <p>Cada noticia va al grano: qué pasó, por qué importa, nuestra posición y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="index.html#hype">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
+   <p>Cada noticia va al grano: qué pasó, por qué importa, nuestra posición y las fuentes para comprobarlo. Además, cada lunes publicamos <a href="columna.html">La Columna</a> de opinión; en el <a href="hype.html">Hype-ómetro</a> medimos la distancia entre la promesa y la realidad de cada tendencia, y en <a href="index.html#mesa">La Mesa</a> abrimos el debate de la semana.</p>
 
    <h2 id="ia">Periodismo potenciado por IA</h2>
    <p>Usamos inteligencia artificial para hacer más y mejor periodismo, no para reemplazar el criterio. La IA nos ayuda a rastrear lo que pasa en el sector, leer las fuentes, ordenar los datos y preparar los borradores de cada edición. Las decisiones son humanas: qué se publica, qué se descarta, qué posición tomamos y qué necesita una verificación adicional.</p>
@@ -354,7 +354,7 @@ def sitemap(todas):
             *[(gp.url_columna(c), c["fecha"], "yearly", "0.5") for c in gp.COLUMNAS[1:]],
             *[(gp.url_pieza(pz), pz["fecha"], "monthly", "0.6") for pz in gp.cargar_piezas()], ("quienes-somos.html", hoy, "monthly", "0.5"),
             ("rss.html", hoy, "monthly", "0.3"), ("privacidad.html", hoy, "yearly", "0.2"), ("multimedia.html", hoy, "weekly", "0.6"),
-            ("infografias.html", hoy, "weekly", "0.6"), *[(gp.url_infografia(i), i["fecha"], "monthly", "0.6") for i in gp.cargar_infografias()]]
+            ("infografias.html", hoy, "weekly", "0.6"), ("hype.html", gp.cargar_hype()["revisado"], "weekly", "0.6"), *[(gp.url_infografia(i), i["fecha"], "monthly", "0.6") for i in gp.cargar_infografias()]]
     filas = [f"  <url><loc>{SITIO}/{r}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>"
              for r, m, c, p in urls]
     for n in todas:
@@ -438,6 +438,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Portada]({SITIO}/): la edición del día.
 - [Todas las noticias]({SITIO}/noticias.html): archivo completo, filtrable por sección.
 - [La Columna]({SITIO}/columna.html): columna semanal de opinión del director.
+- [Hype-ómetro]({SITIO}/hype.html): mide la distancia entre la promesa y la realidad de cada tecnología, con método público y fuentes.
 - [Quiénes somos]({SITIO}/quienes-somos.html): misión, uso de IA, posición editorial, principios, dirección, fotos y correcciones.
 
 ## Últimas noticias
