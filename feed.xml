@@ -9,6 +9,22 @@
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
   <item>
+   <title>SAP estudia recortar al menos 10.000 empleos para rehacer su negocio alrededor de la IA</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Sería cerca del 9 % de su planta mundial; la empresa dice que todavía no ha tomado ninguna decisión. Por qué importa: es otra gran tecnológica que justifica recortes con la IA, y su caso muestra que despedir en un área y contratar en otra no siempre achica la empresa.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.jpg" length="203600" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Vecinos de Tokio se rebelan contra los centros de datos que crecen frente a sus casas</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Humo de generadores, combustible enterrado y edificios de diez pisos a pocos metros de los apartamentos: Japón revisa sus reglas. Por qué importa: el auge de la IA necesita centros de datos en todo el mundo, y sus costos los pagan sobre todo los vecinos, también en Colombia.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos.jpg" length="106766" type="image/jpeg"/>
+  </item>
+  <item>
    <title>OpenAI corrige un error y los usuarios pagos de ChatGPT agotarán antes su cuota</title>
    <link>https://tecnocriticos.com/n/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.html</link>
    <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.html</guid>
@@ -391,22 +407,6 @@
    <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
    <category>IA y tecnología</category>
    <description>El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo. Por qué importa: confirma que las herramientas de IA para atacar ya están en uso contra gobiernos, no solo en advertencias de expertos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.jpg" length="150639" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>MinTIC y Enlaza usarán las redes eléctricas para llevar internet a zonas apartadas</title>
-   <link>https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.html</guid>
-   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Colombia</category>
-   <description>La fibra óptica que ya va en las torres de energía servirá para conectar hogares rurales en Cundinamarca y Tolima. Por qué importa: puede abaratar la llegada de internet a zonas rurales donde tender redes nuevas no resulta rentable.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-mintic-y-enlaza-fibra-por-lineas-de-energia.jpg" length="201384" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>Apple irá a juicio en Francia por presuntas trabas a la reparación independiente de iPhone</title>
-   <link>https://tecnocriticos.com/n/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.html</guid>
-   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
-   <category>IA y tecnología</category>
-   <description>El caso pone a prueba la práctica de vincular las piezas al teléfono, que limita quién puede repararlo. Por qué importa: de la decisión depende que reparar un iPhone fuera de los servicios oficiales siga siendo una opción real.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.jpg" length="221879" type="image/jpeg"/>
   </item>
  </channel>
 </rss>

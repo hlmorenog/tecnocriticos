@@ -2,6 +2,80 @@
   "fecha": "2026-11-27",
   "noticias": [
     {
+      "id": "2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia",
+      "seccion": "IA y tecnología",
+      "titular": "SAP estudia recortar al menos 10.000 empleos para rehacer su negocio alrededor de la IA",
+      "entradilla": "Sería cerca del 9 % de su planta mundial; la empresa dice que todavía no ha tomado ninguna decisión.",
+      "lead": "La empresa alemana de software SAP estudia eliminar al menos 10.000 puestos de trabajo mientras reorganiza su negocio alrededor de la inteligencia artificial, informó Bloomberg el 26 de noviembre, citando a personas al tanto del plan.",
+      "cuerpo": [
+        "El recorte equivaldría a cerca del 9 % de su planta mundial, según el resumen de Reuters del informe de Bloomberg. SAP respondió que no ha tomado decisiones sobre nuevas medidas de personal ni ha anunciado una nueva cifra de despidos, y no ha fijado una fecha para ningún anuncio.",
+        "La cifra coincide con la de su reestructuración anterior, que afectó a unos 10.000 puestos, costó cerca de 3.200 millones de euros y terminó en el primer trimestre de 2025. Esa ronda no redujo el tamaño total de la empresa: SAP eliminó cargos en unas áreas mientras contrataba para funciones ligadas a la IA, y al 30 de septiembre de 2026 tenía 113.076 empleados de tiempo completo, frente a 110.730 un año antes, según Financial News.",
+        "En Alemania, un plan de este tamaño debe negociarse con los comités de empresa, que representan a los trabajadores, antes de aplicarse, señaló CNBC, citado por Financial News. Por eso la cifra final, si se confirma, podría ser distinta."
+      ],
+      "mirada": "La IA llega como promesa de productividad y se anuncia, una vez más, en número de puestos que sobran.",
+      "titular_corto": "SAP: 10.000 empleos en la mira",
+      "por_que_importa": "es otra gran tecnológica que justifica recortes con la IA, y su caso muestra que despedir en un área y contratar en otra no siempre achica la empresa.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "Su recorte anterior, también de unos 10.000 puestos, no redujo el total de empleados de SAP."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.jpg",
+        "alt": "Edificio de la sede de SAP en Walldorf, Alemania",
+        "autor": "Vladislav Bezrukov",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/bezrukov/2560813451/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Financial News",
+          "url": "https://www.financial-news.co.uk/sap-weighs-cutting-at-least-10000-jobs-in-ai-overhaul/"
+        },
+        {
+          "nombre": "Bloomberg (informe original)",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos",
+      "seccion": "IA y tecnología",
+      "titular": "Vecinos de Tokio se rebelan contra los centros de datos que crecen frente a sus casas",
+      "entradilla": "Humo de generadores, combustible enterrado y edificios de diez pisos a pocos metros de los apartamentos: Japón revisa sus reglas.",
+      "lead": "Vecinos del área de Tokio protestan y demandan por los centros de datos que se construyen cada vez más cerca de sus casas, y el Gobierno de Japón prepara para fin de año un plan de acción para evitar los conflictos, informó Reuters el 26 de noviembre.",
+      "cuerpo": [
+        "En Kashiwa, al noreste de Tokio, dos centros de datos de 31 metros de altura, del fondo de inversión PAG, de Hong Kong, quedaron frente a las casas. Las pruebas de sus generadores de respaldo lanzan humo negro, calor y un ruido parecido al de una turbina; en los últimos dos meses sumaron unas 110 horas, y hay dos edificios más en camino. PAG dijo que se reúne cada mes con los vecinos, que instaló barreras de sonido y que redujo los horarios de las pruebas.",
+        "En el distrito de Koto, un centro de datos de 51 metros que estará listo en 2029 tendrá enterrados 1,2 millones de litros de combustible a 3,7 metros de un edificio de apartamentos, en una zona propensa a inundaciones y de alto riesgo sísmico; los vecinos pidieron a Tokio normas obligatorias sobre ruido, calor, combustible y ubicación. En Inzai, un grupo de residentes demandó a la ciudad y a la certificadora Japan ERI porque, según ellos, un centro de datos de 32 megavatios fue aprobado como oficina para poder construirlo donde no estaría permitido. El caso sigue en curso.",
+        "Cerca del 60 % de los centros de datos de Japón está en el área de Tokio, donde viven unos 37 millones de personas, y la consultora JLL calcula que el mercado japonés pasará de 23.400 millones de dólares en 2024 a 33.400 millones en 2030. En Colombia, los vecinos de Tenjo hicieron un reclamo parecido por el centro de datos que se construye en el municipio."
+      ],
+      "mirada": "La nube parece etérea, pero aterriza en un lote concreto: alguien vive al lado del humo, el ruido y el combustible.",
+      "titular_corto": "Tokio: vecinos vs. centros de datos",
+      "por_que_importa": "el auge de la IA necesita centros de datos en todo el mundo, y sus costos los pagan sobre todo los vecinos, también en Colombia.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Cerca del 60 % de los centros de datos de Japón está en el área de Tokio."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos.jpg",
+        "alt": "Edificio de un centro de datos con sus chimeneas de ventilación (imagen ilustrativa)",
+        "autor": "Kecko",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/kecko/52106762896/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Reuters (vía The Korea Times)",
+          "url": "https://www.koreatimes.co.kr/world/20261126/japans-data-center-boom-faces-growing-revolt-from-urban-residents"
+        },
+        {
+          "nombre": "Reuters (vía Cyprus Mail)",
+          "url": "https://cyprus-mail.com/2026/11/26/japan-faces-growing-backlash-over-data-centre-boom"
+        }
+      ]
+    },
+    {
       "id": "2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota",
       "seccion": "IA y tecnología",
       "titular": "OpenAI corrige un error y los usuarios pagos de ChatGPT agotarán antes su cuota",

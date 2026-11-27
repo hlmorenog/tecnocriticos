@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url><loc>https://tecnocriticos.com/n/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.html</loc><news:news>
+    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
+    <news:publication_date>2026-11-27</news:publication_date><news:title>SAP estudia recortar al menos 10.000 empleos para rehacer su negocio alrededor de la IA</news:title>
+  </news:news></url>
+  <url><loc>https://tecnocriticos.com/n/2026-11-27-vecinos-de-tokio-contra-los-centros-de-datos.html</loc><news:news>
+    <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
+    <news:publication_date>2026-11-27</news:publication_date><news:title>Vecinos de Tokio se rebelan contra los centros de datos que crecen frente a sus casas</news:title>
+  </news:news></url>
   <url><loc>https://tecnocriticos.com/n/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.html</loc><news:news>
     <news:publication><news:name>Tecnocríticos</news:name><news:language>es</news:language></news:publication>
     <news:publication_date>2026-11-27</news:publication_date><news:title>OpenAI corrige un error y los usuarios pagos de ChatGPT agotarán antes su cuota</news:title>
