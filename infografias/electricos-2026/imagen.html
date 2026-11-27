@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>5 eléctricos frente a frente — versión en imagen</title>
+<!-- Plantilla para generar la imagen descargable con Playwright. No se publica como página. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --tinta:#111; --tinta2:#3d3d3a; --suave:#6b6b66; --linea:#E4E4E0; --papel:#F4F4F1; --acento:#00875A; --menta:#7FD1B0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 1080px; background: #fff; font-family: Inter, sans-serif; color: var(--tinta); }
+.lienzo { padding: 52px 56px 36px; }
+.top { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--tinta); padding-bottom: 16px; }
+.logo { font: 900 34px 'Inter Tight'; letter-spacing: -.04em; display: flex; align-items: center; gap: 10px; }
+.logo i { width: 18px; height: 18px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.tag { font: 700 15px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); }
+.kicker { font: 700 15px 'JetBrains Mono'; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); margin: 26px 0 10px; }
+h1 { font: 900 60px/1 'Inter Tight'; letter-spacing: -.04em; } h1 em { font-style: normal; color: var(--acento); }
+.sub { font: 400 20px/1.45 Inter; color: var(--tinta2); margin-top: 12px; }
+table { width: 100%; border-collapse: collapse; margin-top: 22px; }
+th, td { padding: 11px 8px; border-bottom: 1px solid var(--linea); text-align: left; vertical-align: top; font: 700 17px/1.25 'Inter Tight'; }
+thead th { border-bottom: 3px solid var(--tinta); }
+tbody th { font: 700 11.5px 'JetBrains Mono'; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); width: 150px; }
+td small { display: block; font: 500 12px Inter; color: var(--suave); margin-top: 2px; }
+.chip { display: inline-block; font: 800 15px/1 'Inter Tight'; padding: 7px 10px; border-radius: 8px; color: #fff; }
+.mejor { color: var(--acento); } .mejor::after { content: " ●"; font-size: 11px; vertical-align: 3px; }
+.mirada { margin-top: 22px; background: var(--tinta); color: #fff; border-radius: 10px; padding: 20px 26px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.mirada .lab { font: 700 14px 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--menta); }
+.mirada p { font: 700 21px/1.35 'Inter Tight'; }
+.ver { margin-top: 16px; font: 700 17px 'Inter Tight'; color: var(--acento); }
+.pie { margin-top: 18px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-top: 14px; border-top: 1px solid var(--linea); }
+.pie .fuentes { font: 400 12.5px/1.5 Inter; color: var(--suave); max-width: 800px; }
+.pie .url { font: 700 16px 'JetBrains Mono'; white-space: nowrap; }
+</style>
+<script src="datos.js"></script>
+</head>
+<body>
+<div class="lienzo">
+  <div class="top"><div class="logo"><i></i>tecnocríticos</div><div class="tag">Infografía · Carros eléctricos</div></div>
+  <div class="kicker">Comparativa · Colombia, noviembre de 2026</div>
+  <h1>5 eléctricos <em>frente a frente</em></h1>
+  <p class="sub">Autonomía, precio, potencia, formas de carga y suscripciones de la versión de entrada de cada uno.</p>
+  <table><thead><tr><th></th><th id="cab" colspan="5"></th></tr></thead><tbody id="filas"></tbody></table>
+  <div class="mirada"><div class="lab">La mirada<br>crítica</div><p>Tesla bajó el precio de entrada de los eléctricos y subió el de la conectividad: el carro se vende barato, pero lo que conecta al carro se cobra cada mes.</p></div>
+  <p class="ver">La versión interactiva, con la ficha de cada carro y la calculadora de carga, está en tecnocriticos.com/infografias</p>
+  <div class="pie">
+    <div class="fuentes">● Mejor dato de la fila. Autonomía WLTP, salvo el Kwid (ciclo urbano SAE J1634, más favorable). Precios de la versión de entrada; el del EX30 es el de lanzamiento. Fuentes: El Carro Colombiano, El Colombiano, Kia Colombia, Yahoo Finanzas y EV Database.</div>
+    <div class="url">tecnocriticos.com</div>
+  </div>
+</div>
+<script>
+const E = window.EVS, n = (v, d = 0) => Number(v).toFixed(d).replace(".", ",");
+document.querySelector("thead tr").innerHTML = "<th></th>" + E.map((e) => `<th><span class="chip" style="background:${e.color};${e.color === "#E0A800" ? "color:#111" : ""}">${e.marca} ${e.modelo}</span></th>`).join("");
+const mejor = (f, menor) => { const v = E.map(f); const b = menor ? Math.min(...v) : Math.max(...v); return (e) => f(e) === b ? "mejor" : ""; };
+const mA = mejor((e) => e.ciclo === "WLTP" ? e.autonomia : 0), mP = mejor((e) => e.precio, true), mH = mejor((e) => e.hp), mD = mejor((e) => e.dc), mC = mejor((e) => e.ac);
+const fila = (t, f) => `<tr><th>${t}</th>${E.map(f).join("")}</tr>`;
+document.getElementById("filas").innerHTML = [
+  fila("Precio", (e) => `<td class="${mP(e)}">${e.precioTxt.replace("Desde ", "")}</td>`),
+  fila("Autonomía", (e) => `<td><span class="${mA(e)}">${e.autonomia} km</span><small>${e.ciclo}</small></td>`),
+  fila("Potencia", (e) => `<td class="${mH(e)}">${e.hp} hp</td>`),
+  fila("Batería", (e) => `<td>${n(e.bateria, 1)} kWh</td>`),
+  fila("Conector", (e) => `<td>${e.conector}</td>`),
+  fila("Carga AC", (e) => `<td class="${mC(e)}">${e.ac} kW</td>`),
+  fila("Carga rápida", (e) => `<td class="${mD(e)}">${e.dc} kW</td>`),
+  fila("Suscripción", (e) => `<td>${e.suscripcion.tipo === "pago" ? "$69.900 al mes<small>Conectividad Premium, opcional</small>" : "Sin tarifa publicada"}</td>`)
+].join("");
+</script>
+</body>
+</html>

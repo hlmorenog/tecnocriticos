@@ -1,0 +1,93 @@
+/* Infografía «5 eléctricos frente a frente»: complementa infografias/drones-2026/app.css (dr-*). */
+.ev-chip { display: inline-block; font: 800 14px/1 var(--f-titular); padding: 6px 10px; border-radius: 8px; background: var(--c); color: #fff; white-space: nowrap; }
+.ev-chip[style*="#E0A800"] { color: #111; }
+.ev-nav__p { width: 14px; height: 14px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px rgba(255,255,255,.85); flex: none; }
+.ev-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.ev-btns button { font: 700 14px var(--f-titular); padding: 9px 14px; border-radius: 999px; border: 1px solid var(--dr-linea); background: #fff; color: var(--dr-tinta); cursor: pointer; }
+.ev-btns button[aria-selected="true"] { background: var(--dr-tinta); color: #fff; border-color: var(--dr-tinta); }
+
+/* Comparador: el carro avanza por la barra */
+.ev-comp { display: grid; gap: 12px; }
+.ev-comp__f { display: grid; grid-template-columns: 240px 1fr 120px; gap: 14px; align-items: center; text-decoration: none; color: inherit; animation: ev-entra .5s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d); }
+@keyframes ev-entra { from { opacity: 0; transform: translateY(6px); } }
+.ev-comp__n { display: grid; gap: 4px; justify-items: start; } .ev-comp__n small { font: 500 12px var(--f-texto); color: var(--gris, #737373); }
+.ev-comp__p { position: relative; height: 40px; background: #F1F1EE; border-radius: 0 10px 10px 0; }
+.ev-comp__p i { position: absolute; left: 0; top: 14px; height: 12px; width: var(--v); border-radius: 0 6px 6px 0; opacity: .35; animation: ev-crece 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d); }
+.ev-comp__car { position: absolute; top: 2px; left: calc(var(--v) - 64px); width: 64px; height: auto; animation: ev-avanza 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d); }
+.ev-comp__car .ev-rueda { animation: ev-gira .5s linear 2; animation-delay: var(--d); }
+@keyframes ev-crece { from { width: 0; } }
+@keyframes ev-avanza { from { left: 0; } }
+@keyframes ev-gira { to { transform: rotate(360deg); } }
+.ev-comp__f b { font: 900 22px var(--f-titular); text-align: right; letter-spacing: -.02em; }
+.ev-comp__f:hover .ev-chip { text-decoration: underline; }
+
+/* Tabla */
+.ev-tabla { overflow-x: auto; }
+.ev-tabla table { width: 100%; border-collapse: collapse; min-width: 760px; }
+.ev-tabla th, .ev-tabla td { padding: 10px 8px; border-bottom: 1px solid var(--dr-linea); text-align: left; vertical-align: top; font: 700 15px/1.3 var(--f-titular); }
+.ev-tabla thead th { border-bottom: 3px solid var(--dr-tinta); }
+.ev-tabla tbody th { font: 700 11.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gris, #737373); white-space: nowrap; }
+.ev-tabla small { display: block; font: 500 11.5px var(--f-texto); color: var(--gris, #737373); }
+
+/* ¿Cada cuánto cargo? */
+.ev-km { display: grid; gap: 10px; margin: 6px 0 18px; padding: 16px 18px; border-radius: 12px; background: var(--dr-papel); }
+.ev-km label { font: 700 18px var(--f-titular); } .ev-km b { font: 900 28px var(--f-titular); color: var(--dr-verde); }
+.ev-km input { width: 100%; accent-color: var(--dr-verde); }
+.ev-rinde { display: grid; gap: 10px; }
+.ev-rinde__f { display: grid; grid-template-columns: 200px 1fr 110px; gap: 12px; align-items: center; }
+.ev-rinde__dias { display: flex; flex-wrap: wrap; gap: 3px; }
+.ev-rinde__dias i { width: 14px; height: 18px; border-radius: 3px; animation: ev-entra .25s both; }
+.ev-rinde__dias em { font: 800 14px var(--f-titular); font-style: normal; }
+.ev-rinde__f b { font: 900 24px var(--f-titular); text-align: right; } .ev-rinde__f b small { font: 600 12px var(--f-mono); }
+
+/* Carga */
+.ev-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.ev-dos > div { border: 1px solid var(--dr-linea); border-radius: 14px; padding: 16px; display: grid; justify-items: start; gap: 6px; }
+.ev-con { width: 90px; height: auto; }
+.ve .ev-con circle { animation: ev-pin .5s cubic-bezier(.3,1.6,.5,1) both; transform-box: fill-box; transform-origin: center; }
+@keyframes ev-pin { from { transform: scale(0); } }
+.ev-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ev-carga { display: grid; gap: 14px; }
+.ev-carga__f { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 6px 12px; align-items: center; }
+.ev-carga__f small { grid-column: 2 / -1; font: 500 12.5px var(--f-texto); color: var(--gris, #737373); }
+.ev-carga__b { position: relative; height: 26px; background: #F1F1EE; border-radius: 6px; overflow: hidden; }
+.ev-carga__b i { position: absolute; inset: 0 auto 0 0; width: var(--v); }
+.ev-ac { background: repeating-linear-gradient(90deg, #9aa0a6 0 6px, #b8bdc2 6px 12px); }
+.ve .ev-carga__b i { animation: ev-crece 1.2s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d); }
+.ev-carga__b em { position: relative; z-index: 1; display: inline-block; margin: 3px 0 0 6px; padding: 0 7px; border-radius: 4px; background: rgba(255,255,255,.92); font: 800 13px/20px var(--f-titular); font-style: normal; color: #111; }
+
+/* Suscripciones */
+.ev-sus { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.ev-sus__c { display: grid; align-content: start; gap: 8px; padding: 14px; border-radius: 12px; border: 1px solid var(--dr-linea); text-decoration: none; color: inherit; background: #fff; }
+.ve .ev-sus__c { animation: ev-entra .5s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d); }
+.ev-sus__c--pago { border: 2px solid var(--c); background: #FFF5F5; }
+.ev-sus__c h4 { margin: 4px 0 0 !important; color: var(--dr-tinta) !important; font: 800 16px/1.2 var(--f-titular) !important; letter-spacing: -.01em !important; text-transform: none !important; }
+.ev-sus__c p { margin: 0; font: 400 13.5px/1.45 var(--f-texto); color: var(--tinta-2, #3a3a3a); }
+.ev-sus__c small { font: 600 12px/1.35 var(--f-texto); color: var(--gris, #737373); }
+.ev-cuenta { margin-top: 16px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 18px 22px; border-radius: 12px; background: var(--dr-tinta); color: #fff; }
+.ev-cuenta b { font: 900 48px/1 var(--f-titular); letter-spacing: -.04em; color: #ff6b6b; } .ev-cuenta p { margin: 0; font: 500 16px/1.5 var(--f-texto); color: #e2e2dd; }
+
+/* Ficha */
+.ev-cab { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; padding: 20px 0 6px; border-bottom: 4px solid var(--c); }
+.ev-cab__t { font: 900 clamp(40px, 6vw, 68px)/1 var(--f-titular); letter-spacing: -.045em; margin: 8px 0 6px; }
+.ev-cab__t em { font-style: normal; color: var(--c); }
+.ev-cab__car svg { max-width: 100%; height: auto; }
+.ve .ev-cab__car svg { animation: ev-llega .9s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes ev-llega { from { transform: translateX(-60px); opacity: 0; } }
+.ve .ev-cab__car .ev-rueda { animation: ev-gira .45s linear 2; }
+
+@media (max-width: 860px) {
+  .ev-comp__f { grid-template-columns: 1fr 90px; } .ev-comp__p { grid-column: 1 / -1; grid-row: 2; }
+  .ev-rinde__f { grid-template-columns: 1fr 90px; } .ev-rinde__dias { grid-column: 1 / -1; grid-row: 2; }
+  .ev-carga__f { grid-template-columns: 1fr 1fr; } .ev-carga__f > span:first-child { grid-column: 1 / -1; } .ev-carga__f small { grid-column: 1 / -1; }
+  .ev-dos { grid-template-columns: 1fr; }
+  .ev-sus { grid-template-columns: 1fr; }
+  .ev-cuenta { grid-template-columns: 1fr; gap: 8px; }
+  .ev-cab { grid-template-columns: 1fr; }
+}
+.st-fuentes { margin: 0; padding-left: 18px; display: grid; gap: 6px; font: 400 14px/1.4 var(--f-texto); } .st-fuentes a { color: var(--dr-verde); }
+.dr-portada__cifras b { white-space: nowrap; }
+@media (max-width: 560px) {
+  .dr-portada__cifras { flex-wrap: wrap; gap: 12px 18px; }
+  .dr-portada__cifras b { font-size: 28px; }
+}
