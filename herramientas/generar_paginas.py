@@ -47,12 +47,6 @@ COLUMNA = COLUMNAS[0]
 
 def url_columna(c):
     return "columna.html" if c is COLUMNAS[0] else f"c/{c['slug']}.html"
-HYPE = [  # (tema, promesa, realidad, veredicto)
-    ("Agentes de IA que «trabajan por ti»", 96, 48, "Útiles con supervisión. Autónomos, todavía no."),
-    ("Gafas de realidad mixta", 88, 35, "Impresionantes en demo, incómodas a la hora."),
-    ("Carros totalmente autónomos", 92, 30, "«El año que viene», desde hace una década."),
-    ("Celulares plegables", 70, 62, "Por fin maduros. El precio, no."),
-]
 MANIFIESTO = [
     ("No somos fans", "Nos gusta la tecnología lo suficiente como para exigirle más. Ninguna marca es nuestro equipo."),
     ("Contexto antes que prisa", "No competimos por ser los primeros, sino por ser los que mejor explican lo que pasa."),
@@ -171,7 +165,7 @@ def cabecera(activo=""):
         return f'<a href="{href}"{" aria-current=\"page\"" if clave and activo == clave else ""}>{txt}</a>'
     movil = (m("index.html", "Hoy", "hoy") + m("multimedia.html", "▶ Videos", "multimedia") + m("infografias.html", "▦ Infografías", "infografias") + "".join(m(f"noticias.html?seccion={q}", s, s) for s, q in SEC)
              + m("noticias.html", "Todas las noticias", "noticias") + m("columna.html", "La Columna", "columna"))
-    movil2 = (m("index.html#hype", "⚡ Hype-ómetro") + m("index.html#mesa", "🗳 La Mesa")
+    movil2 = (m("hype.html", "⚡ Hype-ómetro") + m("index.html#mesa", "🗳 La Mesa")
               + m("quienes-somos.html", "Quiénes somos") + m("rss.html", "RSS"))
     return f"""<header class="cab"><div class="w">
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-btn><span class="menu-btn__icono" aria-hidden="true"></span><span class="sr-only">Abrir el menú</span></button>
@@ -184,7 +178,7 @@ def cabecera(activo=""):
   <span class="menu-movil__lab">Más</span>{movil2}
   <a class="menu-movil__cta" href="index.html#boletin">Suscríbete al Boletín Tecnocríticos</a>
 </div></nav></header>
-<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a class="fijas__mm" href="multimedia.html">▶ Videos</a><a class="fijas__inf" href="infografias.html">▦ Infografías</a><a href="index.html#hype">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
+<nav class="fijas" aria-label="Accesos"><div class="w"><b>Secciones fijas</b><a class="fijas__mm" href="multimedia.html">▶ Videos</a><a class="fijas__inf" href="infografias.html">▦ Infografías</a><a href="hype.html">⚡ Hype-ómetro</a><a href="index.html#mesa">🗳 La Mesa</a><a href="columna.html">✦ La Columna</a><a href="index.html#manifiesto">Manifiesto</a>{chips}</div></nav>
 """
 
 
@@ -211,11 +205,82 @@ def bloque_columna():
   <h4><a href="columna.html">{COLUMNA['titulo']}</a></h4><p>{COLUMNA['resumen']}</p></section>"""
 
 
+def cargar_hype():
+    """Hype-ómetro: hype/hype.json. Realidad = suma de 5 criterios de 0 a 20; distancia = 100 - realidad."""
+    datos = json.loads((RAIZ / "hype" / "hype.json").read_text(encoding="utf-8"))
+    for t in datos["temas"]:
+        t["realidad_total"] = sum(v[0] for v in t["puntos"].values())
+        t["distancia"] = 100 - t["realidad_total"]
+    datos["temas"].sort(key=lambda t: -t["distancia"])
+    return datos
+
+
+def barra_hype(t):
+    return (f'<div class="barra"><div class="pista"><i class="promesa" style="width:100%"></i>'
+            f'<i class="realidad" style="width:{t["realidad_total"]}%"></i></div><span>−{t["distancia"]}</span></div>')
+
+
 def bloque_hype():
-    filas = "".join(f"""<div class="hyp"><h4>{t}</h4><div class="barra"><div class="pista"><i class="promesa" style="width:{p}%"></i><i class="realidad" style="width:{r}%"></i></div><span>−{p - r}</span></div><p>{v}</p></div>"""
-                    for t, p, r, v in HYPE)
+    datos = cargar_hype()
+    filas = "".join(f"""<div class="hyp"><h4><a href="hype.html#{t['id']}">{esc(t['tema'])}</a></h4>{barra_hype(t)}<p>{esc(t['veredicto'])}</p></div>"""
+                    for t in datos["temas"][:4])
     return f"""<section class="hype" id="hype" data-quitar="2"><h3>⚡ Hype-ómetro <span class="meta">promesa vs. realidad</span></h3>{filas}
-  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--acento)"></i>Realidad</span><span>Distancia en puntos</span></div></section>"""
+  <div class="hype__ley"><span><i style="background:#D6D6D0"></i>Promesa</span><span><i style="background:var(--acento)"></i>Realidad</span><span>Distancia en puntos</span></div>
+  <a class="hype__mas" href="hype.html">Ver las {len(datos['temas'])} fichas y el método →</a></section>"""
+
+
+def pagina_hype():
+    datos = cargar_hype()
+    temas = datos["temas"]
+    crit = datos["criterios"]
+    noticias = {n["id"]: n for n in cargar_noticias()}
+    metodo = "".join(f'<li><b>{esc(c[1])}</b><span>{esc(c[2])}</span></li>' for c in crit)
+    ranking = "".join(f"""<a class="hyx-rk" href="#{t['id']}" style="--r:{t['realidad_total']}%"><span class="hyx-rk__n">{i}</span><span class="hyx-rk__t">{esc(t['tema'])}</span>
+   <span class="hyx-rk__b"><i></i></span><b>−{t['distancia']}</b></a>""" for i, t in enumerate(temas, 1))
+    fichas = []
+    for t in temas:
+        filas = "".join(f"""<tr><th>{esc(c[1])}</th><td class="hyx-pt"><b>{t['puntos'][c[0]][0]}</b>/20<span class="hyx-mini"><i style="width:{t['puntos'][c[0]][0] * 5}%"></i></span></td><td>{esc(t['puntos'][c[0]][1])}</td></tr>"""
+                        for c in crit)
+        rel = [f'<li><a href="{url_noticia(noticias[i])}">{esc(noticias[i]["titular"])}</a></li>' for i in t["noticias"] if i in noticias]
+        rel += [f'<li><a href="{esc(e["url"])}">{esc(e["titulo"])}</a></li>' for e in t["enlaces"]]
+        rel_html = f'<div class="hyx-rel"><h4>En Tecnocríticos</h4><ul>{"".join(rel)}</ul></div>' if rel else ""
+        fuentes = "".join(f'<li><a href="{esc(f["url"])}" rel="noopener" target="_blank">{esc(f["nombre"])}</a></li>' for f in t["fuentes"])
+        pr = t["promesa"]
+        fichas.append(f"""<article class="hyx-ficha" id="{t['id']}">
+  <header><span class="hyx-kick">Distancia: −{t['distancia']} puntos</span><h2>{esc(t['tema'])}</h2><p class="hyx-ver">{esc(t['veredicto'])}</p></header>
+  <div class="hyx-medidor"><div><span>Promesa</span><div class="hyx-pista"><i class="hyx-pro"></i></div><b>100</b></div>
+   <div><span>Realidad</span><div class="hyx-pista"><i class="hyx-rea" style="--r:{t['realidad_total']}%"></i></div><b>{t['realidad_total']}</b></div></div>
+  <div class="hyx-dos">
+   <div class="hyx-caja hyx-caja--pro"><h4>Lo que se prometió</h4><p>{esc(pr['texto'])}</p><small>{esc(pr['quien'])} · {esc(pr['fecha'])}</small></div>
+   <div class="hyx-caja"><h4>Lo que hay</h4><p>{esc(t['realidad'])}</p></div>
+  </div>
+  <table class="hyx-tabla"><caption>Cómo llegamos a {t['realidad_total']} de 100</caption>{filas}</table>
+  {rel_html}
+  <div class="hyx-fuentes"><h4>Fuentes</h4><ul>{fuentes}</ul></div>
+ </article>""")
+    rev = fecha_larga(datos["revisado"])
+    desc = "El Hype-ómetro de Tecnocríticos mide la distancia entre lo que promete la tecnología y lo que de verdad entrega, con un método público y fuentes."
+    return (cabeza("Hype-ómetro: promesa vs. realidad — Tecnocríticos", desc, ruta="hype.html")
+            + cabecera("hype")
+            + f"""<main class="hyx">
+ <section class="hyx-heroe"><div class="w">
+  <span class="hyx-kick">⚡ Hype-ómetro · Tecnocríticos</span>
+  <h1>Cuánto le falta a la promesa <em>para ser realidad</em></h1>
+  <p>Cada tecnología llega con una promesa. Aquí la medimos contra lo que de verdad entrega, con cinco criterios, puntajes a la vista y fuentes para comprobarlo. Entre más larga la distancia, más hype.</p>
+  <p class="hyx-rev">Última revisión: {rev}</p>
+ </div></section>
+ <div class="w hyx-cuerpo">
+  <section class="hyx-ranking"><h2>El ranking</h2><p class="hyx-sub">De más a menos hype. La barra verde es la realidad; lo que falta para llegar a 100 es la distancia.</p>{ranking}</section>
+  <section class="hyx-metodo" id="metodo"><h2>Cómo medimos</h2>
+   <p>La promesa vale siempre 100. La realidad es la suma de cinco criterios de 0 a 20 puntos, y la distancia es lo que le falta a la realidad para llegar a 100.</p>
+   <ol>{metodo}</ol>
+   <p class="hyx-nota">Cuando no hay datos públicos para un criterio, vale 10, la mitad, y lo decimos. Los puntajes son una valoración de la redacción con base en las fuentes de cada ficha, y se revisan cuando hay noticias que los mueven.</p></section>
+  {"".join(fichas)}
+  <p class="hyx-pie">¿Crees que algún puntaje está mal o quieres proponer un tema? Escríbenos: el Hype-ómetro también se corrige.</p>
+ </div>
+</main>
+{boletin()}
+""" + pie())
 
 
 def bloque_podcast():
@@ -225,7 +290,7 @@ def bloque_podcast():
 def bloque_explora():
     items = "".join(f'<li><a href="noticias.html?seccion={q}">Noticias de {s}</a></li>' for s, q in SEC)
     items += ('<li><a href="noticias.html">Todas las noticias</a></li><li><a href="columna.html">La Columna de la semana</a></li>'
-              '<li><a href="index.html#mesa">El debate de La Mesa</a></li><li><a href="index.html#hype">El Hype-ómetro</a></li>'
+              '<li><a href="index.html#mesa">El debate de La Mesa</a></li><li><a href="hype.html">El Hype-ómetro</a></li>'
               '<li><a href="index.html#manifiesto">Nuestro manifiesto</a></li>')
     return f'<section class="explora" data-quitar="4" data-elastico><h3>Explora</h3><ol>{items}</ol></section>'
 
@@ -272,7 +337,7 @@ def pie():
    <p>La tecnología, sin fanatismo. Periodismo de tecnología potenciado por IA, con noticias y análisis cada día.</p></div>
   <nav class="pie__cols" aria-label="Pie de página">
    <div><h4>Noticias</h4><ul><li><a href="index.html">Hoy</a></li>{secciones}<li><a href="noticias.html">Todas las noticias</a></li></ul></div>
-   <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="index.html#hype">Hype-ómetro</a></li><li><a href="multimedia.html">Videos</a></li><li><a href="infografias.html">Infografías</a></li></ul></div>
+   <div><h4>Tecnocríticos</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="columna.html">La Columna</a></li><li><a href="index.html#mesa">La Mesa</a></li><li><a href="hype.html">Hype-ómetro</a></li><li><a href="multimedia.html">Videos</a></li><li><a href="infografias.html">Infografías</a></li></ul></div>
    <div><h4>Recíbelo</h4><ul><li><a href="index.html#boletin">Boletín Tecnocríticos</a></li><li><a href="{YOUTUBE}" target="_blank" rel="noopener">YouTube</a></li><li><a href="rss.html">RSS</a></li><li><a href="privacidad.html">Privacidad</a></li><li><a href="privacidad.html#cookies" data-cookies>Preferencias de cookies</a></li></ul></div>
   </nav>
  </div>
@@ -754,7 +819,8 @@ if __name__ == "__main__":
                          ("quienes-somos.html", generar_noticias.pagina_quienes()),
                          ("rss.html", generar_noticias.pagina_rss()),
                          ("privacidad.html", generar_noticias.pagina_privacidad()),
-                         ("multimedia.html", pagina_multimedia()), ("infografias.html", pagina_infografias())]:
+                         ("multimedia.html", pagina_multimedia()), ("infografias.html", pagina_infografias()),
+                         ("hype.html", pagina_hype())]:
         (RAIZ / nombre).write_text(html, encoding="utf-8")
         print("generado", nombre)
     (RAIZ / "c").mkdir(exist_ok=True)

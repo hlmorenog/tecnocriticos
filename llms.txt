@@ -9,6 +9,7 @@ Cada noticia tiene titular, entradilla, «por qué importa», cuerpo con fuentes
 - [Portada](https://tecnocriticos.com/): la edición del día.
 - [Todas las noticias](https://tecnocriticos.com/noticias.html): archivo completo, filtrable por sección.
 - [La Columna](https://tecnocriticos.com/columna.html): columna semanal de opinión del director.
+- [Hype-ómetro](https://tecnocriticos.com/hype.html): mide la distancia entre la promesa y la realidad de cada tecnología, con método público y fuentes.
 - [Quiénes somos](https://tecnocriticos.com/quienes-somos.html): misión, uso de IA, posición editorial, principios, dirección, fotos y correcciones.
 
 ## Últimas noticias

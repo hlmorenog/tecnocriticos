@@ -1,0 +1,135 @@
+{
+  "revisado": "2026-11-27",
+  "criterios": [
+    ["disponible", "¿Ya existe?", "¿Se puede comprar o usar hoy, o sigue siendo un anuncio?"],
+    ["funciona", "¿Funciona como se prometió?", "Lo que muestran las pruebas independientes, no la publicidad."],
+    ["plazos", "¿Cumplió las fechas?", "Si llegó cuando se anunció. Sin fechas prometidas, o si aún no vencen, vale 10."],
+    ["uso", "¿La gente lo usa?", "Adopción real: cifras de uso, flotas, ventas o casos comprobados."],
+    ["colombia", "¿Te sirve hoy en Colombia?", "Si llegó al país, a qué precio y si le cambia algo al usuario común."]
+  ],
+  "temas": [
+    {
+      "id": "centros-de-datos-en-orbita",
+      "tema": "Centros de datos de IA en órbita",
+      "veredicto": "Por ahora es un permiso, no un centro de datos.",
+      "promesa": {"texto": "Hasta un millón de satélites que funcionarán como centros de datos para la inteligencia artificial en el espacio.", "quien": "SpaceX, con su constelación Starmind", "fecha": "Autorizada de forma condicional el 25 de noviembre de 2026"},
+      "realidad": "La FCC de Estados Unidos autorizó el plan con condiciones, pero no hay ningún satélite de este tipo en órbita. SpaceX tiene siete años para poner en funcionamiento el primero y hasta 2040 para completar la constelación. Antes debe abaratar la fabricación y los lanzamientos, resolver cómo enfriar los procesadores en el espacio y financiar los chips.",
+      "puntos": {
+        "disponible": [0, "No hay ningún satélite de este tipo en órbita."],
+        "funciona": [2, "No está demostrado: los retos técnicos de enfriamiento, costo y financiación siguen abiertos."],
+        "plazos": [10, "Aún no vence ningún plazo: el primer satélite puede llegar hasta 2033."],
+        "uso": [0, "Nadie lo usa: no existe todavía."],
+        "colombia": [0, "No tiene ningún efecto para el usuario en Colombia."]
+      },
+      "noticias": ["2026-11-25-fcc-autoriza-a-spacex-un-millon-de-satelites"],
+      "enlaces": [],
+      "fuentes": [
+        {"nombre": "FCC: autorización de Starmind", "url": "https://docs.fcc.gov/public/attachments/DOC-427572A1.pdf"},
+        {"nombre": "Ars Technica", "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/"},
+        {"nombre": "TechCrunch", "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"}
+      ]
+    },
+    {
+      "id": "robotaxis-de-tesla",
+      "tema": "Los robotaxis de Tesla",
+      "veredicto": "Ya hay robotaxis de Tesla, pero pocos, en pocas calles y con años de retraso.",
+      "promesa": {"texto": "Un millón de robotaxis de Tesla en las calles para 2020.", "quien": "Elon Musk, en el Autonomy Day de Tesla", "fecha": "Abril de 2019"},
+      "realidad": "Tesla lanzó su servicio en Austin en junio de 2025 y en enero de 2026 quitó allí los monitores de seguridad. Hoy opera en zonas limitadas de Austin, Miami, Orlando, Dallas, Fort Worth, Houston y San Antonio. Tiene más de 400 carros registrados en Austin, pero en otras ciudades sus flotas van de unos pocos a algunas decenas, y en el segundo trimestre de 2026 recorrió menos kilómetros con clientes que en el primero. Waymo, su rival, ya hacía unos 500.000 viajes pagos por semana sin conductor a marzo de 2026.",
+      "puntos": {
+        "disponible": [10, "Funciona sin conductor, pero solo en zonas limitadas de siete ciudades de Estados Unidos."],
+        "funciona": [8, "Sin monitor a bordo en Austin; en otras ciudades Tesla no aclara si los lleva, y en California sigue con conductor humano."],
+        "plazos": [1, "Prometió un millón de robotaxis para 2020 y tampoco cumplió sus metas de 2025 en Austin y San Francisco."],
+        "uso": [5, "Flotas pequeñas fuera de Austin y menos kilómetros pagos en el segundo trimestre que en el primero."],
+        "colombia": [0, "No hay servicio ni planes anunciados para Colombia."]
+      },
+      "noticias": [],
+      "enlaces": [],
+      "fuentes": [
+        {"nombre": "TechCrunch: Tesla llega a San Antonio (9 de noviembre de 2026)", "url": "https://techcrunch.com/2026/11/09/tesla-expands-robotaxi-service-to-san-antonio/"},
+        {"nombre": "Electrek: las promesas incumplidas de Musk (31 de marzo de 2026)", "url": "https://electrek.co/2026/03/31/tesla-expands-unsupervised-robotaxi-service-area-still-only-handful-vehicles/"}
+      ]
+    },
+    {
+      "id": "ia-que-disena-proteinas",
+      "tema": "La IA que diseña medicamentos",
+      "veredicto": "Un resultado de laboratorio interesante, todavía muy lejos de un medicamento.",
+      "promesa": {"texto": "Un modelo de IA de uso general puede diseñar proteínas, un trabajo que antes exigía varias herramientas especializadas.", "quien": "OpenAI, con sus modelos GPT-6", "fecha": "24 de noviembre de 2026"},
+      "realidad": "De 322 proteínas diseñadas, 35 (el 10,9 %) se adhirieron a su objetivo en pruebas de laboratorio con la empresa Onava, y otros modelos especializados ayudaron a proponer las secuencias. La propia OpenAI reconoce que estudios anteriores con herramientas especializadas reportaron tasas de acierto más altas. Que una proteína se adhiera es apenas el primer paso: no demuestra que sirva como medicamento ni que sea segura.",
+      "puntos": {
+        "disponible": [4, "Es una investigación, no un servicio que se pueda usar para esto."],
+        "funciona": [9, "Hubo aciertos en los cinco objetivos, pero con ayuda de otros modelos, una tasa de 10,9 % y datos de la propia empresa."],
+        "plazos": [10, "OpenAI no anunció fechas."],
+        "uso": [1, "Ningún medicamento ni tratamiento ha salido de aquí."],
+        "colombia": [0, "No le cambia nada al usuario común."]
+      },
+      "noticias": ["2026-11-26-openai-dice-que-gpt-6-disena-proteinas-que-funcionan-en-laboratorio"],
+      "enlaces": [],
+      "fuentes": [
+        {"nombre": "OpenAI: la investigación", "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"}
+      ]
+    },
+    {
+      "id": "agentes-de-ia-que-compran",
+      "tema": "Agentes de IA que compran por ti",
+      "veredicto": "Ya pueden comprar por ti, pero nadie ha probado todavía qué tan bien lo hacen.",
+      "promesa": {"texto": "Un agente de IA que no solo responde, sino que navega, reserva y compra por ti, desde los mensajes de Instagram.", "quien": "Meta, con su agente Muse", "fecha": "24 de noviembre de 2026"},
+      "realidad": "Muse funciona desde el 24 de noviembre en los mensajes de Instagram en Estados Unidos, Canadá, México, Japón y Singapur, y Meta asegura que no actúa sin la aprobación del usuario. No hay pruebas independientes de qué tan bien compra. En otra investigación, de NordVPN, el asistente Perplexity recomendó dos tiendas falsas como confiables, y ChatGPT y Gemini citaron sitios de una red de tiendas fraudulentas.",
+      "puntos": {
+        "disponible": [10, "Ya funciona, pero solo en cinco países."],
+        "funciona": [7, "No hay pruebas independientes de Muse, y otros asistentes de IA ya recomendaron tiendas falsas."],
+        "plazos": [10, "Meta no había prometido fechas."],
+        "uso": [10, "Meta no ha publicado cifras de uso."],
+        "colombia": [2, "No hay fecha para Colombia; México fue el primer país de la región."]
+      },
+      "noticias": ["2026-11-26-meta-lleva-su-agente-muse-a-los-mensajes-de-instagram"],
+      "enlaces": [],
+      "fuentes": [
+        {"nombre": "TechCrunch", "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/"},
+        {"nombre": "La República", "url": "https://www.larepublica.co/internet-economy/muse-ai-la-inteligencia-artificial-de-meta-platforms-que-llego-a-latinoamerica-4524678"},
+        {"nombre": "The Cool Down (Yahoo): la investigación de NordVPN", "url": "https://tech.yahoo.com/cybersecurity/articles/fake-stores-mimic-166-brands-023500236.html"}
+      ]
+    },
+    {
+      "id": "ia-que-demuestra-teoremas",
+      "tema": "La IA que resuelve las grandes preguntas de las matemáticas",
+      "veredicto": "La prueba parece correcta; ahora falta que alguien la entienda.",
+      "promesa": {"texto": "Claude ayudó a demostrar la hipótesis de Riemann, uno de los grandes problemas abiertos de las matemáticas.", "quien": "Levent Alpöge, matemático de Anthropic", "fecha": "20 de noviembre de 2026"},
+      "realidad": "Las comunidades de Lean y Mathlib certificaron la prueba: sus 175.187 módulos compilan sin errores y dos programas verificadores independientes la aceptan. Pero es un programa, no un texto, y ningún humano la entiende todavía. La hizo un matemático experto trabajando con el modelo, no la IA sola, y el Instituto Clay no se ha pronunciado sobre el premio.",
+      "puntos": {
+        "disponible": [12, "Claude es un producto público, pero la prueba la hizo un experto de Anthropic con el modelo."],
+        "funciona": [18, "Tiene una verificación formal independiente, la más exigente que existe."],
+        "plazos": [10, "No había fecha prometida."],
+        "uso": [6, "Es un solo caso, nadie la entiende todavía y el Instituto Clay no la ha reconocido."],
+        "colombia": [5, "Por ahora no le cambia nada al usuario común."]
+      },
+      "noticias": ["2026-11-23-claude-y-la-hipotesis-de-riemann", "2026-11-24-prueba-de-riemann-verificada"],
+      "enlaces": [],
+      "fuentes": [
+        {"nombre": "Nature", "url": "https://www.nature.com/articles/d41586-026-03812-7"},
+        {"nombre": "Enter.co", "url": "https://www.enter.co/especiales/dev/claude-hipotesis-riemann-prueba-verificada/"}
+      ]
+    },
+    {
+      "id": "celulares-plegables",
+      "tema": "Celulares plegables",
+      "veredicto": "Ya cumplen lo que prometían; el precio sigue siendo la barrera.",
+      "promesa": {"texto": "Un celular que se abre como una tableta sin sacrificar resistencia ni batería.", "quien": "Apple con el iPhone Duo y Samsung con el Galaxy Z Fold 8", "fecha": "2026"},
+      "realidad": "Los dos están a la venta y las pruebas de uso de RTÉ, Absolute Geeks y MakeUseOf hablan bien de ellos en el día a día; tras un mes de uso, Absolute Geeks reportó que el iPhone Duo no se ha agrietado. El iPhone Duo cuesta desde $9.199.000 en Colombia, y el Galaxy Z Fold 8 no tiene precio oficial en el país.",
+      "puntos": {
+        "disponible": [20, "Los dos se pueden comprar hoy."],
+        "funciona": [15, "Las pruebas de uso diario son positivas, aunque son de pocas semanas."],
+        "plazos": [10, "No hubo fechas incumplidas que reseñar."],
+        "uso": [10, "No hay cifras de ventas publicadas."],
+        "colombia": [8, "El iPhone Duo llegó desde $9.199.000; el Fold 8 no tiene precio oficial aquí."]
+      },
+      "noticias": [],
+      "enlaces": [{"titulo": "Infografía: iPhone Duo vs. Galaxy Z Fold 8", "url": "i/2026-11-26-iphone-duo-vs-galaxy-z-fold-8-interactiva.html"}],
+      "fuentes": [
+        {"nombre": "Enter.co: precios en Colombia", "url": "https://www.enter.co/smartphones/el-iphone-duo-ya-esta-a-la-venta-en-colombia-estos-son-sus-precios-oficiales/"},
+        {"nombre": "Absolute Geeks: un mes con el iPhone Duo", "url": "https://www.absolutegeeks.com/reviews/iphone-duo-one-month-in-still-folding-still-not-cracking-still-not-sorry-and-heres-what-surprised-me/"},
+        {"nombre": "RTÉ", "url": "https://www.rte.ie/lifestyle/living/2026/1124/1599707-foldable-phones-apple-iphone-duo-vs-samsung-galaxy-z-fold-8/"},
+        {"nombre": "MakeUseOf", "url": "https://www.makeuseof.com/i-used-galaxy-z-fold-8-still-beats-iphone-duo/"}
+      ]
+    }
+  ]
+}
