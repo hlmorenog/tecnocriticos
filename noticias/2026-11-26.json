@@ -2,6 +2,47 @@
   "fecha": "2026-11-26",
   "noticias": [
     {
+      "id": "2026-11-26-google-15-anos-en-colombia-un-millon-de-dolares-para-formacion",
+      "seccion": "Colombia",
+      "titular": "Google cumple 15 años en Colombia y destina más de US$1 millón a formación en IA",
+      "entradilla": "Los recursos de Google.org irán a cuatro proyectos: jóvenes rurales, docentes, pymes y la reconstrucción tras el terremoto de agosto.",
+      "lead": "Google anunció este jueves 26 de noviembre en Bogotá, durante la celebración de sus 15 años en el país, que destina más de un millón de dólares de su brazo filantrópico, Google.org, a proyectos de formación digital e inteligencia artificial en Colombia.",
+      "cuerpo": [
+        "Los recursos, entregados durante 2026, se reparten en cuatro líneas. JuvenTIC, de la organización Colnodo, vuelve después de más de una década para formar a 300 jóvenes de zonas rurales, con prioridad para mujeres, comunidades étnicas, sobrevivientes del conflicto armado y personas con discapacidad. Con la Fundación Pies Descalzos se capacitará a 1.600 docentes de Atlántico y Bolívar en el programa Experience AI, de la Fundación Raspberry Pi y Google DeepMind, con la meta de llegar a 40.000 estudiantes de 11 a 14 años.",
+        "La tercera línea busca capacitar en IA a cerca de 15.000 pymes, en un proyecto liderado por el Centro Nacional de Inteligencia Artificial de Chile (CENIA) y la Fundación Futuro del Trabajo; Google dijo que pronto anunciará el aliado que lo ejecutará en Colombia. La cuarta va al Center for Disaster Philanthropy, para la reconstrucción de las zonas afectadas por el terremoto de agosto.",
+        "En el evento, el director general de Google para la Región Andina, Edgardo Frías, citó el informe AI Sprinters Colombia, elaborado por Google, el BID y Foresight, según el cual una mayor adopción de IA podría sumar entre 7.200 y 13.600 millones de dólares al año a la economía colombiana. La empresa no publicó fechas de inscripción para las nuevas convocatorias."
+      ],
+      "mirada": "Un millón de dólares es poco para una empresa del tamaño de Google, pero mucho para 300 jóvenes rurales: lo que importará es que lleguen.",
+      "titular_corto": "Google: US$1 millón para IA",
+      "por_que_importa": "la formación en IA para docentes, jóvenes rurales y pymes decide quién aprovecha esta tecnología en Colombia y quién se queda atrás.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "300 jóvenes rurales, 1.600 docentes, 40.000 estudiantes y 15.000 pymes como meta."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-google-15-anos-en-colombia-un-millon-de-dolares-para-formacion.jpg",
+        "alt": "Letrero luminoso de Google en una de sus oficinas (imagen ilustrativa)",
+        "autor": "sporst",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/sporst/43209325290"
+      },
+      "fuentes": [
+        {
+          "nombre": "ENTER.CO",
+          "url": "https://www.enter.co/empresas/google-invertira-mas-de-un-millon-de-dolares-en-formacion-tecnologica-en-colombia/"
+        },
+        {
+          "nombre": "Vanguardia",
+          "url": "https://www.vanguardia.com/mundo/tecnologia/2026/11/26/google-cumple-15-anos-en-colombia-y-anuncia-mas-de-us1-millon-para-proyectos-educativos/"
+        },
+        {
+          "nombre": "El Universal",
+          "url": "https://www.eluniversal.com.co/colombia/2026/11/26/google-cumple-15-anos-en-colombia-y-anuncia-inversion-en-inteligencia-artificial/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-microsoft-hackers-de-china-y-corea-del-norte-usan-artex",
       "seccion": "IA y tecnología",
       "titular": "Microsoft: hackers de China y Corea del Norte ya atacan con ARTEX, una herramienta de IA",
