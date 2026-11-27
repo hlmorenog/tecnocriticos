@@ -93,6 +93,79 @@
       }
     },
     {
+      "id": "2026-11-27-carros-electricos-frente-a-frente",
+      "fecha": "2026-11-27",
+      "seccion": "IA y tecnología",
+      "titulo": "Tesla, BYD, Volvo, Kia y Renault: 5 carros eléctricos frente a frente en Colombia",
+      "entradilla": "Autonomía, precio, potencia, conectores de carga y suscripciones del Model Y, el Sealion 7, el EX30, el EV3 y el Kwid E-Tech, con una ficha para cada carro y una calculadora de cada cuánto hay que cargar.",
+      "archivo": "img/infografias/2026-11-27-carros-electricos-frente-a-frente.jpg",
+      "alt": "Tabla que compara cinco carros eléctricos vendidos en Colombia: Tesla Model Y, BYD Sealion 7, Volvo EX30, Kia EV3 y Renault Kwid E-Tech, con su precio, autonomía, potencia, batería, conector, potencia de carga en corriente alterna y en carga rápida, y su suscripción de servicios conectados.",
+      "ancho": 1080,
+      "alto": 1024,
+      "interactiva": {
+        "html": "infografias/electricos-2026/app.html",
+        "css": [
+          "infografias/drones-2026/app.css",
+          "infografias/electricos-2026/app.css"
+        ],
+        "js": [
+          "infografias/electricos-2026/datos.js",
+          "infografias/electricos-2026/app.js"
+        ]
+      },
+      "texto": [
+        "## Cómo leer esta infografía",
+        "Comparamos la versión de entrada de cinco eléctricos que se venden hoy en Colombia: tres de las marcas que más pesan en el mercado, Tesla, BYD y Volvo, y dos más, el Kia EV3 y el Renault Kwid E-Tech, el eléctrico más barato de la lista. Los precios son los publicados en Colombia según la fuente de cada modelo; el del Volvo EX30 es el de su lanzamiento.",
+        "La autonomía se mide en el ciclo europeo WLTP, salvo la del Kwid, que Renault publica en ciclo urbano, más favorable. En la vida real, con aire acondicionado, autopista o subidas, se recorre menos. El conector define dónde se puede cargar: el Tesla, el BYD y el Renault usan Tipo 2 y CCS2; el Volvo y el Kia, Tipo 1 y CCS1.",
+        "## Las suscripciones",
+        "Desde el 1 de octubre de 2026 Tesla cobra en Colombia $69.900 al mes por la Conectividad Premium, que es opcional: tráfico en tiempo real, cámaras a distancia y streaming. La conectividad estándar viene incluida por 8 años. En las otras cuatro marcas no encontramos una tarifa de servicios conectados publicada para Colombia.",
+        "## La mirada crítica",
+        "Tesla bajó el precio de entrada de los eléctricos y subió el de la conectividad: el carro se vende barato, pero lo que conecta al carro se cobra cada mes."
+      ],
+      "fuentes": [
+        {
+          "nombre": "El Carro Colombiano: Tesla Model Y en Colombia",
+          "url": "https://www.elcarrocolombiano.com/lanzamientos/tesla-model-y-colombia-precios-versiones-datos/"
+        },
+        {
+          "nombre": "El Colombiano: la guerra de precios de los eléctricos",
+          "url": "https://www.elcolombiano.com/negocios/guerra-precios-carros-electricos-colombia-tesla-kia-byd-2026-HF35471723"
+        },
+        {
+          "nombre": "El Colombiano: Tesla cobra la conectividad premium",
+          "url": "https://www.elcolombiano.com/negocios/tesla-cobrara-69900-pesos-mensuales-conectividad-premium-colombia-KK40680039"
+        },
+        {
+          "nombre": "EV Database: potencia de carga del Model Y RWD",
+          "url": "https://ev-database.org/car/3741/Tesla-Model-Y-RWD"
+        },
+        {
+          "nombre": "El Carro Colombiano: BYD Sealion 7 RWD en Colombia",
+          "url": "https://www.elcarrocolombiano.com/novedades/byd-sealion-7-rwd-colombia-precio-ficha-tecnica-autonomia/"
+        },
+        {
+          "nombre": "El Carro Colombiano: Volvo EX30 en Colombia",
+          "url": "https://www.elcarrocolombiano.com/lanzamientos/volvo-ex30-colombia-precios-y-datos-suv-electrico-premium-a-precio-de-byd/"
+        },
+        {
+          "nombre": "Yahoo Finanzas: el EX30 llegó a Colombia desde $179 millones",
+          "url": "https://es-us.finanzas.yahoo.com/noticias/volvo-ex30-suv-el%C3%A9ctrica-colombia-130000469.html"
+        },
+        {
+          "nombre": "Kia Colombia: EV3",
+          "url": "https://kia.com.co/nuestros-vehiculos/ev3"
+        },
+        {
+          "nombre": "El Carro Colombiano: Kia EV3 en Colombia",
+          "url": "https://www.elcarrocolombiano.com/lanzamientos/kia-ev3-colombia-precios-versiones-electrico-de-mas-autonomia-por-su-precio/"
+        },
+        {
+          "nombre": "El Carro Colombiano: Renault Kwid E-Tech 2026",
+          "url": "https://www.elcarrocolombiano.com/novedades/renault-kwid-e-tech-2026-colombia-carro-electrico-mas-seguro-y-a-mejor-precio/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-colombia-digital-2027",
       "fecha": "2026-11-26",
       "seccion": "Colombia",
