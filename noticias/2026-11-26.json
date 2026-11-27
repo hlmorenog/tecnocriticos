@@ -2,6 +2,39 @@
   "fecha": "2026-11-26",
   "noticias": [
     {
+      "id": "2026-11-26-mintic-alerta-fraudes-compras-en-linea-black-friday",
+      "seccion": "Colombia",
+      "titular": "Black Friday: el MinTIC alerta por fraudes en compras en línea y dice cómo evitarlos",
+      "entradilla": "La jornada de descuentos es este viernes 27 de noviembre, y los delincuentes aprovechan las ofertas y la prisa para robar datos y dinero.",
+      "lead": "El Ministerio TIC advirtió este jueves 26 de noviembre sobre las estafas digitales que pueden aumentar durante el Black Friday, que en Colombia se celebra este viernes 27, y pidió verificar tiendas y ofertas antes de pagar.",
+      "cuerpo": [
+        "El Ministerio recomendó entrar directamente a la página oficial de cada comercio o a su aplicación, revisar que la dirección web esté bien escrita y no dejarse convencer solo por el logo, las fotos o la apariencia del sitio. También pidió no llegar a tiendas por enlaces de desconocidos, mensajes inesperados o anuncios dudosos, y desconfiar de los descuentos exagerados y de las promociones que presionan para comprar de inmediato.",
+        "Al pagar, aconsejó usar solo los medios de pago oficiales de la tienda, no transferir a cuentas personales, no comprar conectado a redes wifi públicas y nunca compartir contraseñas, claves dinámicas, el código de seguridad de la tarjeta ni fotos de ella: ningún asesor debe pedirlos. Después, recomendó guardar los comprobantes, activar las notificaciones del banco y la verificación en dos pasos.",
+        "Quien detecte una oferta sospechosa o sea víctima de un fraude puede reportarlo en el CAI Virtual de la Policía (caivirtual.policia.gov.co) o en la línea del Centro Cibernético Policial, 323 273 3411, y denunciar ante la Fiscalía. La alerta llega con un comercio electrónico en alza: según la Cámara Colombiana de Comercio Electrónico, citada por el Ministerio, en 2025 se hicieron 684,6 millones de compras en línea en el país, 19,9 % más que en 2024."
+      ],
+      "mirada": "El consejo más útil del Ministerio es el más simple: si una oferta apura y parece demasiado buena, probablemente no es una oferta.",
+      "titular_corto": "Black Friday sin estafas",
+      "por_que_importa": "en las jornadas de descuentos crecen las tiendas falsas y los engaños para robar datos de tarjetas, y un clic apurado puede salir caro.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "684,6 millones de compras en línea en Colombia en 2025, 19,9 % más que en 2024."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-26-mintic-alerta-fraudes-compras-en-linea-black-friday.jpg",
+        "alt": "Una persona sostiene una tarjeta de crédito frente a un computador portátil (imagen ilustrativa)",
+        "autor": "Nenad Stojkovic",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/202846129@N03/54555523188/"
+      },
+      "fuentes": [
+        {
+          "nombre": "MinTIC",
+          "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/442657:Que-el-Black-Friday-no-le-salga-caro-MinTIC-alerta-sobre-estafas-digitales"
+        }
+      ]
+    },
+    {
       "id": "2026-11-26-google-15-anos-en-colombia-un-millon-de-dolares-para-formacion",
       "seccion": "Colombia",
       "titular": "Google cumple 15 años en Colombia y destina más de US$1 millón a formación en IA",
