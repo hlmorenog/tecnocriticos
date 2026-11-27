@@ -1,0 +1,220 @@
+{
+  "fecha": "2026-11-27",
+  "noticias": [
+    {
+      "id": "2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota",
+      "seccion": "IA y tecnología",
+      "titular": "OpenAI corrige un error y los usuarios pagos de ChatGPT agotarán antes su cuota",
+      "entradilla": "El descuento que hacía rendir más los nuevos modelos era un error: ahora la misma tarea consume hasta un 40 % más del plan.",
+      "lead": "OpenAI reconoció el jueves 26 de noviembre que, desde el lanzamiento de sus modelos GPT-6.2 Astra y Sol el 17 de noviembre, ChatGPT contó de menos su uso; al corregirlo, los usuarios pagos llegarán antes a sus límites.",
+      "cuerpo": [
+        "Thibault Sottiaux, líder de producto de OpenAI, explicó en X que el error descontaba de forma incorrecta el uso de los dos modelos para la mayoría de los usuarios. Frente a la semana pasada, la misma tarea agotará el límite un 40 % más rápido con Astra y un 25 % más rápido con Sol. Los demás modelos no se afectaron, y OpenAI asegura que GPT-6.2 sigue rindiendo más dentro del plan que sus antecesores.",
+        "La empresa no cobrará la diferencia del uso pasado y, como disculpa, dará un reinicio de cuota de una sola vez a los usuarios de los planes Go, Plus, Pro y Business. Se puede usar cuando se quiera desde la configuración de uso en la web o en la aplicación de escritorio; en la aplicación del celular no está la opción. OpenAI no ha explicado qué falló ni cuántos usuarios se vieron afectados.",
+        "Al lanzar GPT-6.2, OpenAI había destacado que los nuevos modelos permitían hacer más trabajo dentro de los límites del plan; parte de esa ventaja venía del error, según heise. El cambio llega mientras la empresa une los límites de las pestañas Chat y Work de ChatGPT, algo que planea extender en diciembre."
+      ],
+      "mirada": "El modelo no empeoró: cambió la cuenta, y en los planes por cuota el usuario casi nunca ve cómo se hace.",
+      "titular_corto": "ChatGPT: la cuota rinde menos",
+      "por_que_importa": "quien paga ChatGPT y usa GPT-6.2 llegará antes a su límite por el mismo precio, y solo puede ver de forma parcial cuánto consume cada consulta.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "El reinicio de cuota se activa desde la configuración de uso en la web o en la app de escritorio, no en el celular."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.jpg",
+        "alt": "Pantalla de ChatGPT con una pregunta y su respuesta (imagen ilustrativa)",
+        "autor": "daveynin",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/daveynin/53831308348/"
+      },
+      "fuentes": [
+        {
+          "nombre": "heise",
+          "url": "https://www.heise.de/en/news/OpenAI-corrects-billing-error-GPT-6-2-limits-arrive-sooner-11539518.html"
+        },
+        {
+          "nombre": "The Next Web",
+          "url": "https://thenextweb.com/news/openai-billing-mistake-gpt-6-2-usage-limits"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-suiza-confirma-ciberataques-con-agentes-de-ia",
+      "seccion": "IA y tecnología",
+      "titular": "Suiza confirma sus primeros ciberataques hechos con agentes de IA, y todos lograron entrar",
+      "entradilla": "Los agentes buscan fallas y deciden el siguiente paso por su cuenta, y las herramientas para usarlos casi se duplicaron desde octubre.",
+      "lead": "El Centro Nacional de Ciberseguridad de Suiza (NCSC) confirmó esta semana los primeros ciberataques en el país hechos con ayuda de agentes de inteligencia artificial, contra empresas y operadores de infraestructura crítica, y dijo que en todos los casos que conoce los atacantes lograron entrar.",
+      "cuerpo": [
+        "Según el aviso del NCSC, publicado el 24 de noviembre, los atacantes usaron agentes de IA que buscan vulnerabilidades por su cuenta, eligen las herramientas, evalúan los resultados y planean el siguiente paso. Aprovecharon contraseñas débiles o fáciles de adivinar y fallas conocidas en sistemas conectados a internet, en una fracción del tiempo que le tomaría a una persona. Los ataques afectaron a organizaciones y operadores de infraestructura crítica de al menos dos sectores; la agencia no reveló quiénes son las víctimas ni los atacantes.",
+        "El NCSC advirtió que la cantidad de agentes de este tipo disponibles en internet, como ARTEX y CyberStrikeAI, casi se duplicó desde octubre, y espera más ataques exitosos. Pidió instalar las actualizaciones críticas de seguridad a más tardar 24 horas después de publicadas, proteger con verificación en dos pasos o llaves de acceso todo lo que esté expuesto a internet y reducir al mínimo los sistemas expuestos.",
+        "Italia emitió una alerta parecida: su equipo de respuesta a incidentes, CSIRT Italia, detectó campañas a gran escala en las que varios agentes de IA trabajaban en paralelo y comprometieron muchos sistemas en pocas horas, según BleepingComputer. Microsoft ya había informado que grupos de hackers de China y Corea del Norte atacan con ARTEX."
+      ],
+      "mirada": "Las herramientas para atacar con IA ya están al alcance de cualquiera; las defensas dependen de algo tan viejo como instalar las actualizaciones a tiempo.",
+      "titular_corto": "Suiza: ataques con agentes de IA",
+      "por_que_importa": "los agentes de IA hacen en minutos lo que a un atacante le tomaba horas, y cualquier organización con sistemas desactualizados es un blanco.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "El NCSC pide instalar los parches críticos en menos de 24 horas."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-suiza-confirma-ciberataques-con-agentes-de-ia.jpg",
+        "alt": "Servidores con cables en un rack de un centro de datos (imagen ilustrativa)",
+        "autor": "Lindsay Holmwood",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/auxesis/4380518581/"
+      },
+      "fuentes": [
+        {
+          "nombre": "NCSC de Suiza",
+          "url": "https://www.bacs.admin.ch/en/26-ki-agenten-1-en"
+        },
+        {
+          "nombre": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-paises-bajos-piden-frenar-venta-de-gafas-de-meta",
+      "seccion": "IA y tecnología",
+      "titular": "Consumidores de Países Bajos piden a un juez frenar la venta de las gafas de Meta",
+      "entradilla": "Alegan que permiten grabar a cualquiera sin que lo sepa; Meta responde que una luz en el marco avisa cuando están grabando.",
+      "lead": "La Consumentenbond, principal asociación de consumidores de Países Bajos, y la organización Offlimits pidieron el jueves 26 de noviembre a un tribunal de Ámsterdam que frene la venta de las gafas con IA de Meta en el país, por presuntamente violar las leyes de privacidad europeas.",
+      "cuerpo": [
+        "En un proceso civil de trámite rápido, las organizaciones argumentan que las gafas, desarrolladas por Meta con EssilorLuxottica, dueña de Ray-Ban, permiten grabar a otras personas sin que lo sepan. Piden que Meta impida esas grabaciones, que no use lo grabado para entrenar modelos de IA y que suspenda las ventas hasta cumplir, con multas de 100.000 euros diarios por empresa si no lo hace, hasta un máximo de 100 millones, según Reuters.",
+        "El abogado de Meta pidió rechazar la demanda: dijo que las medidas perjudicarían a los usuarios legítimos, que un fabricante no puede responder por cada mal uso deliberado y que una luz en el marco deja claro cuándo se graba. También negó que Meta procese en Europa las imágenes o las use para entrenar IA en contra de la ley europea. EssilorLuxottica dijo que no tiene acceso a las grabaciones. Las dos empresas vendieron más de 7 millones de gafas inteligentes en 2025, cerca del 80 % del mercado mundial.",
+        "El tribunal aún no ha decidido, y cualquier orden solo aplicaría en Países Bajos. La demanda llega después de que el regulador de privacidad neerlandés recomendara este mes no comprar gafas con cámara y de que la federación de consumidores de Alemania anunciara también acciones legales contra Meta y Ray-Ban."
+      ],
+      "mirada": "Una luz en el marco no es consentimiento: quien sale en el video nunca aceptó los términos y condiciones de Meta.",
+      "titular_corto": "Gafas de Meta, ante un juez",
+      "por_que_importa": "un fallo en contra podría sentar un precedente para otros países donde crecen las quejas por las grabaciones a escondidas con estas gafas.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Meta y EssilorLuxottica vendieron más de 7 millones de gafas inteligentes en 2025."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-paises-bajos-piden-frenar-venta-de-gafas-de-meta.jpg",
+        "alt": "Un hombre con unas gafas inteligentes Ray-Ban Meta (imagen ilustrativa)",
+        "autor": "Underway In Ireland",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/irisheyes/53716843395/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Reuters (vía BusinessWorld)",
+          "url": "https://bworldonline.com/technology/2026/11/27/797243/dutch-groups-ask-court-to-halt-meta-smart-glasses-sales-over-privacy-concerns/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-epm-y-etb-alumbrado-inteligente-en-bogota",
+      "seccion": "Colombia",
+      "titular": "EPM y ETB convertirán el alumbrado de Bogotá en una red inteligente con sensores y cámaras",
+      "entradilla": "Desde el 1 de diciembre, las luminarias empezarán a pasar a un sistema que reporta fallas solo y que también puede vigilar.",
+      "lead": "Desde el 1 de diciembre, Empresas Públicas de Medellín (EPM) operará durante diez años el alumbrado público de Bogotá y, con ETB, montará una red de telegestión para controlar las luminarias a distancia, anunció la Alcaldía el 23 de noviembre.",
+      "cuerpo": [
+        "La telegestión permite que cada luminaria, conectada a una red de datos, reporte sola sus fallas y ajuste su intensidad. La meta a diez años es llegar a 100.000 nodos de telegestión y conectar hasta 50.000 postes con cámaras y sensores; la primera fase cubrirá una o dos zonas de la ciudad. ETB aportará su red de más de 20 millones de metros de fibra óptica.",
+        "Bogotá tiene 366.410 luminarias, el 71,7 % ya con tecnología LED, y le quedan 103.662 por modernizar. EPM fue elegida tras un análisis de mercado de la Unidad Administrativa Especial de Servicios Públicos (Uaesp), que también consultó a GEB-Enel, Emcali y K-Yena, y ya opera el alumbrado de 15 municipios, entre ellos Medellín y Cartagena. El cambio cierra un modelo de operación de más de 30 años.",
+        "El plan se financia con el Acuerdo 724 de 2026, de Ciudad Inteligente: según Impacto TIC, los estratos 1, 2 y 3 no pagarán un aporte adicional y el estrato 4 pagará unos 11.000 pesos al mes con el impuesto predial. La Alcaldía asegura que los datos del servicio quedarán bajo control del Distrito; las cámaras, como cualquier sistema que recoja datos personales, deben cumplir la ley de protección de datos, que vigila la Superintendencia de Industria y Comercio."
+      ],
+      "mirada": "Un poste con cámara ilumina y también vigila: la ciudad inteligente necesita reglas igual de claras sobre quién mira esos datos.",
+      "titular_corto": "Bogotá: alumbrado inteligente",
+      "por_que_importa": "el alumbrado será la base de una red de sensores y cámaras en toda la ciudad, con efectos en seguridad, energía y privacidad.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "100.000 nodos de telegestión y hasta 50.000 postes con cámaras y sensores en diez años."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-epm-y-etb-alumbrado-inteligente-en-bogota.jpg",
+        "alt": "Postes de alumbrado y tráfico nocturno en la Autopista Norte de Bogotá",
+        "autor": "JDCG CG",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/jdcifuentes/13770388563/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Alcaldía de Bogotá",
+          "url": "https://bogota.gov.co/mi-ciudad/habitat/2026-11/epm-asume-el-alumbrado-publico-en-bogota-desde-diciembre-de-2026"
+        },
+        {
+          "nombre": "Impacto TIC",
+          "url": "https://impactotic.co/formatos/noticias-tic/alumbrado-inteligente-en-bogota-epm-etb-telegestion/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-microsoft-codigo-rojo-tras-caida-de-microsoft-365",
+      "seccion": "IA y tecnología",
+      "titular": "Microsoft declara código rojo interno tras la caída de casi 24 horas de Microsoft 365",
+      "entradilla": "La falla del correo y de Teams fue, según la propia empresa, la que más ha afectado a sus clientes en la historia de Exchange Online.",
+      "lead": "Microsoft declaró un código rojo interno, su nivel de alerta más alto, para cambiar cómo previene y responde a las fallas, tras la caída de casi 24 horas de Exchange Online y otros servicios de Microsoft 365 el 12 y 13 de noviembre, según memorandos revisados por Reuters.",
+      "cuerpo": [
+        "La falla afectó el correo de Outlook, Teams y el asistente Copilot, llegó a gobiernos de Australia, Japón y Estados Unidos, retrasó a firmas bursátiles y alteró comunicaciones de aerolíneas. Microsoft la atribuyó a un defecto introducido en julio en una corrección para sus servidores de red: bajo ciertas cargas, un proceso interno de Windows agotaba el procesador y la memoria, y en el peor momento más del 80 % de esos servidores dejó de responder. La empresa dijo que no tuvo relación con ciberataques ni con agentes de IA.",
+        "En un memorando, Jason Henderson, presidente de Microsoft 365 Core, la describió como el incidente que más ha afectado a los clientes en la historia de Exchange Online. Otro memorando relata que los equipos intercambiaron más de 11.000 mensajes en 11 chats de Teams mientras los datos de diagnóstico estaban dispersos en sistemas distintos.",
+        "El plan incluye repartir el tráfico por regiones para que una falla no se extienda y la meta de resolver los incidentes en todo el mundo en menos de una hora, con agentes de IA que ayuden a diagnosticar. Henderson reconoció que una corrección urgente reciente tardó entre cinco y seis días en llegar a todos los servidores. El director ejecutivo, Satya Nadella, ya había pedido disculpas por la caída."
+      ],
+      "mirada": "Cuando el correo de medio mundo depende de una sola empresa, un error de julio puede dejar sin servicio a gobiernos en noviembre.",
+      "titular_corto": "Código rojo en Microsoft",
+      "por_que_importa": "millones de empresas y gobiernos dependen del correo y las herramientas de Microsoft, y la caída mostró lo frágil que es esa dependencia.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "En el peor momento, más del 80 % de los servidores afectados dejó de responder."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-microsoft-codigo-rojo-tras-caida-de-microsoft-365.jpg",
+        "alt": "Letrero de Microsoft frente a uno de sus edificios en Redmond, Estados Unidos",
+        "autor": "Robert Scoble",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/scobleizer/2264764769/"
+      },
+      "fuentes": [
+        {
+          "nombre": "SiliconANGLE (con memorandos revisados por Reuters)",
+          "url": "https://siliconangle.com/2026/11/24/microsoft-declares-internal-code-red-after-nearly-24-hour-microsoft-365-outage/"
+        },
+        {
+          "nombre": "El Espectador",
+          "url": "https://www.elespectador.com/tecnologia/gadgets-y-apps/microsoft-declaro-codigo-rojo-tras-el-apagon-de-24-horas-de-algunos-servicios-que-fallo/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-trabajadores-de-rockstar-rechazan-reconocer-sindicato",
+      "seccion": "Videojuegos y series",
+      "titular": "Trabajadores de Rockstar en Reino Unido rechazan que la empresa reconozca su sindicato",
+      "entradilla": "La votación coincidió con el lanzamiento de GTA VI, y no resuelve la demanda por los despidos de 2025.",
+      "lead": "Tres de cada cuatro empleados de Rockstar Games en Reino Unido que votaron rechazaron que la empresa reconozca formalmente a su sindicato, afiliado al IWGB, en una votación de dos semanas que coincidió con el lanzamiento de GTA VI, informó Engadget el 26 de noviembre.",
+      "cuerpo": [
+        "Votó más del 93 % de los trabajadores de las oficinas de Edimburgo, Leeds, Lincoln, Dundee y Londres: hubo 1.163 votos en contra del reconocimiento y 381 a favor, según IGN, citado por Engadget. Con ese resultado, la dirección de Rockstar no está obligada a reconocer oficialmente al sindicato ni a reunirse de forma periódica con sus representantes.",
+        "El sindicato dijo que seguirá organizándose sin un acuerdo formal y que mantendrá sus reclamos por transparencia salarial, pago de horas extras y protecciones frente a la IA y los despidos. Rockstar aseguró que el resultado refleja el apoyo de su equipo a una relación directa con la empresa.",
+        "El voto no cierra la disputa de fondo: en octubre de 2025, Rockstar despidió a decenas de trabajadores, a quienes acusó de compartir información confidencial de GTA VI, y el IWGB la demandó por presunta persecución sindical y despidos ilegales. Un tribunal laboral escuchó los alegatos finales la semana pasada y aún no ha dictado sentencia."
+      ],
+      "mirada": "Rockstar ganó la votación el mismo mes en que GTA VI rompió récords; cómo se trabaja para lograrlos sigue en discusión.",
+      "titular_corto": "Rockstar: no al sindicato",
+      "por_que_importa": "el estudio del juego más vendido del momento define cómo negocia con sus trabajadores, en una industria marcada por los despidos.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "1.163 votos en contra y 381 a favor, con una participación de más del 93 %."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-trabajadores-de-rockstar-rechazan-reconocer-sindicato.jpg",
+        "alt": "Stand de Rockstar Games en la feria Igromir de 2008 (imagen ilustrativa)",
+        "autor": "Sergiy Galyonkin",
+        "licencia": "CC BY-SA 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/sergesegal/3012110947/",
+        "encuadre": "completa"
+      },
+      "fuentes": [
+        {
+          "nombre": "Engadget",
+          "url": "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
+        }
+      ]
+    }
+  ]
+}

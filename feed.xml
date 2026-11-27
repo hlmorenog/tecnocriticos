@@ -5,9 +5,57 @@
   <link>https://tecnocriticos.com/</link>
   <description>Noticias de tecnología en Colombia, IA, videojuegos y series, con contexto y mirada crítica.</description>
   <language>es-co</language>
-  <lastBuildDate>Thu, 26 Nov 2026 06:00:00 -0500</lastBuildDate>
+  <lastBuildDate>Fri, 27 Nov 2026 06:00:00 -0500</lastBuildDate>
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
+  <item>
+   <title>OpenAI corrige un error y los usuarios pagos de ChatGPT agotarán antes su cuota</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>El descuento que hacía rendir más los nuevos modelos era un error: ahora la misma tarea consume hasta un 40 % más del plan. Por qué importa: quien paga ChatGPT y usa GPT-6.2 llegará antes a su límite por el mismo precio, y solo puede ver de forma parcial cuánto consume cada consulta.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-openai-corrige-error-y-chatgpt-agota-antes-la-cuota.jpg" length="68650" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Suiza confirma sus primeros ciberataques hechos con agentes de IA, y todos lograron entrar</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-suiza-confirma-ciberataques-con-agentes-de-ia.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-suiza-confirma-ciberataques-con-agentes-de-ia.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Los agentes buscan fallas y deciden el siguiente paso por su cuenta, y las herramientas para usarlos casi se duplicaron desde octubre. Por qué importa: los agentes de IA hacen en minutos lo que a un atacante le tomaba horas, y cualquier organización con sistemas desactualizados es un blanco.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-suiza-confirma-ciberataques-con-agentes-de-ia.jpg" length="64397" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Consumidores de Países Bajos piden a un juez frenar la venta de las gafas de Meta</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-paises-bajos-piden-frenar-venta-de-gafas-de-meta.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-paises-bajos-piden-frenar-venta-de-gafas-de-meta.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>Alegan que permiten grabar a cualquiera sin que lo sepa; Meta responde que una luz en el marco avisa cuando están grabando. Por qué importa: un fallo en contra podría sentar un precedente para otros países donde crecen las quejas por las grabaciones a escondidas con estas gafas.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-paises-bajos-piden-frenar-venta-de-gafas-de-meta.jpg" length="70728" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>EPM y ETB convertirán el alumbrado de Bogotá en una red inteligente con sensores y cámaras</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-epm-y-etb-alumbrado-inteligente-en-bogota.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-epm-y-etb-alumbrado-inteligente-en-bogota.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Colombia</category>
+   <description>Desde el 1 de diciembre, las luminarias empezarán a pasar a un sistema que reporta fallas solo y que también puede vigilar. Por qué importa: el alumbrado será la base de una red de sensores y cámaras en toda la ciudad, con efectos en seguridad, energía y privacidad.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-epm-y-etb-alumbrado-inteligente-en-bogota.jpg" length="134013" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Microsoft declara código rojo interno tras la caída de casi 24 horas de Microsoft 365</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-microsoft-codigo-rojo-tras-caida-de-microsoft-365.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-microsoft-codigo-rojo-tras-caida-de-microsoft-365.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>La falla del correo y de Teams fue, según la propia empresa, la que más ha afectado a sus clientes en la historia de Exchange Online. Por qué importa: millones de empresas y gobiernos dependen del correo y las herramientas de Microsoft, y la caída mostró lo frágil que es esa dependencia.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-microsoft-codigo-rojo-tras-caida-de-microsoft-365.jpg" length="114251" type="image/jpeg"/>
+  </item>
+  <item>
+   <title>Trabajadores de Rockstar en Reino Unido rechazan que la empresa reconozca su sindicato</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-trabajadores-de-rockstar-rechazan-reconocer-sindicato.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-trabajadores-de-rockstar-rechazan-reconocer-sindicato.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>Videojuegos y series</category>
+   <description>La votación coincidió con el lanzamiento de GTA VI, y no resuelve la demanda por los despidos de 2025. Por qué importa: el estudio del juego más vendido del momento define cómo negocia con sus trabajadores, en una industria marcada por los despidos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-trabajadores-de-rockstar-rechazan-reconocer-sindicato.jpg" length="132715" type="image/jpeg"/>
+  </item>
   <item>
    <title>Black Friday: el MinTIC alerta por fraudes en compras en línea y dice cómo evitarlos</title>
    <link>https://tecnocriticos.com/n/2026-11-26-mintic-alerta-fraudes-compras-en-linea-black-friday.html</link>
@@ -359,54 +407,6 @@
    <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
    <category>IA y tecnología</category>
    <description>El caso pone a prueba la práctica de vincular las piezas al teléfono, que limita quién puede repararlo. Por qué importa: de la decisión depende que reparar un iPhone fuera de los servicios oficiales siga siendo una opción real.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-apple-ira-a-juicio-en-francia-por-reparaciones.jpg" length="221879" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>El sistema financiero de MinTIC estuvo ocho días caído y frenó pagos y cobros</title>
-   <link>https://tecnocriticos.com/n/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.html</guid>
-   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Colombia</category>
-   <description>La falla obligó al ministerio a suspender los plazos de multas y contraprestaciones del sector TIC. Por qué importa: los operadores y empresas del sector que pagan contraprestaciones y multas tienen ahora nuevos plazos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-sistema-seven-erp-de-mintic-estuvo-ocho-dias-caido.jpg" length="186743" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>GTA VI vendió 3.790 millones de dólares en su primer día, según Take-Two</title>
-   <link>https://tecnocriticos.com/n/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.html</guid>
-   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Videojuegos y series</category>
-   <description>La cifra lo pone entre los mayores lanzamientos del entretenimiento, por encima de los grandes estrenos de cine. Por qué importa: confirma que el videojuego ya mueve más dinero en un estreno que el cine o la música.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-gta-vi-vende-3790-millones-en-su-primer-dia.jpg" length="234290" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>Anthropic debuta en el Nasdaq con la mayor salida a bolsa de la historia</title>
-   <link>https://tecnocriticos.com/n/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.html</guid>
-   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
-   <category>IA y tecnología</category>
-   <description>La creadora de Claude captó más de 107.000 millones de dólares y pone a prueba cuánto está dispuesto a pagar el mercado por la inteligencia artificial. Por qué importa: es la prueba más grande hasta ahora de cuánto está dispuesto a pagar el mercado por la inteligencia artificial.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-anthropic-debuta-en-bolsa-con-la-mayor-salida-de-la-historia.jpg" length="323066" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>Tribunal de Cundinamarca respalda a la SIC frente a Google por datos de menores</title>
-   <link>https://tecnocriticos.com/n/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.html</guid>
-   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Colombia</category>
-   <description>El fallo dice que la ley colombiana de datos personales aplica a empresas extranjeras cuando recogen información en el país. Por qué importa: la ley colombiana de datos personales aplica a empresas extranjeras que recogen información en el país.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-tribunal-respalda-a-la-sic-frente-a-google-por-datos-de-menores.jpg" length="211070" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>GTA VI sale a la venta: en Colombia cuesta desde 339.900 pesos y la crítica lo aplaude</title>
-   <link>https://tecnocriticos.com/n/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.html</guid>
-   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Videojuegos y series</category>
-   <description>El juego más esperado de la década llega solo a consolas y con una caja física que no trae disco. Por qué importa: la caja física no trae disco: lo que se compra es, en la práctica, una licencia digital.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-gta-vi-llega-a-colombia-precios-y-criticas.jpg" length="61797" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>MinTIC y Meta firman un memorando contra el reclutamiento de menores por internet</title>
-   <link>https://tecnocriticos.com/n/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.html</guid>
-   <pubDate>Fri, 20 Nov 2026 06:00:00 -0500</pubDate>
-   <category>Colombia</category>
-   <description>El acuerdo, anunciado en Nueva York, también promete formación digital y en uso responsable de la inteligencia artificial. Por qué importa: el Gobierno busca a una gran plataforma como aliada contra el reclutamiento de menores por internet.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-20-mintic-y-meta-firman-memorando-contra-reclutamiento-de-menores.jpg" length="84606" type="image/jpeg"/>
   </item>
  </channel>
 </rss>
