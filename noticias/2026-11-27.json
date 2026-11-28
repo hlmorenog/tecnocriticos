@@ -2,6 +2,47 @@
   "fecha": "2026-11-27",
   "noticias": [
     {
+      "id": "2026-11-27-canada-subsidia-computacion-para-ia-con-nubes-propias",
+      "seccion": "IA y tecnología",
+      "titular": "Canadá pagará hasta el 80 % de la computación para IA a las pymes que usen nubes canadienses",
+      "entradilla": "El fondo sube a 1.000 millones de dólares canadienses y da más subsidio a quien contrate proveedores de propiedad nacional.",
+      "lead": "El ministro canadiense de Inteligencia Artificial, Evan Solomon, anunció el 26 de noviembre en Toronto 700 millones de dólares canadienses más para el fondo que ayuda a las pequeñas y medianas empresas a pagar computación para IA, que llega así a 1.000 millones.",
+      "cuerpo": [
+        "La novedad está en cómo se reparte: el fondo cubrirá hasta el 80 % de los costos si la empresa usa un proveedor soberano, es decir, de propiedad canadiense, constituido en el país y con su infraestructura y sus datos en Canadá. Con otros proveedores que operen en el país, el tope es del 50 %, y los servicios alojados fuera de Canadá no califican. Antes, el reembolso llegaba hasta dos tercios con nubes canadienses y a la mitad con las demás, según AI Affairs.",
+        "Pueden aplicar empresas con menos de 500 trabajadores y un plan para vender sus productos de IA, y ahora también organizaciones sin ánimo de lucro, fundaciones e instituciones de educación superior. Los proyectos reciben entre 100.000 y 5 millones de dólares canadienses y pueden durar hasta el 31 de marzo de 2030. La primera convocatoria temática es para salud y ciencias de la vida, con plazo hasta el 4 de enero de 2027.",
+        "El Gobierno anunció además más de 52 millones para otras 45 empresas de la primera fase, con lo que el apoyo entregado supera los 118 millones para 89 empresas. El fondo empezó con 300 millones y hace parte de la estrategia nacional de IA, que busca que el país dependa menos de la tecnología extranjera."
+      ],
+      "mirada": "Canadá no solo subsidia la IA: decide en qué nube se hace, y convierte la soberanía digital en un descuento en la factura.",
+      "titular_corto": "Canadá: subsidio a la nube propia",
+      "por_que_importa": "muestra cómo un país usa dinero público para que sus empresas de IA dependan menos de las grandes nubes de otros países.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Hasta el 80 % de los costos con proveedores canadienses, frente al 50 % con los demás."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-27-canada-subsidia-computacion-para-ia-con-nubes-propias.jpg",
+        "alt": "Vista de Toronto al atardecer, con la torre CN y los edificios del centro",
+        "autor": "Christine Wagner",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/christine-wagner/15793918005/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Computing.net",
+          "url": "https://computing.net/canada-will-pay-ai-startups-more-to-use-computing-owned-at-home/"
+        },
+        {
+          "nombre": "AI Affairs",
+          "url": "https://www.aiaffairs.com/government/canada-ai-compute-access-fund-billion-canadian-clouds/"
+        },
+        {
+          "nombre": "Crypto Briefing",
+          "url": "https://cryptobriefing.com/canada-700-million-ai-compute-fund/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia",
       "seccion": "IA y tecnología",
       "titular": "SAP estudia recortar al menos 10.000 empleos para rehacer su negocio alrededor de la IA",
