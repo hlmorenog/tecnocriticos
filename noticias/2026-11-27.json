@@ -10,7 +10,7 @@
       "cuerpo": [
         "La novedad está en cómo se reparte: el fondo cubrirá hasta el 80 % de los costos si la empresa usa un proveedor soberano, es decir, de propiedad canadiense, constituido en el país y con su infraestructura y sus datos en Canadá. Con otros proveedores que operen en el país, el tope es del 50 %, y los servicios alojados fuera de Canadá no califican. Antes, el reembolso llegaba hasta dos tercios con nubes canadienses y a la mitad con las demás, según AI Affairs.",
         "Pueden aplicar empresas con menos de 500 trabajadores y un plan para vender sus productos de IA, y ahora también organizaciones sin ánimo de lucro, fundaciones e instituciones de educación superior. Los proyectos reciben entre 100.000 y 5 millones de dólares canadienses y pueden durar hasta el 31 de marzo de 2030. La primera convocatoria temática es para salud y ciencias de la vida, con plazo hasta el 4 de enero de 2027.",
-        "El Gobierno anunció además más de 52 millones para otras 45 empresas de la primera fase, con lo que el apoyo entregado supera los 118 millones para 89 empresas. El fondo empezó con 300 millones y hace parte de la estrategia nacional de IA, que busca que el país dependa menos de la tecnología extranjera."
+        "El Gobierno anunció además más de 52 millones para otras 45 empresas de la primera fase, con lo que el apoyo comprometido supera los 118 millones para 89 empresas de sectores como salud, agricultura, manufactura, finanzas y transporte, según el comunicado oficial. El fondo empezó con 300 millones y hace parte de la estrategia nacional de IA, que pide más control soberano sobre cómo se construye y se usa la IA; el presupuesto de 2026 se comprometió a poner en marcha 500 megavatios de computación soberana."
       ],
       "mirada": "Canadá no solo subsidia la IA: decide en qué nube se hace, y convierte la soberanía digital en un descuento en la factura.",
       "titular_corto": "Canadá: subsidio a la nube propia",
@@ -28,6 +28,10 @@
         "url": "https://www.flickr.com/photos/christine-wagner/15793918005/"
       },
       "fuentes": [
+        {
+          "nombre": "Gobierno de Canadá: comunicado oficial",
+          "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/11/government-of-canada-boosts-the-ai-compute-access-fund-with-700-million-expansion.html"
+        },
         {
           "nombre": "Computing.net",
           "url": "https://computing.net/canada-will-pay-ai-startups-more-to-use-computing-owned-at-home/"
