@@ -35,6 +35,16 @@ Si un día no hay noticias sólidas para una sección, pasa el cupo a otra. Es m
 5. No repitas noticias ya publicadas: revisa los archivos de `noticias/` de los últimos 7 días.
 6. Descarta notas de prensa sin sustancia, rumores sin fuente y contenido patrocinado.
 
+## Rigor: reglas de la dirección (28 de noviembre de 2026)
+
+Tecnocríticos es un medio serio. Estas reglas están por encima de cualquier cupo o prisa:
+
+1. **Actualizaciones solo con hechos de las últimas horas.** Una actualización (9:00, 12:00, 4:00, 7:00 o 9:00) debe contar algo ocurrido o publicado desde la actualización anterior, o como máximo en las últimas 24 horas. Si no hay nada sólido y nuevo, **no se propone ninguna noticia**: se informa a la dirección que no hubo y se termina. No se rellena con temas pendientes de días anteriores.
+2. **Fuentes leídas completas.** Cada noticia se apoya en la fuente primaria (comunicado oficial, documento, estudio, anuncio de la empresa) o en **dos medios independientes leídos completos**. Un resumen, un agregador o un titular no cuentan como fuente leída. Si solo se pudo leer un medio, se dice en las dudas a verificar.
+3. **Cada cifra, contra su origen.** Antes de mostrar la propuesta, se verifica cada número en la fuente original o se atribuye con precisión a quien lo reporta («según Bain, citado por CNBC»). No se presenta una cifra fuera de su contexto (por ejemplo, un dato global o de otro periodo como si fuera del día). Si no se puede confirmar, se quita.
+4. **Las normas del manual se cumplen antes de mostrar la propuesta:** titular de hasta 90 caracteres, lead de 25 a 45 palabras, mirada crítica de máximo 25 palabras.
+5. **Solo temas a la altura del medio.** No se proponen curiosidades ni notas menores para llenar un espacio.
+
 ## Cómo escribir
 
 - **Tono**: el de Tecnocríticos, *«La tecnología, sin fanatismo»*. Informativo, claro, sin exageración ni entusiasmo publicitario. Ni tecnófobo ni tecnófilo.
@@ -92,7 +102,7 @@ Crea **un archivo por día**: `noticias/AAAA-MM-DD.json` (fecha de Colombia, UTC
 - `encuadre` es opcional: ponlo en `"completa"` solo para fotos de producto o verticales que no deben recortarse; si no, omítelo.
 - Ordena las noticias de la más a la menos importante: la primera aparece destacada en la portada.
 - **Noticia principal**: debe ser reciente para el lector (preferiblemente de las últimas 24 horas).
-- **Actualizaciones del día** (9:00, 12:00, 4:00, 7:00 y 9:00): cada actualización entra como **noticia principal**, es decir, en el primer lugar del archivo del día; las demás bajan un puesto. Por eso su foto debe cumplir la regla de la foto principal.
+- **Actualizaciones del día** (9:00, 12:00, 4:00, 7:00 y 9:00): cada actualización entra como **noticia principal**, es decir, en el primer lugar del archivo del día; las demás bajan un puesto. Por eso su foto debe cumplir la regla de la foto principal. Solo se proponen con hechos de las últimas horas (ver «Rigor»); si no los hay, no hay actualización.
 - **Foto de la principal**: debe ser horizontal y llenar el formato 16:9. Las fotos verticales o con `"encuadre": "completa"` solo van en noticias secundarias.
 - Valida el JSON antes de guardarlo (por ejemplo con `python3 -m json.tool`).
 - Después, regenera el sitio: `python3 herramientas/generar_paginas.py`. Crea la página completa de cada noticia (`n/<id>.html`, que es la que leen Google, los buscadores con IA y las redes sociales), actualiza la portada y el listado, y rehace `sitemap.xml`, `sitemap-noticias.xml`, `feed.xml`, `robots.txt` y `llms.txt`. **Sin este paso, las noticias del día no existen para los buscadores** y se comparten sin foto ni titular.
