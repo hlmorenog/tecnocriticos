@@ -1,0 +1,214 @@
+{
+  "fecha": "2026-11-28",
+  "noticias": [
+    {
+      "id": "2026-11-28-openai-contrademanda-a-apple-por-secretos",
+      "seccion": "IA y tecnología",
+      "titular": "OpenAI contrademanda a Apple y la acusa de robarle secretos y presionar a sus proveedores",
+      "entradilla": "Es su respuesta a la demanda que Apple le puso en julio por presuntamente llevarse secretos de sus equipos para crear un dispositivo rival.",
+      "lead": "OpenAI presentó el viernes 27 de noviembre, ante un tribunal federal de San José, California, una contrademanda contra Apple en la que la acusa de apropiarse de secretos comerciales y de presionar a proveedores que trabajan con las dos empresas.",
+      "cuerpo": [
+        "El pleito empezó en julio, cuando Apple demandó a OpenAI, a su unidad de hardware io Products y a dos de sus exempleados, Tang Tan y Chang Liu, por presuntamente llevar secretos de sus equipos a OpenAI para crear un dispositivo competidor. OpenAI negó las acusaciones. Un juez indicó que era muy probable que concediera la medida cautelar que pidió Apple, y en octubre OpenAI se comprometió a no usar los secretos en disputa.",
+        "Ahora OpenAI acusa a Apple de presionar a fabricantes que trabajan para ambas, por ejemplo pidiéndoles que identificaran qué personal estaba asignado a proyectos de OpenAI, y de hacer que al menos un proveedor dejara de trabajar con ella. También sostiene que una persona que trabajó en OpenAI y volvió a Apple se llevó detalles de sus planes de producto y de sus proveedores. Sus reclamos incluyen robo de secretos comerciales según la ley federal, interferencia en contratos y competencia desleal según la ley de California, según Decrypt.",
+        "OpenAI argumenta que Apple la demandó porque va perdiendo la carrera de la IA. Apple ha dicho que su propia investigación no encontró información confidencial de OpenAI. Ninguna de las acusaciones de las dos partes ha sido probada, y el juicio por la demanda de Apple está previsto para el 19 de julio de 2027."
+      ],
+      "mirada": "Las dos se acusan de lo mismo: en la carrera por el hardware de la IA, cada ingeniero que cambia de empresa es una prueba.",
+      "titular_corto": "OpenAI contrademanda a Apple",
+      "por_que_importa": "el pleito define cómo pueden moverse ingenieros y proveedores entre las empresas que compiten por crear los dispositivos de la IA.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Ninguna acusación está probada; el juicio de la demanda de Apple será el 19 de julio de 2027."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-openai-contrademanda-a-apple-por-secretos.jpg",
+        "alt": "Logo iluminado de Apple en la fachada de su tienda de Milán, Italia (imagen ilustrativa)",
+        "autor": "Guilhem Vellut",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/o_0/49870341303/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Decrypt",
+          "url": "https://decrypt.co/384222/openai-countersuit-apple-trade-secret-theft-claims"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-agentes-de-ia-en-black-friday-pocas-compras",
+      "seccion": "IA y tecnología",
+      "titular": "Las tiendas y los compradores frenan a los agentes de IA en su primer gran Black Friday",
+      "entradilla": "Muchas tiendas no los dejan entrar, los compradores no les confían su dinero y nadie sabe quién responde si se equivocan.",
+      "lead": "Los agentes de inteligencia artificial que compran por el usuario, de Meta, Google, OpenAI y Amazon, tuvieron en este Black Friday su primera gran prueba, pero muchas tiendas no los dejan entrar y los compradores no les confían su dinero.",
+      "cuerpo": [
+        "Su peso todavía es mínimo: según un informe de la consultora Bain, citado por CNBC, las compras hechas por agentes son el 0,4 % de las transacciones del comercio electrónico mundial y el 0,2 % de su valor; el dato no mide solo el Black Friday. Muchas tiendas no los dejan pasar: la empresa Human Forward probó ChatGPT, Gemini, Muse y otros agentes en 200 sitios y encontró que cerca de la mitad de los grandes comercios no les permite comprar. Amazon bloqueó a Muse, de Meta, en septiembre, y demanda a Perplexity por el agente de su navegador Comet.",
+        "Los compradores tampoco les entregan su dinero: en Estados Unidos, el 54 % de los adultos ha usado IA para alguna tarea de compra, según una encuesta de Morning Consult para Visa, pero solo el 23 % confía en que la IA haga pagos por él, según el índice de confianza de Visa. Las pruebas no ayudan: en un ensayo que Visa publicó el 5 de noviembre, 22 modelos de IA de 12 laboratorios hicieron 15 tareas de compra y fallaron en el 42,8 % de los intentos; en el 54 % de esos fallos, el agente compró algo de todos modos.",
+        "Y no está claro quién responde si el agente se equivoca. Best Buy dice en sus condiciones que no responde por lo que haga un agente digital, mientras American Express promete proteger a sus clientes de cargos causados por errores de un agente. En Colombia, una encuesta de Rapyd encontró la misma cautela: el 48 % confía mucho en un asistente que recomiende dónde comprar, pero el 42 % se siente muy incómodo si la IA paga sin pedir permiso en cada compra."
+      ],
+      "mirada": "Las empresas quieren que la IA compre por nosotros; las tiendas no la dejan entrar y los usuarios no le dan la tarjeta.",
+      "titular_corto": "Agentes de IA: pocas compras",
+      "por_que_importa": "los agentes que compran solos son la gran apuesta de las tecnológicas, pero todavía fallan, no son bienvenidos y dejan sin resolver quién paga los errores.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "En las pruebas de Visa, los agentes fallaron el 42,8 % de las compras."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-agentes-de-ia-en-black-friday-pocas-compras.jpg",
+        "alt": "Un carrito de compras en miniatura sobre un celular con una tienda en línea abierta (imagen ilustrativa)",
+        "autor": "Robbert Noordzij",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/robbertjnoordzij/22257890101/"
+      },
+      "fuentes": [
+        {
+          "nombre": "The Next Web",
+          "url": "https://thenextweb.com/news/ai-shopping-agents-black-friday-retailers-trust"
+        },
+        {
+          "nombre": "The Next Web: la prueba de Visa",
+          "url": "https://thenextweb.com/news/visa-ai-shopping-benchmark-agentic-commerce-ai-models-fail"
+        },
+        {
+          "nombre": "Semana: encuesta de Rapyd en Colombia",
+          "url": "https://semana.com/economia/macroeconomia/articulo/colombianos-confian-en-la-ia-para-recomendar-compras-pero-dudan-de-delegarle-sus-pagos/202643"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-colombia-compra-eficiente-guia-ia-contratacion-estatal",
+      "seccion": "Colombia",
+      "titular": "Colombia Compra Eficiente propone que la IA del Estado apoye, pero no decida",
+      "entradilla": "El borrador está abierto a comentarios hasta el 10 de diciembre y desaconseja comprar reconocimiento facial en espacios públicos.",
+      "lead": "La Agencia Nacional de Contratación Pública, Colombia Compra Eficiente, publicó el borrador de una guía para que las entidades del Estado compren y usen inteligencia artificial, con una regla central: la herramienta apoya, pero el servidor público decide.",
+      "cuerpo": [
+        "La guía, de 137 páginas, está abierta a comentarios de ciudadanos, proveedores y entidades hasta el 10 de diciembre, mediante un formulario en línea. Fija que todo resultado de una IA se verifique contra su fuente, que responda quien firma y que la evaluación de ofertas y la recomendación de adjudicación queden en manos de personas. Ninguna alerta o puntaje de un sistema basta por sí solo para rechazar una oferta, poner una multa o terminar un contrato.",
+        "El documento clasifica las herramientas por riesgo. Un asistente que resume normas es de riesgo bajo; uno que habla con ciudadanos debe avisar que es una máquina; y un sistema que prioriza a los beneficiarios de un subsidio es de riesgo alto y requiere un análisis de impacto publicado, pruebas de sesgo y explicaciones de cada resultado. Además, recomienda no comprar reconocimiento biométrico en tiempo real en espacios públicos ni de emociones en trabajos o colegios.",
+        "La guía cumple una tarea de la política nacional de IA, el Conpes 4144 de 2025, y es de buenas prácticas: no cambia las normas de compra pública. Según un diagnóstico de la Agencia, entre 2020 y 2025 hubo 54 contratos públicos de IA por 67.149 millones de pesos, y la contratación directa concentró el 47,8 % de ese valor, según Impacto TIC."
+      ],
+      "mirada": "Que la máquina no decida está bien; que el Estado publique qué compra y para qué está mejor, y eso todavía es solo una promesa.",
+      "titular_corto": "Reglas para la IA del Estado",
+      "por_que_importa": "el Estado ya compra IA, y estas reglas definen si una máquina puede influir en un subsidio, una multa o un contrato que afecte a un ciudadano.",
+      "dato": {
+        "etiqueta": "Ojo",
+        "texto": "Cualquier persona puede comentar el borrador hasta el 10 de diciembre."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-colombia-compra-eficiente-guia-ia-contratacion-estatal.jpg",
+        "alt": "El Capitolio Nacional en la Plaza de Bolívar de Bogotá (imagen ilustrativa)",
+        "autor": "Leandro Neumann Ciuffo",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/leandrociuffo/3326110905/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Impacto TIC",
+          "url": "https://impactotic.co/formatos/noticias-tic/colombia-compra-eficiente-ia-contratacion-estatal/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-banco-de-la-republica-brecha-digital-usos",
+      "seccion": "Colombia",
+      "titular": "Los colombianos usan más internet, pero poco para estudiar, comprar o hacer trámites",
+      "entradilla": "La brecha ya no es solo de conexión: el uso que genera ingresos sigue concentrado en los más ricos y educados.",
+      "lead": "Un estudio publicado el 24 de noviembre por investigadores del Banco de la República encontró que la apropiación digital en Colombia mejoró entre 2018 y 2025, pero que pocos usan internet para estudiar, hacer trámites, usar la banca o comprar en línea.",
+      "cuerpo": [
+        "Los autores crearon un índice de apropiación digital, de 0 a 1, que mide conexión, habilidades y tipo de uso con más de 1,5 millones de registros de la Encuesta Nacional de Calidad de Vida del Dane. El índice nacional subió de 0,228 en 2018 a 0,303 en 2025. Lo más rezagado son los usos que generan valor económico, como la educación en línea, la banca digital, el comercio electrónico y los trámites con el Estado.",
+        "La brecha crece con el ingreso: en 2025, esos usos fueron el 27,1 % de la actividad digital del 20 % más rico y el 11,2 % del 20 % más pobre, una distancia mayor que en 2018. La educación es lo que más separa: quienes tienen estudios superiores tienen un índice 5,2 veces mayor que quienes solo tienen básica. Bogotá encabeza la medición, con 0,413, y Vichada es el último, con 0,074, y el único donde el índice bajó.",
+        "Según el Dane, el 82,3 % de las personas de 5 años o más usó internet en 2025, pero solo el 37,2 % de los hogares tenía computador o tableta, y el 11 % en las zonas rurales. Los autores concluyen que cerrar la brecha digital exige atacar a la vez las brechas de educación, ingreso y territorio; las opiniones del estudio son suyas y no comprometen al Banco."
+      ],
+      "mirada": "Tener datos en el celular no es lo mismo que usar internet para progresar, y esa segunda brecha crece justo donde hay menos plata.",
+      "titular_corto": "Internet: mucho uso, poco provecho",
+      "por_que_importa": "la conexión ya llegó a la mayoría, pero los beneficios económicos de internet siguen concentrados en quienes más tienen.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Solo el 37,2 % de los hogares tiene computador o tableta; en el campo, el 11 %."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-banco-de-la-republica-brecha-digital-usos.jpg",
+        "alt": "Fachada del Banco de la República en Bogotá",
+        "autor": "momentcaptured1",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/pat_ossa/6310168536/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Impacto TIC",
+          "url": "https://impactotic.co/innovacion/brecha-digital-en-colombia-banco-de-la-republica/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-binance-reabre-todos-los-retiros-tras-el-hackeo",
+      "seccion": "IA y tecnología",
+      "titular": "Binance reabre todos los retiros tras el mayor robo de criptomonedas de la historia",
+      "entradilla": "El exchange cubrió los 6.340 millones de dólares robados con fondos propios, pero casi 1.900 millones siguen sin congelar.",
+      "lead": "Binance anunció el jueves 26 de noviembre que levantó por completo la suspensión de retiros que impuso tras el hackeo de octubre, en el que le robaron 6.340 millones de dólares, el mayor robo de criptomonedas de la historia, según Enter.co.",
+      "cuerpo": [
+        "La suspensión empezó el 29 de octubre, y la plataforma reabrió los retiros por etapas desde el 1 de noviembre. Ese primer día, en nueve horas y media, procesó 4.650 millones de dólares en retiros frente a 1.010 millones en depósitos. Para cubrir lo robado usó más de 6.340 millones de fondos propios, entre ellos su tesorería y parte de su fondo de protección de usuarios, y publicó una prueba de reservas para que cada cliente verifique que sus activos están respaldados.",
+        "El rastro del dinero sigue activo: el 26 de noviembre, un rastreador de cadenas de bloques reportó transferencias por 35,5 millones de dólares desde billeteras ligadas al robo, y calcula que quedan unos 1.900 millones sin congelar. Días antes, el Departamento de Justicia de Estados Unidos pidió en una acción civil el decomiso de más de 1.100 millones en la criptomoneda USDC que, según los fiscales, vienen del robo.",
+        "En Colombia, donde Binance opera y se integró al sistema de pagos inmediatos Bre-B, los retiros ya funcionan en casi todas las redes. Enter.co recomienda revisar el estado de la red de cada moneda antes de transferir, porque algunos retrasos vienen de la propia red y no de la plataforma."
+      ],
+      "mirada": "Binance pagó el robo con su propia caja; que pueda hacerlo dice tanto de su tamaño como del riesgo de depender de una sola plataforma.",
+      "titular_corto": "Binance reabre los retiros",
+      "por_que_importa": "millones de personas, también en Colombia, guardan su dinero digital en plataformas como Binance, y este robo mostró cuánto dependen de que la empresa pueda responder.",
+      "dato": {
+        "etiqueta": "En cifras",
+        "texto": "Cerca de 1.900 millones de dólares del robo siguen sin congelar."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-binance-reabre-todos-los-retiros-tras-el-hackeo.jpg",
+        "alt": "Una moneda física conmemorativa de bitcoin sostenida entre los dedos (imagen ilustrativa)",
+        "autor": "Jon Russell",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/jonrussell/27795396771/"
+      },
+      "fuentes": [
+        {
+          "nombre": "Enter.co",
+          "url": "https://www.enter.co/fintech/binance-levanta-suspension-retiros-hackeo-6340-millones/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-silksong-sea-of-sorrow-llega-el-11-de-diciembre",
+      "seccion": "Videojuegos y series",
+      "titular": "Hollow Knight: Silksong recibe el 11 de diciembre su primera expansión, gratis",
+      "entradilla": "Sea of Sorrow llevará a Hornet a una aventura en el mar, con nuevas zonas, jefes y hasta pesca.",
+      "lead": "Team Cherry anunció el 27 de noviembre, en su presentación Cherry Time, que Sea of Sorrow, la primera gran expansión de Hollow Knight: Silksong, llegará el viernes 11 de diciembre y será gratis para quienes tengan el juego.",
+      "cuerpo": [
+        "El estudio australiano había anunciado la expansión en diciembre de 2025 sin fecha. El nuevo tráiler muestra nuevas zonas, combates y lo que parece un minijuego de pesca, en una aventura en altamar con Hornet, la protagonista. Team Cherry la llamó la primera gran expansión del juego, lo que sugiere que podría haber otras, según Kotaku.",
+        "En la misma presentación, Team Cherry mostró tres juegos de estudios independientes australianos que publicará: Radio Rain, Blokkan: Secret of the Walking City y Untangle: Plant Problems, según PCGamesN y Kotaku. Silksong salió en septiembre de 2025, y la expansión llega a un diciembre con pocos lanzamientos grandes después de GTA VI."
+      ],
+      "mirada": "En una industria que cobra por cada traje y cada mapa, un estudio pequeño regala una expansión entera, y eso también es una postura.",
+      "titular_corto": "Silksong: expansión gratis",
+      "por_que_importa": "es contenido nuevo y gratuito para uno de los juegos independientes más vendidos, en contraste con los pagos extra que se volvieron norma.",
+      "dato": {
+        "etiqueta": "El dato",
+        "texto": "Sea of Sorrow llega el 11 de diciembre, gratis para quien tenga el juego."
+      },
+      "imagen": {
+        "archivo": "img/noticias/2026-11-28-silksong-sea-of-sorrow-llega-el-11-de-diciembre.jpg",
+        "alt": "Figura impresa en 3D de Hornet, protagonista de Hollow Knight: Silksong, hecha por un aficionado (imagen ilustrativa)",
+        "autor": "Benjamin Hollis",
+        "licencia": "CC BY 2.0",
+        "fuente": "Flickr",
+        "url": "https://www.flickr.com/photos/dalangalma/52972934736/"
+      },
+      "fuentes": [
+        {
+          "nombre": "PCGamesN",
+          "url": "https://www.pcgamesn.com/hollow-knight-silksong/sea-of-sorrow-release-date"
+        },
+        {
+          "nombre": "Kotaku",
+          "url": "https://kotaku.com/hollow-knight-silksong-dlc-sea-of-sorrow-releases-free-for-all-players-and-adds-fishing-2001001319"
+        }
+      ]
+    }
+  ]
+}
