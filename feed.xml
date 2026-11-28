@@ -9,6 +9,14 @@
   <atom:link href="https://tecnocriticos.com/feed.xml" rel="self" type="application/rss+xml"/>
   <image><url>https://tecnocriticos.com/img/logo-tecnocriticos.png</url><title>Tecnocríticos</title><link>https://tecnocriticos.com/</link></image>
   <item>
+   <title>Canadá pagará hasta el 80 % de la computación para IA a las pymes que usen nubes canadienses</title>
+   <link>https://tecnocriticos.com/n/2026-11-27-canada-subsidia-computacion-para-ia-con-nubes-propias.html</link>
+   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-canada-subsidia-computacion-para-ia-con-nubes-propias.html</guid>
+   <pubDate>Fri, 27 Nov 2026 06:00:00 -0500</pubDate>
+   <category>IA y tecnología</category>
+   <description>El fondo sube a 1.000 millones de dólares canadienses y da más subsidio a quien contrate proveedores de propiedad nacional. Por qué importa: muestra cómo un país usa dinero público para que sus empresas de IA dependan menos de las grandes nubes de otros países.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-27-canada-subsidia-computacion-para-ia-con-nubes-propias.jpg" length="92128" type="image/jpeg"/>
+  </item>
+  <item>
    <title>SAP estudia recortar al menos 10.000 empleos para rehacer su negocio alrededor de la IA</title>
    <link>https://tecnocriticos.com/n/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.html</link>
    <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-27-sap-estudia-recortar-10000-empleos-por-la-ia.html</guid>
@@ -399,14 +407,6 @@
    <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
    <category>IA y tecnología</category>
    <description>Nvidia, Alphabet, Nu y la recién llegada Anthropic perdieron valor en la peor semana de la bolsa estadounidense en más de un año. Por qué importa: las empresas de IA sostienen buena parte del valor de la bolsa, y una caída fuerte de ellas arrastra a todo el mercado.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-estallo-la-burbuja-de-la-ia.jpg" length="144376" type="image/jpeg"/>
-  </item>
-  <item>
-   <title>La Comisión Europea confirma un ciberataque hecho con una herramienta de IA</title>
-   <link>https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html</link>
-   <guid isPermaLink="true">https://tecnocriticos.com/n/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.html</guid>
-   <pubDate>Sat, 21 Nov 2026 06:00:00 -0500</pubDate>
-   <category>IA y tecnología</category>
-   <description>El caso muestra que los ataques automatizados con inteligencia artificial ya alcanzan a una de las administraciones más grandes del mundo. Por qué importa: confirma que las herramientas de IA para atacar ya están en uso contra gobiernos, no solo en advertencias de expertos.</description><enclosure url="https://tecnocriticos.com/img/noticias/2026-11-21-comision-europea-ciberataque-con-herramienta-de-ia.jpg" length="150639" type="image/jpeg"/>
   </item>
  </channel>
 </rss>
